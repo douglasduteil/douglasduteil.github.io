@@ -1,49 +1,107 @@
 
 
-html{
-    background: hsl(0, 0%, 97%);
-    color: hsl(0, 0%, 20%);
-    font: 16px/1.4 Open Sans, Helvetica, Arial, sans-serif;
+html, body {
+    background: #C6B5A1;
+    color: #333;
+    font: 16px/1.4 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-/////////////////////////
-////////// GITHUB RIBBON
-////////// FROM : http://unindented.org/articles/2009/10/github-ribbon-using-css-transforms/
 
-.ribbon {
-    background-color: hsl(0, 0%, 33%);
-    overflow: hidden;
-/* top left corner */
-    position: absolute;
-    left: -3em;
-    top: 2.5em;
-/* 45 deg ccw rotation */
-    -moz-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-/* shadow */
-    -moz-box-shadow: 0 0 1em #888;
-    -webkit-box-shadow: 0 0 1em #888;
-}
-.ribbon a {
-    border: 1px solid hsl(0, 0%, 83%);
-    color: #fff;
-    display: block;
-    font-size: 81.25%;
-    font-weight: bold;
-    margin: 0.05em 0 0.075em 0;
-    padding: 0.5em 3.5em;
-    text-align: center;
-    text-decoration: none;
-/* shadow */
-    text-shadow: 0 0 0.5em #444;
+//.transition(@x: 0, @y: 0, @blur: 1px, @color: #000) {
+.transition(@duration: 0.15s, @property: color, @timing-function: ease) {
+    -webkit-transition: @arguments;
+    -moz-transition: @arguments;
+    -ms-transition: @arguments;
+    -o-transition: @arguments;
+    transition: @arguments;
 }
 
-/////////////////////////
-//////////
+.border-radius (@radius) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+}
+
+.box-shadow (@radius) {
+    -moz-box-shadow: 0 0 @radius #888;
+    -webkit-box-shadow: 0 0 @radius #888;
+    box-shadow: 0 0 @radius #888;
+}
+
+aside{
+
+    width: 256px;
+    background: #000;
+    height: 100%;
+    position: fixed;
+    font-size: 1.1em;
+    z-index: 1000;
+
+    -moz-box-shadow: 10px 0px 5px 1px black;
+    -webkit-box-shadow: 10px 0px 5px 1px black;
+    -o-box-shadow: 10px 0px 5px 1px black;
+    box-shadow: 10px 0px 5px 1px black;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=90, Strength=5);
+
+    .photo{
+
+        background: url(http://s.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1?s=256) no-repeat center top;
+
+    }
+
+    a{
+        color: #CA731C;//hsl(30, 76%, 60%);
+        &:hover { color: hsl(0, 0%, 97%); }
+        font-family: 'Quantico';
+        .transition();
+        text-align: center;
+    }
+
+    #head a{
+        //http://s.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1?s=256
+
+        background: url(http://s.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1?s=256) no-repeat center top;
+        padding-top: 260px;
+        display: block;
+
+
+    }
+
+    ul{
+        list-style-type: none;
+        text-align: right;
+
+        li{
+            padding-right: 1em;
+        }
+    }
+
+/*
+    .meny ul {
+        margin-top: 10px;
+    }
+    */
+}
 
 .container{
-    max-width: 720px;
+    max-width: 700px;
     padding: 40px;
     margin: 0 auto;
+    margin-left: 20em;
+
+    section{
+//        .border-radius (0px);
+        background-color: hsl(0, 0%, 100%);
+        padding: 1em;
+//        margin-bottom: 10em;
+        .box-shadow(5px);
+
+//        position: absolute;
+
+
+        h1{
+            color: hsl(30, 76%, 25%)
+        }
+    }
 }
 

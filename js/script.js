@@ -49,6 +49,7 @@
         htmlInser = "<span class=inserChar>" + inserChar + "</span>";
         out.html("<span class=inserChar>" + inserChar + "</span>");
         blinkAnim = function() {
+            if ($.browser.mozilla) return;
             $(".inserChar").delay(1000).hide(100).delay(1000).show(100);
             $(".inserChar").queue(function(next) {
                 next();

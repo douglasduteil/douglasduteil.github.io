@@ -264,11 +264,11 @@ section#fun{
         margin-top: 3em;
     }
 
-    a.img{
+    a.banner{
         display: block;
         border-top: solid;
         background-repeat: no-repeat;
-        background-position: -100% 0%;
+        background-position: 100% 0%;
         background-color: rgba(0, 0, 0, 0.7);
         line-height: 2.5em;
         font-size: 2.5em;
@@ -276,16 +276,16 @@ section#fun{
 
         background-image: none;
 
-
         @media @desktops {
             padding-left: 2em;
-            .transition(background-position, 500ms, linear);
+
+            &.github{background-image: url("/img/githubLogo.svg");}
+            &.cssdeck{background-image: url("/img/cssdeckLogo.svg");}
 
             &:first-child{border-top-left-radius: 40px;}
-            &:hover{
-    //            background-position: center center;
-                background-position: 0% 0%;
-            }
+
+            .transition(background-position, 500ms, linear);
+            &:hover{background-position: 100% 50%;}
         }
     }
 }

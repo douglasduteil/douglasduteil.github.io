@@ -9,13 +9,48 @@
 
 
 
-/* =Media
+/* =Media FROM http://blog.scur.pl/2012/06/variable-media-queries-less-css/
 -----------------------------------------------------------------------------*/
-@highdensity:   ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
-                ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
-                ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
-                ~"only screen and (min-device-pixel-ratio: 1.5)";
-@mobile:        ~"only screen and (max-width: 320px)";
+// Smartphones (portrait and landscape)
+@mobile:     ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) ";
+// Smartphones (portrait and landscape)
+@mobile-l:      ~"only screen and (min-width : 321px)";
+// Smartphones (portrait and landscape)
+@mobile-p:       ~"only screen and (max-width : 320px)";
+
+
+/* iPads (portrait and landscape) -----------
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+}
+
+/* iPads (landscape) -----------
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+}
+
+/* iPads (portrait) -----------
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+}
+
+/* iPhone 4 -----------
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+}
+*/
+
+// Desktops and laptops
+@desktops:      ~"only screen and (min-width : 1224px)";
+
+//  Large screens
+@desktops-xl:   ~"only screen and (min-width : 1824px) ";
 
 /* =Typography
 -----------------------------------------------------------------------------*/
@@ -25,6 +60,9 @@ body {
     color: #333;
 //    font-size: 15px;
 }
+
+/* Heading kerning pairs and ligatures */
+h1, h2, h3 { text-rendering: optimizeLegibility; }
 
 ::-moz-selection
 ::selection {
@@ -37,6 +75,11 @@ body {
     margin: auto;
     max-width: 1000px;
     padding: 0 10px;
+
+    @media  @mobile{
+        width: 420px;
+    }
+
 }
 
 .inline{
@@ -106,13 +149,10 @@ a           { color: #369;
         height: 2.1em;
         color: #fff;
         text-decoration: underline;
-//        padding: 1em 0;
-
-        > #lang_switch{
+        & > #lang_switch {
             line-height: 2.1em;
         }
-
-        +#top-rainbow span{
+        & + #top-rainbow span {
             height : 1em;
         }
     }
@@ -150,10 +190,17 @@ a           { color: #369;
         border-color: #222;
         border-width: 5px;
         border-style: none solid ;
-        margin-left: @line-left;
 
+        margin-left: @line-left;
+        @media @mobile{
+            margin-left: 0;
+            border: none;
+            min-height: 100px;
+            padding: 2.5em;
+        }
         > div{
             margin-left: -@line-left;
+            @media @mobile{margin-left: 0;}
         }
 
     }
@@ -174,7 +221,7 @@ figure#gravatar{
     &.fixed{
         position: fixed;
         top: -5px;
-        width: 11%;
+        width: 127px;
         left: 80px;
     }
 
@@ -182,6 +229,8 @@ figure#gravatar{
     &:hover{
         -webkit-transform: rotate(-2deg) translateY(-10px);
     }
+
+    @media @mobile { position:relative; background: none; padding: 0; border:0; box-shadow: none; }
 }
 
 /* = Sections
@@ -231,31 +280,4 @@ section#footer {
 
         > div > div{border-top: 1px solid #AAA; padding: 1em 0 ;}
     }
-}
-
-/* =Tablet (Portrait)
------------------------------------------------------------------------------*/
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-    .wrapper { width: 748px; }
-    figure#gravatar.fixed{ left: 52px;}
-}
-
-
-/* =Mobile (Portrait)
------------------------------------------------------------------------------*/
-@media only screen and (max-width: 767px) {
-    .wrapper { width: 420px;
-        article { border: none; margin-left: 0; min-height: 100px; padding: 2.5em;
-            > div{ margin-left: 0}}
-    }
-    figure#gravatar { position:relative; background: none; padding: 0; border:0; -webkit-transform: none; box-shadow: none; }
-    section#footer article { border: none}
-
-}
-
-/* =Mobile (Landscape)
------------------------------------------------------------------------------*/
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    // No border line
-
 }

@@ -3,13 +3,19 @@
 
 
     var stickThePic = function() {
-        var $sticky, $stickyHome, onScroll, stickyHeaderTop;
+        var $sticky, onResize, onScroll, stickyHeaderTop;
 
         $sticky = $('#gravatar');
 
         stickyHeaderTop = $sticky.offset().top + 20;
 
         onScroll = function() {
+
+            if ($(window).width() < 1000){
+                if ($sticky.hasClass("fixed")) $sticky.removeClass("fixed");
+                return;
+            }
+
             if ($(window).scrollTop() > stickyHeaderTop) {
                 if ($('#gravatar', "div#picHost").length > 0){
                     $sticky = $('#gravatar').detach();
@@ -17,19 +23,21 @@
 
                 $sticky.prependTo($('body'));
                 $sticky.addClass("fixed");
+                $("#gravatar.fixed").css("left", ($('.wrapper').offset().left + 14.44) + "px");
             } else {
                 if ($('#gravatar', "div#picHost").length > 0)return;
                 $sticky.appendTo("div#picHost");
                 $sticky.removeClass("fixed");
-                /*if ($sticky === null) $sticky = $('#gravatar');
-                $sticky.appendTo($stickyHome);
-                $sticky = null;
-                */
-
             }
+
         };
 
+        onResize = function() {
+            $("#gravatar.fixed").css("left", ($('.wrapper').offset().left + 14.44) + "px");
+        }
+
         $(window).scroll(onScroll);
+        $(window).resize(onResize);
     };
 
 

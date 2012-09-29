@@ -78,7 +78,7 @@ h1, h2, h3 { text-rendering: optimizeLegibility; }
 
 /* =Links
 -----------------------------------------------------------------------------*/
-a           { color: #CCC;
+a           { color: rgba(255, 255, 255, 0.7);
     &:hover { color: #FFF; }
 }
 
@@ -222,9 +222,14 @@ figure#gravatar{
     }
 }
 
+body > section{
+    color : #EEE;
+
+}
 
 section#me{
     .sectionsColor(@me_bgd_color);
+    color : #111;
     .whatIam{
 
         @media @mobile { display: block }
@@ -234,33 +239,63 @@ section#me{
 }
 //c9b9a0
 section#contact{
-    color : #EEE;
     .sectionsColor(@contact_bgd_color);
 
+    h4 + h6{
+        margin-top: 3em;
+    }
     a{
         text-align: center;
         display : block;
+        line-height: 5em;
+
+        &:hover{background-color: rgba(0,0,0,0.1);}
     }
 }
 
 section#projects{
-    color : #EEE;
     .sectionsColor(@projects_bgd_color);
 }
 
 section#fun{
     .sectionsColor(@fun_bgd_color);
-    color : #EEE;
+
+    h4 + div{
+        margin-top: 3em;
+    }
+
+    a.img{
+        display: block;
+        border-top: solid;
+        background-repeat: no-repeat;
+        background-position: -100% 0%;
+        background-color: rgba(0, 0, 0, 0.7);
+        line-height: 2.5em;
+        font-size: 2.5em;
+        font-style: italic;
+
+        background-image: none;
+
+
+        @media @desktops {
+            padding-left: 2em;
+            .transition(background-position, 500ms, linear);
+
+            &:first-child{border-top-left-radius: 40px;}
+            &:hover{
+    //            background-position: center center;
+                background-position: 0% 0%;
+            }
+        }
+    }
 }
 
 section#footer {
 
     .sectionsColor(@footer_bgd_color);
-    color : #EEE;
     border-color: darken(@footer_bgd_color, @darkerforce);
     article{
         min-height: 0;
-//        border-color: #EEE;
         border-bottom-style: solid;
 
         > div > div{border-top: 1px solid #AAA; padding: 1em 0 ;}

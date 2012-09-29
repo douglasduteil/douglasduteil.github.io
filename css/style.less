@@ -1,107 +1,261 @@
 
+@backcolor1 : #EEE;
 
-html, body {
-    background: #C6B5A1;
+@me_bgd_color       : darken(#EEE, 10%);
+@contact_bgd_color  : darken(#FC7364, 50%);
+@projects_bgd_color : darken(#8BCCED, 50%);
+@fun_bgd_color      : darken(#8BC682, 50%);
+@footer_bgd_color   : darken(#61A1AA, 50%);
+
+
+
+/* =Media
+-----------------------------------------------------------------------------*/
+@highdensity:   ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+                ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+                ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+                ~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile:        ~"only screen and (max-width: 320px)";
+
+/* =Typography
+-----------------------------------------------------------------------------*/
+body {
+    background: @backcolor1;
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
     color: #333;
-    font: 16px/1.4 'Open Sans', Helvetica, Arial, sans-serif;
+//    font-size: 15px;
 }
 
-
-//.transition(@x: 0, @y: 0, @blur: 1px, @color: #000) {
-.transition(@duration: 0.15s, @property: color, @timing-function: ease) {
-    -webkit-transition: @arguments;
-    -moz-transition: @arguments;
-    -ms-transition: @arguments;
-    -o-transition: @arguments;
-    transition: @arguments;
+::-moz-selection
+::selection {
+    color: #fff;
+    background-color: #444;
+    text-shadow: none;
 }
 
-.border-radius (@radius) {
-    border-radius: @radius;
-    -moz-border-radius: @radius;
-    -webkit-border-radius: @radius;
+.wrapper {
+    margin: auto;
+    max-width: 1000px;
+    padding: 0 10px;
 }
 
-.box-shadow (@radius) {
-    -moz-box-shadow: 0 0 @radius #888;
-    -webkit-box-shadow: 0 0 @radius #888;
-    box-shadow: 0 0 @radius #888;
-}
+.inline{
+    margin: 0;
+    list-style: none;
+    height: 1em;
 
-aside{
-
-    width: 256px;
-    background: #000;
-    height: 100%;
-    position: fixed;
-    font-size: 1.1em;
-    z-index: 1000;
-
-    -moz-box-shadow: 10px 0px 5px 1px black;
-    -webkit-box-shadow: 10px 0px 5px 1px black;
-    -o-box-shadow: 10px 0px 5px 1px black;
-    box-shadow: 10px 0px 5px 1px black;
-    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=90, Strength=5);
-
-    .photo{
-
-        background: url(http://s.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1?s=256) no-repeat center top;
-
+    li{
+        float: left;
     }
+}
 
-    a{
-        color: #CA731C;//hsl(30, 76%, 60%);
-        &:hover { color: hsl(0, 0%, 97%); }
-        font-family: 'Quantico';
-        .transition();
-        text-align: center;
-    }
+/* =Kube HACK
+-----------------------------------------------------------------------------*/
+.inner {
+    padding: 2em;
+}
 
-    #head a{
-        //http://s.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1?s=256
-
-        background: url(http://s.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1?s=256) no-repeat center top;
-        padding-top: 260px;
-        display: block;
+/* =Links
+-----------------------------------------------------------------------------*/
+a           { color: #369;
+    &:hover { color: #c72020; }
+}
 
 
-    }
 
-    ul{
-        list-style-type: none;
-        text-align: right;
+/* =Top
+-----------------------------------------------------------------------------*/
 
-        li{
-            padding-right: 1em;
+.transition(@prop, @time, @function){
+    -webkit-transition: @prop @time @function;
+    -moz-transition: @prop @time @function;
+    -ms-transition: @prop @time @function;
+    -o-transition: @prop @time @function;
+    transition: @prop @time @function;
+}
+
+#top {
+    background: #111;
+    color: #eee;
+    overflow: hidden;
+    padding: 0.5em 0;
+    height: 2em;
+    .transition(height, 200ms, linear);
+
+    a {
+        color: #eee;
+        text-decoration: none;
+
+        &:hover {
+            color: #fff;
+            text-decoration: underline;
         }
     }
 
-/*
-    .meny ul {
-        margin-top: 10px;
+    #lang_switch{
+        .inline;
+        height: auto;
+        float: right;
+        line-height: 2em;
+        .transition(line-height, 200ms, linear);
+        li{margin-right: 2em;}
     }
-    */
+
+
+    &:hover {
+        height: 2.1em;
+        color: #fff;
+        text-decoration: underline;
+//        padding: 1em 0;
+
+        > #lang_switch{
+            line-height: 2.1em;
+        }
+
+        +#top-rainbow span{
+            height : 1em;
+        }
+    }
 }
+#top-rainbow{
+    span{
+        height : 0.5em;
+        .transition(height, 200ms, linear);
 
-.container{
-    max-width: 700px;
-    padding: 40px;
-    margin: 0 auto;
-    margin-left: 20em;
-
-    section{
-//        .border-radius (0px);
-        background-color: hsl(0, 0%, 100%);
-        padding: 1em;
-//        margin-bottom: 10em;
-        .box-shadow(5px);
-
-//        position: absolute;
-
-
-        h1{
-            color: hsl(30, 76%, 25%)
+        &:nth-child(1){
+            background-color: @me_bgd_color - #222;
+        }
+        &:nth-child(2){
+            background-color: @contact_bgd_color;
+        }
+        &:nth-child(3){
+            background-color: @projects_bgd_color;
+        }
+        &:nth-child(4){
+            background-color: @fun_bgd_color;
+        }
+        &:nth-child(5){
+            background-color: @footer_bgd_color;
         }
     }
 }
 
+/* =Wrapper
+-----------------------------------------------------------------------------*/
+@line-left: 100px;
+.wrapper{
+    article{
+        min-height: 300px;
+        padding: 2.5em 1em 2.5em 0;
+        border-color: #222;
+        border-width: 5px;
+        border-style: none solid ;
+        margin-left: @line-left;
+
+        > div{
+            margin-left: -@line-left;
+        }
+
+    }
+
+}
+
+/* =Gravatar Figure
+-----------------------------------------------------------------------------*/
+figure#gravatar{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 4px;
+    border: 1px solid #AAA;
+    box-shadow: 5px 20px 37px #111;
+
+    -webkit-transform: none;
+    z-index : 1000;
+
+    &.fixed{
+        position: fixed;
+        top: -5px;
+        width: 11%;
+        left: 80px;
+    }
+
+    .transition(-webkit-transform, 200ms, linear);
+    &:hover{
+        -webkit-transform: rotate(-2deg) translateY(-10px);
+    }
+}
+
+/* = Sections
+-----------------------------------------------------------------------------*/
+@darkerforce : 5%;
+.sectionsColor(@lightcolor){
+    background: @lightcolor;
+    article {
+        background : lighten(@lightcolor, 10%);
+        border-color: darken(@lightcolor, @darkerforce);
+    }
+}
+
+
+section#me{
+    .sectionsColor(@me_bgd_color);
+    .whatIam{
+        color : lighten(#333, 10%);
+        &:before{content: " # ";}
+    }
+}
+//c9b9a0
+section#contact{
+    color : #EEE;
+    .sectionsColor(@contact_bgd_color);
+}
+
+section#projects{
+    color : #EEE;
+    .sectionsColor(@projects_bgd_color);
+}
+
+section#fun{
+    .sectionsColor(@fun_bgd_color);
+    color : #EEE;
+}
+
+section#footer {
+
+    .sectionsColor(@footer_bgd_color);
+    color : #EEE;
+    border-color: darken(@footer_bgd_color, @darkerforce);
+    article{
+        min-height: 0;
+//        border-color: #EEE;
+        border-bottom-style: solid;
+
+        > div > div{border-top: 1px solid #AAA; padding: 1em 0 ;}
+    }
+}
+
+/* =Tablet (Portrait)
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .wrapper { width: 748px; }
+    figure#gravatar.fixed{ left: 52px;}
+}
+
+
+/* =Mobile (Portrait)
+-----------------------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+    .wrapper { width: 420px;
+        article { border: none; margin-left: 0; min-height: 100px; padding: 2.5em;
+            > div{ margin-left: 0}}
+    }
+    figure#gravatar { position:relative; background: none; padding: 0; border:0; -webkit-transform: none; box-shadow: none; }
+    section#footer article { border: none}
+
+}
+
+/* =Mobile (Landscape)
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    // No border line
+
+}

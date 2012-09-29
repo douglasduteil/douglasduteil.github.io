@@ -9,49 +9,17 @@
 
 
 
-/* =Media FROM http://blog.scur.pl/2012/06/variable-media-queries-less-css/
+/* =Media FROM Kube
 -----------------------------------------------------------------------------*/
-// Smartphones (portrait and landscape)
-@mobile:     ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) ";
-// Smartphones (portrait and landscape)
-@mobile-l:      ~"only screen and (min-width : 321px)";
-// Smartphones (portrait and landscape)
-@mobile-p:       ~"only screen and (max-width : 320px)";
+/* =Responsive Mobile (Portrait)
+-----------------------------------------------------------------------------*/
+@mobile-p:   ~"only screen and (max-width : 360px)";
+@mobile-l:   ~"only screen and (min-width : 360px) and (max-width : 480px)";
+@mobile:     ~"only screen and (max-width : 768px) ";
 
-
-/* iPads (portrait and landscape) -----------
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-}
-
-/* iPads (landscape) -----------
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-}
-
-/* iPads (portrait) -----------
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-}
-
-/* iPhone 4 -----------
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-}
-*/
-
-// Desktops and laptops
-@desktops:      ~"only screen and (min-width : 1224px)";
-
-//  Large screens
-@desktops-xl:   ~"only screen and (min-width : 1824px) ";
-
+@desktops:~"only screen and (min-width : 1224px) ";
+@desktops-l:~"only screen and (min-width : 1524px) ";
+@desktops-xl:~"only screen and (min-width : 1824px) ";
 /* =Typography
 -----------------------------------------------------------------------------*/
 body {
@@ -76,10 +44,20 @@ h1, h2, h3 { text-rendering: optimizeLegibility; }
     max-width: 1000px;
     padding: 0 10px;
 
-    @media  @mobile{
+    @media @mobile-l{
         width: 420px;
     }
+    @media @mobile-p{
+        width: 300px;
+    }
 
+    @media @desktops-l{
+        max-width: 1500px;
+    }
+
+    @media @desktops-xl{
+        max-width: 1800px;
+    }
 }
 
 .inline{
@@ -248,6 +226,8 @@ figure#gravatar{
 section#me{
     .sectionsColor(@me_bgd_color);
     .whatIam{
+
+        @media @mobile { display: block }
         color : lighten(#333, 10%);
         &:before{content: " # ";}
     }

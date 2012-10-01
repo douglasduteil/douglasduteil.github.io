@@ -3,9 +3,10 @@
 
 
     var stickThePic = function() {
-        var $sticky, onResize, onScroll, stickyHeaderTop;
+        var $sticky, $stickyTop, onResize, onScroll, stickyHeaderTop, outTop;
 
         $sticky = $('#gravatar');
+        $stickyTop = $("#top, #top-rainbow");
 
         stickyHeaderTop = $sticky.offset().top + 20;
 
@@ -13,6 +14,7 @@
 
             if ($(window).width() < 1000){
                 if ($sticky.hasClass("fixed")) $sticky.removeClass("fixed");
+                if ($stickyTop.hasClass("fixed")) $sticky.removeClass("fixed");
                 return;
             }
 
@@ -23,14 +25,48 @@
 
                 $sticky.prependTo($('body'));
                 $sticky.addClass("fixed");
+                $stickyTop.addClass("fixed");
                 $("#gravatar.fixed").css("left", ($('.wrapper').offset().left + 14.44) + "px");
             } else {
                 if ($('#gravatar', "div#picHost").length > 0)return;
                 $sticky.appendTo("div#picHost");
                 $sticky.removeClass("fixed");
+                $stickyTop.removeClass("fixed");
             }
 
         };
+/*
+        $("#top, #top-rainbow").hover(
+            function(){
+                if ($stickyTop.is(".fixed")){
+                    $stickyTop.toggleClass("active");
+                    if ($("#top-rainbow"))
+                }
+
+            }
+        );
+
+ mouseenter: function(){
+ $(this).addClass("active");
+ },
+ mouseleave: function(){
+ $(this).removeClass("active");
+ }
+ */
+//        outTop = 0;
+//        $("body")
+//            .on("mouseenter", "#top.fixed, #top-rainbow.fixed", function(){
+//                $stickyTop.addClass("active");
+//            })
+//            .on("mouseleave", "#top.fixed, #top-rainbow.fixed", function(){
+//                $stickyTop.removeClass("active");
+//                //if (!$(this).is('active')) outTop++;
+//
+//                //if(outTop > 2){
+////                    $stickyTop.removeClass("active");
+////                    outTop = 0;
+////                }
+//            });
 
         onResize = function() {
             $("#gravatar.fixed").css("left", ($('.wrapper').offset().left + 14.44) + "px");

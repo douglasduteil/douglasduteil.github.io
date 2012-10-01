@@ -32,7 +32,10 @@ body {
 
 /* Heading kerning pairs and ligatures */
 h1, h2, h3 { text-rendering: optimizeLegibility; }
-
+h1{
+    border-bottom: solid;
+    padding-bottom: 0.8em;
+}
 ::-moz-selection
 ::selection {
     color: #fff;
@@ -70,6 +73,11 @@ h1, h2, h3 { text-rendering: optimizeLegibility; }
         float: left;
     }
 }
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
 
 /* =Kube HACK
 -----------------------------------------------------------------------------*/
@@ -100,12 +108,13 @@ a           { color: rgba(255, 255, 255, 0.7);
     transition: @prop @time @function;
 }
 
+@top_height : 2em;
 #top {
     background: #111;
     color: #eee;
     overflow: hidden;
     padding: 0.5em 0;
-    height: 2em;
+    height: @top_height;
     .transition(height, 200ms, linear);
 
     a {
@@ -122,7 +131,7 @@ a           { color: rgba(255, 255, 255, 0.7);
         .inline;
         height: auto;
         float: right;
-        line-height: 2em;
+        line-height: @top_height;
         .transition(line-height, 200ms, linear);
         li{margin-right: 2em;}
     }
@@ -133,14 +142,29 @@ a           { color: rgba(255, 255, 255, 0.7);
         color: #fff;
         text-decoration: underline;
         & > #lang_switch {
-            line-height: 2.1em;
+            line-height: @top_height + 0.1em;
         }
-        & + #top-rainbow span {
-            height : 1em;
+        #top-rainbow span {
+            height : @top_height + 0.1em;
+        }
+    }
+
+
+    &.fixed{
+        .transition(top, 200ms, linear);
+        position: fixed;
+        top: -@top_height;
+        width: 100%;
+        z-index: 100;
+        &:hover {
+            top: 0;
         }
     }
 }
 #top-rainbow{
+    position: relative;
+    top: 2em;
+
     span{
         height : 0.5em;
         .transition(height, 200ms, linear);
@@ -161,6 +185,19 @@ a           { color: rgba(255, 255, 255, 0.7);
             background-color: @footer_bgd_color;
         }
     }
+
+
+//    &.fixed{
+//        position: fixed;
+//        width: 100%;
+//
+////        &:hover,
+////        &.active{
+////            .transition(top, 200ms, linear);
+////            top : @top_height + 1em;
+////            span{height : 1em;}
+////        }
+//    }
 }
 
 /* =Wrapper
@@ -260,6 +297,13 @@ section#contact{
 
 section#projects{
     .sectionsColor(@projects_bgd_color);
+
+    .technUsed{
+        float: right;
+
+        &:before{content: '[';}
+        &:after{content: ']';}
+    }
 }
 
 section#fun{
@@ -303,6 +347,6 @@ section#footer {
         min-height: 0;
         border-bottom-style: solid;
 
-        > div > div{border-top: 1px solid #AAA; padding: 1em 0 ;}
+//        > div > div{border-top: 1px solid #AAA; padding: 1em 0 ;}
     }
 }

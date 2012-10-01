@@ -35,38 +35,6 @@
             }
 
         };
-/*
-        $("#top, #top-rainbow").hover(
-            function(){
-                if ($stickyTop.is(".fixed")){
-                    $stickyTop.toggleClass("active");
-                    if ($("#top-rainbow"))
-                }
-
-            }
-        );
-
- mouseenter: function(){
- $(this).addClass("active");
- },
- mouseleave: function(){
- $(this).removeClass("active");
- }
- */
-//        outTop = 0;
-//        $("body")
-//            .on("mouseenter", "#top.fixed, #top-rainbow.fixed", function(){
-//                $stickyTop.addClass("active");
-//            })
-//            .on("mouseleave", "#top.fixed, #top-rainbow.fixed", function(){
-//                $stickyTop.removeClass("active");
-//                //if (!$(this).is('active')) outTop++;
-//
-//                //if(outTop > 2){
-////                    $stickyTop.removeClass("active");
-////                    outTop = 0;
-////                }
-//            });
 
         onResize = function() {
             $("#gravatar.fixed").css("left", ($('.wrapper').offset().left + 14.44) + "px");
@@ -117,8 +85,8 @@
         $(".less-version").text("1.3.0");
         $(".jquery-version").text($().jquery);
         install_switch(
-            $("#lang_switch"),    // Where to put the lang buttons
-            $(".wrapper"),    // The scope of the switch
+            $("#lang_switch"),          // Where to put the lang buttons
+            $(".wrapper"),              // The scope of the switch
             '<li><a href="#">$lang</a>' // Template
         );
 

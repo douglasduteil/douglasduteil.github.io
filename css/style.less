@@ -200,8 +200,9 @@ a           { color: rgba(255, 255, 255, 0.7);
             margin-left: 0;
             border: none;
             min-height: 100px;
-            padding: 2.5em;
+            padding: 0.5em;
         }
+
         > div{
             margin-left: -@line-left;
             @media @mobile{margin-left: 0;}
@@ -257,8 +258,7 @@ section#me{
     .sectionsColor(@me_bgd_color);
     color : #111;
     .whatIam{
-
-        @media @mobile { display: block }
+        @media @mobile { display: block; font-size: 60%;}
         color : lighten(#333, 10%);
         &:before{content: " # ";}
     }

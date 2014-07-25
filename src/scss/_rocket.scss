@@ -1,0 +1,92 @@
+
+
+
+//== Rocket Views
+//-----------------------------------------------------------------------------
+
+.rocket{
+
+  background-color: $citron;
+  color: #fff;
+
+  @extend .f-col;
+
+  // rocket__content
+  &__content {
+    @extend .f-col;
+    @extend .f-1;
+    justify-content: center;
+
+  }
+
+  // rocket__list
+  &__list{
+    $size: 150px;
+    $spacing: ceil($size / 3);
+
+    @extend .virgin-ul;
+    @extend .f-row;
+    overflow: auto;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+
+
+
+    // modile
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: $navbar--height;
+    }
+
+    > li {
+
+      margin: $spacing;
+
+
+      > a {
+        text-decoration: none;
+        color: #111;
+
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+
+        width: $size - 20;
+        height: $size;
+        background: #fff;
+
+        padding: 0 10px;
+
+        transform: rotate(-45deg);
+
+        position: relative;
+        &:before {
+          content: "";
+          @extend .fill;
+          transform: scale(1.1);
+          border: 2px solid white;
+        }
+        > div{
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  // modile
+  @media (max-width: $screen-xs-max) {
+    .rocket__nav-back{
+
+      position: absolute;
+      z-index: 5;
+      bottom: 0;
+      height: $navbar--height;
+      left: 0;
+      right: 0;
+
+      background-color: $citron;
+    }
+  }
+
+}

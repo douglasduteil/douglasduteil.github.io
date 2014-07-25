@@ -1,0 +1,131 @@
+//== Achievements Views
+//-----------------------------------------------------------------------------
+$achievements__line-size: 10px;
+$achievements__left-padding: 15px;
+$achievements__line-node-border--size: 4px;
+$achievements__left-content-pos: ( $achievements__left-padding * 2 ) + $achievements__line-size + ($achievements__line-node-border--size * 2);
+$achievements__arrow-size: 20px;
+$achievements__line-size: 10px;
+
+.achievements {
+
+  @include section-theme($smalt-blue);
+
+  // achievements__abs-content
+  &__abs-content {
+    @extend .f-1;
+    overflow: auto;
+
+    // to modile
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: $navbar--height - 20px
+    }
+
+    // from tablet
+    @media (min-width: $screen-sm-min) {
+      padding-right: $achievements__left-padding * 2;
+    }
+  }
+}
+
+.achievements-timeline {
+
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+  width: 100%;
+  z-index: 0;
+
+  color: black;
+  margin: 0 auto 30px ;
+
+
+  // achievements-timeline__line
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 2 * $achievements__line-node-border--size + $achievements__line-size + $achievements__left-padding;
+    top: 0;
+    bottom: -30px;
+
+    width: $achievements__line-size;
+    margin-left: -($achievements__line-size/2);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  // achievements-timeline__li
+  &__li {
+    position: relative;
+
+    > .fa {
+      $inner-space : 4px;
+      width: 40px;
+      height: 40px;
+      speak: none;
+      line-height: 40px;
+
+      position: absolute;
+      color: #fff;
+      border-radius: 50%;
+      background-color: $smalt-blue;
+      padding: $inner-space;
+      box-shadow: 0 0 0 $achievements__line-node-border--size #fff;
+      text-align: center;
+      left: ($achievements__left-padding * 2) + $achievements__line-node-border--size;
+      top: -4px;
+      margin: 0 0 0 -25px;
+
+
+      // to modile
+      @media (max-width: $screen-xs-max) {
+        font-size: 1.4em;
+      }
+    }
+
+  }
+
+  // achievements-timeline__body
+  &__body {
+    position: relative;
+    margin: 5px 0 30px $achievements__left-content-pos + ($achievements__arrow-size * 2) + 5;
+
+    background-color: white;
+    padding: 2em;
+
+    > h3 {
+      margin: 0 0 5px;
+    }
+
+    &:after {
+      content: " ";
+      right: 100%;
+      height: 0;
+      width: 0;
+      position: absolute;
+      border: solid transparent;
+      pointer-events: none;
+      border-right-color: #fff;
+      border-width: $achievements__arrow-size;
+      top: 0;
+    }
+  }
+
+  // achievements-timeline__year
+  &__year {
+    display: block;
+    margin: ($watermark-icon-size * 2/3) 0 1em;
+    padding-left: $achievements__left-content-pos;
+    font-size: 50px;
+    font-weight: bold;
+    color: transparentize(#000, 0.6);
+  }
+
+  // from little screen
+  @media (min-width: $screen-md-min) {
+    margin: auto;
+    width: $screen-sm-min;
+  }
+}

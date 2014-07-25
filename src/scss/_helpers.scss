@@ -1,0 +1,102 @@
+
+//== Helpers
+//-----------------------------------------------------------------------------
+
+//== Layout classes
+//-----------------------------------------------------------------------------
+
+.h100{
+  height: 100%;
+}
+.h40{
+  height: 40%;
+}
+
+.f-row {
+  display: flex;
+}
+
+.f-col {
+  @extend .f-row;
+  flex-direction: column;
+}
+
+.f-1{
+  flex: 1;
+}
+
+.fill{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+//== Virginizr classes
+//-----------------------------------------------------------------------------
+
+.virgin-button{
+  background: none;
+  border: none;
+}
+
+.virgin-ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.virgin-figure{
+  margin: 0;
+}
+
+
+//== Section classes
+//-----------------------------------------------------------------------------
+
+.section-title{
+  border-bottom: 1px solid;
+  text-align: center;
+}
+
+@mixin section-theme($color){
+  @extend .f-col;
+
+  background-color: $color;
+  color: #fff;
+
+  // only on modile
+  @media (max-width: $screen-xs-max) {
+    &__nav-back {
+
+      position: absolute;
+      z-index: 5;
+      bottom: 0;
+      height: $navbar--height;
+      left: 0;
+      right: 0;
+
+      background-color: $color;
+    }
+  }
+}
+
+.section__container {
+
+  @extend .f-col;
+  @extend .f-1;
+
+  position: relative;
+  z-index: 5;
+
+  padding: 0 10px;
+
+  min-height: 300px;
+
+  // no mobile
+  @media (min-width: $screen-sm-min) {
+    margin-left: $navbar--width + 10px;
+  }
+
+}

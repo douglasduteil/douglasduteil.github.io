@@ -1,0 +1,41 @@
+
+//== Watermark
+//-----------------------------------------------------------------------------
+
+.watermark{
+  $side-padding: 10px;
+  position: absolute;
+  z-index: 0;
+  top: $side-padding;
+  left: $side-padding;
+  right: $side-padding;
+  bottom: $side-padding;
+  overflow: hidden;
+
+  // no modile
+  @media (min-width: $screen-sm-min) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: $navbar--width;
+  }
+
+  > .fa {
+    @extend .fill;
+    opacity: 0.1;
+
+    margin: auto;
+
+    font-size: $watermark-icon-size;
+    height: $watermark-icon-size;
+
+    text-align: center;
+
+    // no modile
+    @media (min-width: $screen-sm-min) {
+      font-size: $watermark-icon-size * 2;
+    }
+
+  }
+}
+

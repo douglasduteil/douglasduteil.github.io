@@ -1,0 +1,17 @@
+{
+  "name": "douglasduteil.github.com",
+  "version": "0.0.0",
+  "homepage": "https://github.com/douglasduteil/douglasduteil.github.com",
+  "authors": [
+    "Douglas Duteil <douglasduteil@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular-ui-router": "~0.2.10",
+    "fontawesome": "~4.1.0",
+    "normalize.css": "~3.0.1",
+    "yepnope": "~2.0.0",
+    "modernizr": "~2.8.3"
+  }
+}

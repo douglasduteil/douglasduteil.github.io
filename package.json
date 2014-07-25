@@ -1,0 +1,39 @@
+{
+  "name": "douglasduteil.github.com",
+  "version": "0.0.0",
+  "description": "",
+  "main": " ",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/douglasduteil/douglasduteil.github.com.git"
+  },
+  "author": "Douglas Duteil",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/douglasduteil/douglasduteil.github.com/issues"
+  },
+  "homepage": "https://github.com/douglasduteil/douglasduteil.github.com",
+  "devDependencies": {
+    "browser-sync": "^1",
+    "dd-deploy": "git+https://git@github.com/douglasduteil/dd-deploy.git",
+    "gulp": "^3",
+    "gulp-autoprefixer": "^0",
+    "gulp-changed": "^0",
+    "gulp-concat": "^2.3.4",
+    "gulp-cssmin": "^0.1.6",
+    "gulp-jshint": "^1",
+    "gulp-load-plugins": "^0",
+    "gulp-minify-html": "^0.1.4",
+    "gulp-ng-annotate": "^0",
+    "gulp-ng-html2js": "^0.1.7",
+    "gulp-preprocess": "^1.1.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0",
+    "gulp-uglify": "^0.3.1",
+    "jshint-stylish": "^0",
+    "yargs": "^1.2.6"
+  }
+}

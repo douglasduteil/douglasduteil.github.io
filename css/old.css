@@ -91,7 +91,7 @@ body:before {
   content: "";
   z-index: -1;
   background: #111;
-  opacity: 0.5;
+  opacity: 0.75;
 }
 @media (min-width: 768px) {
   /* line 8, ../old.scss */
@@ -106,7 +106,7 @@ a {
 }
 
 /* line 38, ../old.scss */
-.dd-nav {
+.navbar {
   display: none;
 }
 

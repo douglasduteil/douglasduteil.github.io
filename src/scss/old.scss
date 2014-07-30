@@ -22,7 +22,7 @@ body {
     @extend .fill;
     z-index: -1;
     background: #111;
-    opacity: 0.5;
+    opacity: 0.75;
   }
 
   // no modile
@@ -35,7 +35,7 @@ a {
   color: inherit;
 }
 
-.dd-nav {
+.navbar {
   display: none;
 }
 

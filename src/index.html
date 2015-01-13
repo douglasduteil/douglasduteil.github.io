@@ -67,7 +67,7 @@
 
 <!-- js -->
 
-<script async>
+<script async defer>
   WebFontConfig = {
     google: {
       families: ['Lato:300']
@@ -85,7 +85,7 @@
   })();
 </script>
 
-<script async id="inlined-$script.js">
+<script async defer id="inlined-$script.js">
   /*!
    * $script.js JS loader & dependency manager
    * https://github.com/ded/script.js
@@ -105,7 +105,7 @@
     }
 
     /* <!-- @if NODE_ENV=='dev' --> */
-    window.Modernizr.flexbox ? cssLinkInjector('css/old.css') : cssLinkInjector('css/old.css');
+    window.Modernizr.flexbox ? cssLinkInjector('css/modern.css') : cssLinkInjector('css/old.css');
     /* <!-- @endif --> */
 
     /* <!-- @if NODE_ENV=='prod' --> */
@@ -116,9 +116,9 @@
 
   /* <!-- @if NODE_ENV=='dev' --> */
   // load all of the dependencies asynchronously.
-  $script('bower_components/angular/angular.min.js', function () {
+  $script('bower_components/angular/angular.js', function () {
     $script([
-      'bower_components/angular-ui-router/release/angular-ui-router.min.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
       'js/dd-fake-typer.js',
       'js/app.js'
     ], function () {

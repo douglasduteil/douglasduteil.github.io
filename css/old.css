@@ -80,8 +80,7 @@
 body {
   font-family: 'Lato';
   background: url("https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xfa1/t1.0-9/1374780_746857325324990_1630463240_n.jpg") no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   background-position: top;
   overflow: hidden;
   color: #fff;

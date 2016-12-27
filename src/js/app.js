@@ -1,18 +1,19 @@
-'use strict';
+'use strict'
 
-angular.module('x', ['ui.router', 'dd.fake-typer'])
-  .run(function($state, $timeout){
-
-    $timeout(function(){
-      if (window.Modernizr && !window.Modernizr.flexbox){
-        $state.go('me');
+window.angular
+  .module('x', [
+    'ui.router',
+    'dd.fake-typer'
+  ])
+  .run(function ($state, $timeout) {
+    $timeout(function () {
+      if (window.Modernizr && !window.Modernizr.flexbox) {
+        $state.go('me')
       }
-    }, 0);
-
+    }, 0)
   })
   .config(function ($stateProvider, $urlRouterProvider) {
-
-    $urlRouterProvider.otherwise('me');
+    $urlRouterProvider.otherwise('me')
 
     $stateProvider
       .state('me', {
@@ -32,9 +33,5 @@ angular.module('x', ['ui.router', 'dd.fake-typer'])
         url: '/rocket',
         templateUrl: 'views/rocket.html'
       })
-    ;
-
-
   })
 
-;

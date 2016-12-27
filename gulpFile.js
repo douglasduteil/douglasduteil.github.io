@@ -83,7 +83,6 @@ gulp.task('_copy-other', function () {
 })
 
 gulp.task('_copy-vendor', function () {
-  console.log(config.dependencies_endpoints)
   return gulp.src(config.dependencies_endpoints, { base: './node_modules' })
     .pipe($.changed(config.outFolder))
     .pipe($.debug({title: '_copy-vendor:'}))

@@ -4,11 +4,9 @@
   "description": "",
   "main": " ",
   "scripts": {
-    "install": "npm run modernizr",
-    "modernizr": "modernizr -c modernizr-config.json -d out/vendor/modernizr.js",
     "test": " ",
     "deploy": "gulp deploy",
-    "lint": "eslint src gulpFile.js --fix",
+    "lint": "gulp run lint",
     "start": "gulp serve"
   },
   "repository": {
@@ -33,6 +31,7 @@
     "gulp-changed": "^1.3.2",
     "gulp-concat": "^2.3.4",
     "gulp-cssmin": "^0.1.6",
+    "gulp-debug": "^3.0.0",
     "gulp-eslint": "^3.0.1",
     "gulp-load-plugins": "^1.4.0",
     "gulp-minify-html": "^1.0.6",

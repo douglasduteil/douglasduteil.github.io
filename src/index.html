@@ -46,8 +46,8 @@
   <meta name="application-name" content="Douglas Duteil">
 
   <!-- css -->
-  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
-  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="vendor/normalize.css/normalize.css"/>
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css"/>
   <!-- /css -->
 
 </head>
@@ -116,9 +116,9 @@
 
   /* <!-- @if NODE_ENV=='dev' --> */
   // load all of the dependencies asynchronously.
-  $script('node_modules/angular/angular.js', function () {
+  $script('vendor/angular/angular.js', function () {
     $script([
-      'node_modules/angular-ui-router/release/angular-ui-router.js',
+      'vendor/angular-ui-router/release/angular-ui-router.js',
       'js/dd-fake-typer.js',
       'js/app.js'
     ], function () {
@@ -130,9 +130,9 @@
 
   /* <!-- @if NODE_ENV=='prod' --> */
   // load all of the dependencies asynchronously.
-  $script('node_modules/angular/angular.min.js', function () {
+  $script('vendor/angular/angular.min.js', function () {
     $script([
-      'node_modules/angular-ui-router/release/angular-ui-router.min.js',
+      'vendor/angular-ui-router/release/angular-ui-router.min.js',
       'script.min.js'
     ], function () {
       // when all is done, execute bootstrap angular application

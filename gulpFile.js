@@ -2,6 +2,7 @@
 
 var argv = require('yargs').argv
 var gulp = require('gulp')
+var path = require('path')
 
 var browserSync = require('browser-sync').create()
 var reload = browserSync.reload
@@ -12,6 +13,7 @@ var config = {
   outFolder: 'out',
   tmpFolder: '.tmp',
   srcFolder: 'src',
+  outVendorFolder: 'out/vendor',
 
   dependencies_endpoints: [
     // css
@@ -48,6 +50,7 @@ gulp.task('dist', ['js_min', 'css_min', 'copy'])
 gulp.task('scss', function () {
   return gulp.src('scss/*.scss', { cwd: config.srcFolder })
     .pipe($.changed(config.outFolder + '/css', { extension: '.css' }))
+    .pipe($.debug({title: 'scss:'}))
     .pipe($.sass({
       style: 'expanded',
       lineNumbers: true,
@@ -65,6 +68,7 @@ gulp.task('scss', function () {
 gulp.task('_preprocess_html', function () {
   return gulp.src(['*.html'], { cwd: config.srcFolder, base: config.srcFolder })
     .pipe($.changed(config.outFolder))
+    .pipe($.debug({title: '_preprocess_html:'}))
     .pipe($.preprocess({context: { NODE_ENV: env, DEBUG: true }}))
     .pipe(gulp.dest(config.outFolder))
     .pipe(browserSync.reload({stream: true}))
@@ -73,14 +77,17 @@ gulp.task('_preprocess_html', function () {
 gulp.task('_copy-other', function () {
   return gulp.src(['js/*', 'views/*', 'icons/*'], { cwd: config.srcFolder, base: config.srcFolder })
     .pipe($.changed(config.outFolder))
+    .pipe($.debug({title: '_copy-other:'}))
     .pipe(gulp.dest(config.outFolder))
     .pipe(browserSync.reload({stream: true}))
 })
 
 gulp.task('_copy-vendor', function () {
-  return gulp.src(config.dependencies_endpoints, { base: './' })
+  console.log(config.dependencies_endpoints)
+  return gulp.src(config.dependencies_endpoints, { base: './node_modules' })
     .pipe($.changed(config.outFolder))
-    .pipe(gulp.dest(config.outFolder))
+    .pipe($.debug({title: '_copy-vendor:'}))
+    .pipe(gulp.dest(config.outVendorFolder))
     .pipe(browserSync.reload({stream: true}))
 })
 
@@ -98,7 +105,7 @@ gulp.task('browser-sync', function () {
   })
 })
 
-gulp.task('_serve', ['copy', 'scss', 'browser-sync'], function () {
+gulp.task('_serve', ['copy', 'scss', 'modernizr', 'browser-sync'], function () {
   gulp.watch(config.srcFolder + '/scss/**', ['scss'])
 
   gulp.watch(config.srcFolder + '/**/*', ['copy'])
@@ -110,6 +117,7 @@ gulp.task('_serve', ['copy', 'scss', 'browser-sync'], function () {
 
 gulp.task('html_min', function () {
   return gulp.src(config.srcFolder + '/views/*.html')
+    .pipe($.debug({title: 'html_min:'}))
     .pipe($.minifyHtml({
       empty: true,
       spare: true,
@@ -124,6 +132,7 @@ gulp.task('html_min', function () {
 
 gulp.task('ngAnnotate', function () {
   return gulp.src(config.srcFolder + '/js/*.js')
+    .pipe($.debug({title: 'ngAnnotate:'}))
     .pipe($.ngAnnotate({
       remove: true,
       add: true,
@@ -135,6 +144,7 @@ gulp.task('ngAnnotate', function () {
 
 gulp.task('js_min', ['ngAnnotate', 'html_min'], function () {
   return gulp.src([config.tmpFolder + '/script-app.js', config.tmpFolder + '/script-partials.js'])
+    .pipe($.debug({title: 'js_min:'}))
     .pipe($.concat('script.min.js'))
     .pipe($.uglify())
     .pipe(gulp.dest(config.outFolder))
@@ -146,6 +156,7 @@ gulp.task('js_min', ['ngAnnotate', 'html_min'], function () {
 
 gulp.task('css_min', ['scss'], function () {
   return gulp.src(config.outFolder + '/css/*')
+    .pipe($.debug({title: 'css_min:'}))
     .pipe($.cssmin())
     .pipe($.rename({suffix: '.min'}))
     .pipe(gulp.dest(config.outFolder + '/css'))
@@ -160,7 +171,27 @@ gulp.task('eslint', function () {
     config.srcFolder + '/**/*',
     'gulpFile.js'
   ])
+    .pipe($.debug({title: 'eslint:'}))
     .pipe($.eslint())
+})
+
+// ////////////////////////////////////////////////////////////////////////////
+// Modernizr
+// ////////////////////////////////////////////////////////////////////////////
+
+gulp.task('modernizr', function (cb) {
+  var fs = require('fs')
+  var modernizr = require('modernizr')
+
+  modernizr.build(
+    require('./modernizr-config.json'),
+    function (result) {
+      fs.writeFile(
+        path.join(config.outVendorFolder, 'modernizr.js'),
+        result,
+        cb
+      )
+    })
 })
 
 // ////////////////////////////////////////////////////////////////////////////

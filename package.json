@@ -7,6 +7,7 @@
     "install": "npm run modernizr",
     "modernizr": "modernizr -c modernizr-config.json -d out/vendor/modernizr.js",
     "test": " ",
+    "deploy": "gulp deploy",
     "lint": "eslint src gulpFile.js --fix",
     "start": "gulp serve"
   },

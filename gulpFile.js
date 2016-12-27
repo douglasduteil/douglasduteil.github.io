@@ -177,5 +177,5 @@ gulp.task('deploy', function (cb) {
   distWorkspace.extraCleanUp()
   distWorkspace.copy(config.outFolder)
   distWorkspace.commit('Update ' + new Date().toISOString())
-  // distWorkspace.push();
+  // distWorkspace.push()
 })

@@ -51,7 +51,7 @@ gulp.task('dist', ['js_min', 'css_min', 'copy'])
 
 gulp.task('scss', function () {
   return gulp.src('scss/*.scss', { cwd: config.srcFolder })
-    .pipe($.changed(config.outFolder + '/css', { extension: '.css' }))
+    // .pipe($.changed(config.outFolder + '/css', { extension: '.css' }))
     .pipe($.debug({title: 'scss:'}))
     .pipe($.sass({
       style: 'expanded',

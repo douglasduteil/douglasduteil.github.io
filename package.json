@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/douglasduteil/douglasduteil.github.com",
   "devDependencies": {
+    "async": "^2.1.4",
     "browser-sync": "^2.18.5",
+    "debug": "^2.5.2",
     "eslint": "^3.12.2",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-import": "^2.2.0",
@@ -42,11 +44,15 @@
     "gulp-sass": "^3.0.0",
     "gulp-uglify": "^2.0.0",
     "jshint-stylish": "^2.2.1",
+    "mkdirp": "^0.5.1",
     "node-git-deployor": "^1.0.2",
+    "node-sass": "^4.1.1",
+    "preprocess": "^3.1.0",
     "yargs": "^6.5.0"
   },
   "dependencies": {
     "angular-ui-router": "^0.3.2",
+    "dio.js": "^5.0.2",
     "font-awesome": "^4.7.0",
     "modernizr": "^3.3.1",
     "normalize.css": "^5.0.0"

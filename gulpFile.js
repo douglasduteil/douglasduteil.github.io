@@ -1,7 +1,9 @@
 'use strict'
 
 var argv = require('yargs').argv
+var debug = require('debug')('gulpfile')
 var gulp = require('gulp')
+var mkdirp = require('mkdirp')
 var path = require('path')
 
 var browserSync = require('browser-sync').create()
@@ -90,7 +92,43 @@ gulp.task('_copy-vendor', function () {
     .pipe(browserSync.reload({stream: true}))
 })
 
-gulp.task('copy', ['_preprocess_html', '_copy-other', '_copy-vendor'])
+gulp.task('copy', ['js2html', '_copy-vendor'])// ['_preprocess_html', '_copy-other', '_copy-vendor'])
+
+// ////////////////////////////////////////////////////////////////////////////
+// JS->HTML
+// ////////////////////////////////////////////////////////////////////////////
+
+gulp.task('js2html', function (cb) {
+  const htmlBuilder = require('./build/html.js').htmlBuilder
+
+  const pages = [
+    {
+      dest: 'index.html',
+      source: './src/index.js',
+      title: 'me'
+    },
+    {
+      dest: 'contact.html',
+      source: './src/contact.js',
+      title: 'contact'
+    }
+  ]
+
+  // REMOVE CACHED SCRIPTS
+  pages.forEach(({source}) => {
+    delete require.cache[require.resolve(source)]
+  })
+
+  htmlBuilder({
+    base: path.join(config.srcFolder, 'base.html'),
+    outputDir: config.outFolder,
+    pages: pages.map((page) => Object.assign({}, page, {source: require(page.source)})),
+    preprocessOptions: {
+      NODE_ENV: env,
+      DEBUG: true
+    }
+  }, cb)
+})
 
 // ////////////////////////////////////////////////////////////////////////////
 //
@@ -179,12 +217,18 @@ gulp.task('eslint', function () {
 // ////////////////////////////////////////////////////////////////////////////
 
 gulp.task('modernizr', function (cb) {
+  debug('modernizr')
+
   var fs = require('fs')
   var modernizr = require('modernizr')
 
+  mkdirp.sync('out/vendor')
   modernizr.build(
     require('./modernizr-config.json'),
     function (result) {
+      debug('modernizr built')
+      mkdirp.sync('out')
+
       fs.writeFile(
         path.join(config.outVendorFolder, 'modernizr.js'),
         result,

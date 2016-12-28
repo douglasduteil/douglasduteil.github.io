@@ -115,7 +115,10 @@ gulp.task('js2html', function (cb) {
   ]
 
   // REMOVE CACHED SCRIPTS
-  pages.forEach(({source}) => {
+  const targets = Object.keys(require.cache)
+    .filter(fpath => fpath.includes(path.resolve('./', config.srcFolder)))
+  debug('js2html delete from cache %j', targets)
+  targets.forEach((source) => {
     delete require.cache[require.resolve(source)]
   })
 

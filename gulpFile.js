@@ -107,6 +107,17 @@ gulp.task('js2html', function (cb) {
       source: './src/index.js',
       title: 'me'
     },
+    //
+    {
+      dest: 'achievements.html',
+      source: './src/achievements.js',
+      title: 'achievements'
+    },
+    {
+      dest: 'rocket.html',
+      source: './src/rocket.js',
+      title: 'rocket'
+    },
     {
       dest: 'contact.html',
       source: './src/contact.js',

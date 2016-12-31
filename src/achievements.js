@@ -2,7 +2,7 @@
 
 const {h, Component} = require('dio.js')
 
-const {Menu, NavBarBack} = require('./partials/menu.js')
+const {Menu} = require('./partials/menu.js')
 const {Watermark} = require('./partials/watermark.js')
 
 //
@@ -75,7 +75,7 @@ module.exports = class Achievements extends Component {
         )
       ),
       h(Watermark, {icon: 'trophy'}),
-      NavBarBack
+      h('div', {className: 'achievements__nav-back'})
     ]
   }
 }

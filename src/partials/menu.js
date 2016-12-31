@@ -45,6 +45,3 @@ exports.Menu = h => props =>
       })
     ])
   ])
-
-exports.NavBarBack = h => props =>
-  h('div', {className: 'achievements__nav-back'})

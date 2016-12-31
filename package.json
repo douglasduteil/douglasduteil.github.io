@@ -43,6 +43,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^3.0.0",
     "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
     "jshint-stylish": "^2.2.1",
     "mkdirp": "^0.5.1",
     "node-git-deployor": "^1.0.2",

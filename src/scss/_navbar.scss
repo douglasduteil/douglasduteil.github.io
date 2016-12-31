@@ -6,8 +6,13 @@
   color: #fff;
   z-index: 1000;
 
-  button {
-    @extend .virgin-button;
+  > a {
+    @extend .virgin-a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: transparentize(#000, 0.6);
     color: #eee;
 
@@ -23,6 +28,10 @@
       background-color: transparentize(#fff, 0.8);
     }
 
+    // only on mobile
+    @media (max-width: $screen-xs-max) {
+      height: $navbar--height;
+    }
   }
 
   // only on mobile
@@ -32,10 +41,6 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-
-    button {
-      height: $navbar--height;
-    }
   }
 
   // no modile
@@ -47,7 +52,6 @@
     left: 0;
     height: 100%;
     width: $navbar--width;
-
   }
 }
 

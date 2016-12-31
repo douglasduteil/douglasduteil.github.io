@@ -26,10 +26,6 @@ var config = {
     'node_modules/yepnope/dist/*',
 
     // js
-    'node_modules/angular/angular.js',
-    'node_modules/angular/angular.min.js',
-    'node_modules/angular/angular.min.js.map',
-    'node_modules/angular-ui-router/release/*'
   ]
 }
 
@@ -77,7 +73,7 @@ gulp.task('_preprocess_html', function () {
 })
 
 gulp.task('_copy-other', function () {
-  return gulp.src(['js/*', 'views/*', 'icons/*'], { cwd: config.srcFolder, base: config.srcFolder })
+  return gulp.src(['js/*', 'views/*', 'icons/*', 'images/*'], { cwd: config.srcFolder, base: config.srcFolder })
     .pipe($.changed(config.outFolder))
     .pipe($.debug({title: '_copy-other:'}))
     .pipe(gulp.dest(config.outFolder))
@@ -92,7 +88,7 @@ gulp.task('_copy-vendor', function () {
     .pipe(browserSync.reload({stream: true}))
 })
 
-gulp.task('copy', ['js2html', '_copy-vendor'])// ['_preprocess_html', '_copy-other', '_copy-vendor'])
+gulp.task('copy', ['js2html', '_copy-other', '_copy-vendor'])// ['_preprocess_html', '_copy-other', '_copy-vendor'])
 
 // ////////////////////////////////////////////////////////////////////////////
 // JS->HTML
@@ -141,7 +137,13 @@ gulp.task('js2html', function (cb) {
       NODE_ENV: env,
       DEBUG: true
     }
-  }, cb)
+  }, function (errors) {
+    if (errors && errors.length) {
+      errors.forEach((err) => $.util.log(err))
+    }
+
+    cb()
+  })
 })
 
 // ////////////////////////////////////////////////////////////////////////////

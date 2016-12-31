@@ -51,9 +51,10 @@ function htmlBuilder ({base, outputDir, pages, preprocessOptions}, callback) {
     async.apply(async.parallel, reflected)
     // async.parallel(pages.map((page) => async.apply(__foo, page)))
     // async.parallel(reflected)
-  ], function () {
+  ], function (_, [, results]) {
     debug('end')
-    callback()
+    const errors = results.filter(r => r && r.error).map(({error}) => error)
+    callback(errors.length && errors || null)
   })
 }
 
@@ -68,11 +69,18 @@ function _template (templateFile, body, stylesheet) {
 
 function _runDioRender ({outputDir, preprocessOptions, templateFile}, page, cb) {
   debug('_runDioRender', page)
-  const content = dio
-    .renderToString(page.source, _template.bind(null, templateFile))
-    .replace(/<!--\s*@title\s*-->/, page.title)
-  debug(preprocessOptions)
-  const preprocessedContent = preprocess(content, preprocessOptions)
-  fs.writeFile(path.join(outputDir, page.dest), preprocessedContent, cb)
+
+  try {
+    debug('+dio renderToString')
+    const content = dio
+      .renderToString(page.source, _template.bind(null, templateFile))
+      .replace(/<!--\s*@title\s*-->/, page.title)
+    debug('-dio renderToString')
+    // debug(preprocessOptions)
+    const preprocessedContent = preprocess(content, preprocessOptions)
+    fs.writeFile(path.join(outputDir, page.dest), preprocessedContent, cb)
+  } catch (e) {
+    cb(e)
+  }
 }
 

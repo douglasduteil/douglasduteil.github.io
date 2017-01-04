@@ -18,6 +18,13 @@
   <meta name="copyright" content="© 2012 Douglas Duteil">
   <meta name="description" content="Personal website">
 
+  <script>
+  // force https
+  if (!window.location.port && window.location.protocol !== 'https:') {
+    window.location.protocol = 'https:'
+  }
+  /* eslint-disable no-trailing-spaces, eol-last */
+  </script>
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">

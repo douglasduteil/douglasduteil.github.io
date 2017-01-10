@@ -2,7 +2,7 @@
 
 const {h, Component} = require('dio.js')
 
-const {Menu, NavBarBack} = require('./partials/menu.js')
+const {Menu} = require('./partials/menu.js')
 const {Watermark} = require('./partials/watermark.js')
 
 //

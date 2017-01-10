@@ -75,6 +75,7 @@ function _runDioRender ({outputDir, preprocessOptions, templateFile}, page, cb) 
     const content = dio
       .renderToString(page.source, _template.bind(null, templateFile))
       .replace(/<!--\s*@title\s*-->/, page.title)
+      .replace(/<!--\s*@critical-css\s*-->/, page.criticalCss)
     debug('-dio renderToString')
     // debug(preprocessOptions)
     const preprocessedContent = preprocess(content, preprocessOptions)

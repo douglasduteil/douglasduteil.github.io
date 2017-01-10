@@ -17,6 +17,11 @@ var config = {
   srcFolder: 'src',
   outVendorFolder: 'out/vendor',
 
+  criticalCss: [
+    'node_modules/normalize.css/normalize.css',
+    'node_modules/font-awesome/css/font-awesome.css',
+  ],
+
   dependencies_endpoints: [
     // css
     'node_modules/normalize.css/normalize.css',
@@ -26,6 +31,8 @@ var config = {
     'node_modules/yepnope/dist/*',
 
     // js
+    'node_modules/dio.js/dio.js',
+    'node_modules/dio.js/dio.min.js'
   ]
 }
 
@@ -47,7 +54,7 @@ gulp.task('dist', ['js_min', 'css_min', 'copy'])
 
 gulp.task('scss', function () {
   return gulp.src('scss/*.scss', { cwd: config.srcFolder })
-    // .pipe($.changed(config.outFolder + '/css', { extension: '.css' }))
+    // .pipe($.changed(config.outFolder + '/css', { extension: '.css' })) 
     .pipe($.debug({title: 'scss:'}))
     .pipe($.sass({
       style: 'expanded',
@@ -88,33 +95,69 @@ gulp.task('_copy-vendor', function () {
     .pipe(browserSync.reload({stream: true}))
 })
 
-gulp.task('copy', ['js2html', '_copy-other', '_copy-vendor'])// ['_preprocess_html', '_copy-other', '_copy-vendor'])
+gulp.task('copy', ['js2html', 'rollup', '_copy-other', '_copy-vendor'])// ['_preprocess_html', '_copy-other', '_copy-vendor'])
+
+
+gulp.task('rollup', function () {
+  const rollup = require('rollup-stream')
+  const nodeResolve = require('rollup-plugin-node-resolve')
+  const commonjs = require('rollup-plugin-commonjs')
+  const source = require('vinyl-source-stream')
+
+  return rollup({
+    entry: path.join(config.srcFolder, 'browser.js'),
+    format: 'iife',
+    moduleName: 'MyWebsite',
+    plugins: [
+      commonjs()
+    ],
+    external: [ 
+      'dio.js'
+    ],
+    globals: {
+      'dio.js': 'dio'
+    }
+  })
+  .pipe(source('browser.js'))
+  .pipe(gulp.dest(config.outFolder))
+})
 
 // ////////////////////////////////////////////////////////////////////////////
 // JS->HTML
 // ////////////////////////////////////////////////////////////////////////////
 
 gulp.task('js2html', function (cb) {
+  const fs = require('fs')
   const htmlBuilder = require('./build/html.js').htmlBuilder
 
+  const concatContent = (memo, file) => 
+    memo.concat(fs.readFileSync(file).toString('utf8'))
+    .replace(/\.\.\/fonts/g, 'vendor/font-awesome/fonts')
+
+  const stylesheetContents = config.criticalCss.reduce(concatContent, '')
+  const criticalCss = `<style>${stylesheetContents}</style>`
   const pages = [
     {
+      criticalCss,
       dest: 'index.html',
       source: './src/index.js',
       title: 'me'
     },
     //
     {
+      criticalCss,
       dest: 'achievements.html',
       source: './src/achievements.js',
       title: 'achievements'
     },
     {
+      criticalCss,
       dest: 'rocket.html',
       source: './src/rocket.js',
       title: 'rocket'
     },
     {
+      criticalCss,
       dest: 'contact.html',
       source: './src/contact.js',
       title: 'contact'
@@ -152,7 +195,10 @@ gulp.task('js2html', function (cb) {
 
 gulp.task('browser-sync', function () {
   browserSync.init({
+    ghostMode: false,
+    ui: false,
     server: {
+      https: true,
       baseDir: config.outFolder
     }
   })

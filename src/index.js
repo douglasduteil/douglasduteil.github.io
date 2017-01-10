@@ -2,7 +2,22 @@
 
 const {h, Component} = require('dio.js')
 
-const {Menu, NavBarBack} = require('./partials/menu.js')
+const {Menu} = require('./partials/menu.js')
+
+const infos = [
+  {
+    iconName: 'map-marker',
+    text: 'Paris, France'
+  },
+  {
+    iconName: 'github-alt',
+    text: 'AngularUI Member'
+  },
+  {
+    iconName: 'suitcase',
+    text: 'Front End Developer at SFEIR Paris'
+  }
+]
 
 //
 
@@ -10,9 +25,7 @@ module.exports = class Me extends Component {
   render () {
     return [
       Menu,
-      h('div', {
-        className: 'h100 me'
-      }, meList())
+      h('div', {className: 'h100 me'}, meList())
     ]
   }
 }
@@ -20,9 +33,7 @@ module.exports = class Me extends Component {
 //
 
 function meList () {
-  return h('div', {
-    className: 'me__list-container h100'
-  },
+  return h('div', {className: 'me__list-container h100'},
     h('ul', {className: 'f-col me__list'},
       h('li',
         h('h1', 'Douglas Duteil')
@@ -39,21 +50,6 @@ function meList () {
 }
 
 function meMyInfos () {
-  const infos = [
-    {
-      iconName: 'map-marker',
-      text: 'Paris, France'
-    },
-    {
-      iconName: 'github-alt',
-      text: 'AngularUI Member'
-    },
-    {
-      iconName: 'suitcase',
-      text: 'Front End Developer at SFEIR Paris'
-    }
-  ]
-
   return infos.map(({iconName, text}) =>
     h('li', {className: 'f-1'},
       h('i', {className: `fa fa-${iconName}`}),

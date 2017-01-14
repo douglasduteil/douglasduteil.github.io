@@ -1,10 +1,12 @@
 'use strict'
 
+var path = require('path')
+
 var argv = require('yargs').argv
 var debug = require('debug')('gulpfile')
 var gulp = require('gulp')
+var gulpSequence = require('gulp-sequence')
 var mkdirp = require('mkdirp')
-var path = require('path')
 
 var browserSync = require('browser-sync').create()
 var reload = browserSync.reload
@@ -28,6 +30,8 @@ var config = {
     'node_modules/font-awesome/css/*',
     'node_modules/font-awesome/fonts/*',
     'node_modules/modernizr/modernizr.js',
+    'node_modules/sw-toolbox/sw-toolbox.js',
+    'node_modules/sw-toolbox/sw-toolbox.js.map',
     'node_modules/yepnope/dist/*',
 
     // js
@@ -42,11 +46,37 @@ var env = argv.prod ? 'prod' : 'dev'
 // TASK
 // ////////////////////////////////////////////////////////////////////////////
 
-gulp.task('default', ['eslint'])
+gulp.task('default', gulpSequence(['eslint', 'copy']))
 
-gulp.task('serve', ['_serve'])
+gulp.task('serve', gulpSequence(['_serve']))
 
-gulp.task('dist', ['js_min', 'css_min', 'copy'])
+gulp.task('dist', gulpSequence(
+  'del:tmp',
+
+  'build',
+
+  'copy_to_tmp',
+  'del:out',
+
+  [
+    'js_min'
+  ]
+  // ['js_min', 'css_min', 'copy']
+))
+
+// ////////////////////////////////////////////////////////////////////////////
+// Dek
+// ////////////////////////////////////////////////////////////////////////////
+
+gulp.task('del:out', function () {
+  const del = require('del')
+  return del(config.outFolder)
+})
+
+gulp.task('del:tmp', function () {
+  const del = require('del')
+  return del(config.tmpFolder)
+})
 
 // ////////////////////////////////////////////////////////////////////////////
 // SASS
@@ -54,7 +84,7 @@ gulp.task('dist', ['js_min', 'css_min', 'copy'])
 
 gulp.task('scss', function () {
   return gulp.src('scss/*.scss', { cwd: config.srcFolder })
-    // .pipe($.changed(config.outFolder + '/css', { extension: '.css' })) 
+    // .pipe($.changed(config.outFolder + '/css', { extension: '.css' }))
     .pipe($.debug({title: 'scss:'}))
     .pipe($.sass({
       style: 'expanded',
@@ -80,11 +110,19 @@ gulp.task('_preprocess_html', function () {
 })
 
 gulp.task('_copy-other', function () {
-  return gulp.src(['js/*', 'views/*', 'icons/*', 'images/*'], { cwd: config.srcFolder, base: config.srcFolder })
+  return gulp.src([
+      'js/*', 'views/*', 'icons/*', 'images/*',
+      'manifest.json'
+    ], { cwd: config.srcFolder, base: config.srcFolder })
     .pipe($.changed(config.outFolder))
     .pipe($.debug({title: '_copy-other:'}))
     .pipe(gulp.dest(config.outFolder))
     .pipe(browserSync.reload({stream: true}))
+})
+
+gulp.task('copy_to_tmp', function () {
+  return gulp.src(config.outFolder + '/**/*', {base: config.outFolder})
+    .pipe(gulp.dest(config.tmpFolder))
 })
 
 gulp.task('_copy-vendor', function () {
@@ -95,10 +133,20 @@ gulp.task('_copy-vendor', function () {
     .pipe(browserSync.reload({stream: true}))
 })
 
-gulp.task('copy', ['js2html', 'rollup', '_copy-other', '_copy-vendor'])// ['_preprocess_html', '_copy-other', '_copy-vendor'])
+gulp.task('copy', gulpSequence(
+    [
+      '_copy-other',
+      '_copy-vendor',
+      'js2html',
+      'rollup:browser',
+      'scss'
+    ],
+    'generate-sw-precache'
+  )
+)
 
 
-gulp.task('rollup', function () {
+gulp.task('rollup:browser', function () {
   const rollup = require('rollup-stream')
   const nodeResolve = require('rollup-plugin-node-resolve')
   const commonjs = require('rollup-plugin-commonjs')
@@ -111,7 +159,7 @@ gulp.task('rollup', function () {
     plugins: [
       commonjs()
     ],
-    external: [ 
+    external: [
       'dio.js'
     ],
     globals: {
@@ -122,6 +170,36 @@ gulp.task('rollup', function () {
   .pipe(gulp.dest(config.outFolder))
 })
 
+gulp.task('generate-sw-precache', function (callback) {
+  var swPrecache = require('sw-precache');
+
+  swPrecache.write(`${config.outFolder}/sw.js`, {
+    staticFileGlobs: [
+      config.outFolder + '/**/*.{js,html,css,png,jpg,jpeg,gif,svg,eot,ttf,woff,<woff2></woff2>}',
+    ],
+    runtimeCaching: [
+      {
+        urlPattern: /^https:\/\/fonts\.googleapis\.com\//,
+        handler: 'cacheFirst'
+      },
+      {
+        urlPattern: /^https:\/\/fonts.gstatic.com\//,
+        handler: 'cacheFirst'
+      },
+      {
+        urlPattern: /^https:\/\/ajax.googleapis.com\//,
+        handler: 'cacheFirst'
+      },
+      {
+        urlPattern: /\/vendor\//,
+        handler: 'fastest',
+      }
+    ],
+    stripIgnoredUrlParameters: [/./],
+    stripPrefix: config.outFolder
+  }, callback);
+})
+
 // ////////////////////////////////////////////////////////////////////////////
 // JS->HTML
 // ////////////////////////////////////////////////////////////////////////////
@@ -130,7 +208,7 @@ gulp.task('js2html', function (cb) {
   const fs = require('fs')
   const htmlBuilder = require('./build/html.js').htmlBuilder
 
-  const concatContent = (memo, file) => 
+  const concatContent = (memo, file) =>
     memo.concat(fs.readFileSync(file).toString('utf8'))
     .replace(/\.\.\/fonts/g, 'vendor/font-awesome/fonts')
 
@@ -204,9 +282,10 @@ gulp.task('browser-sync', function () {
   })
 })
 
-gulp.task('_serve', ['copy', 'scss', 'modernizr', 'browser-sync'], function () {
-  gulp.watch(config.srcFolder + '/scss/**', ['scss'])
+gulp.task('build', gulpSequence(['copy', 'scss']))
 
+gulp.task('_serve', ['build', 'browser-sync'], function () {
+  gulp.watch(config.srcFolder + '/scss/**', ['scss'])
   gulp.watch(config.srcFolder + '/**/*', ['copy'])
 })
 
@@ -229,23 +308,15 @@ gulp.task('html_min', function () {
     .pipe(gulp.dest(config.tmpFolder))
 })
 
-gulp.task('ngAnnotate', function () {
-  return gulp.src(config.srcFolder + '/js/*.js')
-    .pipe($.debug({title: 'ngAnnotate:'}))
-    .pipe($.ngAnnotate({
-      remove: true,
-      add: true,
-      single_quotes: true
-    }))
-    .pipe($.concat('script-app.js'))
-    .pipe(gulp.dest(config.tmpFolder))
-})
-
-gulp.task('js_min', ['ngAnnotate', 'html_min'], function () {
-  return gulp.src([config.tmpFolder + '/script-app.js', config.tmpFolder + '/script-partials.js'])
+gulp.task('js_min', function () {
+  return gulp.src(['*.js'], {
+      cwd: config.tmpFolder
+    })
     .pipe($.debug({title: 'js_min:'}))
-    .pipe($.concat('script.min.js'))
     .pipe($.uglify())
+    .pipe($.rename({
+      extname: '.min.js'
+    }))
     .pipe(gulp.dest(config.outFolder))
 })
 

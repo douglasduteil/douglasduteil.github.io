@@ -2,8 +2,8 @@
 
 const {h, Component} = require('dio.js')
 
-const {Menu} = require('./partials/menu.js')
-const {FakeTyper} = require('./components/fake-typer.js')
+const {Menu} = require('../components/menu.js')
+const {FakeTyper} = require('../components/fake-typer.js')
 
 const infos = [
   {

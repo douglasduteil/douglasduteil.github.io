@@ -13,7 +13,7 @@
    - unknown
   -->
 
-  <title><!-- @title --> Douglas Duteil</title>
+  <title>me Douglas Duteil</title>
   <meta name="author" content="Douglas Duteil">
   <meta name="copyright" content="© 2012 Douglas Duteil">
   <meta name="description" content="Douglas DUTEIL - Personal website">
@@ -65,12 +65,13 @@
 
 </head>
 <body>
-  <%= _.keys(htmlWebpackPlugin.files) %>
-  <%= _.keys(htmlWebpackPlugin.files.chunks) %>
-  <br>
-  <%= _.keys(htmlWebpackPlugin.files.js) %>
+
   <section id="root" class="h100">
-    <!-- @body -->
+    <nav class="navbar">
+      <a href="index.html" class="f-1"><i class="fa fa-user"></i></a>
+      <a href="achievements.html" class="f-1"><i class="fa fa-trophy"></i></a>
+      <a href="rocket.html" class="f-1"><i class="fa fa-rocket"></i></a>
+      <a href="contact.html" class="f-1"><i class="fa fa-comments-o"></i></a></nav><div class="h100 me"><div class="me__list-container h100"><ul class="f-col me__list"><li><h1>Douglas Duteil<div><span>#</span><span></span><spanstyle="[object Object]">|</span></div></h1></li><li class="f-1"><i class="fa fa-map-marker"></i><div>Paris, France</div></li><li class="f-1"><i class="fa fa-github-alt"></i><div>AngularUI Member</div></li><li class="f-1"><i class="fa fa-suitcase"></i><div>Front End Developer at SFEIR Paris</div></li><li class="old-browser"><i class="fa fa-thumbs-o-down"></i><a href="http://whatbrowser.org/" rel="noopener" target="_blank">Your browser sucks !</a></li></ul></div></div>
   </section>
 
 <!-- js -->
@@ -86,72 +87,25 @@
   (function(e,t){typeof module!="undefined"&&module.exports?module.exports=t():typeof define=="function"&&define.amd?define(t):this[e]=t()})("$script",function(){function p(e,t){for(var n=0,i=e.length;n<i;++n)if(!t(e[n]))return r;return 1}function d(e,t){p(e,function(e){return!t(e)})}function v(e,t,n){function g(e){return e.call?e():u[e]}function y(){if(!--h){u[o]=1,s&&s();for(var e in f)p(e.split("|"),g)&&!d(f[e],g)&&(f[e]=[])}}e=e[i]?e:[e];var r=t&&t.call,s=r?t:n,o=r?e.join(""):t,h=e.length;return setTimeout(function(){d(e,function t(e,n){if(e===null)return y();e=!n&&e.indexOf(".js")===-1&&!/^https?:\/\//.test(e)&&c?c+e+".js":e;if(l[e])return o&&(a[o]=1),l[e]==2?y():setTimeout(function(){t(e,!0)},0);l[e]=1,o&&(a[o]=1),m(e,y)})},0),v}function m(n,r){var i=e.createElement("script"),u;i.onload=i.onerror=i[o]=function(){if(i[s]&&!/^c|loade/.test(i[s])||u)return;i.onload=i[o]=null,u=1,l[n]=2,r()},i.async=1,i.src=h?n+(n.indexOf("?")===-1?"?":"&")+h:n,t.insertBefore(i,t.lastChild)}var e=document,t=e.getElementsByTagName("head")[0],n="string",r=!1,i="push",s="readyState",o="onreadystatechange",u={},a={},f={},l={},c,h;return v.get=m,v.order=function(e,t,n){(function r(i){i=e.shift(),e.length?v(i,r):v(i,t,n)})()},v.path=function(e){c=e},v.urlArgs=function(e){h=e},v.ready=function(e,t,n){e=e[i]?e:[e];var r=[];return!d(e,function(e){u[e]||r[i](e)})&&p(e,function(e){return u[e]})?t():!function(e){f[e]=f[e]||[],f[e][i](t),n&&n(r)}(e.join("|")),v},v.done=function(e){v([null],e)},v})
 
   /* eslint-enable */
-
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-     .register('/sw.js')
-     .then(function () { console.log('Service Worker Registered') })
-     .catch(function () { console.log('Service Worker not Registered') })
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    (window.requestIdleCallback || window.setTimeout)(onDOMContentLoaded)
-  })
-
-  //
-
-  function onDOMContentLoaded () {
-    var cssStyleSheet
-    var $script = window.$script
-
-    window.WebFontConfig = {
-      google: {
-        families: ['Lato:300']
-      }
-    }
-
-    $script([
-      '//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
-    ])
-
-    $script('vendor/dio.js/dio.js', function () {
-      $script(['browser.js'], function () {
-        const browserLauncher = window.MyWebsite && window.MyWebsite.appHydratation || function noop () {}
-        // delay bootstrap
-        setTimeout(browserLauncher)
-      })
-    })
-
-    /* <!-- @if NODE_ENV=='dev' --> */
-    cssStyleSheet = supportFlexbox() ? 'css/modern.css' : 'css/old.css'
-    /* <!-- @endif --> */
-
-    /* <!-- @if NODE_ENV=='prod' --> */
-    cssStyleSheet = supportFlexbox() ? 'css/modern.min.css' : 'css/old.min.css'
-    /* <!-- @endif --> */
-
-    cssLinkInjector(cssStyleSheet)
-  }
-
-  function supportFlexbox () {
-    var d = document.documentElement.style
-    return ('flexWrap' in d) || ('WebkitFlexWrap' in d) || ('msFlexWrap' in d)
-  }
-
-  function cssLinkInjector (filename) {
-    var headElement = document.getElementsByTagName('head')[0]
-    var linkElement = document.createElement('link')
-    linkElement.setAttribute('rel', 'stylesheet')
-    linkElement.setAttribute('type', 'text/css')
-    linkElement.setAttribute('href', filename)
-    headElement.appendChild(linkElement)
-  }
 </script>
 <!-- /js -->
 
-<!-- css -->
-<!-- @critical-css -->
-<!-- /css -->
+<!-- critical js -->
+<% _(compilation.assets)
+  .filter((file, fileName) => /critical(\.min)?\.js$/.test(fileName))
+  .forEach((file) => {
+%>
+<script async defer><%= file.source() %></script>
+<% }) %>
+<!-- /critical js -->
+<!-- critical css -->
+<% _(compilation.assets)
+  .filter((file, fileName) => /critical(\.min)?\.css$/.test(fileName))
+  .forEach((file) => {
+%>
+<style><%= file.source() %></style>
+<% }) %>
+<!-- /critical css -->
 
 </body>
 </html>

@@ -91,12 +91,8 @@
 <!-- /js -->
 
 <!-- critical js -->
-<% _(compilation.assets)
-  .filter((file, fileName) => /critical(\.min)?\.js$/.test(fileName))
-  .forEach((file) => {
-%>
-<script async defer><%= file.source() %></script>
-<% }) %>
+<script><%= compilation.assets[htmlWebpackPlugin.files.chunks['webpack__loader'].entry].source() %></script>
+<script async defer><%= compilation.assets[htmlWebpackPlugin.files.chunks['critical'].entry].source() %></script>
 <!-- /critical js -->
 <!-- critical css -->
 <% _(compilation.assets)

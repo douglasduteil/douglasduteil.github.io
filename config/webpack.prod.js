@@ -6,11 +6,11 @@ const {
   LoaderOptionsPlugin,
   NamedModulesPlugin,
   ProgressPlugin
-} = require('webpack');
-const webpackMerge = require('webpack-merge');
+} = require('webpack')
+const webpackMerge = require('webpack-merge')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const commonConfig = require('./webpack.common.js');
+const commonConfig = require('./webpack.common.js')
 
 
 module.exports = webpackMerge(commonConfig({production: true}), {

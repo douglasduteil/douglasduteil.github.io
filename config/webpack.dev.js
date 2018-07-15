@@ -1,36 +1,19 @@
 'use strict'
 
-const path = require('path')
-
 const {
-  LoaderOptionsPlugin,
   NamedModulesPlugin
-} = require('webpack');
-const webpackMerge = require('webpack-merge');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+} = require('webpack')
 
-const commonConfig = require('./webpack.common.js');
+const webpackMerge = require('webpack-merge')
 
+const commonConfig = require('./webpack.common.js')
+
+//
 
 module.exports = webpackMerge(commonConfig({}), {
-  devtool: 'inline-source-map',
-
-  entry: {
-    // 'browser': [
-      // 'webpack-dev-server/client?http://localhost:8080',
-      // 'webpack/hot/only-dev-server',
-      // commonConfig({}).entry.browser
-    // ]
-  },
 
   plugins: [
-    new NamedModulesPlugin(),
-
-    // new HotModuleReplacementPlugin(),
-
-    new LoaderOptionsPlugin({
-      debug: true
-    })
+    new NamedModulesPlugin()
   ],
 
   devServer: {
@@ -44,15 +27,6 @@ module.exports = webpackMerge(commonConfig({}), {
       aggregateTimeout: 300,
       poll: 1000
     }
-  },
-
-
-  node: {
-    global: true,
-    crypto: 'empty',
-    process: true,
-    module: false,
-    clearImmediate: false,
-    setImmediate: false
   }
+
 })

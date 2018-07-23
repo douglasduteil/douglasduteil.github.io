@@ -1,0 +1,15 @@
+{
+  "name": "packr",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "private": true,
+  "scripts": {},
+  "author": "Douglas Duteil",
+  "license": "WTFPL",
+  "dependencies": {
+    "rollup": "^0.63.4",
+    "rollup-plugin-babel": "^4.0.0-beta.7",
+    "rollup-plugin-commonjs": "^9.1.3"
+  }
+}

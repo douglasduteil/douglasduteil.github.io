@@ -1,0 +1,14 @@
+{
+  "name": "@hyperchoo/devtools",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {},
+  "author": "Douglas Duteil",
+  "license": "WTFPL",
+  "dependencies": {
+    "on-performance": "^1.2.2",
+    "nanologger": "^1.3.1"
+  }
+}

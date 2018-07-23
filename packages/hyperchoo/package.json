@@ -1,0 +1,19 @@
+{
+  "name": "@hyperchoo/core",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {},
+  "author": "Douglas Duteil",
+  "license": "WTFPL",
+  "dependencies": {
+    "hyperhtml": "^2.11.3",
+    "nanobus": "^4.3.3",
+    "nanotiming": "^7.3.1",
+    "nanorouter": "^3.1.1",
+    "nanolocation": "^1.0.1",
+    "nanoraf": "^3.0.1",
+    "on-idle": "3.1.4"
+  }
+}

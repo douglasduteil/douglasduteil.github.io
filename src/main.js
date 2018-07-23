@@ -8,9 +8,13 @@ import { devtools } from '@hyperchoo/devtools';
 export const app = new HyperChoo(hyper);
 app.use(devtools);
 app.use(countStore);
-app.route('/', mainView);
+app.route(
+  '/',
+  async (state, emit) => await import('./home.js').default(hyper, state, emit)
+);
 
-function mainView(state, emit) {
+async function mainView(state, emit) {
+  await new Promise(res => setTimeout(res, 1000));
   return hyper(state, ':main')`
     <section>
       <h1>count is ${state.count}</h1>
@@ -32,4 +36,4 @@ function countStore(state, emitter) {
 
 //console.log(require('./views/index.html'));
 
-app.mount('#root');
+// app.mount('#root');

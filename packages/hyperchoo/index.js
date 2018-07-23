@@ -32,12 +32,17 @@ export class HyperChoo {
 
     this.emitter.prependListener('render', () => {
       const renderTiming = nanotiming(`${this.prefix}.render`);
-      onIdle(() => {
-        const tree = this.router.emit(this.state.href);
+      onIdle(async () => {
+        const resolveTreeTiming = nanotiming(
+          `${this.prefix}.render resolve tree`
+        );
+        const treeFn = this.router.emit(this.state.href);
+        const tree = await treeFn();
+        resolveTreeTiming();
 
         nanoraf(() => {
           const hyperHtmlTiming = nanotiming(`${this.prefix}.hyperHtml`);
-          this.render`${tree()}`;
+          this.render`${tree}`;
           hyperHtmlTiming();
         })();
       });

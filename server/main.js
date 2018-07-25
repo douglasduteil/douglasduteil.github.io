@@ -14,18 +14,19 @@ import hyperhtmlHtmlViewsLoader from 'hyperhtml-html-views-loader';
 app.hyper = hyper;
 
 const log = Debug('my:server:main');
-const routerWhitelist = [
-  '/',
+const templatePath = 'src/template.html';
+
+//
+
+export const routes = [
+  '/index.html',
   '/me.html',
   '/achievements.html',
   '/rockets.html',
   '/contact.html'
 ];
-const templatePath = 'src/template.html';
 
-//
-
-export default ({ hyperTemplate } = {}) => async (ctx, next) => {
+export default async () => {
   const templateFileBuffer = await fse.readFile(templatePath);
   const htmlifyTemplate = hyperhtmlHtmlViewsLoader
     .call({}, templateFileBuffer.toString())
@@ -37,19 +38,21 @@ export default ({ hyperTemplate } = {}) => async (ctx, next) => {
     sandbox
   );
 
-  const {
-    request: { url, method }
-  } = ctx;
+  return async (ctx, next) => {
+    const {
+      request: { url, method }
+    } = ctx;
 
-  if (/^(?!GET|HEAD).*$/.test(method)) {
-    return next();
-  }
+    if (/^(?!GET|HEAD).*$/.test(method)) {
+      return next();
+    }
 
-  if (!routerWhitelist.includes(url)) {
-    return next();
-  }
+    if (!['/', ...routes].includes(url)) {
+      return next();
+    }
 
-  const response = await app.toString(url);
+    const response = await app.toString(url);
 
-  ctx.body = hyperTemplate(hyper, response).toString();
+    ctx.body = hyperTemplate(hyper, response).toString();
+  };
 };

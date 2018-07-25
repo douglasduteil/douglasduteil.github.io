@@ -1,4 +1,6 @@
 //
 
 require = require('esm')(module);
-module.exports = require('./main.js').default;
+const { default: ssr, routes } = require('./main.js');
+ssr.routes = routes;
+module.exports = ssr;

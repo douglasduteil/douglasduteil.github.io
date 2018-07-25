@@ -6,6 +6,7 @@ import { devtools } from '@hyperchoo/devtools';
 export const app = new HyperChoo({ defaultRoute: '/me' });
 
 app.route('/', () => app.router.emit('/me.html'));
+app.route('/index.html', () => app.router.emit('/me.html'));
 
 app.route('/me.html', async (state, emit) => {
   const { default: template } = await import('./me.js');

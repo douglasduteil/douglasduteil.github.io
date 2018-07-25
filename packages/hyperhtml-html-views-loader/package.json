@@ -1,0 +1,9 @@
+{
+  "name": "hyperhtml-html-views-loader",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "html-loader": "^0.5.5"
+  }
+}

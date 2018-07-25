@@ -1,31 +1,38 @@
 //
 
-import hyper from 'hyperhtml';
+import nanorouter from 'nanorouter';
 
-import { HyperChoo } from '@hyperchoo/core';
-import { devtools } from '@hyperchoo/devtools';
+//
 
-export const app = new HyperChoo(hyper);
-app.use(devtools);
-app.use(countStore);
-app.route('/', mainView);
+export default function routerConfig(hyper, app) {
+  console.log('routerConfig');
 
-function mainView(state, emit) {
-  return hyper(state, ':main')`
-    <section id="root">
-      <h1>count is ${state.count}</h1>
-      <button onclick=${onclick}>Increment</button>
-    </section>
-  `;
+  app.route('/', () => app.router.emit('/me'));
 
-  function onclick() {
-    emit('increment', 1);
-  }
-}
-function countStore(state, emitter) {
-  state.count = 0;
-  emitter.on('increment', function(count) {
-    state.count += count;
-    emitter.emit('render');
+  app.route('/me', async (state, emit) => {
+    console.log('hit /me');
+    console.log({ state, emit });
+    const { default: template } = await import('./me.js');
+    return { body: template(hyper, state, emit) };
   });
+
+  app.route('/achievements', async () => {
+    console.log('hit /achievements');
+    return { body: `Achievements` };
+  });
+
+  app.route('/rockets', async () => {
+    console.log('hit /rockets');
+    return { body: `Rockets` };
+  });
+
+  app.route('/contact', async () => {
+    console.log('hit /contact');
+    return {
+      body: `Contact`
+    };
+  });
+
+  return app;
 }
+//

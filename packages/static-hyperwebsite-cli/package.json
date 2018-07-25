@@ -1,0 +1,16 @@
+{
+  "name": "@douglasduteil/static-hyperwebsite-cli",
+  "version": "0.0.0",
+  "bin": {
+    "static-hyperwebsite": "./bin/static-hyperwebsite.js"
+  },
+  "private": true,
+  "dependencies": {
+    "esm": "^3.0.72",
+    "hyperhtml-html-views-loader": "^0.0.0",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-serve": "^2.0.2",
+    "yargs": "^12.0.1"
+  }
+}

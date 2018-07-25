@@ -16,19 +16,12 @@ const app = new HyperChoo(hyper);
 app.use(countStore);
 app.route('/', mainView);
 
-console.log(
-  templateToRenderModelFn(
-    fs.readFileSync(__dirname + '/views/index.html').toString()
-  )
+const base = templateToRenderModelFn(
+  fs.readFileSync(__dirname + '/views/index.html').toString()
 );
 
 function mainView(state, emit) {
-  return hyper(state, ':main')`
-    <section id="root">
-      <h1>count is ${state.count}</h1>
-      <button onclick=${onclick}>Increment</button>
-    </section>
-  `;
+  return hyper(state, ':main')`${base}`;
 
   function onclick() {
     emit('increment', 1);
@@ -36,7 +29,7 @@ function mainView(state, emit) {
 }
 
 const view = app.router.emit(path);
-// console.log(view().toString());
+console.log(view().toString());
 
 function countStore(state, emitter) {
   state.count = 0;

@@ -2,10 +2,9 @@
 
 import menu from './menu';
 
+const _ = {};
 export default (app, state, emit) => {
-  return app.hyper.wire(state, ':contact')`
-  <menu>${menu(app, state, emit)}</menu>
-
+  return app.hyper.wire(_, ':contact')`
     <h1>Yo Contact </h1>
   `;
 };

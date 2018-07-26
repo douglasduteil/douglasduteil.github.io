@@ -2,27 +2,24 @@ import { stateFrom } from './utils';
 import { commentIcon, faceIcon, trophyIcon, rocketIcon } from './svg';
 
 //
-
-export default ({ hyper: wire }, state = {}, emit) => wire(
-  stateFrom(state.href, () => ({ href: state.href })),
-  ':menu'
-)`
+const _ = {};
+export default (render, state = {}) => render(_)`
 <nav>
   <a active=${isActiveHref(state.href, '/me.html')} href="/me.html">${faceIcon(
-  wire
+  render
 )}</a>
   <a active=${isActiveHref(
     state.href,
     '/achievements.html'
-  )} href="/achievements.html">${trophyIcon(wire)}</a>
+  )} href="/achievements.html">${trophyIcon(render)}</a>
   <a active=${isActiveHref(
     state.href,
     '/rockets.html'
-  )} href="/rockets.html">${rocketIcon(wire)}</a>
+  )} href="/rockets.html">${rocketIcon(render)}</a>
   <a active=${isActiveHref(
     state.href,
     '/contact.html'
-  )} href="/contact.html">${commentIcon(wire)}</a>
+  )} href="/contact.html">${commentIcon(render)}</a>
 </nav>
 `;
 

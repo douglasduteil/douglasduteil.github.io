@@ -96,10 +96,18 @@ export class HyperChoo {
 
   _render(tree) {
     const hyperHtmlTiming = nanotiming(`${this.prefix}.render`);
-    const dom = this.render`${tree.body} ${new Date().toLocaleTimeString()}`;
+    const dom = this.render`${tree.body}`;
     hyperHtmlTiming();
 
+    if (tree.title && typeof document === 'object') {
+      document.title = this.renderTitle(tree.title);
+    }
+
     return dom;
+  }
+
+  renderTitle(title) {
+    return title;
   }
 
   use(cb) {

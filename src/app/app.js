@@ -2,6 +2,8 @@
 
 import { HyperChoo } from '@hyperchoo/core';
 import { devtools } from '@hyperchoo/devtools';
+import { stateFrom } from './utils';
+import rootLayout from './layout';
 
 export const app = new HyperChoo({ defaultRoute: '/me' });
 
@@ -12,29 +14,28 @@ app.route('/me.html', async (state, emit) => {
   const {
     default: template
   } = await import(/* webpackChunkName: "me" */ './me.js');
-  return {
-    title: 'Me',
-    body: template(app, state, emit)
-  };
+  const main = rootLayout(app.hyper.wire, state);
+  return { title: 'Me', body: main(template(app, state, emit)) };
 });
 
 app.route('/achievements.html', async (state, emit) => {
   const {
     default: template
   } = await import(/* webpackChunkName: "achievements" */ './achievements.js');
-  return {
-    title: 'Achievements of',
-    body: template(app, state, emit)
-  };
+
+  const main = rootLayout(app.hyper.wire, state);
+  return { title: 'Achievements of', body: main(template(app, state, emit)) };
 });
 
 app.route('/rockets.html', async (state, emit) => {
   const {
     default: template
   } = await import(/* webpackChunkName: "rockets" */ './rockets.js');
+
+  const main = rootLayout(app.hyper.wire, state);
   return {
     title: 'Rockets of',
-    body: template(app, state, emit)
+    body: main(template(app, state, emit))
   };
 });
 
@@ -42,8 +43,10 @@ app.route('/contact.html', async (state, emit) => {
   const {
     default: template
   } = await import(/* webpackChunkName: "contact" */ './contact.js');
+
+  const main = rootLayout(app.hyper.wire, state);
   return {
     title: 'Contacts of',
-    body: template(app, state, emit)
+    body: main(template(app, state, emit))
   };
 });

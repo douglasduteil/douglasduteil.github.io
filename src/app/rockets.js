@@ -2,9 +2,9 @@
 
 import menu from './menu';
 
+const _ = {};
 export default (app, state, emit) => {
-  return app.hyper.wire(state, ':rockets')`
-  <menu>${menu(app, state, emit)}</menu>
+  return app.hyper.wire(_, ':rockets')`
     <h1>Yo Rockets </h1>
   `;
 };

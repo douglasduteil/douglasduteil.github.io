@@ -22,52 +22,58 @@ const me = gravatar_pic + '?s=680';
 const styles = require('./me.scss');
 
 const inlineStyle = `
-.me {
+main {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
 
+ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 50px;
+  height: 200px;
+}
+
+ul > li {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+ul > li:not(:first-child) {
+  flex: 1;
 }
 `;
 
+const _ = {};
 export default (app, state, emit) => {
-  return app.hyper.wire(state, ':me')`
-    <menu>${menu(app, state, emit)}</menu>
-    <main>
-      <style>${inlineStyle}</style>
-      <ul class="f-col me__list">
+  return app.hyper.wire(_, ':me')`
+
+    <ul class=${styles.list}>
       <li>
         <h1>
           Douglas Duteil
-
-          <div prefix="'#'" order="'random'" class="ng-isolate-scope">
-  <div class="options" style="display: none" ng-transclude="">
-            <dd-fake-typer-option class="ng-scope">=========</dd-fake-typer-option>
-            <dd-fake-typer-option class="ng-scope">Contributor</dd-fake-typer-option>
-            <dd-fake-typer-option class="ng-scope">Developer</dd-fake-typer-option>
-            <dd-fake-typer-option class="ng-scope">Musician</dd-fake-typer-option>
-            <dd-fake-typer-option class="ng-scope">Gamer</dd-fake-typer-option>
-            <dd-fake-typer-option class="ng-scope">Sleeper</dd-fake-typer-option>
-            <dd-fake-typer-option class="ng-scope">Jogger</dd-fake-typer-option>
-          </div>
-  <div class="text ng-binding">#Sleeper</div>
-</div>
         </h1>
       </li>
-      <li class="f-1 ">
+      <li>
         <i class="fa fa-map-marker"></i>
         <div>Paris, France</div>
       </li>
-      <li class="f-1 ">
+      <li>
         <i class="fa fa-github-alt"></i>
         <div>AngularUI Member</div>
       </li>
-      <li class="f-1 ">
+      <li>
         <i class="fa fa-suitcase"></i>
         <div>Front End Developer at SFEIR Paris</div>
       </li>
-      <li class="old-browser">
-        <i class="fa fa-thumbs-o-down"></i> <a href="http://whatbrowser.org/" target="_blank">Your browser sucks !</a>
-      </li>
 
     </ul>
-    </main>
+
+    <style>${inlineStyle}</style>
   `;
 };

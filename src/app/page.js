@@ -11,8 +11,16 @@ const inlineStyle = `
 section {
   flex: 1;
   display: flex;
-  margin-bottom: 50px;
   padding: 20px;
+  margin-bottom: 50px;
+  overflow: auto;
+}
+
+@media (min-width: 768px) {
+  section {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 `;
 const _ = {};
@@ -26,7 +34,7 @@ export default render => ({ title, content, bgColor }) => {
       main {
         background-color: ${bgColor};
       }
-    `
+      `
     }}</style>
   `;
 };

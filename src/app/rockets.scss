@@ -1,0 +1,58 @@
+//
+
+@import './variables';
+@import './mixins';
+
+//== Rocket Views
+//-----------------------------------------------------------------------------
+
+.list {
+  $size: 150px;
+  $spacing: ceil($size / 3);
+
+  @include virgin-ul;
+  @include f-row;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+
+  // modile
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: -20px;
+  }
+
+  > li {
+    margin: $spacing;
+
+    > a {
+      text-decoration: none;
+      color: #111;
+
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+
+      width: $size - 20;
+      height: $size;
+      background: #fff;
+
+      padding: 0 10px;
+
+      transform: rotate(-45deg);
+
+      position: relative;
+
+      &:before {
+        content: '';
+        @include fill;
+        transform: scale(1.1);
+        border: 2px solid white;
+      }
+
+      > div {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

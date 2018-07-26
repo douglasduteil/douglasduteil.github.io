@@ -63,6 +63,15 @@
       padding: 0;
     }
 
+    html.wf-active>body {
+      font-family: 'Lato';
+    }
+
+    body {
+      color: #111;
+      flex: 1;
+    }
+
     root,
     main {
       display: flex;
@@ -73,12 +82,6 @@
     main {
       color: white;
       background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    body {
-      font-family: 'Lato';
-      color: #111;
-      flex: 1;
     }
 
     svg {
@@ -148,7 +151,7 @@
 
   <root>${model.body}</root>
 
-  <script src="main.js"></script>
+  <script src="main.js" async defer></script>
 
   <script async defer>
     WebFontConfig = {

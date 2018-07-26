@@ -1,6 +1,6 @@
 //
 
-import menu from './menu';
+import { githubIcon, locationIcon, suitcaseIcon } from './svg';
 
 const gravatar_pic =
   'http://1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1';
@@ -26,6 +26,9 @@ main {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+  background-image: url(${me}), url(${mini_me_64});
+  background-position: center center;
+  background-size: cover;
 }
 
 ul {
@@ -35,24 +38,33 @@ ul {
   padding: 0;
   list-style-type: none;
   margin-bottom: 50px;
-  height: 200px;
+  height: 250px;
 }
 
 ul > li {
   display: flex;
   align-items: center;
   padding: 0 20px;
+  font-size: 1.15em;
 }
 
 ul > li:not(:first-child) {
   flex: 1;
 }
+
+h1 {
+  font-weight: normal;
+}
+
+i {
+  text-align: center;
+  margin-right: 20px;
+}
 `;
 
 const _ = {};
-export default (app, state, emit) => {
-  return app.hyper.wire(_, ':me')`
-
+export default ({ hyper: { wire } }, state, emit) => {
+  return wire(_, ':me')`
     <ul class=${styles.list}>
       <li>
         <h1>
@@ -60,18 +72,18 @@ export default (app, state, emit) => {
         </h1>
       </li>
       <li>
-        <i class="fa fa-map-marker"></i>
+        <i>${locationIcon(wire)}</i>
         <div>Paris, France</div>
       </li>
       <li>
-        <i class="fa fa-github-alt"></i>
-        <div>AngularUI Member</div>
+        <i>${githubIcon(wire)}</i>
+        <div>OneDoes Member</div>
       </li>
       <li>
-        <i class="fa fa-suitcase"></i>
+        <i>${suitcaseIcon(wire)}</i>
         <div>Front End Developer at SFEIR Paris</div>
       </li>
-
+      <li></li>
     </ul>
 
     <style>${inlineStyle}</style>

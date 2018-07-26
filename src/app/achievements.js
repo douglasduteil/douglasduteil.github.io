@@ -2,10 +2,13 @@
 
 import pageLayout from './page';
 
+const inlineStyle = `
+`;
 const _ = {};
 export default ({ hyper: { wire } }, state, emit) =>
   pageLayout(wire)({
     title: 'Achievements',
+    bgColor: '#4F8C86',
     content: wire(_, ':achivement')`
   <ul>
     <li>
@@ -18,5 +21,7 @@ export default ({ hyper: { wire } }, state, emit) =>
       </ul>
     </li>
   </ul>
+
+  <style>${{ html: inlineStyle }}</style>
   `
   });

@@ -6,7 +6,7 @@ const _ = {};
 export default ({ hyper: { wire } }, state, emit) =>
   pageLayout(wire)({
     title: 'Rockets',
-
+    bgColor: '#97A629',
     content: wire(_, ':rockets')`
   <ul>
     <li><a target="_blank" href="https://github.com/douglasduteil"><sapn>Github</sapn></a></li>

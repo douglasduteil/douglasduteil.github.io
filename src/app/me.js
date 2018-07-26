@@ -38,10 +38,26 @@ ul {
   padding: 0;
   list-style-type: none;
   margin-bottom: 50px;
+  padding: 20vh 0 20px;
   height: 250px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 }
 
-ul > li {
+@media (min-width: 768px) {
+  ul {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-left: 70px;
+  }
+}
+
+ul \> li {
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -83,9 +99,8 @@ export default ({ hyper: { wire } }, state, emit) => {
         <i>${suitcaseIcon(wire)}</i>
         <div>Front End Developer at SFEIR Paris</div>
       </li>
-      <li></li>
     </ul>
 
-    <style>${inlineStyle}</style>
+    <style>${{ html: inlineStyle }}</style>
   `;
 };

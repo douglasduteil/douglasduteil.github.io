@@ -13,7 +13,7 @@
    - unknown
   -->
 
-  <title>Douglas Duteil</title>
+  <title>${model.title ? `${model.title} `: ''}Douglas Duteil</title>
 
   <meta name="author" content="Douglas Duteil">
   <meta name="copyright" content="© 2012-2018 Douglas Duteil">
@@ -46,11 +46,107 @@
   <meta name="application-name" content="Douglas Duteil">
 
 
+  <style>
+    .h100,
+    html,
+    body,
+    main,
+    root,
+    article {
+      height: 100%;
+    }
+
+    body,
+    menu {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    root,
+    main {
+      display: flex;
+
+      flex: 1;
+    }
+
+    main {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    body {
+      font-family: 'Lato';
+      color: #111;
+      flex: 1;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+
+    nav {
+      font-size: 1.5em;
+      color: #fff;
+      z-index: 1000;
+
+      display: flex;
+      position: absolute;
+      bottom: 0;
+    }
+
+    nav a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    nav a {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #eee;
+      transition: .2s ease;
+      transition-property: background-color, color;
+    }
+
+    nav a:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    nav a[active] {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 767px) {
+      nav {
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      nav a {
+        height: 50px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      nav {
+        flex-direction: column;
+        left: 0;
+        top: 0;
+        bottom: 0;
+      }
+      nav a {
+        width: 70px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <div id="root">${model.body}</div>
+  <root>${model.body}</root>
 
   <script src="main.js"></script>
 

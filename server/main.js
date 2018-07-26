@@ -27,6 +27,7 @@ export const routes = [
 ];
 
 export default async () => {
+  log('loading template from', templatePath);
   const templateFileBuffer = await fse.readFile(templatePath);
   const htmlifyTemplate = hyperhtmlHtmlViewsLoader
     .call({}, templateFileBuffer.toString())
@@ -51,6 +52,7 @@ export default async () => {
       return next();
     }
 
+    log({ url, method });
     const response = await app.toString(url);
 
     ctx.body = hyperTemplate(hyper, response).toString();

@@ -11,4 +11,4 @@ app.use(devtools);
 
 app.hyper = hyper;
 
-app.mount('#root');
+app.mount('root');

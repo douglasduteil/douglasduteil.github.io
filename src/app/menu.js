@@ -1,4 +1,5 @@
 import { stateFrom } from './utils';
+import { commentIcon, faceIcon, trophyIcon, rocketIcon } from './svg';
 
 //
 
@@ -6,22 +7,26 @@ export default ({ hyper: wire }, state = {}, emit) => wire(
   stateFrom(state.href, () => ({ href: state.href })),
   ':menu'
 )`
-<nav class="navbar">
-  <a class="${
-    isActiveHref(state.href, '/me.html') ? 'active' : ''
-  }" href="/me.html">me</a>
-  <a class="${
-    isActiveHref(state.href, '/achievements.html') ? 'active' : ''
-  }" href="/achievements.html">achievements</a>
-  <a class="${
-    isActiveHref(state.href, '/rockets.html') ? 'active' : ''
-  }" href="/rockets.html">rockets</a>
-  <a class="${
-    isActiveHref(state.href, '/contact.html') ? 'active' : ''
-  }" href="/contact.html">contact</a>
+<nav>
+  <a active=${isActiveHref(state.href, '/me.html')} href="/me.html">${faceIcon(
+  wire
+)}</a>
+  <a active=${isActiveHref(
+    state.href,
+    '/achievements.html'
+  )} href="/achievements.html">${trophyIcon(wire)}</a>
+  <a active=${isActiveHref(
+    state.href,
+    '/rockets.html'
+  )} href="/rockets.html">${rocketIcon(wire)}</a>
+  <a active=${isActiveHref(
+    state.href,
+    '/contact.html'
+  )} href="/contact.html">${commentIcon(wire)}</a>
 </nav>
 `;
 
 function isActiveHref(current, href) {
-  return current === href;
+  current = current === '' ? '/me.html' : current;
+  return current === href ? 'active' : null;
 }

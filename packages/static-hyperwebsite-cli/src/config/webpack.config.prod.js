@@ -2,27 +2,12 @@
 
 const { writeFile } = require('fs-extra');
 const { resolve } = require('path');
+const config = require('./webpack.config.base');
 
 module.exports = {
+  ...config,
   mode: 'production',
   devtool: 'none',
-  module: {
-    rules: [
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'hyperhtml-html-views-loader'
-          }
-        ]
-      },
-      {
-        test: /\.js$/,
-        type: 'javascript/esm',
-        exclude: /node_modules/
-      }
-    ]
-  },
   plugins: [new SSRStaticRenderer()]
 };
 

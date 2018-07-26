@@ -1,10 +1,18 @@
 //
 
 const inlineStyle = `
+
 @media (min-width: 768px) {
   main {
     padding-left: 70px;
   }
+}
+
+section {
+  flex: 1;
+  display: flex;
+  margin-bottom: 50px;
+  padding: 20px;
 }
 `;
 const _ = {};

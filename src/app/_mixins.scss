@@ -1,6 +1,31 @@
 //
 
+//== Virginizr classes
+//-----------------------------------------------------------------------------
+
 @mixin virgin-button() {
   background: none;
   border: none;
 }
+
+@mixin virgin-ul() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+//
+
+@mixin f-col() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin f-row() {
+  display: flex;
+}
+
+//
+
+//== Section classes
+//-----------------------------------------------------------------------------

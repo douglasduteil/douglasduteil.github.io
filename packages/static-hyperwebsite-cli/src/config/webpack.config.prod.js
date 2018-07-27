@@ -2,6 +2,7 @@
 
 const { writeFile } = require('fs-extra');
 const { resolve } = require('path');
+const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
 const config = require('./webpack.config.base');
 
 module.exports = {
@@ -9,10 +10,16 @@ module.exports = {
   mode: 'production',
   devtool: 'none',
   plugins: [
+    new PrepackWebpackPlugin({}),
     new SSRStaticRenderer({
       outputPath: resolve(process.cwd(), 'dist')
     })
-  ]
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
 };
 
 function SSRStaticRenderer({ outputPath } = {}) {

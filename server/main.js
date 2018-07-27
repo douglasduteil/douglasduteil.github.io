@@ -6,7 +6,9 @@ import { runInContext, createContext, Script } from 'vm';
 import path from 'path';
 import nanorouter from 'nanorouter';
 import hyper, { bind } from 'viperhtml';
+import jss from '../src/app/jss';
 import { app } from '../src/app/app';
+import styles from '../src/ciritcal.scss';
 import hyperhtmlHtmlViewsLoader from 'hyperhtml-html-views-loader';
 
 //
@@ -15,6 +17,8 @@ app.hyper = hyper;
 
 const log = Debug('my:server:main');
 const templatePath = 'src/template.html';
+
+const sheet = jss.createStyleSheet(styles);
 
 //
 
@@ -54,7 +58,10 @@ export default async () => {
 
     log({ url, method });
     const response = await app.toString(url);
-
-    ctx.body = hyperTemplate(hyper, response).toString();
+    log({ url, method, response });
+    ctx.body = hyperTemplate(hyper, {
+      ...response,
+      criticalCss: `<style>${sheet.toString()}</style>`
+    }).toString();
   };
 };

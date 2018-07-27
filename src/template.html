@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -45,63 +46,10 @@
   <meta name="msapplication-config" content="icons/browserconfig.xml">
   <meta name="application-name" content="Douglas Duteil">
 
+  <!--  -->
+  ${{html: model.criticalCss}}
+  <!--  -->
 
-  <style>
-    .h100,
-    html,
-    body,
-    main,
-    root,
-    article {
-      height: 100%;
-    }
-
-    body,
-    menu {
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-
-    html.wf-active>body {
-      font-family: 'Lato';
-    }
-
-    body {
-      color: #111;
-      flex: 1;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    a {
-      color: white;
-      font-weight: bold;
-    }
-
-    root,
-    main {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    main {
-      color: white;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    svg {
-      fill: currentColor;
-    }
-
-
-    main>h1 {
-      text-align: center
-    }
-  </style>
 </head>
 
 <body>

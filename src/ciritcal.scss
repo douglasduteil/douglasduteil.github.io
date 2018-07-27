@@ -1,0 +1,50 @@
+@global {
+  html,
+  body,
+  main,
+  root,
+  article {
+    height: 100%;
+  }
+
+  body,
+  menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  html.wf-active > body {
+    font-family: 'Lato';
+  }
+
+  body {
+    color: #111;
+    flex: 1;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    color: white;
+    font-weight: bold;
+  }
+
+  root,
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  main {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}

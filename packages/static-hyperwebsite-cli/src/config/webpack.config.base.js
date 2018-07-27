@@ -5,7 +5,6 @@ const { resolve } = require('path');
 module.exports = {
   mode: 'development',
   devtool: 'eval',
-  output: {},
   module: {
     rules: [
       {

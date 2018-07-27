@@ -8,17 +8,25 @@ module.exports = {
   ...config,
   mode: 'production',
   devtool: 'none',
-  plugins: [new SSRStaticRenderer()]
+  plugins: [
+    new SSRStaticRenderer({
+      outputPath: resolve(process.cwd(), 'dist')
+    })
+  ]
 };
 
-function SSRStaticRenderer() {
+function SSRStaticRenderer({ outputPath } = {}) {
   this.apply = compiler => {
     let ssr = null;
-    let routes = [];
-    compiler.hooks.run.tapPromise('SSRStaticRenderer', async compiler => {
-      const middleware = require(resolve(process.cwd(), 'server'));
 
-      routes = middleware.routes;
+    const { default: middleware, routes } = require(resolve(
+      process.cwd(),
+      'dist',
+      'server',
+      'main.js'
+    ));
+
+    compiler.hooks.run.tapPromise('SSRStaticRenderer', async compiler => {
       ssr = await middleware();
     });
 
@@ -32,7 +40,7 @@ function SSRStaticRenderer() {
           await ssr(context, next);
 
           await writeFile(
-            compiler.compiler.outputPath + context.request.url,
+            (outputPath || compiler.compiler.outputPath) + context.request.url,
             context.body
           );
         })

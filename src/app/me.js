@@ -1,6 +1,6 @@
 //
 
-import jss from './jss';
+import jss from '../jss';
 import { githubIcon, locationIcon, suitcaseIcon } from './svg';
 import styles from './me.scss';
 import mini_me from './mini_me.jpeg';

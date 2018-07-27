@@ -4,7 +4,7 @@ const { resolve } = require('path');
 const nodeExternals = require('webpack-node-externals');
 const config = require('./webpack.config.base');
 
-const ssrMiddleware = resolve(process.cwd(), 'server', 'main.js');
+const ssrMiddleware = resolve(process.cwd(), 'src', 'server', 'index.js');
 
 module.exports = {
   ...config,

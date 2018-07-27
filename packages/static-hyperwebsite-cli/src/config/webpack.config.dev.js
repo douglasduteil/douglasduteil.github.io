@@ -23,7 +23,6 @@ module.exports = {
           'server',
           'main.js'
         )).default;
-        console.log(ssrMiddleware);
         const ssr = await ssrMiddleware();
 
         await ssr(...args);

@@ -6,9 +6,9 @@ import { runInContext, createContext, Script } from 'vm';
 import path from 'path';
 import nanorouter from 'nanorouter';
 import hyper, { bind } from 'viperhtml';
-import jss from '../src/app/jss';
-import { app } from '../src/app/app';
-import styles from '../src/ciritcal.scss';
+import jss from '../jss';
+import { app } from '../app/app';
+import styles from '../ciritcal.scss';
 import hyperhtmlHtmlViewsLoader from 'hyperhtml-html-views-loader';
 
 //

@@ -1,6 +1,6 @@
 //
 
-import jss from './jss';
+import jss from '../jss';
 import styles from './menu.scss';
 import { stateFrom } from './utils';
 import { commentIcon, faceIcon, trophyIcon, rocketIcon } from './svg';

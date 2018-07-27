@@ -7,29 +7,14 @@ module.exports = {
   devtool: 'eval',
   module: {
     rules: [
+      //
+
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
-          { loader: 'style-loader' },
           {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              modules: true,
-              localIdentName: '[local]___[hash:base64:5]'
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: loader => [
-                require('autoprefixer')({ env: '> 1%, Last 2 versions, iOS 8' })
-              ]
-            }
-          },
-          {
-            loader: 'sass-loader',
+            loader: 'prejss-styles-loader',
             options: {
               sourceMap: true,
               includePaths: [resolve(process.cwd(), 'src')]
@@ -37,23 +22,21 @@ module.exports = {
           }
         ]
       },
+
       {
-        // HACK(douglasduteil): Some files need "require" T-T
-        //
-        // It took me hours to figure this sh*t out...
-        // The files that do require "require" can't exist in
-        // the 'javascript/esm' world.
-        // It have to be 'javascript/auto' or something...
-        //
-        test: /(me)\.js$/,
-        type: 'javascript/auto',
-        exclude: /node_modules/,
+        test: /\.(jpe?g)$/,
         use: [
           {
-            loader: 'babel-loader'
+            loader: 'url-loader',
+            options: {
+              sourceMap: true,
+              includePaths: [resolve(process.cwd(), 'src')]
+            }
           }
         ]
       }
+
+      //
     ]
   }
 };

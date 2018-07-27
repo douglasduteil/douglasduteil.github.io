@@ -1,4 +1,52 @@
-//
+@global main {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-position: center center;
+  background-size: cover;
+}
 
-.list {
+ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 50px;
+  padding: 20vh 0 20px;
+  height: 250px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+@media (min-width: 768px) {
+  ul {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-left: 70px;
+  }
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 1.15em;
+
+  &:not(:first-child) {
+    flex: 1;
+  }
+}
+
+h1 {
+  font-weight: normal;
+}
+
+i {
+  text-align: center;
+  margin-right: 20px;
 }

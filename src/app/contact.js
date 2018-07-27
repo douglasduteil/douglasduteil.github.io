@@ -24,7 +24,7 @@ export default ({ hyper: { wire } }, state, emit) =>
   pageLayout(wire)({
     title: 'Contact',
     bgColor: '#F23030',
-    content: wire(_, ':contact')`
+    children: wire(_, ':contact')`
   <ul class=${styles.list}>
     <li><a target="_blank" href="mailto:douglasduteil@gmail.com">Gmail</a></li>
     <li><a target="_blank" href="https://google.com/+DouglasDuteil">Google +</a></li>

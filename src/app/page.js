@@ -24,10 +24,10 @@ section {
 }
 `;
 const _ = {};
-export default render => ({ title, content, bgColor }) => {
+export default render => ({ title, children, bgColor }) => {
   return render(_, ':page-layout')`
     <h1>${title}</h1>
-    <section>${content}</section>
+    <section>${children}</section>
     <style>${{ html: inlineStyle }}</style>
     <style>${{
       html: `

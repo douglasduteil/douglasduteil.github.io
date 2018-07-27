@@ -13,7 +13,7 @@ import pageLayout from './page';
 // I don't know about #frustractedDouglas
 //
 const styles = require('./rockets.scss');
-console.log(styles);
+
 const inlineStyle = `
 section {
   justify-content: center;
@@ -25,7 +25,7 @@ export default ({ hyper: { wire } }, state, emit) =>
   pageLayout(wire)({
     title: 'Rockets',
     bgColor: '#97A629',
-    content: wire(_, ':rockets')`
+    children: wire(_, ':rockets')`
   <ul class=${styles.list}>
     <li><a target="_blank" href="https://github.com/douglasduteil"><div>Github</div></a></li>
     <li><a target="_blank" href="http://plnkr.co/users/douglasduteil"><div>Plunker</div></a></li>

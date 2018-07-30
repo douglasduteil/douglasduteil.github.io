@@ -5,8 +5,12 @@ import jss from '../jss';
 import { githubIcon, locationIcon, suitcaseIcon } from './svg';
 import styles from './rockets.scss';
 
+//
+
 const sheet = jss.createStyleSheet(styles);
 const { classes } = sheet;
+
+//
 
 const _ = {};
 export default ({ hyper: { wire } }, state, emit) =>

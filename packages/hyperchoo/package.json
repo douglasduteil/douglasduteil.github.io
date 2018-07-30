@@ -8,7 +8,7 @@
   "author": "Douglas Duteil",
   "license": "WTFPL",
   "dependencies": {
-    "hyperhtml": "^2.11.3",
+    "hyperhtml": "^2.13.0",
     "nanobus": "^4.3.3",
     "nanohref": "^3.0.3",
     "nanolocation": "^1.0.1",

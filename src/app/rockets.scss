@@ -1,14 +1,18 @@
 //
 
-@import './variables';
-@import './mixins';
+@import './_variables.scss';
+@import './_mixins.scss';
+
+@global section {
+  justify-content: center;
+}
 
 //== Rocket Views
 //-----------------------------------------------------------------------------
 
-.list {
+ul {
   $size: 150px;
-  $spacing: ceil($size / 3);
+  $spacing: calc($size / 3);
 
   @include virgin-ul;
   @include f-row;
@@ -21,38 +25,37 @@
   @media (max-width: $screen-xs-max) {
     margin-bottom: -20px;
   }
+}
+li {
+  margin: $spacing;
+}
 
-  > li {
-    margin: $spacing;
+a {
+  text-decoration: none;
+  color: #111;
 
-    > a {
-      text-decoration: none;
-      color: #111;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
+  width: calc($size - 20px);
+  height: $size;
+  background: #fff;
 
-      width: $size - 20;
-      height: $size;
-      background: #fff;
+  padding: 0 10px;
 
-      padding: 0 10px;
+  transform: rotate(-45deg);
 
-      transform: rotate(-45deg);
+  position: relative;
 
-      position: relative;
-
-      &:before {
-        content: '';
-        @include fill;
-        transform: scale(1.1);
-        border: 2px solid white;
-      }
-
-      > div {
-        transform: rotate(45deg);
-      }
-    }
+  &:before {
+    content: '';
+    @include fill;
+    transform: scale(1.1);
+    border: 2px solid white;
   }
+}
+
+text {
+  transform: rotate(45deg);
 }

@@ -1,0 +1,31 @@
+//
+
+//== Page Layout
+//-----------------------------------------------------------------------------
+
+@global {
+  @media (min-width: 768px) {
+    main {
+      padding-left: 70px;
+    }
+  }
+}
+
+title {
+  text-align: center;
+}
+
+section {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  margin-bottom: 50px;
+  overflow: auto;
+}
+
+@media (min-width: 768px) {
+  section {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}

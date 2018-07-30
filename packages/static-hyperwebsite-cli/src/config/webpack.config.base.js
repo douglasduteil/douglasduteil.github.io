@@ -2,6 +2,8 @@
 
 const { resolve } = require('path');
 
+//
+
 module.exports = {
   mode: 'development',
   devtool: 'eval',
@@ -14,10 +16,18 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'prejss-styles-loader',
+            loader: 'prejss-styles-loader'
+          },
+          {
+            loader: 'postcss-loader',
             options: {
-              sourceMap: true,
-              includePaths: [resolve(process.cwd(), 'src')]
+              parser: require('postcss-scss'),
+              plugins: [
+                require('postcss-import'),
+                require('postcss-sassy-mixins'),
+                require('postcss-simple-vars'),
+                require('autoprefixer')
+              ]
             }
           }
         ]

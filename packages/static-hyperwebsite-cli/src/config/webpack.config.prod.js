@@ -63,11 +63,10 @@ function SSRStaticRenderer({ outputPath } = {}) {
       return Promise.all(
         routes.map(toContext).map(async context => {
           await ssr(context, next)
-
-          await writeFile(
-            (outputPath || compiler.compiler.outputPath) + context.request.url,
-            context.body
-          )
+          compiler.assets[context.request.url.replace('/', '')] = {
+            size: () => context.body.length,
+            source: () => context.body
+          }
         })
       )
     })

@@ -1,20 +1,20 @@
 //
 
-import pageLayout from './page';
-import jss from '../jss';
-import { githubIcon, locationIcon, suitcaseIcon, rocketIcon } from './svg';
-import styles from './rockets.scss';
+import pageLayout from './page'
+import jss from '../jss'
+import { githubIcon, locationIcon, suitcaseIcon, rocketIcon } from './svg'
+import styles from './rockets.scss'
 
 //
 
-const sheet = jss.createStyleSheet(styles);
-const { classes } = sheet;
+const sheet = jss.createStyleSheet(styles)
+const { classes } = sheet
 
 //
 
-const _ = {};
+const _ = {}
 
-export const backgoundColor = '#97A629';
+export const backgoundColor = '#97A629'
 export default ({ hyper: { wire } }, state, emit) =>
   pageLayout(wire)({
     title: 'Rockets',
@@ -49,4 +49,4 @@ export default ({ hyper: { wire } }, state, emit) =>
   </ul>
   <style>${{ html: sheet.toString() }}</style>
   `
-  });
+  })

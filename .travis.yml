@@ -12,6 +12,8 @@ cache: yarn
 jobs:
   include:
     - stage: Tests
+      script:
+        - yarn lint
 
     - stage: Deploy Front End
       before_script:

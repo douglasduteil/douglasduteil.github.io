@@ -1,22 +1,22 @@
 //
 
-import jss from '../jss';
-import { githubIcon, locationIcon, suitcaseIcon } from './svg';
-import styles from './me.scss';
-import mini_me from './mini_me.jpeg';
+import jss from '../jss'
+import { githubIcon, locationIcon, suitcaseIcon } from './svg'
+import styles from './me.scss'
+import mini_me from './mini_me.jpeg'
 
 const gravatar_pic =
-  'http://1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1';
+  'http://1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1'
 
-const sheet = jss.createStyleSheet(styles);
+const sheet = jss.createStyleSheet(styles)
 sheet.addRules({
   '@global main': {
     backgroundImage: `url(${gravatar_pic + '?s=680'}), url(${mini_me})`
   }
-});
-const { classes } = sheet;
+})
+const { classes } = sheet
 
-const _ = {};
+const _ = {}
 export default ({ hyper: { wire } }, state, emit) => {
   return wire(_, ':me')`
     <ul class=${classes.ul}>
@@ -40,5 +40,5 @@ export default ({ hyper: { wire } }, state, emit) => {
     </ul>
 
     <style>${{ html: sheet.toString() }}</style>
-  `;
-};
+  `
+}

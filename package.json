@@ -5,6 +5,7 @@
   "main": false,
   "private": true,
   "scripts": {
+    "lint": "static-hyperwebsite lint",
     "build": "static-hyperwebsite build",
     "start": "static-hyperwebsite serve"
   },

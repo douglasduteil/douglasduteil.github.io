@@ -18,7 +18,17 @@ module.exports = (env, argv) => {
       new SSRStaticRenderer({
         outputPath: resolve(process.cwd(), 'dist')
       }),
-      new GenerateSW()
+      new GenerateSW({
+        runtimeCaching: [
+          {
+            urlPattern: /https:\/\/fonts\.googleapis\.com.*/,
+            handler: 'cacheFirst',
+            options: {
+              cacheName: 'google-font-cache'
+            }
+          }
+        ]
+      })
     ]
     /*
   optimization: {

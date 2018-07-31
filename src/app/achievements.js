@@ -1,11 +1,18 @@
 //
 
+import jss from '../jss';
 import pageLayout from './page';
+import { githubIcon, locationIcon, suitcaseIcon } from './svg';
+import styles from './achievements.scss';
 import achievements from './achievements.json';
 
-const inlineStyle = `
+//
 
-`;
+const sheet = jss.createStyleSheet(styles);
+const { classes } = sheet;
+
+//
+
 const _ = {};
 export default ({ hyper: { wire } }, state, emit) =>
   pageLayout(wire)({
@@ -14,22 +21,24 @@ export default ({ hyper: { wire } }, state, emit) =>
     children: wire(_, ':achivement')`
     <article>${listTimeline(wire)(achievements)}</article>
 
-    <style>${{ html: inlineStyle }}</style>
+    <style>${{ html: sheet.toString() }}</style>
   `
   });
 
 function listTimeline(render) {
   return yearList => render()`
-    <ul>
+    <ul class=${classes.ul}>
     ${yearList.map(
       ([year, events]) => render()`
         <li>
           ${renderYear(render)(year)}
 
-          <ul>
+          <ul class=${classes['event-list']}>
           ${events.map(
             event => render()`
-              <li>${renderEvent[event.type](render)(event)}</li>
+              <li class=${classes.event}>${renderEvent[event.type](render)(
+              event
+            )}</li>
             `
           )}
           </ul>
@@ -40,33 +49,51 @@ function listTimeline(render) {
 }
 
 function renderYear(render) {
-  return year => render()`<h2>${year}</h2>`;
+  return year =>
+    render()`<time class=${classes.year} datetime="${new Date(
+      year
+    )}">${year}</time>`;
 }
 
 const renderEvent = {
   job(render) {
     return event => render()`
-    <h3>${event.title}</h3>
-    <p>${event.body}</p>
+    <i class=${classes.icon}></i>
+    <div class=${classes.body}>
+
+      <h3>${event.title}</h3>
+      <p>${event.body}</p>
+    </div>
     `;
   },
   study(render) {
     return event => render()`
-    <h3>${event.title}</h3>
-    <p>${event.body}</p>
+    <i class=${classes.icon}></i>
+    <div class=${classes.body}>
+
+      <h3>${event.title}</h3>
+      <p>${event.body}</p>
+    </div>
     `;
   },
   github(render) {
     return event => render()`
-    <h3>${event.title}</h3>
-    <p>${event.body}</p>
+    <i class=${classes.icon}>${githubIcon(render, event)}</i>
+    <div class=${classes.body}>
+
+      <h3>${event.title}</h3>
+      <p>${event.body}</p>
+    </div>
     `;
   },
   talk(render) {
     return event => render()`
-    <h3>${event.where}</h3>
-    <p><em>"${event.title}"</em></p>
-    <p><a href="${event.link.href}">${event.link.name}</a></p>
-    `;
+    <i class=${classes.icon}></i>
+    <div class=${classes.body}>
+      <h3>${event.where}</h3>
+      <p><em>"${event.title}"</em></p>
+      <p><a href="${event.link.href}">${event.link.name}</a></p>
+    </div>
+      `;
   }
 };

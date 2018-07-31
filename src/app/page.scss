@@ -12,7 +12,18 @@
 }
 
 title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 100;
+  transform: translateZ(0);
+  will-change: transform;
+
   text-align: center;
+  margin: 0;
+  padding: 1rem 0;
 }
 
 section {
@@ -20,7 +31,6 @@ section {
   display: flex;
   padding: 20px;
   margin-bottom: 50px;
-  overflow: auto;
 }
 
 @media (min-width: 768px) {

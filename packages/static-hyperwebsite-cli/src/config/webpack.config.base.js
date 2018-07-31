@@ -26,7 +26,7 @@ module.exports = {
                 require('postcss-import'),
                 require('postcss-sassy-mixins'),
                 require('postcss-simple-vars'),
-                require('autoprefixer')
+                require('postcss-calc')
               ]
             }
           }

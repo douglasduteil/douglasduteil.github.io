@@ -4,6 +4,7 @@
 @import './_mixins.scss';
 
 @global section {
+  margin-top: 5rem;
   justify-content: center;
 }
 
@@ -19,7 +20,7 @@ ul {
 
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;
+  align-content: center;
 
   // modile
   @media (max-width: $screen-xs-max) {

@@ -4,8 +4,11 @@ nav {
   z-index: 1000;
 
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 a {

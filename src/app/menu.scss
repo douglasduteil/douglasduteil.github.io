@@ -1,9 +1,20 @@
+//
+
+@import './_variables.scss';
+@import './_mixins.scss';
+
+//
+
 nav {
   font-size: 1.5em;
   color: #fff;
   display: flex;
 
   width: 100%;
+
+  @media (--tablet) {
+    flex-direction: column;
+  }
 }
 
 a {
@@ -25,20 +36,14 @@ a {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.8);
   }
-}
 
-@media (max-width: 767px) {
-  a {
+  // mobile
+  @media (--phone) {
     height: 50px;
   }
-}
 
-@media (min-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-
-  a {
-    width: 70px;
+  // no mobile
+  @media (--tablet) {
+    width: $navbar--width;
   }
 }

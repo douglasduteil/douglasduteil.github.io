@@ -14,18 +14,14 @@ $screen-xs-min: 480px;
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
-$screen-xs-max: ($screen-sm-min - 1);
-$screen-sm-max: ($screen-md-min - 1);
-$screen-md-max: ($screen-lg-min - 1);
+$screen-xs-max: calc($screen-sm-min - 1px);
+$screen-sm-max: calc($screen-md-min - 1px);
+$screen-md-max: calc($screen-lg-min - 1px);
 
-// modile
-// @media (max-width: $screen-xs-max) { ... }
-// tablet
-// @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { ... }
-// little screen
-// @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { ... }
-// large screen
-// @media (min-width: $screen-lg-min) { ... }
+@custom-media --phone (max-width: $screen-xs-max);
+@custom-media --tablet (min-width: $screen-sm-min);
+@custom-media --desktop (min-width: $screen-md-min);
+@custom-media --large-desktop (min-width: $screen-lg-min);
 
 //==
 //-----------------------------------------------------------------------------

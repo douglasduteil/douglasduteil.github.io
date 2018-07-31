@@ -24,7 +24,7 @@ ul {
   align-content: center;
 
   // modile
-  @media (max-width: $screen-xs-max) {
+  @media (--phone) {
     margin-bottom: -20px;
   }
 }

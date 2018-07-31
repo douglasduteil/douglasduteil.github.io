@@ -26,7 +26,8 @@ module.exports = {
                 require('postcss-import'),
                 require('postcss-sassy-mixins'),
                 require('postcss-simple-vars'),
-                require('postcss-calc')
+                require('postcss-calc')({ mediaQueries: true }),
+                require('postcss-custom-media')
               ]
             }
           }

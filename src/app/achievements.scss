@@ -5,6 +5,7 @@
 
 //== Achievements Views
 //-----------------------------------------------------------------------------
+
 $line-size: 10px;
 $left-padding: 15px;
 $line-node-border--size: 4px;
@@ -18,12 +19,12 @@ $line-size: 10px;
   // abs-content
   section {
     // to modile
-    @media (max-width: $screen-xs-max) {
+    @media (--phone) {
       margin-bottom: $navbar--height - 20px;
     }
 
     // from tablet
-    @media (min-width: $screen-sm-min) {
+    @media (--tablet) {
       padding-right: $left-padding * 2;
       justify-content: center;
     }
@@ -99,7 +100,7 @@ icon {
   }
 
   // to modile
-  @media (max-width: $screen-xs-max) {
+  @media (--phone) {
     font-size: 1.4em;
   }
 }

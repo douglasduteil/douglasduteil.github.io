@@ -1,14 +1,15 @@
 //
 
+@import './_variables.scss';
 @import './_mixins.scss';
 
 //== Page Layout
 //-----------------------------------------------------------------------------
 
 @global {
-  @media (min-width: 768px) {
+  @media (--tablet) {
     main {
-      padding-left: 70px;
+      padding-left: $navbar--width;
     }
   }
 }
@@ -35,7 +36,7 @@ section {
   margin-bottom: 50px;
 }
 
-@media (min-width: 768px) {
+@media (--tablet) {
   section {
     margin-bottom: 0;
     padding-bottom: 0;

@@ -17,6 +17,7 @@
     "esm": "^3.0.72",
     "hyperhtml-html-views-loader": "^0.0.0",
     "postcss-calc": "^6.0.1",
+    "postcss-custom-media": "^6.0.0",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.6",
     "postcss-sassy-mixins": "^2.1.0",

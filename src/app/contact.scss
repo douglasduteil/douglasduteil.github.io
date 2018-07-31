@@ -39,7 +39,7 @@ a {
   line-height: 100px;
 
   // no modile
-  @media (min-width: $screen-sm-min) {
+  @media (--tablet) {
     width: 200px;
     height: 200px;
     line-height: 200px;

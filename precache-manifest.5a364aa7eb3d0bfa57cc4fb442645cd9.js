@@ -116,10 +116,6 @@ self.__precacheManifest = [
     "url": "icons/icon-72x72.png"
   },
   {
-    "revision": "f3cbef970c15279adc8a813fb3888372",
-    "url": "icons/icon-96x96.png"
-  },
-  {
     "revision": "0fafa2c56a454bae274ca8ddf4579c30",
     "url": "icons/mstile-144x144.png"
   },
@@ -138,6 +134,10 @@ self.__precacheManifest = [
   {
     "revision": "81f5712b6d6c1295a7104945cbd6e2e2",
     "url": "icons/mstile-70x70.png"
+  },
+  {
+    "revision": "f3cbef970c15279adc8a813fb3888372",
+    "url": "icons/icon-96x96.png"
   },
   {
     "revision": "1ab95bd500422863e46a8a2c803718c5",

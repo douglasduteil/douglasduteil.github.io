@@ -5,8 +5,7 @@ import { githubIcon, locationIcon, suitcaseIcon } from './svg'
 import styles from './me.scss'
 import miniMe from './mini_me.jpeg'
 
-const gravatarPic =
-  'http://1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1'
+const gravatarPic = '//1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1'
 
 const sheet = jss.createStyleSheet(styles)
 sheet.addRules({

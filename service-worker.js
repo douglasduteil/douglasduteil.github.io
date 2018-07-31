@@ -26,4 +26,5 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
+workbox.routing.registerRoute(/https:\/\/ajax\.googleapis\.com.*/, workbox.strategies.cacheFirst({ cacheName: "google-ajax-cache", plugins: [] }), 'GET');
 workbox.routing.registerRoute(/https:\/\/fonts\.googleapis\.com.*/, workbox.strategies.cacheFirst({ cacheName: "google-font-cache", plugins: [] }), 'GET');

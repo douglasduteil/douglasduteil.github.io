@@ -27,6 +27,10 @@ title {
   text-align: center;
   margin: 0;
   padding: 1rem 0;
+
+  @media (--tablet) {
+    left: $navbar--width;
+  }
 }
 
 section {
@@ -34,10 +38,8 @@ section {
   display: flex;
   padding: 20px;
   margin-bottom: 50px;
-}
 
-@media (--tablet) {
-  section {
+  @media (--tablet) {
     margin-bottom: 0;
     padding-bottom: 0;
   }

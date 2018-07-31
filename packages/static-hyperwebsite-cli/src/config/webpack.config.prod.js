@@ -12,7 +12,8 @@ module.exports = (env, argv) => {
     mode: 'production',
     devtool: 'none',
     plugins: [
-      ...baseConfig.plugins, // new PrepackWebpackPlugin({}),
+      ...baseConfig.plugins,
+      // new PrepackWebpackPlugin({}),
       new SSRStaticRenderer({
         outputPath: resolve(process.cwd(), 'dist')
       }),
@@ -26,7 +27,7 @@ module.exports = (env, argv) => {
             }
           },
           {
-            urlPattern: /https:\/\/fonts\.googleapis\.com.*/,
+            urlPattern: /https:\/\/fonts\.(googleapis|gstatic)\.com.*/,
             handler: 'cacheFirst',
             options: {
               cacheName: 'google-font-cache'

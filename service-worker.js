@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.5e1ed266da6a9fdcd6c5df7159298eb1.js"
+  "precache-manifest.41b321108112a05a19b773edc7992149.js"
 );
 
 /**
@@ -25,3 +25,5 @@ importScripts(
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerRoute(/https:\/\/fonts\.googleapis\.com.*/, workbox.strategies.cacheFirst({ cacheName: "google-font-cache", plugins: [] }), 'GET');

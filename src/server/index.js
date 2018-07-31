@@ -2,10 +2,8 @@
 
 import Debug from 'debug'
 import fse from 'fs-extra'
-import { runInContext, createContext, Script } from 'vm'
-import path from 'path'
-import nanorouter from 'nanorouter'
-import hyper, { bind } from 'viperhtml'
+import { runInContext, createContext } from 'vm'
+import hyper from 'viperhtml'
 import jss from '../jss'
 import { app } from '../app/app'
 import styles from '../ciritcal.scss'

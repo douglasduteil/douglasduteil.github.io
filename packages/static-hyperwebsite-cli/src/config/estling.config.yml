@@ -1,8 +1,9 @@
 ---
+parser: babel-eslint
 parserOptions:
-  ecmaVersion: 6
+  ecmaVersion: 2018
   sourceType: module
-plugins:
-- prettier
-rules:
-  prettier/prettier: error
+extends:
+  - standard
+  - prettier
+  - prettier/standard

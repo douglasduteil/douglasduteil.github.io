@@ -1,9 +1,2 @@
 ---
-parser: babel-eslint
-parserOptions:
-  ecmaVersion: 2018
-  sourceType: module
-extends:
-  - standard
-  - prettier
-  - prettier/standard
+extends: ./packages/static-hyperwebsite-cli/src/config/estling.config.yml

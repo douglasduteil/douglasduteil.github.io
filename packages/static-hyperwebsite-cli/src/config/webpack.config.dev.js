@@ -1,8 +1,8 @@
 //
 
-const { resolve } = require('path');
+const { resolve } = require('path')
 
-const config = require('./webpack.config.base');
+const config = require('./webpack.config.base')
 
 module.exports = (env, argv) => ({
   ...config({ ...env, mode: 'development' }, argv),
@@ -12,8 +12,8 @@ module.exports = (env, argv) => ({
   serve: {
     add: async (app, middleware, options) => {
       // middleware _after_ the built-in webpack and content middleware.
-      await middleware.webpack();
-      await middleware.content();
+      await middleware.webpack()
+      await middleware.content()
 
       // this example assumes router must be added last
       app.use(async (...args) => {
@@ -22,26 +22,25 @@ module.exports = (env, argv) => ({
           'dist',
           'server',
           'main.js'
-        )).default;
-        const ssr = await ssrMiddleware();
+        )).default
+        const ssr = await ssrMiddleware()
 
-        await ssr(...args);
-      });
+        await ssr(...args)
+      })
 
-      var chokidar = require('chokidar');
-      var watcher = chokidar.watch('./dist/server');
+      var chokidar = require('chokidar')
+      var watcher = chokidar.watch('./dist/server')
       watcher.on('ready', function() {
         watcher.on('all', function() {
-          console.log('Clearing /dist/server/ module cache from server');
+          console.log('Clearing /dist/server/ module cache from server')
           Object.keys(require.cache).forEach(function(id) {
-            if (/[\/\\]dist[\/\\]server[\/\\]/.test(id))
-              delete require.cache[id];
-          });
-        });
-      });
+            if (/[/\\]dist[/\\]server[/\\]/.test(id)) delete require.cache[id]
+          })
+        })
+      })
     },
     dev: {
       stats: 'minimal'
     }
   }
-});
+})

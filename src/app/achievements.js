@@ -5,7 +5,6 @@ import pageLayout from './page'
 import {
   githubIcon,
   graduationIcon,
-  locationIcon,
   trophyIcon,
   suitcaseIcon,
   usersIcon
@@ -34,30 +33,30 @@ export default ({ hyper: { wire } }, state, emit) =>
   `
   })
 
-function listTimeline (render) {
+function listTimeline(render) {
   return yearList => render()`
     <ul class=${classes.ul}>
     ${yearList.map(
-    ([year, events]) => render()`
+      ([year, events]) => render()`
         <li>
           ${renderYear(render)(year)}
 
           <ul class=${classes['event-list']}>
           ${events.map(
-    event => render()`
+            event => render()`
               <li class=${classes.event}>${renderEvent[event.type](render)(
-  event
-)}</li>
+              event
+            )}</li>
             `
-  )}
+          )}
           </ul>
         </li>
       `
-  )}
+    )}
     </ul>`
 }
 
-function renderYear (render) {
+function renderYear(render) {
   return year =>
     render()`<time class=${classes.year} datetime="${new Date(
       year
@@ -65,7 +64,7 @@ function renderYear (render) {
 }
 
 const renderEvent = {
-  job (render) {
+  job(render) {
     return event => render()`
     <i class=${classes.icon}>${suitcaseIcon(render, event)}</i>
     <div class=${classes.body}>
@@ -75,7 +74,7 @@ const renderEvent = {
     </div>
     `
   },
-  study (render) {
+  study(render) {
     return event => render()`
     <i class=${classes.icon}>${graduationIcon(render, event)}</i>
     <div class=${classes.body}>
@@ -85,7 +84,7 @@ const renderEvent = {
     </div>
     `
   },
-  github (render) {
+  github(render) {
     return event => render()`
     <i class=${classes.icon}>${githubIcon(render, event)}</i>
     <div class=${classes.body}>
@@ -95,7 +94,7 @@ const renderEvent = {
     </div>
     `
   },
-  talk (render) {
+  talk(render) {
     return event => render()`
     <i class=${classes.icon}>${usersIcon(render, event)}</i>
     <div class=${classes.body}>

@@ -1,10 +1,10 @@
 //
 
-const { resolve } = require('path');
-const nodeExternals = require('webpack-node-externals');
-const config = require('./webpack.config.base');
+const { resolve } = require('path')
+const nodeExternals = require('webpack-node-externals')
+const config = require('./webpack.config.base')
 
-const ssrMiddleware = resolve(process.cwd(), 'src', 'server', 'index.js');
+const ssrMiddleware = resolve(process.cwd(), 'src', 'server', 'index.js')
 
 module.exports = (env, argv) => ({
   ...config({ ...env, mode: 'development' }, argv),
@@ -31,4 +31,4 @@ module.exports = (env, argv) => ({
     __filename: false,
     __dirname: false
   }
-});
+})

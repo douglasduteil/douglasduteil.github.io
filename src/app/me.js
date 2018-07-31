@@ -3,15 +3,15 @@
 import jss from '../jss'
 import { githubIcon, locationIcon, suitcaseIcon } from './svg'
 import styles from './me.scss'
-import mini_me from './mini_me.jpeg'
+import miniMe from './mini_me.jpeg'
 
-const gravatar_pic =
+const gravatarPic =
   'http://1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1'
 
 const sheet = jss.createStyleSheet(styles)
 sheet.addRules({
   '@global main': {
-    backgroundImage: `url(${gravatar_pic + '?s=680'}), url(${mini_me})`
+    backgroundImage: `url(${gravatarPic + '?s=680'}), url(${miniMe})`
   }
 })
 const { classes } = sheet

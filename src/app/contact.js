@@ -2,7 +2,7 @@
 
 import pageLayout from './page'
 import jss from '../jss'
-import { commentIcon, githubIcon, locationIcon, suitcaseIcon } from './svg'
+import { commentIcon } from './svg'
 import styles from './contact.scss'
 
 //

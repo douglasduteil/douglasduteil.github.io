@@ -2,7 +2,7 @@
 
 import pageLayout from './page'
 import jss from '../jss'
-import { githubIcon, locationIcon, suitcaseIcon, rocketIcon } from './svg'
+import { rocketIcon } from './svg'
 import styles from './rockets.scss'
 
 //

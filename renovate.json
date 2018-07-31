@@ -3,5 +3,6 @@
     "config:base"
   ],
   "semanticCommits": true,
-  "prHourlyLimit": 0
+  "prHourlyLimit": 0,
+  "rangeStrategy": "replace"
 }

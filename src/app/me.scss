@@ -23,10 +23,22 @@ $black: rgba(0, 0, 0, 0.6);
   }
 }
 
+section {
+  @media (--tablet) {
+    display: flex;
+    flex: 1;
+    background: rgba(0, 0, 0, 0.6);
+    padding-left: $navbar--width;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 ul {
   display: flex;
   flex-direction: column;
   margin: 0;
+  padding: 0;
   list-style-type: none;
 
   // modile
@@ -49,10 +61,7 @@ ul {
 
   // no modile
   @media (--tablet) {
-    flex: 1;
-    height: 30vh;
-    padding: 25vh 0 36vh 30vw;
-    background: rgba(0, 0, 0, 0.6);
+    min-height: 300px;
   }
 }
 

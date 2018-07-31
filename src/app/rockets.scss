@@ -1,0 +1,64 @@
+//
+
+@import './_variables.scss';
+@import './_mixins.scss';
+
+@global section {
+  margin-top: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+//== Rocket Views
+//-----------------------------------------------------------------------------
+
+ul {
+  $size: 150px;
+  $spacing: calc($size / 3);
+
+  @include virgin-ul;
+  @include f-row;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  // modile
+  @media (--phone) {
+    margin-bottom: -20px;
+  }
+}
+
+li {
+  margin: $spacing;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+  width: calc($size - 20px);
+  height: $size;
+  background: #fff;
+
+  padding: 0 10px;
+
+  transform: rotate(-45deg);
+
+  position: relative;
+
+  &:before {
+    content: '';
+    @include fill;
+    transform: scale(1.1);
+    border: 2px solid white;
+  }
+}
+
+text {
+  transform: rotate(45deg);
+}

@@ -1,0 +1,146 @@
+//
+
+@import './_variables.scss';
+@import './_mixins.scss';
+
+//== Achievements Views
+//-----------------------------------------------------------------------------
+
+$line-size: 10px;
+$left-padding: 15px;
+$line-node-border--size: 4px;
+$left-content-pos: calc(
+  ($left-padding * 2) + $line-size + ($line-node-border--size * 2)
+);
+$arrow-size: 20px;
+$line-size: 10px;
+
+@global {
+  // abs-content
+  section {
+    // to modile
+    @media (--phone) {
+      margin-bottom: $navbar--height - 20px;
+    }
+
+    // from tablet
+    @media (--tablet) {
+      padding-right: $left-padding * 2;
+      justify-content: center;
+    }
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+  width: 100%;
+  z-index: 0;
+
+  color: black;
+  margin: 0 auto 30px;
+
+  // timeline__line
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: calc(2 * $line-node-border--size + $line-size + $left-padding);
+    top: 0;
+    bottom: -30px;
+
+    width: $line-size;
+    margin-left: calc(-1 * $line-size/2);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+event-list {
+  @include virgin-ul;
+}
+
+event {
+  position: relative;
+
+  // from little screen
+  @media (min-width: $screen-md-min) {
+    margin: auto;
+    width: $screen-sm-min;
+  }
+}
+
+icon {
+  $size: 40px;
+  $inner-space: 4px;
+  width: $size;
+  height: $size;
+  speak: none;
+
+  position: absolute;
+  color: #fff;
+  border-radius: 50%;
+  background-color: $smalt-blue;
+  padding: $inner-space;
+  box-shadow: 0 0 0 $line-node-border--size #fff;
+  left: calc(($left-padding * 2) + $line-node-border--size);
+  top: -4px;
+  margin: 0 0 0 -25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @global svg {
+    $radio: 0.6;
+    width: calc($size * $radio);
+    height: calc($size * $radio);
+  }
+
+  // to modile
+  @media (--phone) {
+    font-size: 1.4em;
+  }
+}
+
+// timeline__body
+body {
+  position: relative;
+  margin: 5px 0 30px calc($left-content-pos + ($arrow-size * 2) + 5px);
+
+  background-color: white;
+  padding: 1rem 2rem;
+
+  @global a {
+    color: #333;
+  }
+
+  > h3 {
+    margin: 0 0 5px;
+  }
+
+  &:after {
+    content: ' ';
+    right: 100%;
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: solid transparent;
+    pointer-events: none;
+    border-right-color: #fff;
+    border-width: $arrow-size;
+    top: 0;
+  }
+}
+
+// timeline__year
+year {
+  display: block;
+  margin: calc($watermark-icon-size * 2 / 3) 0 1em;
+  padding-left: $left-content-pos;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+}

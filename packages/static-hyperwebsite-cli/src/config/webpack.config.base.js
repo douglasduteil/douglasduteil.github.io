@@ -65,8 +65,7 @@ module.exports = (env, argv) => ({
   plugins: [
     new CopyWebpackPlugin([
       {
-        from: 'src/icons',
-        to: 'icons'
+        from: 'src/assets'
       }
     ])
   ]

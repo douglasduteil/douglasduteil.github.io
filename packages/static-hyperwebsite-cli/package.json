@@ -13,6 +13,7 @@
     "babel-loader": "^8.0.0-beta",
     "babel-plugin-css-modules-transform": "^1.6.1",
     "chokidar": "^2.0.4",
+    "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "esm": "^3.0.72",
     "hyperhtml-html-views-loader": "^0.0.0",

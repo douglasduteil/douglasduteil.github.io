@@ -6,25 +6,29 @@ const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
 const { GenerateSW } = require('workbox-webpack-plugin');
 const config = require('./webpack.config.base');
 
-module.exports = (env, argv) => ({
-  ...config({ ...env, mode: 'production' }, argv),
-  mode: 'production',
-  devtool: 'none',
-  plugins: [
-    // new PrepackWebpackPlugin({}),
-    new SSRStaticRenderer({
-      outputPath: resolve(process.cwd(), 'dist')
-    }),
-    new GenerateSW()
-  ]
-  /*
+module.exports = (env, argv) => {
+  const baseConfig = config({ ...env, mode: 'production' }, argv);
+  return {
+    ...baseConfig,
+    mode: 'production',
+    devtool: 'none',
+    plugins: [
+      ...baseConfig.plugins,
+      // new PrepackWebpackPlugin({}),
+      new SSRStaticRenderer({
+        outputPath: resolve(process.cwd(), 'dist')
+      }),
+      new GenerateSW()
+    ]
+    /*
   optimization: {
     splitChunks: {
       chunks: 'all'
     }
   }
   */
-});
+  };
+};
 
 function SSRStaticRenderer({ outputPath } = {}) {
   this.apply = compiler => {

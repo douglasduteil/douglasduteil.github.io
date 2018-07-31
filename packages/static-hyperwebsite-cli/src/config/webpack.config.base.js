@@ -1,6 +1,7 @@
 //
 
 const { resolve } = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 //
 
@@ -60,5 +61,13 @@ module.exports = (env, argv) => ({
 
       //
     ]
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: 'src/icons',
+        to: 'icons'
+      }
+    ])
+  ]
 });

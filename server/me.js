@@ -23,8 +23,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const gravatarPic =
-  'http://1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1'
+const gravatarPic = '//1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1'
 
 const sheet = _jss__WEBPACK_IMPORTED_MODULE_0__["default"].createStyleSheet(_me_scss__WEBPACK_IMPORTED_MODULE_2___default.a)
 sheet.addRules({

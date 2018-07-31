@@ -12,8 +12,8 @@ ul {
   margin: 0;
   list-style-type: none;
   margin-bottom: 50px;
-  padding: 20vh 0 20px;
-  height: 250px;
+  padding: 20vh 5vw 20px;
+  height: 35vh;
 
   background: linear-gradient(
     to bottom,
@@ -21,12 +21,10 @@ ul {
     rgba(0, 0, 0, 0.6) 50%,
     rgba(0, 0, 0, 0.6) 100%
   );
-}
 
-@media (min-width: 768px) {
-  ul {
+  @media (min-width: 768px) {
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 5vh;
     margin-left: 70px;
   }
 }
@@ -34,7 +32,7 @@ ul {
 li {
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  font-weight: 600;
   font-size: 1.15em;
 
   &:not(:first-child) {
@@ -43,6 +41,7 @@ li {
 }
 
 h1 {
+  font-size: 3rem;
   font-weight: normal;
 }
 

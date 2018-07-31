@@ -21,7 +21,7 @@ export default ({ hyper: { wire } }, state, emit) => {
   return wire(_, ':me')`
     <ul class=${classes.ul}>
       <li class=${classes.li}>
-        <h1 ckass=${classes.h1}>
+        <h1 class=${classes.h1}>
           Douglas Duteil
         </h1>
       </li>

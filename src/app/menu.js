@@ -15,16 +15,22 @@ export default (render, state = {}) => render(_)`
   <nav class=${classes.nav}>
     <a active=${isActiveHref(state.href, '/me.html')}
     class=${classes.a}
-    href="/me.html">${faceIcon(render)}</a>
+    href="/me.html">${faceIcon(render)} <span class="sr-only">Me</span></a>
     <a active=${isActiveHref(state.href, '/achievements.html')}
     class=${classes.a}
-    href="/achievements.html">${trophyIcon(render)}</a>
+    href="/achievements.html">${trophyIcon(
+      render
+    )}<span class="sr-only">Achievements</span></a>
     <a active=${isActiveHref(state.href, '/rockets.html')}
     class=${classes.a}
-    href="/rockets.html">${rocketIcon(render)}</a>
+    href="/rockets.html">${rocketIcon(
+      render
+    )}<span class="sr-only">Rockets</span></a>
     <a active=${isActiveHref(state.href, '/contact.html')}
     class=${classes.a}
-    href="/contact.html">${commentIcon(render)}</a>
+    href="/contact.html">${commentIcon(
+      render
+    )}<span class="sr-only">Contact</span></a>
   </nav>
 
   <style>${{ html: sheet.toString() }}</style>

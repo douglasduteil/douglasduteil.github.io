@@ -1,6 +1,5 @@
 //
 
-const { writeFile } = require('fs-extra')
 const { resolve } = require('path')
 // const PrepackWebpackPlugin = require('prepack-webpack-plugin').default
 const { GenerateSW } = require('workbox-webpack-plugin')
@@ -13,13 +12,19 @@ module.exports = (env, argv) => {
     mode: 'production',
     devtool: 'none',
     plugins: [
-      ...baseConfig.plugins,
-      // new PrepackWebpackPlugin({}),
+      ...baseConfig.plugins, // new PrepackWebpackPlugin({}),
       new SSRStaticRenderer({
         outputPath: resolve(process.cwd(), 'dist')
       }),
       new GenerateSW({
         runtimeCaching: [
+          {
+            urlPattern: /https:\/\/ajax\.googleapis\.com.*/,
+            handler: 'cacheFirst',
+            options: {
+              cacheName: 'google-ajax-cache'
+            }
+          },
           {
             urlPattern: /https:\/\/fonts\.googleapis\.com.*/,
             handler: 'cacheFirst',
@@ -30,14 +35,14 @@ module.exports = (env, argv) => {
         ]
       })
     ]
-    /*
+  }
+  /*
   optimization: {
     splitChunks: {
       chunks: 'all'
     }
   }
   */
-  }
 }
 
 function SSRStaticRenderer({ outputPath } = {}) {

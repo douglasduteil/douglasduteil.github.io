@@ -3,24 +3,28 @@
 const { writeFile } = require('fs-extra');
 const { resolve } = require('path');
 const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
+const { GenerateSW } = require('workbox-webpack-plugin');
 const config = require('./webpack.config.base');
 
-module.exports = {
-  ...config,
+module.exports = (env, argv) => ({
+  ...config({ ...env, mode: 'production' }, argv),
   mode: 'production',
   devtool: 'none',
   plugins: [
-    new PrepackWebpackPlugin({}),
+    // new PrepackWebpackPlugin({}),
     new SSRStaticRenderer({
       outputPath: resolve(process.cwd(), 'dist')
-    })
-  ],
+    }),
+    new GenerateSW()
+  ]
+  /*
   optimization: {
     splitChunks: {
       chunks: 'all'
     }
   }
-};
+  */
+});
 
 function SSRStaticRenderer({ outputPath } = {}) {
   this.apply = compiler => {

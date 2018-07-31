@@ -4,8 +4,8 @@ const { resolve } = require('path');
 
 const config = require('./webpack.config.base');
 
-module.exports = {
-  ...config,
+module.exports = (env, argv) => ({
+  ...config({ ...env, mode: 'development' }, argv),
   mode: 'development',
   devtool: 'eval',
   //
@@ -44,4 +44,4 @@ module.exports = {
       stats: 'minimal'
     }
   }
-};
+});

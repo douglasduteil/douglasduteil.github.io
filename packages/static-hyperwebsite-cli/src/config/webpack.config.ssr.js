@@ -6,8 +6,8 @@ const config = require('./webpack.config.base');
 
 const ssrMiddleware = resolve(process.cwd(), 'src', 'server', 'index.js');
 
-module.exports = {
-  ...config,
+module.exports = (env, argv) => ({
+  ...config({ ...env, mode: 'development' }, argv),
   entry: ssrMiddleware,
   mode: 'development',
   devtool: false,
@@ -31,4 +31,4 @@ module.exports = {
     __filename: false,
     __dirname: false
   }
-};
+});

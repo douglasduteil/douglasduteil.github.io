@@ -4,12 +4,23 @@ const { resolve } = require('path');
 
 //
 
-module.exports = {
-  mode: 'development',
-  devtool: 'eval',
+module.exports = (env, argv) => ({
   module: {
     rules: [
       //
+
+      {
+        test: /.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'preprocess-loader',
+            options: {
+              BUILD_ENV: env.mode
+            }
+          }
+        ]
+      },
 
       {
         test: /\.scss$/,
@@ -50,4 +61,4 @@ module.exports = {
       //
     ]
   }
-};
+});

@@ -1,14 +1,9 @@
 nav {
   font-size: 1.5em;
   color: #fff;
-  z-index: 1000;
-
   display: flex;
-  position: fixed;
-  bottom: 0;
 
-  transform: translateZ(0);
-  will-change: transform;
+  width: 100%;
 }
 
 a {
@@ -33,11 +28,6 @@ a {
 }
 
 @media (max-width: 767px) {
-  nav {
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
   a {
     height: 50px;
   }
@@ -46,9 +36,6 @@ a {
 @media (min-width: 768px) {
   nav {
     flex-direction: column;
-    left: 0;
-    top: 0;
-    bottom: 0;
   }
 
   a {

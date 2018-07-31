@@ -2,7 +2,7 @@
 
 import pageLayout from './page';
 import jss from '../jss';
-import { githubIcon, locationIcon, suitcaseIcon } from './svg';
+import { commentIcon, githubIcon, locationIcon, suitcaseIcon } from './svg';
 import styles from './contact.scss';
 
 //
@@ -13,10 +13,12 @@ const { classes } = sheet;
 //
 
 const _ = {};
+export const backgoundColor = '#F23030';
 export default ({ hyper: { wire } }, state, emit) =>
   pageLayout(wire)({
     title: 'Contact',
-    bgColor: '#F23030',
+    bgColor: backgoundColor,
+    watermark: commentIcon(wire, state),
     children: wire(_, ':contact')`
   <ul class=${classes.ul}>
     <li class=${classes.li}>

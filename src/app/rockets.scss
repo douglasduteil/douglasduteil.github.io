@@ -4,8 +4,9 @@
 @import './_mixins.scss';
 
 @global section {
-  margin-top: 5rem;
+  margin-top: 4rem;
   justify-content: center;
+  align-items: center;
 }
 
 //== Rocket Views
@@ -27,6 +28,7 @@ ul {
     margin-bottom: -20px;
   }
 }
+
 li {
   margin: $spacing;
 }

@@ -2,7 +2,7 @@
 
 import pageLayout from './page';
 import jss from '../jss';
-import { githubIcon, locationIcon, suitcaseIcon } from './svg';
+import { githubIcon, locationIcon, suitcaseIcon, rocketIcon } from './svg';
 import styles from './rockets.scss';
 
 //
@@ -13,10 +13,13 @@ const { classes } = sheet;
 //
 
 const _ = {};
+
+export const backgoundColor = '#97A629';
 export default ({ hyper: { wire } }, state, emit) =>
   pageLayout(wire)({
     title: 'Rockets',
-    bgColor: '#97A629',
+    bgColor: backgoundColor,
+    watermark: rocketIcon(wire, state),
     children: wire(_, ':rockets')`
   <ul class=${classes.ul}>
     <li class=${classes.li}>

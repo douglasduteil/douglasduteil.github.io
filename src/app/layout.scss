@@ -1,0 +1,28 @@
+//
+
+menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+
+  transform: translateZ(0);
+  will-change: transform;
+  z-index: 1000;
+}
+
+@media (max-width: 767px) {
+  menu {
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  menu {
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+}

@@ -25,6 +25,7 @@ $line-size: 10px;
     // from tablet
     @media (min-width: $screen-sm-min) {
       padding-right: $left-padding * 2;
+      justify-content: center;
     }
   }
 }
@@ -71,11 +72,11 @@ event {
 }
 
 icon {
+  $size: 40px;
   $inner-space: 4px;
-  width: 40px;
-  height: 40px;
+  width: $size;
+  height: $size;
   speak: none;
-  line-height: 40px;
 
   position: absolute;
   color: #fff;
@@ -83,10 +84,19 @@ icon {
   background-color: $smalt-blue;
   padding: $inner-space;
   box-shadow: 0 0 0 $line-node-border--size #fff;
-  text-align: center;
   left: calc(($left-padding * 2) + $line-node-border--size);
   top: -4px;
   margin: 0 0 0 -25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @global svg {
+    $radio: 0.6;
+    width: calc($size * $radio);
+    height: calc($size * $radio);
+  }
 
   // to modile
   @media (max-width: $screen-xs-max) {
@@ -100,7 +110,11 @@ body {
   margin: 5px 0 30px calc($left-content-pos + ($arrow-size * 2) + 5px);
 
   background-color: white;
-  padding: 2em;
+  padding: 1rem 2rem;
+
+  @global a {
+    color: #333;
+  }
 
   > h3 {
     margin: 0 0 5px;

@@ -1,5 +1,7 @@
 //
 
+@import './_mixins.scss';
+
 //== Page Layout
 //-----------------------------------------------------------------------------
 
@@ -37,5 +39,27 @@ section {
   section {
     margin-bottom: 0;
     padding-bottom: 0;
+  }
+}
+
+watermark {
+  $size: 170px;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 0;
+  opacity: 0.1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @global svg {
+    width: $size;
+    height: $size;
   }
 }

@@ -4,7 +4,6 @@ import jss from '../jss';
 import pageLayout from './page';
 import {
   githubIcon,
-  graduationIcon,
   locationIcon,
   trophyIcon,
   suitcaseIcon,
@@ -67,7 +66,7 @@ function renderYear(render) {
 const renderEvent = {
   job(render) {
     return event => render()`
-    <i class=${classes.icon}>${suitcaseIcon(render, event)}</i>
+    <i class=${classes.icon}></i>
     <div class=${classes.body}>
 
       <h3>${event.title}</h3>
@@ -77,7 +76,7 @@ const renderEvent = {
   },
   study(render) {
     return event => render()`
-    <i class=${classes.icon}>${graduationIcon(render, event)}</i>
+    <i class=${classes.icon}></i>
     <div class=${classes.body}>
 
       <h3>${event.title}</h3>

@@ -13,8 +13,6 @@ import { app } from './app/app';
 app.use(devtools);
 // @endif
 
-console.log('run /* @echo BUILD_ENV */ mode');
-
 app.hyper = hyper;
 
 app.renderTitle = title => ` ${title ? `${title} ` : ''} Douglas Duteil`;

@@ -1,3 +1,9 @@
+//
+
+import { buildClientWebpackServer, buildSSRWebpackServer } from '../index';
+
+//
+
 export const command = 'build';
 export const desc = 'Build sources';
 export const builder = {
@@ -6,14 +12,6 @@ export const builder = {
   }
 };
 export function handler(argv) {
-  const { spawn } = require('child_process');
-  const { resolve } = require('path');
-  const srcPath = resolve(__dirname, '..');
-  const args = [
-    'webpack-cli',
-    '--config',
-    resolve(srcPath, 'config', 'webpack.config.prod.js')
-  ];
-
-  spawn('yarn', args, { stdio: 'inherit' });
+  const cp = buildSSRWebpackServer();
+  cp.once('exit', buildClientWebpackServer);
 }

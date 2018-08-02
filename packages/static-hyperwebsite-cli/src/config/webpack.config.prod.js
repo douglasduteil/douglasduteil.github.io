@@ -27,6 +27,8 @@ module.exports = (env, argv) => {
         outputPath: resolve(process.cwd(), 'dist')
       }),
       new GenerateSW({
+        skipWaiting: true,
+        clientsClaim: true,
         runtimeCaching: [
           {
             urlPattern: /https:\/\/google-analytics\.com\/analytics.js/,

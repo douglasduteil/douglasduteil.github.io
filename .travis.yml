@@ -13,7 +13,7 @@ script:
   - yarn lint
   - yarn run build
 
-after_script:
+after_success:
   # The "dist/server" shouldn't be deploy on the static server
   - rm -rf dist/server
 

@@ -25,5 +25,5 @@ Deployment with https://github.com/douglasduteil/dd-deploy
     terms of the Do What The Fuck You Want To Public License, Version 2,
     as published by Sam Hocevar. See the LICENCE file for more details.
 
-[travis-url]: http://travis-ci.com/douglasduteil/douglasduteil.github.io
-[travis-image]: http://travis-ci.com/douglasduteil/douglasduteil.github.io.svg?branch=master
+[travis-url]: https://travis-ci.com/douglasduteil/douglasduteil.github.io
+[travis-image]: https://travis-ci.com/douglasduteil/douglasduteil.github.io.svg?branch=boss

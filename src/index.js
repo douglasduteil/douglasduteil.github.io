@@ -17,4 +17,12 @@ app.hyper = hyper
 
 app.renderTitle = title => ` ${title ? `${title} ` : ''} Douglas Duteil`
 
-app.mount('root')
+const bootstrap = () => {
+  app.mount('root')
+
+  // @if BUILD_ENV='production'
+  import(/* webpackChunkName: "stalker" */ './autotrack.js')
+  // @endif
+}
+
+window.addEventListener('load', setTimeout.bind(null, bootstrap, 0))

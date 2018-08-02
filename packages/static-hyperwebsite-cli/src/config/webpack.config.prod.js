@@ -3,7 +3,15 @@
 const { resolve } = require('path')
 // const PrepackWebpackPlugin = require('prepack-webpack-plugin').default
 const { GenerateSW } = require('workbox-webpack-plugin')
+const SitemapPlugin = require('sitemap-webpack-plugin').default
 const config = require('./webpack.config.base')
+
+const { default: middleware, url, routes } = require(resolve(
+  process.cwd(),
+  'dist',
+  'server',
+  'main.js'
+))
 
 module.exports = (env, argv) => {
   const baseConfig = config({ ...env, mode: 'production' }, argv)
@@ -13,6 +21,7 @@ module.exports = (env, argv) => {
     devtool: 'none',
     plugins: [
       ...baseConfig.plugins,
+      //
       // new PrepackWebpackPlugin({}),
       new SSRStaticRenderer({
         outputPath: resolve(process.cwd(), 'dist')
@@ -41,7 +50,8 @@ module.exports = (env, argv) => {
             }
           }
         ]
-      })
+      }),
+      new SitemapPlugin(url, routes)
     ]
   }
   /*
@@ -56,13 +66,6 @@ module.exports = (env, argv) => {
 function SSRStaticRenderer({ outputPath } = {}) {
   this.apply = compiler => {
     let ssr = null
-
-    const { default: middleware, routes } = require(resolve(
-      process.cwd(),
-      'dist',
-      'server',
-      'main.js'
-    ))
 
     compiler.hooks.run.tapPromise('SSRStaticRenderer', async compiler => {
       ssr = await middleware()

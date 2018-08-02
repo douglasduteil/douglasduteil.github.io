@@ -23,6 +23,8 @@ module.exports = (env, argv) => ({
     libraryTarget: 'commonjs2'
   },
 
+  plugins: [],
+
   node: {
     console: false,
     global: false,

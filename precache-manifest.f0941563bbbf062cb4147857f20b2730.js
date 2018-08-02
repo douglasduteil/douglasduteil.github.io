@@ -1,27 +1,35 @@
 self.__precacheManifest = [
   {
-    "revision": "3ade000373d875e48ca9a59ed40efc38",
-    "url": "icons/favicon-96x96.png"
+    "revision": "165014d0267a83a3248355654c3ace8c",
+    "url": "icons/favicon-32x32.png"
   },
   {
-    "revision": "c1131113e580f93b6d97",
+    "revision": "d09c58493401432a1e7b",
     "url": "main.js"
   },
   {
-    "revision": "09407d57f406de140004fdc4ad8c6389",
+    "revision": "7463763f644266ed49d6",
+    "url": "me.js"
+  },
+  {
+    "revision": "25c655b4c8dc16db719e256dce83e8cb",
     "url": "rockets.html"
   },
   {
-    "revision": "3a78f6c7389ee2bb62f6",
+    "revision": "f583c86e359783e0aec4",
     "url": "rockets.js"
   },
   {
-    "revision": "d04bba8f6644271e7bd36ed5a809815c",
+    "revision": "c7821d101f2ae1ab14b3de7c9910d969",
     "url": "me.html"
   },
   {
-    "revision": "1bb3310115b83fa87098",
-    "url": "me.js"
+    "revision": "7a1ca3298b5a0b316848",
+    "url": "vendors~stalker.js"
+  },
+  {
+    "revision": "3867c3bef66a2eac6155",
+    "url": "stalker.js"
   },
   {
     "revision": "772c70912f02d5b5a206cf0c07a89998",
@@ -76,12 +84,12 @@ self.__precacheManifest = [
     "url": "icons/favicon-196x196.png"
   },
   {
-    "revision": "165014d0267a83a3248355654c3ace8c",
-    "url": "icons/favicon-32x32.png"
+    "revision": "c7821d101f2ae1ab14b3de7c9910d969",
+    "url": "index.html"
   },
   {
-    "revision": "d04bba8f6644271e7bd36ed5a809815c",
-    "url": "index.html"
+    "revision": "3ade000373d875e48ca9a59ed40efc38",
+    "url": "icons/favicon-96x96.png"
   },
   {
     "revision": "e158b17383f176dd370e09431676b4c0",
@@ -144,19 +152,19 @@ self.__precacheManifest = [
     "url": "icons/apple-touch-icon-114x114.png"
   },
   {
-    "revision": "94700e5503921f5ea50c",
+    "revision": "0c1bc49d479a1b247f59",
     "url": "contact.js"
   },
   {
-    "revision": "143eaddae0d879912bba0effdc3f400c",
+    "revision": "0d45602cf0f9512ded3b9640f9ac4362",
     "url": "contact.html"
   },
   {
-    "revision": "38a8bec39bd3abc8330f",
+    "revision": "27cf68004cd040672aa3",
     "url": "achievements.js"
   },
   {
-    "revision": "251dccb0a15103dab052571fa14eef23",
+    "revision": "59d79df691497eac44d50ced7b3a4bf4",
     "url": "achievements.html"
   }
 ];

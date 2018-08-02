@@ -20,6 +20,13 @@ module.exports = (env, argv) => {
       new GenerateSW({
         runtimeCaching: [
           {
+            urlPattern: /https:\/\/google-analytics\.com\/analytics.js/,
+            handler: 'cacheFirst',
+            options: {
+              cacheName: 'google-analytics-cache'
+            }
+          },
+          {
             urlPattern: /https:\/\/ajax\.googleapis\.com.*/,
             handler: 'cacheFirst',
             options: {

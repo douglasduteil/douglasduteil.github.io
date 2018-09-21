@@ -28,6 +28,8 @@ export const routes = [
   '/contact.html'
 ]
 
+export const url = 'https://douglasduteil.github.io'
+
 export default async () => {
   log('loading template from', templatePath)
   const templateFileBuffer = await fse.readFile(templatePath)

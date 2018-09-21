@@ -18,25 +18,27 @@ const { classes } = sheet
 const _ = {}
 export default ({ hyper: { wire } }, state, emit) => {
   return wire(_, ':me')`
-    <ul class=${classes.ul}>
-      <li class=${classes.li}>
-        <h1 class=${classes.h1}>
-          Douglas Duteil
-        </h1>
-      </li>
-      <li class=${classes.li}>
-        <i class=${classes.i}>${locationIcon(wire)}</i>
-        <div>Paris, France</div>
-      </li>
-      <li class=${classes.li}>
-        <i class=${classes.i}>${githubIcon(wire)}</i>
-        <div>OneDoes Member</div>
-      </li>
-      <li class=${classes.li}>
-        <i class=${classes.i}>${suitcaseIcon(wire)}</i>
-        <div>Front End Developer at SFEIR Paris</div>
-      </li>
-    </ul>
+    <section class=${classes.section}>
+      <ul class=${classes.ul}>
+        <li class=${classes.li}>
+          <h1 class=${classes.h1}>
+            Douglas Duteil
+          </h1>
+        </li>
+        <li class=${classes.li}>
+          <i class=${classes.i}>${locationIcon(wire)}</i>
+          <div>Paris, France</div>
+        </li>
+        <li class=${classes.li}>
+          <i class=${classes.i}>${githubIcon(wire)}</i>
+          <div>OneDoes Member</div>
+        </li>
+        <li class=${classes.li}>
+          <i class=${classes.i}>${suitcaseIcon(wire)}</i>
+          <div>Front End Developer at SFEIR Paris</div>
+        </li>
+      </ul>
+    </section>
 
     <style>${{ html: sheet.toString() }}</style>
   `

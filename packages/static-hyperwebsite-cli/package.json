@@ -31,7 +31,7 @@
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.6",
     "postcss-sassy-mixins": "^2.1.0",
-    "postcss-scss": "^1.0.0",
+    "postcss-scss": "^2.0.0",
     "postcss-simple-vars": "^5.0.0",
     "prejss-styles-loader": "^1.0.0",
     "prepack-webpack-plugin": "^1.1.1",

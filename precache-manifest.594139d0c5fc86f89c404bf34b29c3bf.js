@@ -160,11 +160,11 @@ self.__precacheManifest = [
     "url": "contact.html"
   },
   {
-    "revision": "27cf68004cd040672aa3",
+    "revision": "22dd1f594f2cf228f509",
     "url": "achievements.js"
   },
   {
-    "revision": "9fa4aae066569bfe45861735f4dad120",
+    "revision": "2aef2f967caf99b3c2c4bbb33960c128",
     "url": "achievements.html"
   }
 ];

@@ -35,7 +35,7 @@ export default ({ hyper: { wire } }, state, emit) => {
         </li>
         <li class=${classes.li}>
           <i class=${classes.i}>${suitcaseIcon(wire)}</i>
-          <div>Front End Developer at SFEIR Paris</div>
+          <div>Front End Developer</div>
         </li>
       </ul>
     </section>

@@ -8,7 +8,7 @@ self.__precacheManifest = [
     "url": "main.js"
   },
   {
-    "revision": "7463763f644266ed49d6",
+    "revision": "350450b63718cdfca20e",
     "url": "me.js"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "rockets.js"
   },
   {
-    "revision": "22fc85faebafb9ddaea2edad5a270431",
+    "revision": "38b65dd6ab832a4c0a14a53a5761d2ac",
     "url": "me.html"
   },
   {
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "icons/favicon-196x196.png"
   },
   {
-    "revision": "22fc85faebafb9ddaea2edad5a270431",
+    "revision": "38b65dd6ab832a4c0a14a53a5761d2ac",
     "url": "index.html"
   },
   {

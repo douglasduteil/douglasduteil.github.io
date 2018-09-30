@@ -12,11 +12,11 @@ self.__precacheManifest = [
     "url": "me.js"
   },
   {
-    "revision": "93268478056251fb04b2a574f0751cf9",
+    "revision": "3bd38d03aa9a6ca467456fcd66812eff",
     "url": "rockets.html"
   },
   {
-    "revision": "f583c86e359783e0aec4",
+    "revision": "947134b373242d5a5631",
     "url": "rockets.js"
   },
   {

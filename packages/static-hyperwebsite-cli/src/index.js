@@ -33,7 +33,7 @@ export function serveClientWebpackServer(configFile) {
   const { resolve } = require('path')
   const srcPath = resolve(__dirname)
   const args = [
-    'webpack-serve',
+    'webpack-dev-server',
     '--config',
     resolve(srcPath, 'config', 'webpack.config.dev.js')
   ]

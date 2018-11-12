@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "stalker.js"
   },
   {
-    "revision": "772c70912f02d5b5a206cf0c07a89998",
-    "url": "icons/icon-144x144.png"
+    "revision": "d0c71f4a220b549e55cd8cddb5c23a92",
+    "url": "icons/icon-152x152.png"
   },
   {
     "revision": "bfdb900142801af384836d64ec3e1192",
@@ -92,20 +92,16 @@ self.__precacheManifest = [
     "url": "icons/favicon-96x96.png"
   },
   {
-    "revision": "e158b17383f176dd370e09431676b4c0",
-    "url": "icons/favicon.ico"
-  },
-  {
     "revision": "d8fa058096d7f5d4a245054ddb615e96",
     "url": "icons/icon-128x128.png"
   },
   {
-    "revision": "38d3098b8ebf5be088c1d2b147197a22",
-    "url": "icons/apple-touch-icon-144x144.png"
+    "revision": "772c70912f02d5b5a206cf0c07a89998",
+    "url": "icons/icon-144x144.png"
   },
   {
-    "revision": "d0c71f4a220b549e55cd8cddb5c23a92",
-    "url": "icons/icon-152x152.png"
+    "revision": "38d3098b8ebf5be088c1d2b147197a22",
+    "url": "icons/apple-touch-icon-144x144.png"
   },
   {
     "revision": "496343a27c84b86a3340c7abf8b6e69e",
@@ -148,6 +144,10 @@ self.__precacheManifest = [
     "url": "icons/mstile-70x70.png"
   },
   {
+    "revision": "e158b17383f176dd370e09431676b4c0",
+    "url": "icons/favicon.ico"
+  },
+  {
     "revision": "1ab95bd500422863e46a8a2c803718c5",
     "url": "icons/apple-touch-icon-114x114.png"
   },
@@ -164,7 +164,7 @@ self.__precacheManifest = [
     "url": "achievements.js"
   },
   {
-    "revision": "2aef2f967caf99b3c2c4bbb33960c128",
+    "revision": "d4586554e2df6648c875138b7e384f6a",
     "url": "achievements.html"
   }
 ];

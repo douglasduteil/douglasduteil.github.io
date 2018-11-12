@@ -1,9 +1,12 @@
 //
 
+import nanoraf from 'nanoraf'
+
 import jss from '../jss'
 import { githubIcon, locationIcon, suitcaseIcon } from './svg'
 import styles from './me.scss'
 import miniMe from './mini_me.jpeg'
+import { bind } from 'hyperhtml'
 
 const gravatarPic = '//1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1'
 
@@ -15,6 +18,16 @@ sheet.addRules({
 })
 const { classes } = sheet
 
+const activities = [
+  '===========',
+  'Contributor',
+  'Developer',
+  'Musician',
+  'Gamer',
+  'Sleeper',
+  'Jogger',
+]
+
 const _ = {}
 export default ({ hyper: { wire } }, state, emit) => {
   return wire(_, ':me')`
@@ -24,6 +37,9 @@ export default ({ hyper: { wire } }, state, emit) => {
           <h1 class=${classes.h1}>
             Douglas Duteil
           </h1>
+        </li>
+        <li class=${classes.li}>
+          ${typer(wire)(activities, { prefix: '#', orderFn: randomTyperOrder })}
         </li>
         <li class=${classes.li}>
           <i class=${classes.i}>${locationIcon(wire)}</i>
@@ -42,4 +58,37 @@ export default ({ hyper: { wire } }, state, emit) => {
 
     <style>${{ html: sheet.toString() }}</style>
   `
+}
+
+//
+
+function typer(wire) {
+  const root = wire(_, ':my-supa-cinematic-hacker-typer')`
+    <my-supa-cinematic-hacker-typer class=${classes['hacker-typer']}>
+    </my-supa-cinematic-hacker-typer>
+  `
+
+  return (words, {prefix, orderFn}) => {
+    //
+    bind(root)`${prefix} ${words[0]}`
+
+    const updateLoop = () => {
+      if (!document.body.contains(root)) {
+        // The supa hacker typer is no longueur in the DOM bro !
+        clearInterval(loopId)
+        return
+      }
+
+      const doRender = () => bind(root)`# ${orderFn(words)}`
+      nanoraf(doRender)()
+    }
+
+    const loopId = setInterval(updateLoop, 1000)
+
+    return root
+  }
+}
+
+function randomTyperOrder(words) {
+  return words[Math.floor(Math.random() * words.length)]
 }

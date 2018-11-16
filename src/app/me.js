@@ -6,7 +6,6 @@ import jss from '../jss'
 import { githubIcon, locationIcon, suitcaseIcon } from './svg'
 import styles from './me.scss'
 import miniMe from './mini_me.jpeg'
-import { bind } from 'hyperhtml'
 
 const gravatarPic = '//1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1'
 
@@ -29,7 +28,7 @@ const activities = [
 ]
 
 const _ = {}
-export default ({ hyper: { wire } }, state, emit) => {
+export default ({ hyper: { bind, wire } }, state, emit) => {
   return wire(_, ':me')`
     <section class=${classes.section}>
       <ul class=${classes.ul}>
@@ -39,7 +38,7 @@ export default ({ hyper: { wire } }, state, emit) => {
           </h1>
         </li>
         <li class=${classes.li}>
-          ${typer(wire)(activities, { prefix: '#', orderFn: randomTyperOrder })}
+          ${typer({bind, wire})(activities, { prefix: '#', orderFn: randomTyperOrder })}
         </li>
         <li class=${classes.li}>
           <i class=${classes.i}>${locationIcon(wire)}</i>
@@ -62,7 +61,7 @@ export default ({ hyper: { wire } }, state, emit) => {
 
 //
 
-function typer(wire) {
+function typer({bind, wire}) {
   const root = wire(_, ':my-supa-cinematic-hacker-typer')`
     <my-supa-cinematic-hacker-typer class=${classes['hacker-typer']}>
     </my-supa-cinematic-hacker-typer>

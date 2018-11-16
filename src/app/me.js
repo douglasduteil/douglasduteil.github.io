@@ -82,7 +82,8 @@ function typer({bind, wire}) {
       nanoraf(doRender)()
     }
 
-    const loopId = setInterval(updateLoop, 1000)
+    const loopId = typeof document === 'object'
+    ? setInterval(updateLoop, 1000) : NaN
 
     return root
   }

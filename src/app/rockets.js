@@ -30,7 +30,7 @@ export default ({ hyper: { wire } }, state, emit) =>
   </li>
     <li class=${classes.li}>
       <a class=${classes.a} target="_blank"
-      href="http://plnkr.co/users/douglasduteil">
+      href="https://next.plnkr.co/users/douglasduteil/plunks">
       <div class=${classes.text}>Plunker</div>
     </a>
   </li>

@@ -1,5 +1,7 @@
 //
 
+import nanoraf from 'nanoraf'
+
 import jss from '../jss'
 import { githubIcon, locationIcon, suitcaseIcon } from './svg'
 import styles from './me.scss'
@@ -15,8 +17,18 @@ sheet.addRules({
 })
 const { classes } = sheet
 
+const activities = [
+  '===========',
+  'Contributor',
+  'Developer',
+  'Musician',
+  'Gamer',
+  'Sleeper',
+  'Jogger',
+]
+
 const _ = {}
-export default ({ hyper: { wire } }, state, emit) => {
+export default ({ hyper: { bind, wire } }, state, emit) => {
   return wire(_, ':me')`
     <section class=${classes.section}>
       <ul class=${classes.ul}>
@@ -24,6 +36,9 @@ export default ({ hyper: { wire } }, state, emit) => {
           <h1 class=${classes.h1}>
             Douglas Duteil
           </h1>
+        </li>
+        <li class=${classes.li}>
+          ${typer({bind, wire})(activities, { prefix: '#', orderFn: randomTyperOrder })}
         </li>
         <li class=${classes.li}>
           <i class=${classes.i}>${locationIcon(wire)}</i>
@@ -35,11 +50,45 @@ export default ({ hyper: { wire } }, state, emit) => {
         </li>
         <li class=${classes.li}>
           <i class=${classes.i}>${suitcaseIcon(wire)}</i>
-          <div>Front End Developer at SFEIR Paris</div>
+          <div>Front End Developer</div>
         </li>
       </ul>
     </section>
 
     <style>${{ html: sheet.toString() }}</style>
   `
+}
+
+//
+
+function typer({bind, wire}) {
+  const root = wire(_, ':my-supa-cinematic-hacker-typer')`
+    <my-supa-cinematic-hacker-typer class=${classes['hacker-typer']}>
+    </my-supa-cinematic-hacker-typer>
+  `
+
+  return (words, {prefix, orderFn}) => {
+    //
+    bind(root)`${prefix} ${words[0]}`
+
+    const updateLoop = () => {
+      if (!document.body.contains(root)) {
+        // The supa hacker typer is no longueur in the DOM bro !
+        clearInterval(loopId)
+        return
+      }
+
+      const doRender = () => bind(root)`# ${orderFn(words)}`
+      nanoraf(doRender)()
+    }
+
+    const loopId = typeof document === 'object'
+    ? setInterval(updateLoop, 1000) : NaN
+
+    return root
+  }
+}
+
+function randomTyperOrder(words) {
+  return words[Math.floor(Math.random() * words.length)]
 }

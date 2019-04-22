@@ -5,7 +5,7 @@ sudo: false
 git:
   depth: 5
 
-node_js: lts/*
+node_js: 10
 
 cache: yarn
 

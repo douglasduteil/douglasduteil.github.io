@@ -10,7 +10,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "autoprefixer": "^8.0.0",
-    "babel-eslint": "^9.0.0",
+    "babel-eslint": "^10.0.0",
     "babel-loader": "^8.0.0-beta",
     "babel-plugin-css-modules-transform": "^1.6.1",
     "chokidar": "^2.0.4",
@@ -20,8 +20,8 @@
     "eslint-config-prettier": "^3.0.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-standard": "^4.0.0",
     "esm": "^3.0.72",
@@ -43,7 +43,7 @@
     "webpack": "^4.16.2",
     "webpack-cli": "^3.1.0",
     "webpack-node-externals": "^1.7.2",
-    "webpack-serve": "^2.0.2",
+    "webpack-dev-server": "^3.1.9",
     "workbox-webpack-plugin": "^3.4.1",
     "yargs": "^12.0.1"
   }

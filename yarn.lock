@@ -4429,11 +4429,6 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "~3.0.0"
 
-lodash@^3.10.1:
-  version "3.10.1"
-  resolved "https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
-  integrity sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
-
 lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.10"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
@@ -5731,13 +5726,12 @@ prepack@^0.2.34:
   optionalDependencies:
     v8-profiler "^5.7.0"
 
-preprocess-loader@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/preprocess-loader/-/preprocess-loader-0.2.2.tgz#1700ec491559affc46a22ce163817b02b36262ae"
-  integrity sha1-FwDsSRVZr/xGoizhY4F7ArNiYq4=
+preprocess-loader@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/preprocess-loader/-/preprocess-loader-0.3.0.tgz#21092bef9f75393f76cc20093d72d6e0229d8c78"
+  integrity sha512-dnHXb8y3tZljNWyuUe1Pps30eKg49GKSsSqwGJYDMaJqdNnC3xO4LtDZR9zYlLojnk1lOKk1I5dAMPkeD5g9rA==
   dependencies:
     loader-utils "^1.0.0"
-    lodash "^3.10.1"
     preprocess "^3.0.2"
 
 preprocess@^3.0.2:

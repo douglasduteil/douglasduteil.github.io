@@ -1,4 +1,4 @@
-self.__precacheManifest = [
+self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "165014d0267a83a3248355654c3ace8c",
     "url": "icons/favicon-32x32.png"
@@ -28,20 +28,20 @@ self.__precacheManifest = [
     "url": "vendors~stalker.js"
   },
   {
+    "revision": "3967afe6d55f9e13ff97eb54b06eacab",
+    "url": "manifest.json"
+  },
+  {
     "revision": "3867c3bef66a2eac6155",
     "url": "stalker.js"
   },
   {
-    "revision": "d0c71f4a220b549e55cd8cddb5c23a92",
-    "url": "icons/icon-152x152.png"
+    "revision": "496343a27c84b86a3340c7abf8b6e69e",
+    "url": "icons/icon-192x192.png"
   },
   {
-    "revision": "bfdb900142801af384836d64ec3e1192",
-    "url": "icons/apple-touch-icon-120x120.png"
-  },
-  {
-    "revision": "41eeb7151f72ef76278c28c4459ea4bf",
-    "url": "icons/apple-touch-icon-152x152.png"
+    "revision": "38d3098b8ebf5be088c1d2b147197a22",
+    "url": "icons/apple-touch-icon-144x144.png"
   },
   {
     "revision": "4645fea58f6d6b2fb2abafc269537009",
@@ -100,12 +100,12 @@ self.__precacheManifest = [
     "url": "icons/icon-144x144.png"
   },
   {
-    "revision": "38d3098b8ebf5be088c1d2b147197a22",
-    "url": "icons/apple-touch-icon-144x144.png"
+    "revision": "d0c71f4a220b549e55cd8cddb5c23a92",
+    "url": "icons/icon-152x152.png"
   },
   {
-    "revision": "496343a27c84b86a3340c7abf8b6e69e",
-    "url": "icons/icon-192x192.png"
+    "revision": "41eeb7151f72ef76278c28c4459ea4bf",
+    "url": "icons/apple-touch-icon-152x152.png"
   },
   {
     "revision": "3c38e4aacdf5463505fc493b62539e4d",
@@ -148,6 +148,10 @@ self.__precacheManifest = [
     "url": "icons/favicon.ico"
   },
   {
+    "revision": "bfdb900142801af384836d64ec3e1192",
+    "url": "icons/apple-touch-icon-120x120.png"
+  },
+  {
     "revision": "1ab95bd500422863e46a8a2c803718c5",
     "url": "icons/apple-touch-icon-114x114.png"
   },
@@ -167,4 +171,4 @@ self.__precacheManifest = [
     "revision": "7877df9381c578c3b103f34b1b0a8408",
     "url": "achievements.html"
   }
-];
+]);

@@ -11,14 +11,14 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.c65bde847f751b3452a2f5a5c2e6f6e6.js"
+  "precache-manifest.fa1f97def1f25746ddea61082414fc78.js"
 );
 
-workbox.skipWaiting();
-workbox.clientsClaim();
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -26,9 +26,8 @@ workbox.clientsClaim();
  * See https://goo.gl/S9QRab
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
-workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/https:\/\/google-analytics\.com\/analytics.js/, workbox.strategies.cacheFirst({ cacheName: "google-analytics-cache", plugins: [] }), 'GET');
-workbox.routing.registerRoute(/https:\/\/ajax\.googleapis\.com.*/, workbox.strategies.cacheFirst({ cacheName: "google-ajax-cache", plugins: [] }), 'GET');
-workbox.routing.registerRoute(/https:\/\/fonts\.(googleapis|gstatic)\.com.*/, workbox.strategies.cacheFirst({ cacheName: "google-font-cache", plugins: [] }), 'GET');
+workbox.routing.registerRoute(/https:\/\/google-analytics\.com\/analytics.js/, new workbox.strategies.CacheFirst({ "cacheName":"google-analytics-cache", plugins: [] }), 'GET');
+workbox.routing.registerRoute(/https:\/\/ajax\.googleapis\.com.*/, new workbox.strategies.CacheFirst({ "cacheName":"google-ajax-cache", plugins: [] }), 'GET');
+workbox.routing.registerRoute(/https:\/\/fonts\.(googleapis|gstatic)\.com.*/, new workbox.strategies.CacheFirst({ "cacheName":"google-font-cache", plugins: [] }), 'GET');

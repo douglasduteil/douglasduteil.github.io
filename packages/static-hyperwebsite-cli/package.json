@@ -13,7 +13,7 @@
     "babel-eslint": "^10.0.0",
     "babel-loader": "^8.0.0-beta",
     "babel-plugin-css-modules-transform": "^1.6.1",
-    "chokidar": "^2.0.4",
+    "chokidar": "^3.0.0",
     "copy-webpack-plugin": "^5.0.0",
     "css-loader": "^2.0.0",
     "eslint": "^5.2.0",

@@ -112,10 +112,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "icons/icon-384x384.png"
   },
   {
-    "revision": "bbdd5eba45e966499ad88ba2c9908429",
-    "url": "icons/icon-512x512.png"
-  },
-  {
     "revision": "0af6fe5d37bd3e263e275399503b6f03",
     "url": "icons/icon-72x72.png"
   },
@@ -134,6 +130,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "26c87e16b9360d6d9be27330db6a243c",
     "url": "icons/mstile-310x150.png"
+  },
+  {
+    "revision": "bbdd5eba45e966499ad88ba2c9908429",
+    "url": "icons/icon-512x512.png"
   },
   {
     "revision": "e93024f72e03fc3bc414e9c003d9ea07",

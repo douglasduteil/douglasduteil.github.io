@@ -46,6 +46,14 @@
     <div class=${d.body}>
       <h3>${e.where}</h3>
       <p><em>"${e.title}"</em></p>
-      <p><a href="${e.link.href}">${e.link.name}</a></p>
+      <p>
+        <a
+          href="${e.link.href}"
+          rel="noreferrer"
+          target="_blank"
+        >
+          ${e.link.name}
+        </a>
+      </p>
     </div>
       `}}}]);

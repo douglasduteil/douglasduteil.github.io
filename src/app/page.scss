@@ -60,6 +60,9 @@ watermark {
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  user-select: none;
+  pointer-events: none;
 
   @global svg {
     width: $size;

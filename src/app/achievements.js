@@ -100,7 +100,15 @@ const renderEvent = {
     <div class=${classes.body}>
       <h3>${event.where}</h3>
       <p><em>"${event.title}"</em></p>
-      <p><a href="${event.link.href}">${event.link.name}</a></p>
+      <p>
+        <a
+          href="${event.link.href}"
+          rel="noreferrer"
+          target="_blank"
+        >
+          ${event.link.name}
+        </a>
+      </p>
     </div>
       `
   }

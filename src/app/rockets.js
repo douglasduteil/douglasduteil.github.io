@@ -22,30 +22,51 @@ export default ({ hyper: { wire } }, state, emit) =>
     watermark: rocketIcon(wire, state),
     children: wire(_, ':rockets')`
   <ul class=${classes.ul}>
+  
     <li class=${classes.li}>
-      <a class=${classes.a} target="_blank"
-      href="https://github.com/douglasduteil">
-      <div class=${classes.text}>Github</div>
-    </a>
-  </li>
+      <a
+        class=${classes.a}
+        href="https://github.com/douglasduteil"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <div class=${classes.text}>Github</div>
+      </a>
+    </li>
+
     <li class=${classes.li}>
-      <a class=${classes.a} target="_blank"
-      href="https://next.plnkr.co/users/douglasduteil/plunks">
-      <div class=${classes.text}>Plunker</div>
-    </a>
-  </li>
+      <a
+        class=${classes.a}
+        href="https://next.plnkr.co/users/douglasduteil/plunks"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <div class=${classes.text}>Plunker</div>
+      </a>
+    </li>
+
     <li class=${classes.li}>
-      <a class=${classes.a} target="_blank"
-      href="http://cssdeck.com/user/DouglasDuteil">
-      <div class=${classes.text}>CSSDesk</div>
-    </a>
-  </li>
+      <a
+        class=${classes.a}
+        href="http://cssdeck.com/user/DouglasDuteil"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <div class=${classes.text}>CSSDesk</div>
+      </a>
+    </li>
+
     <li class=${classes.li}>
-      <a class=${classes.a} target="_blank"
-      href="http://codepen.io/douglasduteil">
-      <div class=${classes.text}>CodePen</div>
-    </a>
-  </li>
+      <a
+        class=${classes.a}
+        href="http://codepen.io/douglasduteil"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <div class=${classes.text}>CodePen</div>
+      </a>
+    </li>
+
   </ul>
   <style>${{ html: sheet.toString() }}</style>
   `

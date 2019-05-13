@@ -14,7 +14,7 @@ const { classes } = sheet
 
 const _ = {}
 
-export const backgoundColor = '#97A629'
+export const backgoundColor = '#525A16'
 export default ({ hyper: { wire } }, state, emit) =>
   pageLayout(wire)({
     title: 'Rockets',

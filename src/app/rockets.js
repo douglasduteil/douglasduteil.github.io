@@ -22,7 +22,7 @@ export default ({ hyper: { wire } }, state, emit) =>
     watermark: rocketIcon(wire, state),
     children: wire(_, ':rockets')`
   <ul class=${classes.ul}>
-  
+
     <li class=${classes.li}>
       <a
         class=${classes.a}

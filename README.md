@@ -12,11 +12,6 @@ Use `yarn start`
 
 Use `yarn start`
 
-# Deployment
-
-Use `rm -rf out && gulp dist --prod && gulp deploy`
-
-Deployment with https://github.com/douglasduteil/dd-deploy
 
 ## License
 

@@ -12,11 +12,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "me.js"
   },
   {
-    "revision": "d1f7f32a1934c11cad7a22401c4c1af2",
+    "revision": "6d785fda068be32fa880cb90313a4032",
     "url": "rockets.html"
   },
   {
-    "revision": "8f6a000664bc41740826",
+    "revision": "652cef73e1b59a425944",
     "url": "rockets.js"
   },
   {

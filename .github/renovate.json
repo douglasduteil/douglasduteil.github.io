@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "config:base",
+    ":maintainLockFilesWeekly",
+    ":automergeAll"
+    ":masterIssue",
+    ":preserveSemverRanges",
+    ":disableRateLimiting",
+    ":semanticCommits",
+    ":timezone(Europe/Paris)"
+  ],
+  "masterIssueAutoclose": true,
+  "semanticCommits": true,
+  "postUpdateOptions": [
+    "npmDedupe", 
+    "yarnDedupeHighest"
+  ],
+  "rangeStrategy": "bump",
+  "labels": ["dependencies"]
+}

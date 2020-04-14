@@ -1,9 +1,0 @@
-{
-  "extends": [
-    "config:base",
-    ":automergeAll"
-  ],
-  "semanticCommits": true,
-  "prHourlyLimit": 0,
-  "rangeStrategy": "replace"
-}

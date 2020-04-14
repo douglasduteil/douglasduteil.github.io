@@ -2,7 +2,7 @@
   "extends": [
     "config:base",
     ":maintainLockFilesWeekly",
-    ":automergeAll"
+    ":automergeAll",
     ":masterIssue",
     ":preserveSemverRanges",
     ":disableRateLimiting",

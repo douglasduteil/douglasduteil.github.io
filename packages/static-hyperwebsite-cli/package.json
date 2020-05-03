@@ -24,7 +24,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-standard": "^4.0.0",
-    "esm": "^3.0.72",
+    "esm": "^3.2.25",
     "hyperhtml-html-views-loader": "^0.0.0",
     "postcss-calc": "^7.0.0",
     "postcss-custom-media": "^7.0.0",

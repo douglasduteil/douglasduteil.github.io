@@ -34,7 +34,7 @@
     "postcss-scss": "^2.0.0",
     "postcss-simple-vars": "^5.0.2",
     "prejss-styles-loader": "^1.0.0",
-    "prepack-webpack-plugin": "^1.1.1",
+    "prepack-webpack-plugin": "^1.1.2",
     "preprocess-loader": "^0.3.0",
     "prettier": "^1.14.0",
     "raw-loader": "^2.0.0",

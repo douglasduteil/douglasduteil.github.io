@@ -4875,7 +4875,7 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-nanoraf@^3.0.1:
+nanoraf@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/nanoraf/-/nanoraf-3.1.0.tgz#97a892f1009146b95c8774b521d92e45dcdd229b"
   integrity sha512-7Emv5Pv/fvgVK6yrud93WsdO4d3AUqLoP38Cpn0chYe+tT/wu25Yl2guxBjE3ngRrI5Yd9DxaTCgCFi1uq7hgQ==

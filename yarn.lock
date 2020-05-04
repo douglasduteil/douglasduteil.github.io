@@ -7387,7 +7387,7 @@ vinyl@^2.0.1:
     remove-trailing-separator "^1.0.1"
     replace-ext "^1.0.0"
 
-viperhtml@^2.16.0:
+viperhtml@^2.17.1:
   version "2.17.1"
   resolved "https://registry.yarnpkg.com/viperhtml/-/viperhtml-2.17.1.tgz#b0f91ef40f5f6178d95ca2fdbb8f0269752fe973"
   integrity sha512-ul2M0owpGehkyc8Bb0PT/kPmgmgxk3kj1TrMD0zAmdC5XIIX4XBXLI6G3FX8Pzcf8Xv9zCn0SgkcpPGdPM5EjA==

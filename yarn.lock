@@ -4837,7 +4837,7 @@ nanobus@^4.3.3:
     nanotiming "^7.2.0"
     remove-array-items "^1.0.0"
 
-nanohref@^3.0.3:
+nanohref@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/nanohref/-/nanohref-3.1.0.tgz#5ff6c0e5ae1fff6dd95611408031ce98eb16cf46"
   integrity sha512-2DyDzc8B/29xRCDprTt8UscdsF3E/axcHQMIBFR+WM1cj1ku7hqxQWwMYDOajfEuv5fZdVTh+NBuFronappMQQ==

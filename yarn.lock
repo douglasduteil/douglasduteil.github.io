@@ -5859,7 +5859,7 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prepack-webpack-plugin@^1.1.1:
+prepack-webpack-plugin@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prepack-webpack-plugin/-/prepack-webpack-plugin-1.1.2.tgz#ebbf3229cd3000f5ccbe767c52e193f1b938cdb1"
   integrity sha512-n00BvUa59YjIlG4DHtKAVxMIVwnc5ZoyoZYr3jVvJh89tHlnmvXLlvCAyCljBsHnBG5SYdfc/hYoAkRCgmtX4A==

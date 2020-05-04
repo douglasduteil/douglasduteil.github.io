@@ -3721,7 +3721,7 @@ hyperhtml-wire@^2.1.0:
   resolved "https://registry.yarnpkg.com/hyperhtml-wire/-/hyperhtml-wire-2.1.1.tgz#ac566669333efdb381fc1a1bf803c33203156289"
   integrity sha512-6rOTnb+BSWIsNaqiji01BdV8qyhwyCT38aGmG5k37JQeI9n+lwgvFsq0/G7wNAh5NuGdAaWUl1umbjrW7fj++w==
 
-hyperhtml@^2.13.0:
+hyperhtml@^2.32.2:
   version "2.32.2"
   resolved "https://registry.yarnpkg.com/hyperhtml/-/hyperhtml-2.32.2.tgz#d65e13651ea45ba2ddea79b4058ad405ad960a19"
   integrity sha512-F4r0MtZn2aQtUUafe009kQPfNoW7cZvK/r3XrDjW5WiybWMCWGRv1WqCYdbMxChLhgNcdklQh3aMl0gbERlOnQ==

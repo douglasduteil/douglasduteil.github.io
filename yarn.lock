@@ -4868,12 +4868,10 @@ nanolocation@^1.0.1:
   dependencies:
     nanoassert "^1.1.0"
 
-nanologger@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/nanologger/-/nanologger-1.3.1.tgz#da8167887f21ee5f2d881bfe5b075ceb6c595ca9"
-  integrity sha1-2oFniH8h7l8tiBv+Wwdc62xZXKk=
-  dependencies:
-    xtend "^4.0.1"
+nanologger@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/nanologger/-/nanologger-2.0.0.tgz#c8a0c9d1141ea53a5ce8dbaa98210928a3365da1"
+  integrity sha512-rhP8tksOhv/lGXcioA0IMuRejkzTuMvqFqU3ATKZ22mu2fJ2A7ZKHYILjcyzmSThQzB1GCu3I7ZJ38Cj/WqyrA==
 
 nanomatch@^1.2.9:
   version "1.2.13"

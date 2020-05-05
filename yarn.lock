@@ -4899,13 +4899,13 @@ nanoraf@^3.1.0:
   dependencies:
     nanoassert "^1.1.0"
 
-nanorouter@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/nanorouter/-/nanorouter-3.1.1.tgz#b8e0b271bb1d500056a0ce5bf457e3192ef5c00d"
-  integrity sha512-nQ1YRpVzc/0cQA3lG/wCe0ooLtmzLQeIO0VKDRJduVN+KaL5aW5pUDRQDu5EvamiF3lDmbNLYiUkBfjPxOY6fA==
+nanorouter@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/nanorouter/-/nanorouter-4.0.0.tgz#1452bc888937684f5c1d9ac43c290c184f035b56"
+  integrity sha512-HQ6VeNpFhIx/vKjqQiVUodeu0SvRb6ekkmkzf4pXMjkAZy0RS2jsIWZmzob9s6ORW0dfhYHpL7+w7T+bE5kNCQ==
   dependencies:
     nanoassert "^1.1.0"
-    wayfarer "^6.6.3"
+    wayfarer "^7.0.0"
 
 nanoscheduler@^1.0.0, nanoscheduler@^1.0.2:
   version "1.0.3"
@@ -7461,12 +7461,12 @@ watchpack@^1.6.1:
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
 
-wayfarer@^6.6.3:
-  version "6.6.4"
-  resolved "https://registry.yarnpkg.com/wayfarer/-/wayfarer-6.6.4.tgz#3f67ddd79068dc7b96830d03d1f5c7423140b429"
-  integrity sha512-5ZRE4iwcIYytikTN9somy5oz/K7hEPK0YfrjCEN6zr5vlqadJ+r+GQmDzsV5zg5aW0qZvctxo443B1YFWSywpw==
+wayfarer@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/wayfarer/-/wayfarer-7.0.1.tgz#17a64d351d49f9d3d6c508155867df7658184ce3"
+  integrity sha512-yf+kAlOYnJRjLxflLy+1+xEclb6222EAVvAjSY+Yz2qAIDrXeN5wLl/G302Mwv3E0KMg1HT/WDGsvSymX0U7Rw==
   dependencies:
-    xtend "^4.0.1"
+    nanoassert "^1.1.0"
 
 wbuf@^1.1.0, wbuf@^1.7.3:
   version "1.7.3"

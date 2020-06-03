@@ -23,7 +23,7 @@
     "@hyperchoo/core": "0.0.0",
     "@hyperchoo/devtools": "0.0.0",
     "autotrack": "^2.4.1",
-    "jss": "^10.1.1",
+    "jss": "^10.2.0",
     "jss-preset-default": "^10.1.1",
     "nanorouter": "^4.0.0",
     "viperhtml": "^2.17.1"

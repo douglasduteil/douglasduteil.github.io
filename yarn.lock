@@ -7254,10 +7254,10 @@ signal-exit@^3.0.0:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-sitemap-webpack-plugin@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/sitemap-webpack-plugin/-/sitemap-webpack-plugin-0.8.0.tgz#08e022ddc107c9f98a170b2522ab5ba670612d73"
-  integrity sha512-8dt1+HExzJkLavUN6GwlKSsJYCZMGXgcM9s5XcTRNqePDZr5Ok7ZvooUvPyoGhg2bp9pDnRvo774APmtlSLo4Q==
+sitemap-webpack-plugin@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/sitemap-webpack-plugin/-/sitemap-webpack-plugin-0.8.1.tgz#ec5fde2aa4308f3d559772df8f77f273de06301b"
+  integrity sha512-E2vQkF2afgo4Mlfe+KvGGk4xYJmGdBI8mjJX7n9NM41g2ulPJhan5DW3s1ri9wduoWO4mzXfZN/CFDtvke4RFA==
   dependencies:
     sitemap "^6.0.0"
     webpack-sources "^1.4.3"

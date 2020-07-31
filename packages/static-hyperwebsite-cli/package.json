@@ -15,7 +15,7 @@
     "babel-plugin-css-modules-transform": "^1.6.2",
     "chokidar": "^3.4.1",
     "copy-webpack-plugin": "^6.0.3",
-    "css-loader": "^4.1.1",
+    "css-loader": "^4.2.0",
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",

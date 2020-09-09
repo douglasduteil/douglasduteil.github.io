@@ -8722,10 +8722,10 @@ yargs@^13.3.2:
     y18n "^4.0.0"
     yargs-parser "^13.1.2"
 
-yargs@^16.0.0:
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.0.0.tgz#767d0e914605c0fc4e4ffd3bf214d8e56182da19"
-  integrity sha512-Ykb00VnWjee855QmeCrDAAmhVagt0T8PMML9WS2YrcU0VtvbeGq02MD7UiWmK6biiVPas6CaXmJNetL4Ye4+ng==
+yargs@^16.0.1:
+  version "16.0.1"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.0.1.tgz#2b5c9dae25d408e5362a04397b2766312e68a011"
+  integrity sha512-Ul+D7UAEUARsJW96m82Z4rs6Z/Ti3+fA9RO8o63bKGCyQV8UE9JZLFfjlYHCDo33+S5TtBJ7eRuZ6hDY7x9Tkg==
   dependencies:
     cliui "^7.0.0"
     escalade "^3.0.2"

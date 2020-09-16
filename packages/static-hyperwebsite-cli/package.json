@@ -36,7 +36,7 @@
     "prejss-styles-loader": "^1.0.0",
     "prepack-webpack-plugin": "^1.1.2",
     "preprocess-loader": "^0.3.0",
-    "prettier": "^2.1.1",
+    "prettier": "^2.1.2",
     "raw-loader": "^4.0.1",
     "sitemap-webpack-plugin": "^0.8.1",
     "url-loader": "^4.1.0",

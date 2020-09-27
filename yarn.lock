@@ -6452,10 +6452,10 @@ postcss-simple-vars@^3.0.0:
   dependencies:
     postcss "^5.2.16"
 
-postcss-simple-vars@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-6.0.0.tgz#7f9c556151753f7b3c0caca2e892b740089e62e8"
-  integrity sha512-zpgSAJfxCXCFkbf0VUJTSFtoOiSor+a/dp+a+hg5q/jbf2vyOGeb69QYzxD1G/HHuFWoBgjiwYg3tzkJFVDuAA==
+postcss-simple-vars@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-simple-vars/-/postcss-simple-vars-6.0.1.tgz#7733415a7b57f5cb9b5a15cdd6b0546c505e7ad6"
+  integrity sha512-P1M+APrquBXOPKtk/LlWptuPBwTCjMgxZxv1lkpjG9RdOx8ewi8USOclPCt75xG7UT7viDUB3p3qy2ffPBefjQ==
 
 postcss-value-parser@^3.2.3:
   version "3.3.1"

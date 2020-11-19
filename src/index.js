@@ -21,6 +21,7 @@ const bootstrap = () => {
   app.mount('root')
 
   // @if BUILD_ENV='production'
+  // eslint-disable-next-line no-unused-expressions
   import(/* webpackChunkName: "stalker" */ './autotrack.js')
   // @endif
 }

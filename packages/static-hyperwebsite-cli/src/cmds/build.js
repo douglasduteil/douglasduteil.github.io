@@ -8,10 +8,16 @@ export const command = 'build'
 export const desc = 'Build sources'
 export const builder = {
   dir: {
-    default: '.'
-  }
+    default: '.',
+  },
 }
 export function handler(argv) {
   const cp = buildSSRWebpackServer()
-  cp.once('exit', buildClientWebpackServer)
+  cp.once('exit', (code) => {
+    process.exitCode = code
+
+    buildClientWebpackServer().once('exit', (code) => {
+      process.exitCode = code
+    })
+  })
 }

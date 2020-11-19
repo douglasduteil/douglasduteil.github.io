@@ -8,9 +8,11 @@ export const command = 'lint'
 export const desc = 'Run linter'
 export const builder = {
   dir: {
-    default: '.'
-  }
+    default: '.',
+  },
 }
 export function handler(argv) {
-  lint()
+  lint().once('exit', (code) => {
+    process.exitCode = code
+  })
 }

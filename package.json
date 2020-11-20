@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@douglasduteil/static-hyperwebsite-cli": "^0.0.0",
-    "fs-extra": "^8.0.0"
+    "fs-extra": "^9.0.1"
   },
   "workspaces": [
     "packages/*"

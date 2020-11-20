@@ -7,7 +7,8 @@
     ":preserveSemverRanges",
     ":disableRateLimiting",
     ":semanticCommits",
-    ":timezone(Europe/Paris)"
+    ":timezone(Europe/Paris)",
+    "group:postcss"
   ],
   "masterIssueAutoclose": true,
   "semanticCommits": true,

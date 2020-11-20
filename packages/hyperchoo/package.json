@@ -13,7 +13,7 @@
     "nanohref": "^3.1.0",
     "nanolocation": "^1.0.1",
     "nanoraf": "^3.1.0",
-    "nanorouter": "^3.1.1",
+    "nanorouter": "^4.0.0",
     "nanotiming": "^7.3.1",
     "on-idle": "3.1.4"
   }

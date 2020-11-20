@@ -32,7 +32,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-sassy-mixins": "^2.1.0",
     "postcss-scss": "^2.0.0",
-    "postcss-simple-vars": "^5.0.2",
+    "postcss-simple-vars": "^6.0.1",
     "prejss-styles-loader": "^1.0.0",
     "prepack-webpack-plugin": "^1.1.2",
     "preprocess-loader": "^0.3.0",

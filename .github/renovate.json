@@ -13,9 +13,15 @@
   "masterIssueAutoclose": true,
   "semanticCommits": true,
   "postUpdateOptions": [
-    "npmDedupe", 
+    "npmDedupe",
     "yarnDedupeHighest"
   ],
   "rangeStrategy": "bump",
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "packagePatterns": "^eslint",
+      "groupName": "eslint"
+    }
+  ]
 }

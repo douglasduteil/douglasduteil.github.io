@@ -32,21 +32,21 @@ module.exports = (env, argv) => {
         runtimeCaching: [
           {
             urlPattern: /https:\/\/google-analytics\.com\/analytics.js/,
-            handler: 'cacheFirst',
+            handler: 'CacheFirst',
             options: {
               cacheName: 'google-analytics-cache'
             }
           },
           {
             urlPattern: /https:\/\/ajax\.googleapis\.com.*/,
-            handler: 'cacheFirst',
+            handler: 'CacheFirst',
             options: {
               cacheName: 'google-ajax-cache'
             }
           },
           {
             urlPattern: /https:\/\/fonts\.(googleapis|gstatic)\.com.*/,
-            handler: 'cacheFirst',
+            handler: 'CacheFirst',
             options: {
               cacheName: 'google-font-cache'
             }

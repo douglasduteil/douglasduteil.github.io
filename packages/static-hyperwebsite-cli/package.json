@@ -37,7 +37,7 @@
     "preprocess-loader": "^0.3.0",
     "prettier": "^2.2.0",
     "raw-loader": "^4.0.2",
-    "sitemap-webpack-plugin": "^0.7.1",
+    "sitemap-webpack-plugin": "^1.0.0",
     "source-map-loader": "^1.1.2",
     "url-loader": "^4.1.1",
     "lodash.debounce": "^4.0.8",

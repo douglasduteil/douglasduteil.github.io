@@ -13,7 +13,7 @@ const ssrMiddleware = require(resolve(
   'server',
   'main.js'
 ))
-const { default: middleware, url, routes } = ssrMiddleware.ssrMiddleware
+const { default: middleware, url: base, routes } = ssrMiddleware.ssrMiddleware
 
 module.exports = (env, argv) => {
   const baseConfig = config({ ...env, mode: 'production' }, argv)
@@ -53,7 +53,7 @@ module.exports = (env, argv) => {
           },
         ],
       }),
-      new SitemapPlugin(url, routes),
+      new SitemapPlugin({ base, paths: routes }),
     ],
   }
 }

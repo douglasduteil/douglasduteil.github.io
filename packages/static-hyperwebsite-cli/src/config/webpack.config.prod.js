@@ -86,7 +86,6 @@ class SSRStaticRenderer {
             const source = context.response.body
             logger.log(`writing '${filename}' to compilation assets...`)
             const info = {}
-            console.log({ filename, info })
             compilation.emitAsset(filename, new RawSource(source), info)
           })
         )

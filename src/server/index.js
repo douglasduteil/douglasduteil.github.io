@@ -7,7 +7,6 @@ import hyper from 'viperhtml'
 import jss from '../jss'
 import { app } from '../app/app'
 import styles from '../ciritcal.scss'
-import hyperhtmlHtmlViewsLoader from 'hyperhtml-html-views-loader'
 
 //
 
@@ -34,13 +33,10 @@ export default async () => {
   // log('loading template from', templatePath)
 
   const templateFileBuffer = await fse.readFile(templatePath)
-  const htmlifyTemplate = hyperhtmlHtmlViewsLoader
-    .call({}, templateFileBuffer.toString())
-    .replace(/^module.exports = "/, '`')
-    .replace(/";$/, '`')
+  const htmlifyTemplate = templateFileBuffer.toString()
   const sandbox = createContext({})
-  const hyperTemplate = runInContext(
-    `(render, model) => render${htmlifyTemplate}`,
+  const hyperTemplate = await runInContext(
+    `(render, model) => render\`${htmlifyTemplate}\``,
     sandbox
   )
 

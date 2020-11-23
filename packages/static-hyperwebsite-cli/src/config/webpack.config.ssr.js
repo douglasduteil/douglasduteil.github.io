@@ -13,24 +13,22 @@ module.exports = (env, argv) => ({
   devtool: false,
   externals: [
     nodeExternals({
-      whitelist: ['@hyperchoo/core', '@hyperchoo/devtools']
-    })
+      target: 'node',
+      allowlist: [/^@hyperchoo/],
+    }),
   ],
   target: 'node',
   output: {
     path: resolve(process.cwd(), 'dist', 'server'),
     library: 'ssrMiddleware',
-    libraryTarget: 'commonjs2'
+    libraryTarget: 'commonjs2',
   },
 
   plugins: [],
 
   node: {
-    console: false,
     global: false,
-    process: false,
-    Buffer: false,
     __filename: false,
-    __dirname: false
-  }
+    __dirname: false,
+  },
 })

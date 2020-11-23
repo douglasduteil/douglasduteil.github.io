@@ -5,15 +5,15 @@ import styles from './page.scss'
 
 export const sheet = jss.createStyleSheet(styles)
 sheet.addRules({
-  section: { backgroundColor: data => data.bgColor },
-  title: { backgroundColor: data => data.bgColor }
+  section: { backgroundColor: (data) => data.bgColor },
+  title: { backgroundColor: (data) => data.bgColor },
 })
 const { classes } = sheet
 
 const _ = {}
-export default render => ({ title, children, bgColor, watermark }) => {
+export default (render) => ({ title, children, bgColor, watermark }) => {
   sheet.update({
-    bgColor
+    bgColor,
   })
   return render(_, ':page-layout')`
     <div class=${classes.watermark}>${watermark}</div>

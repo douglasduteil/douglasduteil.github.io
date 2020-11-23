@@ -8,8 +8,8 @@ export const command = 'serve'
 export const desc = 'Launch development server'
 export const builder = {
   dir: {
-    default: '.'
-  }
+    default: '.',
+  },
 }
 export function handler(argv) {
   serveClientWebpackServer()

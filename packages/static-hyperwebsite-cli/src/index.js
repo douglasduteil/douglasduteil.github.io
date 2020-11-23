@@ -7,7 +7,7 @@ export function buildClientWebpackServer(configFile) {
   const args = [
     'webpack-cli',
     '--config',
-    resolve(srcPath, 'config', 'webpack.config.prod.js')
+    resolve(srcPath, 'config', 'webpack.config.prod.js'),
   ]
 
   return spawn('yarn', args, { stdio: 'inherit' })
@@ -20,7 +20,7 @@ export function buildServerWebpackServer(configFile) {
   const args = [
     'webpack-cli',
     '--config',
-    resolve(srcPath, 'config', 'webpack.config.prod.js')
+    resolve(srcPath, 'config', 'webpack.config.prod.js'),
   ]
 
   return spawn('yarn', args, { stdio: 'inherit' })
@@ -33,9 +33,10 @@ export function serveClientWebpackServer(configFile) {
   const { resolve } = require('path')
   const srcPath = resolve(__dirname)
   const args = [
-    'webpack-dev-server',
+    'webpack',
+    'serve',
     '--config',
-    resolve(srcPath, 'config', 'webpack.config.dev.js')
+    resolve(srcPath, 'config', 'webpack.config.dev.js'),
   ]
 
   return spawn('yarn', args, { stdio: 'inherit' })
@@ -51,7 +52,7 @@ export function buildSSRWebpackServer({ watch } = { watch: false }) {
     'webpack',
     ...(watch ? ['--watch'] : []),
     '--config',
-    resolve(srcPath, 'config', 'webpack.config.ssr.js')
+    resolve(srcPath, 'config', 'webpack.config.ssr.js'),
   ]
 
   return spawn('yarn', args, { stdio: 'inherit' })

@@ -69,5 +69,5 @@ export default ({ hyper: { wire } }, state, emit) =>
 
   </ul>
   <style>${{ html: sheet.toString() }}</style>
-  `
+  `,
   })

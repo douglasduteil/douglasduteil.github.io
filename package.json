@@ -5,7 +5,7 @@
   "main": false,
   "private": true,
   "scripts": {
-    "lint": "static-hyperwebsite lint",
+    "lint": "eslint .",
     "build": "static-hyperwebsite build",
     "start": "static-hyperwebsite serve"
   },
@@ -26,6 +26,7 @@
     "jss": "^10.5.0",
     "jss-preset-default": "^10.5.0",
     "nanorouter": "^4.0.0",
+    "assert": "^2.0.0",
     "viperhtml": "^2.17.1"
   },
   "devDependencies": {

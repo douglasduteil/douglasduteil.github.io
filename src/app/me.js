@@ -12,8 +12,8 @@ const gravatarPic = '//1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1'
 const sheet = jss.createStyleSheet(styles)
 sheet.addRules({
   '@global main': {
-    backgroundImage: `url(${gravatarPic + '?s=680'}), url(${miniMe})`
-  }
+    backgroundImage: `url(${gravatarPic + '?s=680'}), url(${miniMe})`,
+  },
 })
 const { classes } = sheet
 
@@ -38,7 +38,10 @@ export default ({ hyper: { bind, wire } }, state, emit) => {
           </h1>
         </li>
         <li class=${classes.li}>
-          ${typer({bind, wire})(activities, { prefix: '#', orderFn: randomTyperOrder })}
+          ${typer({ bind, wire })(activities, {
+            prefix: '#',
+            orderFn: randomTyperOrder,
+          })}
         </li>
         <li class=${classes.li}>
           <i class=${classes.i}>${locationIcon(wire)}</i>
@@ -61,13 +64,13 @@ export default ({ hyper: { bind, wire } }, state, emit) => {
 
 //
 
-function typer({bind, wire}) {
+function typer({ bind, wire }) {
   const root = wire(_, ':my-supa-cinematic-hacker-typer')`
     <my-supa-cinematic-hacker-typer class=${classes['hacker-typer']}>
     </my-supa-cinematic-hacker-typer>
   `
 
-  return (words, {prefix, orderFn}) => {
+  return (words, { prefix, orderFn }) => {
     //
     bind(root)`${prefix} ${words[0]}`
 
@@ -82,8 +85,8 @@ function typer({bind, wire}) {
       nanoraf(doRender)()
     }
 
-    const loopId = typeof document === 'object'
-    ? setInterval(updateLoop, 1000) : NaN
+    const loopId =
+      typeof document === 'object' ? setInterval(updateLoop, 1000) : NaN
 
     return root
   }

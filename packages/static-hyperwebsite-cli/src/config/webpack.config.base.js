@@ -2,6 +2,7 @@
 
 const { resolve } = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { EnvironmentPlugin } = require('webpack')
 
 //
 
@@ -17,10 +18,11 @@ module.exports = (env, argv) => ({
           {
             loader: 'preprocess-loader',
             options: {
-              BUILD_ENV: env.mode
-            }
-          }
-        ]
+              BUILD_ENV: env.mode,
+            },
+          },
+          'source-map-loader',
+        ],
       },
 
       {
@@ -28,7 +30,7 @@ module.exports = (env, argv) => ({
         exclude: /node_modules/,
         use: [
           {
-            loader: 'prejss-styles-loader'
+            loader: 'prejss-styles-loader',
           },
           {
             loader: 'postcss-loader',
@@ -39,11 +41,12 @@ module.exports = (env, argv) => ({
                 require('postcss-sassy-mixins'),
                 require('postcss-simple-vars'),
                 require('postcss-calc')({ mediaQueries: true }),
-                require('postcss-custom-media')
-              ]
-            }
-          }
-        ]
+                require('postcss-custom-media'),
+              ],
+            },
+          },
+          'source-map-loader',
+        ],
       },
 
       {
@@ -53,20 +56,26 @@ module.exports = (env, argv) => ({
             loader: 'url-loader',
             options: {
               sourceMap: true,
-              includePaths: [resolve(process.cwd(), 'src')]
-            }
-          }
-        ]
-      }
+              includePaths: [resolve(process.cwd(), 'src')],
+            },
+          },
+        ],
+      },
 
       //
-    ]
+    ],
+  },
+  resolve: {
+    fallback: {
+      assert: require.resolve('assert'),
+    },
   },
   plugins: [
-    new CopyWebpackPlugin([
-      {
-        from: 'src/assets'
-      }
-    ])
-  ]
+    new EnvironmentPlugin({
+      NODE_DEBUG: false,
+    }),
+    new CopyWebpackPlugin({
+      patterns: [resolve(process.cwd(), 'src/assets')],
+    }),
+  ],
 })

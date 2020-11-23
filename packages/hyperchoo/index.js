@@ -15,7 +15,7 @@ export class HyperChoo {
     this.emitter = nanobus(`${this.prefix}.emitter`)
     this.router = nanorouter({
       curry: true,
-      default: defaultRoute
+      default: defaultRoute,
     })
     this.hyper = null
     this.state = {}
@@ -49,20 +49,20 @@ export class HyperChoo {
       this.emitter.emit('navigate')
     })
 
-    this.emitter.prependListener('pushState', href => {
+    this.emitter.prependListener('pushState', (href) => {
       window.history.pushState(HISTORY_OBJECT, null, href)
       this.emitter.emit('navigate')
     })
 
-    this.emitter.prependListener('replaceState', href => {
+    this.emitter.prependListener('replaceState', (href) => {
       window.history.replaceState(HISTORY_OBJECT, null, href)
       this.emitter.emit('navigate')
     })
 
     window.onpopstate = () => this.emitter.emit('popState')
 
-    nanohref(location => {
-      var href = location.href
+    nanohref((location) => {
+      const href = location.href
       if (href === window.location.href) {
         // if (!hash) scrollToAnchor(hash)
         return
@@ -126,11 +126,11 @@ export class HyperChoo {
   }
 
   route(route, handler) {
-    this.router.on(route, params => {
+    this.router.on(route, (params) => {
       this.state.params = params
       this.state.route = route
       const routeTiming = nanotiming(`${this.prefix}.route("${route}")`)
-      var res = handler(this.state, this.emitter.emit.bind(this.emitter))
+      const res = handler(this.state, this.emitter.emit.bind(this.emitter))
       routeTiming()
       return res
     })

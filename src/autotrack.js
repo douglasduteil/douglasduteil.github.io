@@ -14,6 +14,6 @@ export const ga = window.ga
 ga('require', 'eventTracker')
 ga('require', 'outboundLinkTracker')
 ga('require', 'pageVisibilityTracker', {
-  sendInitialPageview: true
+  sendInitialPageview: true,
 })
 ga('require', 'urlChangeTracker')

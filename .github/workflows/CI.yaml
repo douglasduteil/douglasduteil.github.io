@@ -32,6 +32,8 @@ jobs:
       - run: yarn lint
 
       - run: yarn build
+      # Ensure that we produced a dist folder
+      - run: test -f dist/index.html
 
       # The "dist/server" shouldn't be deploy on the static server
       - run: rm -rf dist/server

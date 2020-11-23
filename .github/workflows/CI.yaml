@@ -4,9 +4,7 @@ name: CI
 on:
   push:
 
-
 jobs:
-
   deploy:
     runs-on: ubuntu-latest
     steps:

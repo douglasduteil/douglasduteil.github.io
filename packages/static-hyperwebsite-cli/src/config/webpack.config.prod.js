@@ -3,28 +3,28 @@
 const { resolve } = require('path')
 // const PrepackWebpackPlugin = require('prepack-webpack-plugin').default
 const { GenerateSW } = require('workbox-webpack-plugin')
+const { RawSource } = require('webpack-sources')
 const SitemapPlugin = require('sitemap-webpack-plugin').default
 const config = require('./webpack.config.base')
 
-const { default: middleware, url, routes } = require(resolve(
+const ssrMiddleware = require(resolve(
   process.cwd(),
   'dist',
   'server',
   'main.js'
 ))
+const { default: middleware, url, routes } = ssrMiddleware.ssrMiddleware
 
 module.exports = (env, argv) => {
   const baseConfig = config({ ...env, mode: 'production' }, argv)
   return {
     ...baseConfig,
     mode: 'production',
-    devtool: 'none',
+    devtool: false,
     plugins: [
       ...baseConfig.plugins,
-      //
-      // new PrepackWebpackPlugin({}),
       new SSRStaticRenderer({
-        outputPath: resolve(process.cwd(), 'dist')
+        outputPath: resolve(process.cwd(), 'dist'),
       }),
       new GenerateSW({
         skipWaiting: true,
@@ -34,68 +34,78 @@ module.exports = (env, argv) => {
             urlPattern: /https:\/\/google-analytics\.com\/analytics.js/,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'google-analytics-cache'
-            }
+              cacheName: 'google-analytics-cache',
+            },
           },
           {
             urlPattern: /https:\/\/ajax\.googleapis\.com.*/,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'google-ajax-cache'
-            }
+              cacheName: 'google-ajax-cache',
+            },
           },
           {
             urlPattern: /https:\/\/fonts\.(googleapis|gstatic)\.com.*/,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'google-font-cache'
-            }
-          }
-        ]
+              cacheName: 'google-font-cache',
+            },
+          },
+        ],
       }),
-      new SitemapPlugin(url, routes)
-    ]
+      new SitemapPlugin(url, routes),
+    ],
   }
-  /*
-  optimization: {
-    splitChunks: {
-      chunks: 'all'
-    }
-  }
-  */
 }
 
-function SSRStaticRenderer({ outputPath } = {}) {
-  this.apply = compiler => {
-    let ssr = null
+class SSRStaticRenderer {
+  constructor({ outputPath } = {}) {
+    this.outputPath = outputPath
+    this.name = 'SSRStaticRenderer'
+  }
 
-    compiler.hooks.run.tapPromise('SSRStaticRenderer', async compiler => {
+  apply(compiler) {
+    const { name } = this
+    let ssr
+    const next = () => {
+      throw new Error('unexpected route to create')
+    }
+    compiler.hooks.beforeCompile.tapAsync(name, async (params, callback) => {
       ssr = await middleware()
+      return callback()
     })
 
-    compiler.hooks.emit.tapPromise('SSRStaticRenderer', async compiler => {
-      const next = () => {
-        throw new Error('unexpected route to create')
-      }
-
-      return Promise.all(
-        routes.map(toContext).map(async context => {
-          await ssr(context, next)
-          compiler.assets[context.request.url.replace('/', '')] = {
-            size: () => context.body.length,
-            source: () => context.body
-          }
-        })
-      )
+    compiler.hooks.thisCompilation.tap(name, (compilation) => {
+      const logger = compilation.getLogger(name)
+      compilation.hooks.additionalAssets.tapAsync(name, async (callback) => {
+        logger.log('starting to add statc ssr rendering...')
+        await Promise.all(
+          routes.map(toContext).map(async (context) => {
+            await ssr(context.request, context.response, next)
+            const filename = context.request.url.replace('/', '')
+            const source = context.response.body
+            logger.log(`writing '${filename}' to compilation assets...`)
+            const info = {}
+            console.log({ filename, info })
+            compilation.emitAsset(filename, new RawSource(source), info)
+          })
+        )
+        return callback()
+      })
     })
   }
 }
 
 function toContext(url) {
   return {
+    response: {
+      send(body) {
+        this.body = body
+      },
+    },
     request: {
       url,
-      method: 'GET'
-    }
+      method: 'GET',
+    },
   }
 }

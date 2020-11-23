@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-'use strict';
+'use strict'
 
-require = require('esm')(module, {});
-module.exports = require('../src/cli.js');
+// eslint-disable-next-line no-global-assign
+require = require('esm')(module, {})
+module.exports = require('../src/cli.js')

@@ -25,13 +25,13 @@ export const routes = [
   '/me.html',
   '/achievements.html',
   '/rockets.html',
-  '/contact.html'
+  '/contact.html',
 ]
 
 export const url = 'https://douglasduteil.github.io'
 
 export default async () => {
-  log('loading template from', templatePath)
+  // log('loading template from', templatePath)
 
   const templateFileBuffer = await fse.readFile(templatePath)
   const htmlifyTemplate = hyperhtmlHtmlViewsLoader
@@ -44,10 +44,8 @@ export default async () => {
     sandbox
   )
 
-  return async (ctx, next) => {
-    const {
-      request: { url, method }
-    } = ctx
+  return async (req, resp, next) => {
+    const { url, method } = req
 
     if (/^(?!GET|HEAD).*$/.test(method)) {
       return next()
@@ -58,11 +56,13 @@ export default async () => {
     }
 
     log({ url, method })
-    const response = await app.toString(url)
-    log({ url, method, response })
-    ctx.body = hyperTemplate(hyper, {
-      ...response,
-      criticalCss: `<style>${sheet.toString()}</style>`
-    }).toString()
+    const hyperResponse = await app.toString(url)
+    // log({ hyperResponse })
+    resp.send(
+      hyperTemplate(hyper, {
+        ...hyperResponse,
+        criticalCss: `<style>${sheet.toString()}</style>`,
+      }).toString()
+    )
   }
 }

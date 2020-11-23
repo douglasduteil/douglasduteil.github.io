@@ -7,7 +7,7 @@ import {
   graduationIcon,
   trophyIcon,
   suitcaseIcon,
-  usersIcon
+  usersIcon,
 } from './svg'
 import styles from './achievements.scss'
 import achievements from './achievements.json'
@@ -30,11 +30,11 @@ export default ({ hyper: { wire } }, state, emit) =>
     <article>${listTimeline(wire)(achievements)}</article>
 
     <style>${{ html: sheet.toString() }}</style>
-  `
+  `,
   })
 
 function listTimeline(render) {
-  return yearList => render()`
+  return (yearList) => render()`
     <ul class=${classes.ul}>
     ${yearList.map(
       ([year, events]) => render()`
@@ -43,7 +43,7 @@ function listTimeline(render) {
 
           <ul class=${classes['event-list']}>
           ${events.map(
-            event => render()`
+            (event) => render()`
               <li class=${classes.event}>${renderEvent[event.type](render)(
               event
             )}</li>
@@ -57,7 +57,7 @@ function listTimeline(render) {
 }
 
 function renderYear(render) {
-  return year =>
+  return (year) =>
     render()`<time class=${classes.year} datetime="${new Date(
       year
     )}">${year}</time>`
@@ -65,7 +65,7 @@ function renderYear(render) {
 
 const renderEvent = {
   job(render) {
-    return event => render()`
+    return (event) => render()`
     <i class=${classes.icon}>${suitcaseIcon(render, event)}</i>
     <div class=${classes.body}>
 
@@ -75,7 +75,7 @@ const renderEvent = {
     `
   },
   study(render) {
-    return event => render()`
+    return (event) => render()`
     <i class=${classes.icon}>${graduationIcon(render, event)}</i>
     <div class=${classes.body}>
 
@@ -85,7 +85,7 @@ const renderEvent = {
     `
   },
   github(render) {
-    return event => render()`
+    return (event) => render()`
     <i class=${classes.icon}>${githubIcon(render, event)}</i>
     <div class=${classes.body}>
 
@@ -95,7 +95,7 @@ const renderEvent = {
     `
   },
   talk(render) {
-    return event => render()`
+    return (event) => render()`
     <i class=${classes.icon}>${usersIcon(render, event)}</i>
     <div class=${classes.body}>
       <h3>${event.where}</h3>
@@ -111,5 +111,5 @@ const renderEvent = {
       </p>
     </div>
       `
-  }
+  },
 }

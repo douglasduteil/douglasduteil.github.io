@@ -15,14 +15,14 @@ app.use(devtools)
 
 app.hyper = hyper
 
-app.renderTitle = title => ` ${title ? `${title} ` : ''} Douglas Duteil`
+app.renderTitle = (title) => ` ${title ? `${title} ` : ''} Douglas Duteil`
 
 const bootstrap = () => {
   app.mount('root')
 
   // @if BUILD_ENV='production'
   // eslint-disable-next-line no-unused-expressions
-  import(/* webpackChunkName: "stalker" */ './autotrack.js')
+  import('./stalker.js')
   // @endif
 }
 

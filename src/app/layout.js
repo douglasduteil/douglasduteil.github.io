@@ -7,11 +7,11 @@ import styles from './layout.scss'
 const sheet = jss.createStyleSheet(styles)
 sheet.addRules({
   menu: {
-    backgroundColor: data => data.backgoundColor
+    backgroundColor: (data) => data.backgoundColor,
   },
   main: {
-    backgroundColor: data => data.backgoundColor
-  }
+    backgroundColor: (data) => data.backgoundColor,
+  },
 })
 const { classes } = sheet
 

@@ -1,6 +1,6 @@
 //
 
-export function stateFrom (value, stateConstructor) {
+export function stateFrom(value, stateConstructor) {
   const { cache } = stateFrom
   return cache.has(value)
     ? cache.get(value)

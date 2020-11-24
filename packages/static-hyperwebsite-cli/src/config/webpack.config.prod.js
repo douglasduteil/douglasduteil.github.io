@@ -1,7 +1,6 @@
 //
 
 const { resolve } = require('path')
-// const PrepackWebpackPlugin = require('prepack-webpack-plugin').default
 const { GenerateSW } = require('workbox-webpack-plugin')
 const { RawSource } = require('webpack-sources')
 const SitemapPlugin = require('sitemap-webpack-plugin').default

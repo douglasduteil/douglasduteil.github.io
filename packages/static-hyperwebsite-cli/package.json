@@ -16,7 +16,7 @@
     "chokidar": "^3.5.1",
     "copy-webpack-plugin": "^6.4.0",
     "css-loader": "^5.0.1",
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",

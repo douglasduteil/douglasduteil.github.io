@@ -9,7 +9,7 @@
   "license": "WTFPL",
   "dependencies": {
     "hyperhtml": "^2.34.0",
-    "nanobus": "^4.4.0",
+    "nanobus": "^4.5.0",
     "nanohref": "^3.1.0",
     "nanolocation": "^1.0.1",
     "nanoraf": "^3.1.0",

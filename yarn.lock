@@ -4582,10 +4582,10 @@ nanoassert@^1.1.0:
   resolved "https://registry.yarnpkg.com/nanoassert/-/nanoassert-1.1.0.tgz#4f3152e09540fde28c76f44b19bbcd1d5a42478d"
   integrity sha1-TzFS4JVA/eKMdvRLGbvNHVpCR40=
 
-nanobus@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/nanobus/-/nanobus-4.4.0.tgz#e5c20846fa17cff01ef5aac301410d1e541f81ed"
-  integrity sha512-Hv9USGyH8EsPy0o8pPWE7x3YRIfuZDgMBirzjU6XLebhiSK2g53JlfqgolD0c39ne6wXAfaBNcIAvYe22Bav+Q==
+nanobus@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/nanobus/-/nanobus-4.5.0.tgz#7a6b3ff358ed0a075374697a7a2c18e0f5a439d2"
+  integrity sha512-7sBZo9wthqNJ7QXnfVXZL7fkKJLN55GLOdX+RyZT34UOvxxnFtJe/c7K0ZRLAKOvaY1xJThFFn0Usw2H9R6Frg==
   dependencies:
     nanoassert "^1.1.0"
     nanotiming "^7.2.0"

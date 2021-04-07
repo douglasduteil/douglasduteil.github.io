@@ -28,17 +28,13 @@
     ]
   ],
   [
-    "2018",
+    "2015",
     [
       {
-        "type": "talk",
-        "where": "Talk at the Bouffe Front",
-        "title": "How to build a cow ?",
-        "link": {
-          "href": "https://twitter.com/olegskl/status/1045011688557355009",
-          "name": "Bouffe Front @SFEIR"
-        }
-      }
+        "type": "job",
+        "body": "https://github.com/onedoes",
+        "title": "Co-founded OneDoes"
+      },
     ]
   ],
   [

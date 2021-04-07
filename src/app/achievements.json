@@ -3,6 +3,34 @@
     "2018",
     [
       {
+        "type": "job",
+        "body": "Digital Services Incubator of the French government",
+        "title": "Join the Fabrique numérique des Ministères Sociaux as Lead Dev",
+        "link": {
+          "href": "https://github.com/SocialGouv",
+          "name": "@SocialGouv"
+        }
+      },
+      {
+        "type": "job",
+        "body": "Software development company",
+        "title": "Leave SFEIR Paris"
+      },
+      {
+        "type": "talk",
+        "where": "Talk at the Bouffe Front",
+        "title": "How to build a cow ?",
+        "link": {
+          "href": "https://twitter.com/olegskl/status/1045011688557355009",
+          "name": "Bouffe Front @SFEIR"
+        }
+      }
+    ]
+  ],
+  [
+    "2018",
+    [
+      {
         "type": "talk",
         "where": "Talk at the Bouffe Front",
         "title": "How to build a cow ?",

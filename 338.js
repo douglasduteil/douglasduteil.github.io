@@ -22,7 +22,7 @@
         </li>
         <li class=${s.li}>
           <i class=${s.i}>${(0,A.zD)(i)}</i>
-          <div>Front End Developer</div>
+          <div>Lead Developer</div>
         </li>
       </ul>
     </section>

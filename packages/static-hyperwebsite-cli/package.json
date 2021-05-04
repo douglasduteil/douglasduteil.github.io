@@ -45,6 +45,6 @@
     "webpack-node-externals": "^3.0.0",
     "webpack-dev-server": "^3.11.2",
     "workbox-webpack-plugin": "^6.1.5",
-    "yargs": "^17.0.0"
+    "yargs": "^17.0.1"
   }
 }

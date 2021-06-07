@@ -41,7 +41,7 @@
     "url-loader": "^4.1.1",
     "lodash.debounce": "^4.0.8",
     "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.1",
+    "webpack-cli": "^4.7.2",
     "webpack-node-externals": "^3.0.0",
     "webpack-dev-server": "^3.11.2",
     "workbox-webpack-plugin": "^6.1.5",

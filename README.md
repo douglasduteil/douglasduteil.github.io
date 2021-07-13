@@ -6,7 +6,7 @@
 
 # Dev
 
-Use `yarn start`
+Use `yarn start `
 
 # Build
 

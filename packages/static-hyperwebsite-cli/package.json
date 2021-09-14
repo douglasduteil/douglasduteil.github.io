@@ -43,7 +43,7 @@
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0",
     "webpack-node-externals": "^3.0.0",
-    "webpack-dev-server": "^4.2.0",
+    "webpack-dev-server": "^4.2.1",
     "workbox-webpack-plugin": "^6.3.0",
     "yargs": "^17.1.1"
   }

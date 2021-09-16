@@ -34,7 +34,7 @@
     "postcss-simple-vars": "^5.0.2",
     "prejss-styles-loader": "^1.0.0",
     "preprocess-loader": "^0.3.0",
-    "prettier": "^2.4.0",
+    "prettier": "^2.4.1",
     "raw-loader": "^4.0.2",
     "sitemap-webpack-plugin": "^1.1.1",
     "source-map-loader": "^3.0.0",

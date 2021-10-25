@@ -3846,7 +3846,7 @@ jss-preset-default@^10.8.2:
     jss-plugin-template "10.8.2"
     jss-plugin-vendor-prefixer "10.8.2"
 
-jss@10.8.2, jss@^10.8.1:
+jss@10.8.2, jss@^10.8.2:
   version "10.8.2"
   resolved "https://registry.yarnpkg.com/jss/-/jss-10.8.2.tgz#4b2a30b094b924629a64928236017a52c7c97505"
   integrity sha512-FkoUNxI329CKQ9OQC8L72MBF9KPf5q8mIupAJ5twU7G7XREW7ahb+7jFfrjZ4iy1qvhx1HwIWUIvkZBDnKkEdQ==

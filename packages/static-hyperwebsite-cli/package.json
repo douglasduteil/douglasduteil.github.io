@@ -24,7 +24,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.1.1",
     "esm": "^3.2.25",
-    "postcss": "^8.4.1",
+    "postcss": "^8.4.3",
     "postcss-calc": "^7.0.5",
     "postcss-custom-media": "^7.0.8",
     "postcss-import": "^12.0.1",

@@ -1,2 +1,0 @@
----
-extends: ./packages/static-hyperwebsite-cli/src/config/estling.config.yml

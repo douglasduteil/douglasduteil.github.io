@@ -1,39 +1,16 @@
 {
-  "name": "douglasduteil.github.com",
-  "version": "0.0.0",
-  "description": "",
-  "main": false,
+  "name": "douglasduteil.github.io",
   "private": true,
+  "packageManager": "yarn@3.3.0",
   "scripts": {
-    "lint": "eslint .",
-    "build": "static-hyperwebsite build",
-    "start": "static-hyperwebsite serve"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/douglasduteil/douglasduteil.github.com.git"
-  },
-  "author": "Douglas Duteil",
-  "license": "WTFPL",
-  "bugs": {
-    "url": "https://github.com/douglasduteil/douglasduteil.github.com/issues"
-  },
-  "homepage": "https://github.com/douglasduteil/douglasduteil.github.com",
-  "dependencies": {
-    "@hyperchoo/core": "0.0.0",
-    "@hyperchoo/devtools": "0.0.0",
-    "autotrack": "^2.4.1",
-    "jss": "^10.9.0",
-    "jss-preset-default": "^10.9.0",
-    "nanorouter": "^4.0.0",
-    "assert": "^2.0.0",
-    "viperhtml": "^2.17.1"
-  },
-  "devDependencies": {
-    "@douglasduteil/static-hyperwebsite-cli": "^0.0.0",
-    "fs-extra": "^11.0.0"
+    "build": "yarn workspace www build",
+    "dev": "yarn workspace www dev",
+    "format": "yarn workspace www format",
+    "lint": "yarn workspace www lint",
+    "preview": "yarn workspace www preview",
+    "test": "yarn workspace www test:unit"
   },
   "workspaces": [
-    "packages/*"
+    "www"
   ]
 }

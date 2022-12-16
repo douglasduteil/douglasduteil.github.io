@@ -1,0 +1,64 @@
+@import "$lib/variables";
+@import "$lib/mixins";
+@import "./variables";
+
+@mixin timeline_event {
+  :global([aria-label="event card"]) {
+    position: relative;
+    margin: 5px 0 30px calc($left-content-pos + ($arrow-size * 2) + 5px);
+
+    background-color: white;
+    padding: 1rem 2rem;
+
+    // card__arrow
+    &:after {
+      content: " ";
+      right: 100%;
+      height: 0;
+      width: 0;
+      position: absolute;
+      border: solid transparent;
+      pointer-events: none;
+      border-right-color: #fff;
+      border-width: $arrow-size;
+      top: 0;
+    }
+  }
+
+  :global(a) {
+    color: #333;
+  }
+
+  :global(i) {
+    $size: 40px;
+    $inner-space: 4px;
+    width: $size;
+    height: $size;
+    speak: none;
+
+    position: absolute;
+    color: #fff;
+    border-radius: 50%;
+    background-color: $smalt-blue;
+    padding: $inner-space;
+    box-shadow: 0 0 0 $line-node-border--size #fff;
+    left: calc(($left-padding * 2) + $line-node-border--size);
+    top: -4px;
+    margin: 0 0 0 -25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > :global(svg) {
+      $radio: 0.6;
+      width: calc($size * $radio);
+      height: calc($size * $radio);
+    }
+
+    // to modile
+    @include media-max-phone {
+      font-size: 1.4em;
+    }
+  }
+}

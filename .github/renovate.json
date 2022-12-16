@@ -12,10 +12,7 @@
   ],
   "masterIssueAutoclose": true,
   "semanticCommits": true,
-  "postUpdateOptions": [
-    "npmDedupe",
-    "yarnDedupeHighest"
-  ],
+  "postUpdateOptions": ["npmDedupe", "yarnDedupeHighest"],
   "rangeStrategy": "bump",
   "labels": ["dependencies"],
   "packageRules": [

@@ -1,0 +1,61 @@
+/* Write your global styles here, in PostCSS syntax */
+
+html,
+body,
+main,
+root,
+article {
+	min-height: 100vh;
+}
+
+body {
+	font-family: sans-serif;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+html.wf-active > body {
+	font-family: 'Lato', sans-serif;
+}
+
+body {
+	color: #111;
+	flex: 1;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: white;
+	font-weight: bold;
+}
+
+root,
+main {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+main {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+svg {
+	fill: currentColor;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}

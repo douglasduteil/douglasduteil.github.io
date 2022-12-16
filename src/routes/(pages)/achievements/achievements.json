@@ -1,121 +1,121 @@
 [
-	[
-		2022,
-		[
-			{
-				"type": "github",
-				"body": "A open source organisation that buld widgets and directives for AngularJS",
-				"title": "Leave Angular UI"
-			}
-		]
-	],
-	[
-		2021,
-		[
-			{
-				"type": "job",
-				"body": "Digital Services Incubator of the French government",
-				"title": "Leave the Fabrique numérique des Ministères"
-			}
-		]
-	],
-	[
-		2018,
-		[
-			{
-				"type": "job",
-				"body": "Digital Services Incubator of the French government",
-				"title": "Join the Fabrique numérique des Ministères Sociaux as Lead Dev",
-				"link": {
-					"href": "https://github.com/SocialGouv",
-					"name": "@SocialGouv"
-				}
-			},
-			{
-				"type": "job",
-				"body": "Software development company",
-				"title": "Leave SFEIR Paris"
-			},
-			{
-				"type": "talk",
-				"where": "Talk at the Bouffe Front",
-				"title": "How to build a cow ?",
-				"link": {
-					"href": "https://twitter.com/olegskl/status/1045011688557355009",
-					"name": "Bouffe Front @SFEIR"
-				}
-			}
-		]
-	],
-	[
-		2015,
-		[
-			{
-				"type": "job",
-				"body": "https://github.com/onedoes",
-				"title": "Co-founded OneDoes"
-			}
-		]
-	],
-	[
-		2014,
-		[
-			{
-				"type": "talk",
-				"where": "Talk at the ngParis meetup",
-				"title": "Waaa Again !?",
-				"link": {
-					"href": "https://www.meetup.com/AngularJS-Paris/events/192808622/",
-					"name": "Meetup AngularJS #13 @SFEIR"
-				}
-			},
-			{
-				"type": "talk",
-				"where": "Talk at the ngParis meetup",
-				"title": "Input[Range] over 9000",
-				"link": {
-					"href": "https://www.meetup.com/AngularJS-Paris/events/185603592/",
-					"name": "Meetup AngularJS #12 @BeMyAppFr"
-				}
-			},
-			{
-				"type": "talk",
-				"where": "Talk at the ngParis meetup",
-				"title": "We need to make UI.Utils util again !",
-				"link": {
-					"href": "https://www.meetup.com/AngularJS-Paris/events/165733502/",
-					"name": "Meetup AngularJS #8 @SFEIR"
-				}
-			}
-		]
-	],
-	[
-		2013,
-		[
-			{
-				"type": "talk",
-				"where": "Talk at the ngParis meetup",
-				"title": "WaaaAnimation",
-				"link": {
-					"href": "https://www.meetup.com/AngularJS-Paris/events/147070122/",
-					"name": "Meetup #5 @Deezer"
-				}
-			},
-			{
-				"type": "job",
-				"body": "Software development company",
-				"title": "Join SFEIR Paris"
-			},
-			{
-				"type": "study",
-				"body": "Master's degree in Computer Science and Human Sciences",
-				"title": "Graduated from the University of Paris 8"
-			},
-			{
-				"type": "github",
-				"body": "A open source organisation that buld widgets and directives for AngularJS",
-				"title": "Join Angular UI"
-			}
-		]
-	]
+  [
+    2022,
+    [
+      {
+        "type": "github",
+        "body": "A open source organisation that buld widgets and directives for AngularJS",
+        "title": "Leave Angular UI"
+      }
+    ]
+  ],
+  [
+    2021,
+    [
+      {
+        "type": "job",
+        "body": "Digital Services Incubator of the French government",
+        "title": "Leave the Fabrique numérique des Ministères"
+      }
+    ]
+  ],
+  [
+    2018,
+    [
+      {
+        "type": "job",
+        "body": "Digital Services Incubator of the French government",
+        "title": "Join the Fabrique numérique des Ministères Sociaux as Lead Dev",
+        "link": {
+          "href": "https://github.com/SocialGouv",
+          "name": "@SocialGouv"
+        }
+      },
+      {
+        "type": "job",
+        "body": "Software development company",
+        "title": "Leave SFEIR Paris"
+      },
+      {
+        "type": "talk",
+        "where": "Talk at the Bouffe Front",
+        "title": "How to build a cow ?",
+        "link": {
+          "href": "https://twitter.com/olegskl/status/1045011688557355009",
+          "name": "Bouffe Front @SFEIR"
+        }
+      }
+    ]
+  ],
+  [
+    2015,
+    [
+      {
+        "type": "job",
+        "body": "https://github.com/onedoes",
+        "title": "Co-founded OneDoes"
+      }
+    ]
+  ],
+  [
+    2014,
+    [
+      {
+        "type": "talk",
+        "where": "Talk at the ngParis meetup",
+        "title": "Waaa Again !?",
+        "link": {
+          "href": "https://www.meetup.com/AngularJS-Paris/events/192808622/",
+          "name": "Meetup AngularJS #13 @SFEIR"
+        }
+      },
+      {
+        "type": "talk",
+        "where": "Talk at the ngParis meetup",
+        "title": "Input[Range] over 9000",
+        "link": {
+          "href": "https://www.meetup.com/AngularJS-Paris/events/185603592/",
+          "name": "Meetup AngularJS #12 @BeMyAppFr"
+        }
+      },
+      {
+        "type": "talk",
+        "where": "Talk at the ngParis meetup",
+        "title": "We need to make UI.Utils util again !",
+        "link": {
+          "href": "https://www.meetup.com/AngularJS-Paris/events/165733502/",
+          "name": "Meetup AngularJS #8 @SFEIR"
+        }
+      }
+    ]
+  ],
+  [
+    2013,
+    [
+      {
+        "type": "talk",
+        "where": "Talk at the ngParis meetup",
+        "title": "WaaaAnimation",
+        "link": {
+          "href": "https://www.meetup.com/AngularJS-Paris/events/147070122/",
+          "name": "Meetup #5 @Deezer"
+        }
+      },
+      {
+        "type": "job",
+        "body": "Software development company",
+        "title": "Join SFEIR Paris"
+      },
+      {
+        "type": "study",
+        "body": "Master's degree in Computer Science and Human Sciences",
+        "title": "Graduated from the University of Paris 8"
+      },
+      {
+        "type": "github",
+        "body": "A open source organisation that buld widgets and directives for AngularJS",
+        "title": "Join Angular UI"
+      }
+    ]
+  ]
 ]

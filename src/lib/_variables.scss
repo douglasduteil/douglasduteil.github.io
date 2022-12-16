@@ -25,24 +25,24 @@ $screen-md-max: calc($screen-lg-min - 1px);
 
 // media devices
 @mixin media-max-phone {
-	@media screen and (max-width: #{$screen-xs-max}) {
-		@content;
-	}
+  @media screen and (max-width: #{$screen-xs-max}) {
+    @content;
+  }
 }
 @mixin media-min-tablet {
-	@media screen and (min-width: #{$screen-sm-min}) {
-		@content;
-	}
+  @media screen and (min-width: #{$screen-sm-min}) {
+    @content;
+  }
 }
 @mixin media-min-desktop {
-	@media screen and (min-width: #{$screen-md-min}) {
-		@content;
-	}
+  @media screen and (min-width: #{$screen-md-min}) {
+    @content;
+  }
 }
 @mixin media-min-large-desktop {
-	@media screen and (min-width: #{$screen-lg-min}) {
-		@content;
-	}
+  @media screen and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
 }
 
 //==

@@ -1,17 +1,17 @@
-import arrayShuffle from 'array-shuffle';
+import arrayShuffle from "array-shuffle";
 
 //
 
 export function shuffledTyperOrder(words: string[]) {
-	if (!shuffledTyperOrder._shuffledWords.length) {
-		shuffledTyperOrder._shuffledWords = arrayShuffle(words);
-	}
-	return shuffledTyperOrder._shuffledWords.pop();
+  if (!shuffledTyperOrder._shuffledWords.length) {
+    shuffledTyperOrder._shuffledWords = arrayShuffle(words);
+  }
+  return shuffledTyperOrder._shuffledWords.pop();
 }
 shuffledTyperOrder._shuffledWords = [] as string[];
 
 //
 
 export function randomTyperOrder(words: string[]) {
-	return words[Math.floor(Math.random() * words.length)];
+  return words[Math.floor(Math.random() * words.length)];
 }

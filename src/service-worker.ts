@@ -5,7 +5,7 @@ import { build, files, prerendered, version } from "$service-worker";
 import { clientsClaim } from "workbox-core";
 import { precacheAndRoute, cleanupOutdatedCaches } from "workbox-precaching";
 import { registerRoute, NavigationRoute, Route } from "workbox-routing";
-import { StaleWhileRevalidate, CacheFirst } from "workbox-strategies";
+import { StaleWhileRevalidate } from "workbox-strategies";
 import { initialize as workboxGoogleAnalytics } from "workbox-google-analytics";
 
 // self.skipWaiting() prevents the waiting, meaning the service worker

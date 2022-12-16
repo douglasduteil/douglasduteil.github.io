@@ -22,9 +22,9 @@
 
   onMount(typingLoop);
   onDestroy(() => {
-    clearTimeout(timeoutNextWord);
-    clearInterval(timing_interval_blinking);
-    clearInterval(timing_interval_typing);
+    window.clearTimeout(timeoutNextWord);
+    window.clearInterval(timing_interval_blinking);
+    window.clearInterval(timing_interval_typing);
   });
 
   //
@@ -44,12 +44,12 @@
     const limit = direction > 0 ? expectedWord.length : 0;
 
     return new Promise((resolve) => {
-      timing_interval_typing = setInterval(type_letter, speed);
+      timing_interval_typing = window.setInterval(type_letter, speed);
 
       function type_letter() {
         const typed_length = actualWord.length;
         if (typed_length === limit) {
-          clearInterval(timing_interval_typing);
+          window.clearInterval(timing_interval_typing);
           return resolve();
         }
         actualWord = expectedWord.slice(0, typed_length + direction);
@@ -60,11 +60,14 @@
 
   async function wait(delay: number): Promise<void> {
     const _cursor = cursor;
-    timing_interval_blinking = setInterval(cursorBlinking, cursorBlinkingSpeed);
+    timing_interval_blinking = window.setInterval(
+      cursorBlinking,
+      cursorBlinkingSpeed
+    );
     return new Promise(
       (resolve) =>
-        (timeoutNextWord = setTimeout(() => {
-          clearInterval(timing_interval_blinking);
+        (timeoutNextWord = window.setTimeout(() => {
+          window.clearInterval(timing_interval_blinking);
           cursor = _cursor;
           render();
           resolve();

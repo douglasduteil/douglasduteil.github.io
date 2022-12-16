@@ -6,16 +6,16 @@
 
 # Dev
 
-Use `yarn start`
+Use `yarn dev`
 
 # Build
 
-Use `yarn start`
-
+Use `yarn build`
+Use `yarn preview`
 
 ## License
 
-    Copyright © 2018 Douglas Duteil <douglasduteil@gmail.com>
+    Copyright © 2023 Douglas Duteil <douglasduteil@gmail.com>
     This work is free. You can redistribute it and/or modify it under the
     terms of the Do What The Fuck You Want To Public License, Version 2,
     as published by Sam Hocevar. See the LICENCE file for more details.

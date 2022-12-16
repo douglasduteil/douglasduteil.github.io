@@ -1,7 +1,14 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import '$lib/ciritcal.scss';
+	import { onMount } from 'svelte';
 	import Menu from './Menu.svelte';
+
+	onMount(() => {
+		if (import.meta.env.PROD) {
+			import('$lib/stalker');
+		}
+	});
 </script>
 
 <svelte:head>

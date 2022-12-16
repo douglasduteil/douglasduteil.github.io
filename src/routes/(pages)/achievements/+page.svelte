@@ -1,6 +1,9 @@
-<script>
-	import Timeline from './Timeline.svelte';
-	import achievements from './achievements.json';
+<script lang="ts">
+	import { Timeline } from '$lib/timeline';
+	import type { TimelineEvent } from '$lib/timeline';
+	import _achievements from './achievements.json';
+
+	const achievements = _achievements as Array<[number, Array<TimelineEvent>]>;
 </script>
 
 <Timeline eventsPerYear={achievements} />
@@ -10,10 +13,7 @@
 
 	@import '$lib/variables';
 	@import '$lib/mixins';
-
-	//
-
-	$left-padding: 15px;
+	@import '$lib/timeline/variables';
 
 	// abs-content
 	:global(section.\/achievements) {

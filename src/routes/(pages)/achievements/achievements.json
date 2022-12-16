@@ -1,5 +1,15 @@
 [
 	[
+		2022,
+		[
+			{
+				"type": "github",
+				"body": "A open source organisation that buld widgets and directives for AngularJS",
+				"title": "Leave Angular UI"
+			}
+		]
+	],
+	[
 		2021,
 		[
 			{
@@ -98,8 +108,8 @@
 			},
 			{
 				"type": "study",
-				"body": "MSc Human-Compute",
-				"title": "Graduated from Paris 8"
+				"body": "Master's degree in Computer Science and Human Sciences",
+				"title": "Graduated from the University of Paris 8"
 			},
 			{
 				"type": "github",

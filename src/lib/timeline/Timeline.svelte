@@ -1,25 +1,19 @@
 <script lang="ts">
-	import TimelineJobEvent from './TimelineJobEvent.svelte';
-	interface TimelineEvent {
-		title: string;
-		body: string;
-	}
-	export let eventsPerYear = [] as Array<[number, Array<TimelineEvent>]>;
+	import TimelineEventMatcher from './TimelineEventMatcher.svelte';
+	import type { TimelineEvent } from './types';
+	export let eventsPerYear: Array<[number, Array<TimelineEvent>]>;
 </script>
 
-<ul>
+<ul aria-label="timeline">
 	{#each eventsPerYear as [year, events]}
-		<li>
-			<time datetime={new Date(year, 0, 1).toDateString()}>{year}</time>
+		<li aria-labelledby={String(year)}>
+			<time datetime={new Date(year, 0, 1).toDateString()} id={String(year)}>{year}</time>
 
-			<ul class="event-list">
+			<ul aria-label="events">
 				{#each events as event}
-					<!-- <code>{JSON.stringify({ event })}</code> -->
-					<li class="event"><TimelineJobEvent {...event} /></li>
-					<!-- ${events.map(
-            <li class="event">${renderEvent[event.type](render)(
-              event
-            )}</li> -->
+					<li aria-label="event">
+						<TimelineEventMatcher {event} />
+					</li>
 				{/each}
 			</ul>
 		</li>
@@ -31,31 +25,12 @@
 
 	@import '$lib/variables';
 	@import '$lib/mixins';
+	@import './variables';
+	@import './timeline_event.scss';
 
 	//
 
-	$line-size: 10px;
-	$left-padding: 15px;
-	$line-node-border--size: 4px;
-	$left-content-pos: calc(($left-padding * 2) + $line-size + ($line-node-border--size * 2));
-	$arrow-size: 20px;
-	$line-size: 10px;
-
-	//
-
-	:global(section.\/achievements) {
-		@include media-max-phone {
-			margin-bottom: $navbar--height - 20px;
-		}
-		@include media-min-tablet {
-			padding-right: $left-padding * 2;
-			justify-content: center;
-		}
-	}
-
-	//
-
-	ul {
+	ul[aria-label='timeline'] {
 		padding: 0;
 		list-style: none;
 		position: relative;
@@ -65,6 +40,11 @@
 
 		color: black;
 		margin: 0 auto 30px;
+
+		// from little screen
+		@media (min-width: $screen-md-min) {
+			width: $screen-sm-min;
+		}
 
 		// timeline__line
 		&:after {
@@ -81,10 +61,16 @@
 			background-color: rgba(0, 0, 0, 0.3);
 		}
 	}
-	.event-list {
+
+	ul[aria-label='events'] {
 		@include virgin-ul;
+
+		li[aria-label='event'] {
+			@include timeline_event;
+		}
 	}
-	.event {
+
+	li[aria-label='event'] {
 		position: relative;
 
 		// from little screen

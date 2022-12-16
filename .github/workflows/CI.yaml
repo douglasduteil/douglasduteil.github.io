@@ -16,7 +16,7 @@ jobs:
           node-version: node
           cache: "yarn"
 
-      - run: yarn install --immutable-cache
+      - run: yarn install --immutable
 
       - run: yarn lint
       - run: yarn check

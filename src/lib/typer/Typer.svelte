@@ -16,10 +16,10 @@
   let expectedWord = "";
   let actualWord = "";
   let text = `${prefix} ${actualWord}`;
-  let timing_interval_typing: NodeJS.Timer;
-  let timing_interval_blinking: NodeJS.Timer;
-  let timeoutNextWord: NodeJS.Timer;
-  // let timeoutNextWord = setTimeout(nextWord, delayBetweenWords);
+  let timing_interval_typing: number;
+  let timing_interval_blinking: number;
+  let timeoutNextWord: number;
+
   onMount(typingLoop);
   onDestroy(() => {
     clearTimeout(timeoutNextWord);

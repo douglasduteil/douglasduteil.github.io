@@ -1,5 +1,0 @@
-/*! (c) 2018 Andrea Giammarchi (ISC) */
-
-/*! (c) Andrea Giammarchi */
-
-/*! (c) Andrea Giammarchi - ISC */

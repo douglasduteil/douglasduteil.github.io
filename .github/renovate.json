@@ -3,26 +3,9 @@
     "config:base",
     ":maintainLockFilesWeekly",
     ":automergeAll",
-    ":masterIssue",
-    ":preserveSemverRanges",
-    ":disableRateLimiting",
-    ":semanticCommits",
-    ":timezone(Europe/Paris)",
-    "group:postcss"
+    ":timezone(Europe/Paris)"
   ],
-  "masterIssueAutoclose": true,
-  "semanticCommits": true,
+  "dependencyDashboardAutoclose": true,
   "postUpdateOptions": ["npmDedupe", "yarnDedupeHighest"],
-  "rangeStrategy": "bump",
-  "labels": ["dependencies"],
-  "packageRules": [
-    {
-      "packagePatterns": "^eslint",
-      "groupName": "eslint"
-    },
-    {
-      "packagePatterns": "^webpack",
-      "groupName": "webpack"
-    }
-  ]
+  "labels": ["dependencies"]
 }

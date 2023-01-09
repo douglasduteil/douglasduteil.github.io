@@ -1,48 +1,48 @@
 const ae = [
   "/_app/immutable/assets/_layout-3c40b81d.css",
-  "/_app/immutable/assets/_page-ac07bd01.css",
-  "/_app/immutable/assets/_layout-821f84a5.css",
   "/_app/immutable/assets/_page-890e339e.css",
+  "/_app/immutable/assets/_layout-821f84a5.css",
   "/_app/immutable/assets/_page-3d0e8ef0.css",
   "/_app/immutable/assets/_page-a2f904ab.css",
-  "/_app/immutable/start-8adbff3d.js",
-  "/_app/immutable/chunks/5-2a4ad66c.js",
-  "/_app/immutable/chunks/6-3aad4e7d.js",
-  "/_app/immutable/chunks/7-fb418b6d.js",
-  "/_app/immutable/modules/pages/me/_page.ts-a413abf6.js",
-  "/_app/immutable/chunks/0-7b2f21f2.js",
-  "/_app/immutable/components/pages/(pages)/rockets/_page.svelte-62c0cd1b.js",
-  "/_app/immutable/chunks/2-5b6b4a53.js",
-  "/_app/immutable/chunks/3-40f2beee.js",
-  "/_app/immutable/chunks/4-d16de960.js",
-  "/_app/immutable/chunks/preload-helper-41c905a7.js",
+  "/_app/immutable/assets/_page-ac07bd01.css",
   "/_app/immutable/chunks/control-f5b05b5f.js",
-  "/_app/immutable/chunks/singletons-572afc3b.js",
-  "/_app/immutable/components/pages/_layout.svelte-7ed34e6c.js",
-  "/_app/immutable/components/pages/me/_page.svelte-51a4c2dc.js",
-  "/_app/immutable/chunks/1-6d3b3045.js",
-  "/_app/immutable/components/pages/(pages)/_layout.svelte-ec23f54f.js",
-  "/_app/immutable/chunks/stores-37b0f26c.js",
+  "/_app/immutable/chunks/index-2e1481b4.js",
+  "/_app/immutable/chunks/preload-helper-41c905a7.js",
   "/_app/immutable/chunks/rocket-0f9a48ab.js",
-  "/_app/immutable/chunks/trophy-2cb64f43.js",
-  "/_app/immutable/components/error.svelte-bbf45686.js",
-  "/_app/immutable/chunks/github-e875a305.js",
+  "/_app/immutable/chunks/stores-37b0f26c.js",
+  "/_app/immutable/chunks/4-345539b2.js",
+  "/_app/immutable/chunks/_layout-da46b06b.js",
   "/_app/immutable/chunks/_page-0b9ed94a.js",
+  "/_app/immutable/components/error.svelte-bbf45686.js",
+  "/_app/immutable/chunks/_page-26b8aac6.js",
+  "/_app/immutable/chunks/_page-02344e9c.js",
   "/_app/immutable/chunks/_page-fa5d064b.js",
-  "/_app/immutable/modules/pages/(pages)/rockets/_page.ts-84041dbd.js",
+  "/_app/immutable/chunks/singletons-572afc3b.js",
+  "/_app/immutable/chunks/github-e875a305.js",
+  "/_app/immutable/start-2a978e99.js",
+  "/_app/immutable/chunks/2-b1e2cf16.js",
+  "/_app/immutable/chunks/1-6d3b3045.js",
+  "/_app/immutable/chunks/5-d4aa0b4b.js",
+  "/_app/immutable/chunks/6-1e8288cf.js",
+  "/_app/immutable/chunks/7-22165701.js",
+  "/_app/immutable/modules/pages/_layout.ts-9cbb603b.js",
+  "/_app/immutable/modules/pages/_page.ts-46492177.js",
   "/_app/immutable/chunks/_page-6eff400c.js",
   "/_app/immutable/chunks/comment-97e7acd1.js",
-  "/_app/immutable/chunks/_page-02344e9c.js",
-  "/_app/immutable/chunks/_layout-da46b06b.js",
+  "/_app/immutable/chunks/3-40f2beee.js",
   "/_app/immutable/chunks/stalker-e3db8160.js",
+  "/_app/immutable/chunks/trophy-2cb64f43.js",
+  "/_app/immutable/components/pages/me/_page.svelte-b42f5a37.js",
   "/_app/immutable/modules/pages/(pages)/achievements/_page.ts-b74843e7.js",
-  "/_app/immutable/components/pages/(pages)/achievements/_page.svelte-e85de3bb.js",
-  "/_app/immutable/components/pages/(pages)/contact/_page.svelte-542321eb.js",
-  "/_app/immutable/modules/pages/_page.ts-46492177.js",
-  "/_app/immutable/chunks/_page-26b8aac6.js",
-  "/_app/immutable/chunks/index-2e1481b4.js",
+  "/_app/immutable/chunks/0-baad1302.js",
   "/_app/immutable/modules/pages/(pages)/contact/_page.ts-cb8b1759.js",
-  "/_app/immutable/modules/pages/_layout.ts-9cbb603b.js"
+  "/_app/immutable/modules/pages/(pages)/rockets/_page.ts-84041dbd.js",
+  "/_app/immutable/modules/pages/me/_page.ts-a413abf6.js",
+  "/_app/immutable/components/pages/(pages)/rockets/_page.svelte-a2b0d325.js",
+  "/_app/immutable/components/pages/(pages)/contact/_page.svelte-8e7e1ada.js",
+  "/_app/immutable/components/pages/(pages)/_layout.svelte-25594fd6.js",
+  "/_app/immutable/components/pages/_layout.svelte-6dae7d42.js",
+  "/_app/immutable/components/pages/(pages)/achievements/_page.svelte-c54f2e1c.js"
 ], re = [
   "/favicon.ico",
   "/icons/apple-touch-icon-114x114.png",
@@ -83,7 +83,7 @@ const ae = [
   "/contact",
   "/me",
   "/rockets"
-], V = "1672631116488";
+], V = "1673237014568";
 try {
   self["workbox:core:6.5.3"] && _();
 } catch {
@@ -93,6 +93,14 @@ const ce = (n, ...e) => {
   return e.length > 0 && (t += ` :: ${JSON.stringify(e)}`), t;
 }, oe = ce;
 class l extends Error {
+  /**
+   *
+   * @param {string} errorCode The error code that
+   * identifies this particular error.
+   * @param {Object=} details Any relevant arguments
+   * that will help developers identify issues should
+   * be added as a key on the context object.
+   */
   constructor(e, t) {
     const s = oe(e, t);
     super(s), this.name = e, this.details = t;
@@ -151,6 +159,9 @@ function de() {
   return w;
 }
 class fe {
+  /**
+   * Creates a promise and exposes its resolve and reject functions as methods.
+   */
   constructor() {
     this.promise = new Promise((e, t) => {
       this.resolve = e, this.reject = t;
@@ -243,12 +254,41 @@ function E(n) {
   return typeof n == "string" ? new Request(n) : n;
 }
 class ke {
+  /**
+   * Creates a new instance associated with the passed strategy and event
+   * that's handling the request.
+   *
+   * The constructor also initializes the state that will be passed to each of
+   * the plugins handling this request.
+   *
+   * @param {workbox-strategies.Strategy} strategy
+   * @param {Object} options
+   * @param {Request|string} options.request A request to run this strategy for.
+   * @param {ExtendableEvent} options.event The event associated with the
+   *     request.
+   * @param {URL} [options.url]
+   * @param {*} [options.params] The return value from the
+   *     {@link workbox-routing~matchCallback} (if applicable).
+   */
   constructor(e, t) {
     this._cacheKeys = {}, Object.assign(this, t), this.event = t.event, this._strategy = e, this._handlerDeferred = new fe(), this._extendLifetimePromises = [], this._plugins = [...e.plugins], this._pluginStateMap = /* @__PURE__ */ new Map();
     for (const s of this._plugins)
       this._pluginStateMap.set(s, {});
     this.event.waitUntil(this._handlerDeferred.promise);
   }
+  /**
+   * Fetches a given request (and invokes any applicable plugin callback
+   * methods) using the `fetchOptions` (for non-navigation requests) and
+   * `plugins` defined on the `Strategy` object.
+   *
+   * The following plugin lifecycle methods are invoked when using this method:
+   * - `requestWillFetch()`
+   * - `fetchDidSucceed()`
+   * - `fetchDidFail()`
+   *
+   * @param {Request|string} input The URL or request to fetch.
+   * @return {Promise<Response>}
+   */
   async fetch(e) {
     const { event: t } = this;
     let s = E(e);
@@ -287,10 +327,32 @@ class ke {
       }), r;
     }
   }
+  /**
+   * Calls `this.fetch()` and (in the background) runs `this.cachePut()` on
+   * the response generated by `this.fetch()`.
+   *
+   * The call to `this.cachePut()` automatically invokes `this.waitUntil()`,
+   * so you do not have to manually call `waitUntil()` on the event.
+   *
+   * @param {Request|string} input The request or URL to fetch and cache.
+   * @return {Promise<Response>}
+   */
   async fetchAndCachePut(e) {
     const t = await this.fetch(e), s = t.clone();
     return this.waitUntil(this.cachePut(e, s)), t;
   }
+  /**
+   * Matches a request from the cache (and invokes any applicable plugin
+   * callback methods) using the `cacheName`, `matchOptions`, and `plugins`
+   * defined on the strategy object.
+   *
+   * The following plugin lifecycle methods are invoked when using this method:
+   * - cacheKeyWillByUsed()
+   * - cachedResponseWillByUsed()
+   *
+   * @param {Request|string} key The Request or URL to use as the cache key.
+   * @return {Promise<Response|undefined>} A matching response, if found.
+   */
   async cacheMatch(e) {
     const t = E(e);
     let s;
@@ -306,6 +368,21 @@ class ke {
       }) || void 0;
     return s;
   }
+  /**
+   * Puts a request/response pair in the cache (and invokes any applicable
+   * plugin callback methods) using the `cacheName` and `plugins` defined on
+   * the strategy object.
+   *
+   * The following plugin lifecycle methods are invoked when using this method:
+   * - cacheKeyWillByUsed()
+   * - cacheWillUpdate()
+   * - cacheDidUpdate()
+   *
+   * @param {Request|string} key The request or URL to use as the cache key.
+   * @param {Response} response The response to cache.
+   * @return {Promise<boolean>} `false` if a cacheWillUpdate caused the response
+   * not be cached, and `true` otherwise.
+   */
   async cachePut(e, t) {
     const s = E(e);
     await J(0);
@@ -318,6 +395,9 @@ class ke {
     if (!i)
       return !1;
     const { cacheName: r, matchOptions: c } = this._strategy, o = await self.caches.open(r), u = this.hasCallback("cacheDidUpdate"), y = u ? await he(
+      // TODO(philipwalton): the `__WB_REVISION__` param is a precaching
+      // feature. Consider into ways to only add this behavior if using
+      // precaching.
       o,
       a.clone(),
       ["__WB_REVISION__"],
@@ -339,6 +419,17 @@ class ke {
       });
     return !0;
   }
+  /**
+   * Checks the list of plugins for the `cacheKeyWillBeUsed` callback, and
+   * executes any of those callbacks found in sequence. The final `Request`
+   * object returned by the last plugin is treated as the cache key for cache
+   * reads and/or writes. If no `cacheKeyWillBeUsed` plugin callbacks have
+   * been registered, the passed request is returned unmodified
+   *
+   * @param {Request} request
+   * @param {string} mode
+   * @return {Promise<Request>}
+   */
   async getCacheKey(e, t) {
     const s = `${e.url} | ${t}`;
     if (!this._cacheKeys[s]) {
@@ -348,22 +439,56 @@ class ke {
           mode: t,
           request: a,
           event: this.event,
+          // params has a type any can't change right now.
           params: this.params
+          // eslint-disable-line
         }));
       this._cacheKeys[s] = a;
     }
     return this._cacheKeys[s];
   }
+  /**
+   * Returns true if the strategy has at least one plugin with the given
+   * callback.
+   *
+   * @param {string} name The name of the callback to check for.
+   * @return {boolean}
+   */
   hasCallback(e) {
     for (const t of this._strategy.plugins)
       if (e in t)
         return !0;
     return !1;
   }
+  /**
+   * Runs all plugin callbacks matching the given name, in order, passing the
+   * given param object (merged ith the current plugin state) as the only
+   * argument.
+   *
+   * Note: since this method runs all plugins, it's not suitable for cases
+   * where the return value of a callback needs to be applied prior to calling
+   * the next callback. See
+   * {@link workbox-strategies.StrategyHandler#iterateCallbacks}
+   * below for how to handle that case.
+   *
+   * @param {string} name The name of the callback to run within each plugin.
+   * @param {Object} param The object to pass as the first (and only) param
+   *     when executing each callback. This object will be merged with the
+   *     current plugin state prior to callback execution.
+   */
   async runCallbacks(e, t) {
     for (const s of this.iterateCallbacks(e))
       await s(t);
   }
+  /**
+   * Accepts a callback and returns an iterable of matching plugin callbacks,
+   * where each callback is wrapped with the current handler state (i.e. when
+   * you call each callback, whatever object parameter you pass it will
+   * be merged with the plugin's current state).
+   *
+   * @param {string} name The name fo the callback to run
+   * @return {Array<Function>}
+   */
   *iterateCallbacks(e) {
     for (const t of this._strategy.plugins)
       if (typeof t[e] == "function") {
@@ -374,17 +499,54 @@ class ke {
         };
       }
   }
+  /**
+   * Adds a promise to the
+   * [extend lifetime promises]{@link https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises}
+   * of the event event associated with the request being handled (usually a
+   * `FetchEvent`).
+   *
+   * Note: you can await
+   * {@link workbox-strategies.StrategyHandler~doneWaiting}
+   * to know when all added promises have settled.
+   *
+   * @param {Promise} promise A promise to add to the extend lifetime promises
+   *     of the event that triggered the request.
+   */
   waitUntil(e) {
     return this._extendLifetimePromises.push(e), e;
   }
+  /**
+   * Returns a promise that resolves once all promises passed to
+   * {@link workbox-strategies.StrategyHandler~waitUntil}
+   * have settled.
+   *
+   * Note: any work done after `doneWaiting()` settles should be manually
+   * passed to an event's `waitUntil()` method (not this handler's
+   * `waitUntil()` method), otherwise the service worker thread my be killed
+   * prior to your work completing.
+   */
   async doneWaiting() {
     let e;
     for (; e = this._extendLifetimePromises.shift(); )
       await e;
   }
+  /**
+   * Stops running the strategy and immediately resolves any pending
+   * `waitUntil()` promises.
+   */
   destroy() {
     this._handlerDeferred.resolve(null);
   }
+  /**
+   * This method will call cacheWillUpdate on the available plugins (or use
+   * status === 200) to determine if the Response is safe and valid to cache.
+   *
+   * @param {Request} options.request
+   * @param {Response} options.response
+   * @return {Promise<Response|undefined>}
+   *
+   * @private
+   */
   async _ensureResponseSafeToCache(e) {
     let t = e, s = !1;
     for (const a of this.iterateCallbacks("cacheWillUpdate"))
@@ -398,13 +560,76 @@ class ke {
   }
 }
 class x {
+  /**
+   * Creates a new instance of the strategy and sets all documented option
+   * properties as public instance properties.
+   *
+   * Note: if a custom strategy class extends the base Strategy class and does
+   * not need more than these properties, it does not need to define its own
+   * constructor.
+   *
+   * @param {Object} [options]
+   * @param {string} [options.cacheName] Cache name to store and retrieve
+   * requests. Defaults to the cache names provided by
+   * {@link workbox-core.cacheNames}.
+   * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
+   * to use in conjunction with this caching strategy.
+   * @param {Object} [options.fetchOptions] Values passed along to the
+   * [`init`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+   * of [non-navigation](https://github.com/GoogleChrome/workbox/issues/1796)
+   * `fetch()` requests made by this strategy.
+   * @param {Object} [options.matchOptions] The
+   * [`CacheQueryOptions`]{@link https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions}
+   * for any `cache.match()` or `cache.put()` calls made by this strategy.
+   */
   constructor(e = {}) {
     this.cacheName = C.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
   }
+  /**
+   * Perform a request strategy and returns a `Promise` that will resolve with
+   * a `Response`, invoking all relevant plugin callbacks.
+   *
+   * When a strategy instance is registered with a Workbox
+   * {@link workbox-routing.Route}, this method is automatically
+   * called when the route matches.
+   *
+   * Alternatively, this method can be used in a standalone `FetchEvent`
+   * listener by passing it to `event.respondWith()`.
+   *
+   * @param {FetchEvent|Object} options A `FetchEvent` or an object with the
+   *     properties listed below.
+   * @param {Request|string} options.request A request to run this strategy for.
+   * @param {ExtendableEvent} options.event The event associated with the
+   *     request.
+   * @param {URL} [options.url]
+   * @param {*} [options.params]
+   */
   handle(e) {
     const [t] = this.handleAll(e);
     return t;
   }
+  /**
+   * Similar to {@link workbox-strategies.Strategy~handle}, but
+   * instead of just returning a `Promise` that resolves to a `Response` it
+   * it will return an tuple of `[response, done]` promises, where the former
+   * (`response`) is equivalent to what `handle()` returns, and the latter is a
+   * Promise that will resolve once any promises that were added to
+   * `event.waitUntil()` as part of performing the strategy have completed.
+   *
+   * You can await the `done` promise to ensure any extra work performed by
+   * the strategy (usually caching responses) completes successfully.
+   *
+   * @param {FetchEvent|Object} options A `FetchEvent` or an object with the
+   *     properties listed below.
+   * @param {Request|string} options.request A request to run this strategy for.
+   * @param {ExtendableEvent} options.event The event associated with the
+   *     request.
+   * @param {URL} [options.url]
+   * @param {*} [options.params]
+   * @return {Array<Promise>} A tuple of [response, done]
+   *     promises that can be used to determine when the response resolves as
+   *     well as when the handler has completed all its work.
+   */
   handleAll(e) {
     e instanceof FetchEvent && (e = {
       event: e,
@@ -457,9 +682,33 @@ class x {
   }
 }
 class m extends x {
+  /**
+   *
+   * @param {Object} [options]
+   * @param {string} [options.cacheName] Cache name to store and retrieve
+   * requests. Defaults to the cache names provided by
+   * {@link workbox-core.cacheNames}.
+   * @param {Array<Object>} [options.plugins] {@link https://developers.google.com/web/tools/workbox/guides/using-plugins|Plugins}
+   * to use in conjunction with this caching strategy.
+   * @param {Object} [options.fetchOptions] Values passed along to the
+   * {@link https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters|init}
+   * of all fetch() requests made by this strategy.
+   * @param {Object} [options.matchOptions] The
+   * {@link https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions|CacheQueryOptions}
+   * for any `cache.match()` or `cache.put()` calls made by this strategy.
+   * @param {boolean} [options.fallbackToNetwork=true] Whether to attempt to
+   * get the response from the network if there's a precache miss.
+   */
   constructor(e = {}) {
     e.cacheName = C.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(m.copyRedirectedCacheableResponsesPlugin);
   }
+  /**
+   * @private
+   * @param {Request|string} request A request to run this strategy for.
+   * @param {workbox-strategies.StrategyHandler} handler The event that
+   *     triggered the request.
+   * @return {Promise<Response>}
+   */
   async _handle(e, t) {
     const s = await t.cacheMatch(e);
     return s || (t.event && t.event.type === "install" ? await this._handleInstall(e, t) : await this._handleFetch(e, t));
@@ -489,6 +738,33 @@ class m extends x {
       });
     return s;
   }
+  /**
+   * This method is complex, as there a number of things to account for:
+   *
+   * The `plugins` array can be set at construction, and/or it might be added to
+   * to at any time before the strategy is used.
+   *
+   * At the time the strategy is used (i.e. during an `install` event), there
+   * needs to be at least one plugin that implements `cacheWillUpdate` in the
+   * array, other than `copyRedirectedCacheableResponsesPlugin`.
+   *
+   * - If this method is called and there are no suitable `cacheWillUpdate`
+   * plugins, we need to add `defaultPrecacheCacheabilityPlugin`.
+   *
+   * - If this method is called and there is exactly one `cacheWillUpdate`, then
+   * we don't have to do anything (this might be a previously added
+   * `defaultPrecacheCacheabilityPlugin`, or it might be a custom plugin).
+   *
+   * - If this method is called and there is more than one `cacheWillUpdate`,
+   * then we need to check if one is `defaultPrecacheCacheabilityPlugin`. If so,
+   * we need to remove it. (This situation is unlikely, but it could happen if
+   * the strategy is used multiple times, the first without a `cacheWillUpdate`,
+   * and then later on after manually adding a custom `cacheWillUpdate`.)
+   *
+   * See https://github.com/GoogleChrome/workbox/issues/2737 for more context.
+   *
+   * @private
+   */
   _useDefaultCacheabilityPluginIfNeeded() {
     let e = null, t = 0;
     for (const [s, a] of this.plugins.entries())
@@ -507,6 +783,16 @@ m.copyRedirectedCacheableResponsesPlugin = {
   }
 };
 class Ce {
+  /**
+   * Create a new PrecacheController.
+   *
+   * @param {Object} [options]
+   * @param {string} [options.cacheName] The cache to use for precaching.
+   * @param {string} [options.plugins] Plugins to use when precaching as well
+   * as responding to fetch events for precached assets.
+   * @param {boolean} [options.fallbackToNetwork=true] Whether to attempt to
+   * get the response from the network if there's a precache miss.
+   */
   constructor({ cacheName: e, plugins: t = [], fallbackToNetwork: s = !0 } = {}) {
     this._urlsToCacheKeys = /* @__PURE__ */ new Map(), this._urlsToCacheModes = /* @__PURE__ */ new Map(), this._cacheKeysToIntegrities = /* @__PURE__ */ new Map(), this._strategy = new m({
       cacheName: C.getPrecacheName(e),
@@ -517,12 +803,33 @@ class Ce {
       fallbackToNetwork: s
     }), this.install = this.install.bind(this), this.activate = this.activate.bind(this);
   }
+  /**
+   * @type {workbox-precaching.PrecacheStrategy} The strategy created by this controller and
+   * used to cache assets and respond to fetch events.
+   */
   get strategy() {
     return this._strategy;
   }
+  /**
+   * Adds items to the precache list, removing any duplicates and
+   * stores the files in the
+   * {@link workbox-core.cacheNames|"precache cache"} when the service
+   * worker installs.
+   *
+   * This method can be called multiple times.
+   *
+   * @param {Array<Object|string>} [entries=[]] Array of entries to precache.
+   */
   precache(e) {
     this.addToCacheList(e), this._installAndActiveListenersAdded || (self.addEventListener("install", this.install), self.addEventListener("activate", this.activate), this._installAndActiveListenersAdded = !0);
   }
+  /**
+   * This method will add items to the precache list, removing duplicates
+   * and ensuring the information is valid.
+   *
+   * @param {Array<workbox-precaching.PrecacheController.PrecacheEntry|string>} entries
+   *     Array of entries to precache.
+   */
   addToCacheList(e) {
     const t = [];
     for (const s of e) {
@@ -547,6 +854,16 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
       }
     }
   }
+  /**
+   * Precaches new and updated assets. Call this method from the service worker
+   * install event.
+   *
+   * Note: this method calls `event.waitUntil()` for you, so you do not need
+   * to call it yourself in your event handlers.
+   *
+   * @param {ExtendableEvent} event
+   * @return {Promise<workbox-precaching.InstallResult>}
+   */
   install(e) {
     return B(e, async () => {
       const t = new be();
@@ -567,6 +884,16 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
       return { updatedURLs: s, notUpdatedURLs: a };
     });
   }
+  /**
+   * Deletes assets that are no longer present in the current precache manifest.
+   * Call this method from the service worker activate event.
+   *
+   * Note: this method calls `event.waitUntil()` for you, so you do not need
+   * to call it yourself in your event handlers.
+   *
+   * @param {ExtendableEvent} event
+   * @return {Promise<workbox-precaching.CleanupResult>}
+   */
   activate(e) {
     return B(e, async () => {
       const t = await self.caches.open(this.strategy.cacheName), s = await t.keys(), a = new Set(this._urlsToCacheKeys.values()), i = [];
@@ -575,24 +902,76 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
       return { deletedURLs: i };
     });
   }
+  /**
+   * Returns a mapping of a precached URL to the corresponding cache key, taking
+   * into account the revision information for the URL.
+   *
+   * @return {Map<string, string>} A URL to cache key mapping.
+   */
   getURLsToCacheKeys() {
     return this._urlsToCacheKeys;
   }
+  /**
+   * Returns a list of all the URLs that have been precached by the current
+   * service worker.
+   *
+   * @return {Array<string>} The precached URLs.
+   */
   getCachedURLs() {
     return [...this._urlsToCacheKeys.keys()];
   }
+  /**
+   * Returns the cache key used for storing a given URL. If that URL is
+   * unversioned, like `/index.html', then the cache key will be the original
+   * URL with a search parameter appended to it.
+   *
+   * @param {string} url A URL whose cache key you want to look up.
+   * @return {string} The versioned URL that corresponds to a cache key
+   * for the original URL, or undefined if that URL isn't precached.
+   */
   getCacheKeyForURL(e) {
     const t = new URL(e, location.href);
     return this._urlsToCacheKeys.get(t.href);
   }
+  /**
+   * @param {string} url A cache key whose SRI you want to look up.
+   * @return {string} The subresource integrity associated with the cache key,
+   * or undefined if it's not set.
+   */
   getIntegrityForCacheKey(e) {
     return this._cacheKeysToIntegrities.get(e);
   }
+  /**
+   * This acts as a drop-in replacement for
+   * [`cache.match()`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)
+   * with the following differences:
+   *
+   * - It knows what the name of the precache is, and only checks in that cache.
+   * - It allows you to pass in an "original" URL without versioning parameters,
+   * and it will automatically look up the correct cache key for the currently
+   * active revision of that URL.
+   *
+   * E.g., `matchPrecache('index.html')` will find the correct precached
+   * response for the currently active service worker, even if the actual cache
+   * key is `'/index.html?__WB_REVISION__=1234abcd'`.
+   *
+   * @param {string|Request} request The key (without revisioning parameters)
+   * to look up in the precache.
+   * @return {Promise<Response|undefined>}
+   */
   async matchPrecache(e) {
     const t = e instanceof Request ? e.url : e, s = this.getCacheKeyForURL(t);
     if (s)
       return (await self.caches.open(this.strategy.cacheName)).match(s);
   }
+  /**
+   * Returns a function that looks up `url` in the precache (taking into
+   * account revision information), and returns the corresponding `Response`.
+   *
+   * @param {string} url The precached URL which will be used to lookup the
+   * `Response`.
+   * @return {workbox-routing~handlerCallback}
+   */
   createHandlerBoundToURL(e) {
     const t = this.getCacheKeyForURL(e);
     if (!t)
@@ -608,14 +987,43 @@ try {
 }
 const X = "GET", T = (n) => n && typeof n == "object" ? n : { handle: n };
 class h {
+  /**
+   * Constructor for Route class.
+   *
+   * @param {workbox-routing~matchCallback} match
+   * A callback function that determines whether the route matches a given
+   * `fetch` event by returning a non-falsy value.
+   * @param {workbox-routing~handlerCallback} handler A callback
+   * function that returns a Promise resolving to a Response.
+   * @param {string} [method='GET'] The HTTP method to match the Route
+   * against.
+   */
   constructor(e, t, s = X) {
     this.handler = T(t), this.match = e, this.method = s;
   }
+  /**
+   *
+   * @param {workbox-routing-handlerCallback} handler A callback
+   * function that returns a Promise resolving to a Response
+   */
   setCatchHandler(e) {
     this.catchHandler = T(e);
   }
 }
 class Ee extends h {
+  /**
+   * If the regular expression contains
+   * [capture groups]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#grouping-back-references},
+   * the captured values will be passed to the
+   * {@link workbox-routing~handlerCallback} `params`
+   * argument.
+   *
+   * @param {RegExp} regExp The regular expression to match against URLs.
+   * @param {workbox-routing~handlerCallback} handler A callback
+   * function that returns a Promise resulting in a Response.
+   * @param {string} [method='GET'] The HTTP method to match the Route
+   * against.
+   */
   constructor(e, t, s) {
     const a = ({ url: i }) => {
       const r = e.exec(i.href);
@@ -626,18 +1034,52 @@ class Ee extends h {
   }
 }
 class Y {
+  /**
+   * Initializes a new Router.
+   */
   constructor() {
     this._routes = /* @__PURE__ */ new Map(), this._defaultHandlerMap = /* @__PURE__ */ new Map();
   }
+  /**
+   * @return {Map<string, Array<workbox-routing.Route>>} routes A `Map` of HTTP
+   * method name ('GET', etc.) to an array of all the corresponding `Route`
+   * instances that are registered.
+   */
   get routes() {
     return this._routes;
   }
+  /**
+   * Adds a fetch event listener to respond to events when a route matches
+   * the event's request.
+   */
   addFetchListener() {
     self.addEventListener("fetch", (e) => {
       const { request: t } = e, s = this.handleRequest({ request: t, event: e });
       s && e.respondWith(s);
     });
   }
+  /**
+   * Adds a message event listener for URLs to cache from the window.
+   * This is useful to cache resources loaded on the page prior to when the
+   * service worker started controlling it.
+   *
+   * The format of the message data sent from the window should be as follows.
+   * Where the `urlsToCache` array may consist of URL strings or an array of
+   * URL string + `requestInit` object (the same as you'd pass to `fetch()`).
+   *
+   * ```
+   * {
+   *   type: 'CACHE_URLS',
+   *   payload: {
+   *     urlsToCache: [
+   *       './script1.js',
+   *       './script2.js',
+   *       ['./script3.js', {mode: 'no-cors'}],
+   *     ],
+   *   },
+   * }
+   * ```
+   */
   addCacheListener() {
     self.addEventListener("message", (e) => {
       if (e.data && e.data.type === "CACHE_URLS") {
@@ -650,6 +1092,18 @@ class Y {
       }
     });
   }
+  /**
+   * Apply the routing rules to a FetchEvent object to get a Response from an
+   * appropriate Route's handler.
+   *
+   * @param {Object} options
+   * @param {Request} options.request The request to handle.
+   * @param {ExtendableEvent} options.event The event that triggered the
+   *     request.
+   * @return {Promise<Response>|undefined} A promise is returned if a
+   *     registered route can handle the request. If there is no matching
+   *     route and there's no `defaultHandler`, `undefined` is returned.
+   */
   handleRequest({ request: e, event: t }) {
     const s = new URL(e.url, location.href);
     if (!s.protocol.startsWith("http"))
@@ -683,25 +1137,72 @@ class Y {
       throw d;
     })), u;
   }
+  /**
+   * Checks a request and URL (and optionally an event) against the list of
+   * registered routes, and if there's a match, returns the corresponding
+   * route along with any params generated by the match.
+   *
+   * @param {Object} options
+   * @param {URL} options.url
+   * @param {boolean} options.sameOrigin The result of comparing `url.origin`
+   *     against the current origin.
+   * @param {Request} options.request The request to match.
+   * @param {Event} options.event The corresponding event.
+   * @return {Object} An object with `route` and `params` properties.
+   *     They are populated if a matching route was found or `undefined`
+   *     otherwise.
+   */
   findMatchingRoute({ url: e, sameOrigin: t, request: s, event: a }) {
     const i = this._routes.get(s.method) || [];
     for (const r of i) {
       let c;
       const o = r.match({ url: e, sameOrigin: t, request: s, event: a });
       if (o)
-        return c = o, (Array.isArray(c) && c.length === 0 || o.constructor === Object && Object.keys(o).length === 0 || typeof o == "boolean") && (c = void 0), { route: r, params: c };
+        return c = o, (Array.isArray(c) && c.length === 0 || o.constructor === Object && // eslint-disable-line
+        Object.keys(o).length === 0 || typeof o == "boolean") && (c = void 0), { route: r, params: c };
     }
     return {};
   }
+  /**
+   * Define a default `handler` that's called when no routes explicitly
+   * match the incoming request.
+   *
+   * Each HTTP method ('GET', 'POST', etc.) gets its own default handler.
+   *
+   * Without a default handler, unmatched requests will go against the
+   * network as if there were no service worker present.
+   *
+   * @param {workbox-routing~handlerCallback} handler A callback
+   * function that returns a Promise resulting in a Response.
+   * @param {string} [method='GET'] The HTTP method to associate with this
+   * default handler. Each method has its own default.
+   */
   setDefaultHandler(e, t = X) {
     this._defaultHandlerMap.set(t, T(e));
   }
+  /**
+   * If a Route throws an error while handling a request, this `handler`
+   * will be called and given a chance to provide a response.
+   *
+   * @param {workbox-routing~handlerCallback} handler A callback
+   * function that returns a Promise resulting in a Response.
+   */
   setCatchHandler(e) {
     this._catchHandler = T(e);
   }
+  /**
+   * Registers a route with the router.
+   *
+   * @param {workbox-routing.Route} route The route to register.
+   */
   registerRoute(e) {
     this._routes.has(e.method) || this._routes.set(e.method, []), this._routes.get(e.method).push(e);
   }
+  /**
+   * Unregisters a route with the router.
+   *
+   * @param {workbox-routing.Route} route The route to unregister.
+   */
   unregisterRoute(e) {
     if (!this._routes.has(e.method))
       throw new l("unregister-route-but-not-found-with-method", {
@@ -759,6 +1260,22 @@ function* Pe(n, { ignoreURLParametersMatching: e = [/^utm_/, /^fbclid$/], direct
   }
 }
 class De extends h {
+  /**
+   * @param {PrecacheController} precacheController A `PrecacheController`
+   * instance used to both match requests and respond to fetch events.
+   * @param {Object} [options] Options to control how requests are matched
+   * against the list of precached URLs.
+   * @param {string} [options.directoryIndex=index.html] The `directoryIndex` will
+   * check cache entries for a URLs ending with '/' to see if there is a hit when
+   * appending the `directoryIndex` value.
+   * @param {Array<RegExp>} [options.ignoreURLParametersMatching=[/^utm_/, /^fbclid$/]] An
+   * array of regex's to remove search params when looking for a cache match.
+   * @param {boolean} [options.cleanURLs=true] The `cleanURLs` option will
+   * check the cache for the URL with a `.html` added to the end of the end.
+   * @param {workbox-precaching~urlManipulation} [options.urlManipulation]
+   * This is a function that should take a URL and return an array of
+   * alternative URLs that should be checked for precache matches.
+   */
   constructor(e, t) {
     const s = ({ request: a }) => {
       const i = e.getURLsToCacheKeys();
@@ -795,9 +1312,43 @@ function ve(n, e) {
   qe(n), Ne(e);
 }
 class je extends h {
+  /**
+   * If both `denylist` and `allowlist` are provided, the `denylist` will
+   * take precedence and the request will not match this route.
+   *
+   * The regular expressions in `allowlist` and `denylist`
+   * are matched against the concatenated
+   * [`pathname`]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/pathname}
+   * and [`search`]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search}
+   * portions of the requested URL.
+   *
+   * *Note*: These RegExps may be evaluated against every destination URL during
+   * a navigation. Avoid using
+   * [complex RegExps](https://github.com/GoogleChrome/workbox/issues/3077),
+   * or else your users may see delays when navigating your site.
+   *
+   * @param {workbox-routing~handlerCallback} handler A callback
+   * function that returns a Promise resulting in a Response.
+   * @param {Object} options
+   * @param {Array<RegExp>} [options.denylist] If any of these patterns match,
+   * the route will not handle the request (even if a allowlist RegExp matches).
+   * @param {Array<RegExp>} [options.allowlist=[/./]] If any of these patterns
+   * match the URL's pathname and search parameter, the route will handle the
+   * request (assuming the denylist doesn't match).
+   */
   constructor(e, { allowlist: t = [/./], denylist: s = [] } = {}) {
     super((a) => this._match(a), e), this._allowlist = t, this._denylist = s;
   }
+  /**
+   * Routes match handler.
+   *
+   * @param {Object} options
+   * @param {URL} options.url
+   * @param {Request} options.request
+   * @return {boolean}
+   *
+   * @private
+   */
   _match({ url: e, request: t }) {
     if (t && t.mode !== "navigate")
       return !1;
@@ -809,12 +1360,48 @@ class je extends h {
   }
 }
 const Z = {
+  /**
+   * Returns a valid response (to allow caching) if the status is 200 (OK) or
+   * 0 (opaque).
+   *
+   * @param {Object} options
+   * @param {Response} options.response
+   * @return {Response|null}
+   *
+   * @private
+   */
   cacheWillUpdate: async ({ response: n }) => n.status === 200 || n.status === 0 ? n : null
 };
 class U extends x {
+  /**
+   * @param {Object} [options]
+   * @param {string} [options.cacheName] Cache name to store and retrieve
+   * requests. Defaults to cache names provided by
+   * {@link workbox-core.cacheNames}.
+   * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
+   * to use in conjunction with this caching strategy.
+   * @param {Object} [options.fetchOptions] Values passed along to the
+   * [`init`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+   * of [non-navigation](https://github.com/GoogleChrome/workbox/issues/1796)
+   * `fetch()` requests made by this strategy.
+   * @param {Object} [options.matchOptions] [`CacheQueryOptions`](https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions)
+   * @param {number} [options.networkTimeoutSeconds] If set, any network requests
+   * that fail to respond within the timeout will fallback to the cache.
+   *
+   * This option can be used to combat
+   * "[lie-fi]{@link https://developers.google.com/web/fundamentals/performance/poor-connectivity/#lie-fi}"
+   * scenarios.
+   */
   constructor(e = {}) {
     super(e), this.plugins.some((t) => "cacheWillUpdate" in t) || this.plugins.unshift(Z), this._networkTimeoutSeconds = e.networkTimeoutSeconds || 0;
   }
+  /**
+   * @private
+   * @param {Request|string} request A request to run this strategy for.
+   * @param {workbox-strategies.StrategyHandler} handler The event that
+   *     triggered the request.
+   * @return {Promise<Response>}
+   */
   async _handle(e, t) {
     const s = [], a = [];
     let i;
@@ -834,6 +1421,15 @@ class U extends x {
       throw new l("no-response", { url: e.url });
     return c;
   }
+  /**
+   * @param {Object} options
+   * @param {Request} options.request
+   * @param {Array} options.logs A reference to the logs array
+   * @param {Event} options.event
+   * @return {Promise<Response>}
+   *
+   * @private
+   */
   _getTimeoutPromise({ request: e, logs: t, handler: s }) {
     let a;
     return {
@@ -845,6 +1441,16 @@ class U extends x {
       id: a
     };
   }
+  /**
+   * @param {Object} options
+   * @param {number|undefined} options.timeoutId
+   * @param {Request} options.request
+   * @param {Array} options.logs A reference to the logs Array.
+   * @param {Event} options.event
+   * @return {Promise<Response>}
+   *
+   * @private
+   */
   async _getNetworkPromise({ timeoutId: e, request: t, logs: s, handler: a }) {
     let i, r;
     try {
@@ -856,9 +1462,27 @@ class U extends x {
   }
 }
 class Ue extends x {
+  /**
+   * @param {Object} [options]
+   * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
+   * to use in conjunction with this caching strategy.
+   * @param {Object} [options.fetchOptions] Values passed along to the
+   * [`init`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+   * of [non-navigation](https://github.com/GoogleChrome/workbox/issues/1796)
+   * `fetch()` requests made by this strategy.
+   * @param {number} [options.networkTimeoutSeconds] If set, any network requests
+   * that fail to respond within the timeout will result in a network error.
+   */
   constructor(e = {}) {
     super(e), this._networkTimeoutSeconds = e.networkTimeoutSeconds || 0;
   }
+  /**
+   * @private
+   * @param {Request|string} request A request to run this strategy for.
+   * @param {workbox-strategies.StrategyHandler} handler The event that
+   *     triggered the request.
+   * @return {Promise<Response>}
+   */
   async _handle(e, t) {
     let s, a;
     try {
@@ -880,9 +1504,29 @@ class Ue extends x {
   }
 }
 class O extends x {
+  /**
+   * @param {Object} [options]
+   * @param {string} [options.cacheName] Cache name to store and retrieve
+   * requests. Defaults to cache names provided by
+   * {@link workbox-core.cacheNames}.
+   * @param {Array<Object>} [options.plugins] [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
+   * to use in conjunction with this caching strategy.
+   * @param {Object} [options.fetchOptions] Values passed along to the
+   * [`init`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+   * of [non-navigation](https://github.com/GoogleChrome/workbox/issues/1796)
+   * `fetch()` requests made by this strategy.
+   * @param {Object} [options.matchOptions] [`CacheQueryOptions`](https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions)
+   */
   constructor(e = {}) {
     super(e), this.plugins.some((t) => "cacheWillUpdate" in t) || this.plugins.unshift(Z);
   }
+  /**
+   * @private
+   * @param {Request|string} request A request to run this strategy for.
+   * @param {workbox-strategies.StrategyHandler} handler The event that
+   *     triggered the request.
+   * @return {Promise<Response>}
+   */
   async _handle(e, t) {
     const s = t.fetchAndCachePut(e).catch(() => {
     });
@@ -998,6 +1642,7 @@ function Ge(n, e, { blocked: t, upgrade: s, blocking: a, terminated: i } = {}) {
   return s && r.addEventListener("upgradeneeded", (o) => {
     s(g(r.result), o.oldVersion, o.newVersion, g(r.transaction), o);
   }), t && r.addEventListener("blocked", (o) => t(
+    // Casting due to https://github.com/microsoft/TypeScript-DOM-lib-generator/pull/1405
     o.oldVersion,
     o.newVersion,
     o
@@ -1013,7 +1658,8 @@ function H(n, e) {
   if (I.get(e))
     return I.get(e);
   const t = e.replace(/FromIndex$/, ""), s = e !== t, a = $e.includes(t);
-  if (!(t in (s ? IDBIndex : IDBObjectStore).prototype) || !(a || Qe.includes(t)))
+  if (// Bail if the target doesn't exist on the target. Eg, getAll isn't in Edge.
+  !(t in (s ? IDBIndex : IDBObjectStore).prototype) || !(a || Qe.includes(t)))
     return;
   const i = async function(r, ...c) {
     const o = this.transaction(r, a ? "readwrite" : "readonly");
@@ -1039,41 +1685,99 @@ class Je {
   constructor() {
     this._db = null;
   }
+  /**
+   * Add QueueStoreEntry to underlying db.
+   *
+   * @param {UnidentifiedQueueStoreEntry} entry
+   */
   async addEntry(e) {
     const s = (await this.getDb()).transaction(f, "readwrite", {
       durability: "relaxed"
     });
     await s.store.add(e), await s.done;
   }
+  /**
+   * Returns the first entry id in the ObjectStore.
+   *
+   * @return {number | undefined}
+   */
   async getFirstEntryId() {
     const t = await (await this.getDb()).transaction(f).store.openCursor();
     return t == null ? void 0 : t.value.id;
   }
+  /**
+   * Get all the entries filtered by index
+   *
+   * @param queueName
+   * @return {Promise<QueueStoreEntry[]>}
+   */
   async getAllEntriesByQueueName(e) {
     const s = await (await this.getDb()).getAllFromIndex(f, R, IDBKeyRange.only(e));
     return s || new Array();
   }
+  /**
+   * Returns the number of entries filtered by index
+   *
+   * @param queueName
+   * @return {Promise<number>}
+   */
   async getEntryCountByQueueName(e) {
     return (await this.getDb()).countFromIndex(f, R, IDBKeyRange.only(e));
   }
+  /**
+   * Deletes a single entry by id.
+   *
+   * @param {number} id the id of the entry to be deleted
+   */
   async deleteEntry(e) {
     await (await this.getDb()).delete(f, e);
   }
+  /**
+   *
+   * @param queueName
+   * @returns {Promise<QueueStoreEntry | undefined>}
+   */
   async getFirstEntryByQueueName(e) {
     return await this.getEndEntryFromIndex(IDBKeyRange.only(e), "next");
   }
+  /**
+   *
+   * @param queueName
+   * @returns {Promise<QueueStoreEntry | undefined>}
+   */
   async getLastEntryByQueueName(e) {
     return await this.getEndEntryFromIndex(IDBKeyRange.only(e), "prev");
   }
+  /**
+   * Returns either the first or the last entries, depending on direction.
+   * Filtered by index.
+   *
+   * @param {IDBCursorDirection} direction
+   * @param {IDBKeyRange} query
+   * @return {Promise<QueueStoreEntry | undefined>}
+   * @private
+   */
   async getEndEntryFromIndex(e, t) {
     const a = await (await this.getDb()).transaction(f).store.index(R).openCursor(e, t);
     return a == null ? void 0 : a.value;
   }
+  /**
+   * Returns an open connection to the database.
+   *
+   * @private
+   */
   async getDb() {
     return this._db || (this._db = await Ge(Ve, G, {
       upgrade: this._upgradeDb
     })), this._db;
   }
+  /**
+   * Upgrades QueueDB
+   *
+   * @param {IDBPDatabase<QueueDBSchema>} db
+   * @param {number} oldVersion
+   * @private
+   */
   _upgradeDb(e, t) {
     t > 0 && t < G && e.objectStoreNames.contains(f) && e.deleteObjectStore(f), e.createObjectStore(f, {
       autoIncrement: !0,
@@ -1082,31 +1786,92 @@ class Je {
   }
 }
 class ze {
+  /**
+   * Associates this instance with a Queue instance, so entries added can be
+   * identified by their queue name.
+   *
+   * @param {string} queueName
+   */
   constructor(e) {
     this._queueName = e, this._queueDb = new Je();
   }
+  /**
+   * Append an entry last in the queue.
+   *
+   * @param {Object} entry
+   * @param {Object} entry.requestData
+   * @param {number} [entry.timestamp]
+   * @param {Object} [entry.metadata]
+   */
   async pushEntry(e) {
     delete e.id, e.queueName = this._queueName, await this._queueDb.addEntry(e);
   }
+  /**
+   * Prepend an entry first in the queue.
+   *
+   * @param {Object} entry
+   * @param {Object} entry.requestData
+   * @param {number} [entry.timestamp]
+   * @param {Object} [entry.metadata]
+   */
   async unshiftEntry(e) {
     const t = await this._queueDb.getFirstEntryId();
     t ? e.id = t - 1 : delete e.id, e.queueName = this._queueName, await this._queueDb.addEntry(e);
   }
+  /**
+   * Removes and returns the last entry in the queue matching the `queueName`.
+   *
+   * @return {Promise<QueueStoreEntry|undefined>}
+   */
   async popEntry() {
     return this._removeEntry(await this._queueDb.getLastEntryByQueueName(this._queueName));
   }
+  /**
+   * Removes and returns the first entry in the queue matching the `queueName`.
+   *
+   * @return {Promise<QueueStoreEntry|undefined>}
+   */
   async shiftEntry() {
     return this._removeEntry(await this._queueDb.getFirstEntryByQueueName(this._queueName));
   }
+  /**
+   * Returns all entries in the store matching the `queueName`.
+   *
+   * @param {Object} options See {@link workbox-background-sync.Queue~getAll}
+   * @return {Promise<Array<Object>>}
+   */
   async getAll() {
     return await this._queueDb.getAllEntriesByQueueName(this._queueName);
   }
+  /**
+   * Returns the number of entries in the store matching the `queueName`.
+   *
+   * @param {Object} options See {@link workbox-background-sync.Queue~size}
+   * @return {Promise<number>}
+   */
   async size() {
     return await this._queueDb.getEntryCountByQueueName(this._queueName);
   }
+  /**
+   * Deletes the entry for the given ID.
+   *
+   * WARNING: this method does not ensure the deleted entry belongs to this
+   * queue (i.e. matches the `queueName`). But this limitation is acceptable
+   * as this class is not publicly exposed. An additional check would make
+   * this method slower than it needs to be.
+   *
+   * @param {number} id
+   */
   async deleteEntry(e) {
     await this._queueDb.deleteEntry(e);
   }
+  /**
+   * Removes and returns the first or last entry in the queue (based on the
+   * `direction` argument) matching the `queueName`.
+   *
+   * @return {Promise<QueueStoreEntry|undefined>}
+   * @private
+   */
   async _removeEntry(e) {
     return e && await this.deleteEntry(e.id), e;
   }
@@ -1123,9 +1888,24 @@ const Xe = [
   "keepalive"
 ];
 class k {
+  /**
+   * Accepts an object of request data that can be used to construct a
+   * `Request` but can also be stored in IndexedDB.
+   *
+   * @param {Object} requestData An object of request data that includes the
+   *     `url` plus any relevant properties of
+   *     [requestInit]{@link https://fetch.spec.whatwg.org/#requestinit}.
+   */
   constructor(e) {
     e.mode === "navigate" && (e.mode = "same-origin"), this._requestData = e;
   }
+  /**
+   * Converts a Request object to a plain object that can be structured
+   * cloned or JSON-stringified.
+   *
+   * @param {Request} request
+   * @return {Promise<StorableRequest>}
+   */
   static async fromRequest(e) {
     const t = {
       url: e.url,
@@ -1138,13 +1918,28 @@ class k {
       e[s] !== void 0 && (t[s] = e[s]);
     return new k(t);
   }
+  /**
+   * Returns a deep clone of the instances `_requestData` object.
+   *
+   * @return {Object}
+   */
   toObject() {
     const e = Object.assign({}, this._requestData);
     return e.headers = Object.assign({}, this._requestData.headers), e.body && (e.body = e.body.slice(0)), e;
   }
+  /**
+   * Converts this instance to a Request.
+   *
+   * @return {Request}
+   */
   toRequest() {
     return new Request(this._requestData.url, this._requestData);
   }
+  /**
+   * Creates and returns a deep clone of the instance.
+   *
+   * @return {StorableRequest}
+   */
   clone() {
     return new k(this.toObject());
   }
@@ -1157,26 +1952,106 @@ const Q = "workbox-background-sync", Ye = 60 * 24 * 7, q = /* @__PURE__ */ new S
   return n.metadata && (e.metadata = n.metadata), e;
 };
 class Ze {
+  /**
+   * Creates an instance of Queue with the given options
+   *
+   * @param {string} name The unique name for this queue. This name must be
+   *     unique as it's used to register sync events and store requests
+   *     in IndexedDB specific to this instance. An error will be thrown if
+   *     a duplicate name is detected.
+   * @param {Object} [options]
+   * @param {Function} [options.onSync] A function that gets invoked whenever
+   *     the 'sync' event fires. The function is invoked with an object
+   *     containing the `queue` property (referencing this instance), and you
+   *     can use the callback to customize the replay behavior of the queue.
+   *     When not set the `replayRequests()` method is called.
+   *     Note: if the replay fails after a sync event, make sure you throw an
+   *     error, so the browser knows to retry the sync event later.
+   * @param {number} [options.maxRetentionTime=7 days] The amount of time (in
+   *     minutes) a request may be retried. After this amount of time has
+   *     passed, the request will be deleted from the queue.
+   * @param {boolean} [options.forceSyncFallback=false] If `true`, instead
+   *     of attempting to use background sync events, always attempt to replay
+   *     queued request at service worker startup. Most folks will not need
+   *     this, unless you explicitly target a runtime like Electron that
+   *     exposes the interfaces for background sync, but does not have a working
+   *     implementation.
+   */
   constructor(e, { forceSyncFallback: t, onSync: s, maxRetentionTime: a } = {}) {
     if (this._syncInProgress = !1, this._requestsAddedDuringSync = !1, q.has(e))
       throw new l("duplicate-queue-name", { name: e });
     q.add(e), this._name = e, this._onSync = s || this.replayRequests, this._maxRetentionTime = a || Ye, this._forceSyncFallback = Boolean(t), this._queueStore = new ze(this._name), this._addSyncListener();
   }
+  /**
+   * @return {string}
+   */
   get name() {
     return this._name;
   }
+  /**
+   * Stores the passed request in IndexedDB (with its timestamp and any
+   * metadata) at the end of the queue.
+   *
+   * @param {QueueEntry} entry
+   * @param {Request} entry.request The request to store in the queue.
+   * @param {Object} [entry.metadata] Any metadata you want associated with the
+   *     stored request. When requests are replayed you'll have access to this
+   *     metadata object in case you need to modify the request beforehand.
+   * @param {number} [entry.timestamp] The timestamp (Epoch time in
+   *     milliseconds) when the request was first added to the queue. This is
+   *     used along with `maxRetentionTime` to remove outdated requests. In
+   *     general you don't need to set this value, as it's automatically set
+   *     for you (defaulting to `Date.now()`), but you can update it if you
+   *     don't want particular requests to expire.
+   */
   async pushRequest(e) {
     await this._addRequest(e, "push");
   }
+  /**
+   * Stores the passed request in IndexedDB (with its timestamp and any
+   * metadata) at the beginning of the queue.
+   *
+   * @param {QueueEntry} entry
+   * @param {Request} entry.request The request to store in the queue.
+   * @param {Object} [entry.metadata] Any metadata you want associated with the
+   *     stored request. When requests are replayed you'll have access to this
+   *     metadata object in case you need to modify the request beforehand.
+   * @param {number} [entry.timestamp] The timestamp (Epoch time in
+   *     milliseconds) when the request was first added to the queue. This is
+   *     used along with `maxRetentionTime` to remove outdated requests. In
+   *     general you don't need to set this value, as it's automatically set
+   *     for you (defaulting to `Date.now()`), but you can update it if you
+   *     don't want particular requests to expire.
+   */
   async unshiftRequest(e) {
     await this._addRequest(e, "unshift");
   }
+  /**
+   * Removes and returns the last request in the queue (along with its
+   * timestamp and any metadata). The returned object takes the form:
+   * `{request, timestamp, metadata}`.
+   *
+   * @return {Promise<QueueEntry | undefined>}
+   */
   async popRequest() {
     return this._removeRequest("pop");
   }
+  /**
+   * Removes and returns the first request in the queue (along with its
+   * timestamp and any metadata). The returned object takes the form:
+   * `{request, timestamp, metadata}`.
+   *
+   * @return {Promise<QueueEntry | undefined>}
+   */
   async shiftRequest() {
     return this._removeRequest("shift");
   }
+  /**
+   * Returns all the entries that have not expired (per `maxRetentionTime`).
+   * Any expired entries are removed from the queue.
+   *
+   * @return {Promise<Array<QueueEntry>>}
+   */
   async getAll() {
     const e = await this._queueStore.getAll(), t = Date.now(), s = [];
     for (const a of e) {
@@ -1185,9 +2060,25 @@ class Ze {
     }
     return s;
   }
+  /**
+   * Returns the number of entries present in the queue.
+   * Note that expired entries (per `maxRetentionTime`) are also included in this count.
+   *
+   * @return {Promise<number>}
+   */
   async size() {
     return await this._queueStore.size();
   }
+  /**
+   * Adds the entry to the QueueStore and registers for a sync event.
+   *
+   * @param {Object} entry
+   * @param {Request} entry.request
+   * @param {Object} [entry.metadata]
+   * @param {number} [entry.timestamp=Date.now()]
+   * @param {string} operation ('push' or 'unshift')
+   * @private
+   */
   async _addRequest({ request: e, metadata: t, timestamp: s = Date.now() }, a) {
     const r = {
       requestData: (await k.fromRequest(e.clone())).toObject(),
@@ -1203,6 +2094,14 @@ class Ze {
     }
     this._syncInProgress ? this._requestsAddedDuringSync = !0 : await this.registerSync();
   }
+  /**
+   * Removes and returns the first or last (depending on `operation`) entry
+   * from the QueueStore that's not older than the `maxRetentionTime`.
+   *
+   * @param {string} operation ('pop' or 'shift')
+   * @return {Object|undefined}
+   * @private
+   */
   async _removeRequest(e) {
     const t = Date.now();
     let s;
@@ -1220,6 +2119,11 @@ class Ze {
     } else
       return;
   }
+  /**
+   * Loops through each request in the queue and attempts to re-fetch it.
+   * If any request fails to re-fetch, it's put back in the same position in
+   * the queue (which registers a retry for the next sync event).
+   */
   async replayRequests() {
     let e;
     for (; e = await this.shiftRequest(); )
@@ -1229,6 +2133,9 @@ class Ze {
         throw await this.unshiftRequest(e), new l("queue-replay-failed", { name: this._name });
       }
   }
+  /**
+   * Registers a sync event with a tag unique to this instance.
+   */
   async registerSync() {
     if ("sync" in self.registration && !this._forceSyncFallback)
       try {
@@ -1236,6 +2143,13 @@ class Ze {
       } catch {
       }
   }
+  /**
+   * In sync-supporting browsers, this adds a listener for the sync event.
+   * In non-sync-supporting browsers, or if _forceSyncFallback is true, this
+   * will retry the queue on service worker startup.
+   *
+   * @private
+   */
   _addSyncListener() {
     "sync" in self.registration && !this._forceSyncFallback ? self.addEventListener("sync", (e) => {
       if (e.tag === `${Q}:${this._name}`) {
@@ -1255,11 +2169,26 @@ class Ze {
       }
     }) : this._onSync({ queue: this });
   }
+  /**
+   * Returns the set of queue names. This is primarily used to reset the list
+   * of queue names in tests.
+   *
+   * @return {Set<string>}
+   *
+   * @private
+   */
   static get _queueNames() {
     return q;
   }
 }
 class et {
+  /**
+   * @param {string} name See the {@link workbox-background-sync.Queue}
+   *     documentation for parameter details.
+   * @param {Object} [options] See the
+   *     {@link workbox-background-sync.Queue} documentation for
+   *     parameter details.
+   */
   constructor(e, t) {
     this.fetchDidFail = async ({ request: s }) => {
       await this._queue.pushRequest({ request: s });

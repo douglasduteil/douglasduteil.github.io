@@ -1,48 +1,48 @@
 const ae = [
-  "/_app/immutable/assets/_layout-3c40b81d.css",
+  "/_app/immutable/assets/_page-ac07bd01.css",
   "/_app/immutable/assets/_layout-821f84a5.css",
   "/_app/immutable/assets/_page-890e339e.css",
   "/_app/immutable/assets/_page-3d0e8ef0.css",
   "/_app/immutable/assets/_page-a2f904ab.css",
-  "/_app/immutable/assets/_page-ac07bd01.css",
-  "/_app/immutable/chunks/singletons-572afc3b.js",
-  "/_app/immutable/chunks/_page-26b8aac6.js",
-  "/_app/immutable/chunks/_page-02344e9c.js",
-  "/_app/immutable/chunks/_page-6eff400c.js",
-  "/_app/immutable/components/error.svelte-bbf45686.js",
-  "/_app/immutable/chunks/_layout-da46b06b.js",
-  "/_app/immutable/chunks/github-e875a305.js",
-  "/_app/immutable/chunks/_page-0b9ed94a.js",
-  "/_app/immutable/components/pages/(pages)/_layout.svelte-25594fd6.js",
-  "/_app/immutable/modules/pages/me/_page.ts-a413abf6.js",
-  "/_app/immutable/components/pages/(pages)/achievements/_page.svelte-c54f2e1c.js",
-  "/_app/immutable/modules/pages/(pages)/contact/_page.ts-cb8b1759.js",
-  "/_app/immutable/modules/pages/(pages)/rockets/_page.ts-84041dbd.js",
-  "/_app/immutable/components/pages/(pages)/contact/_page.svelte-8e7e1ada.js",
-  "/_app/immutable/modules/pages/_page.ts-46492177.js",
-  "/_app/immutable/components/pages/(pages)/rockets/_page.svelte-a2b0d325.js",
-  "/_app/immutable/chunks/0-baad1302.js",
-  "/_app/immutable/chunks/comment-97e7acd1.js",
-  "/_app/immutable/components/pages/me/_page.svelte-b42f5a37.js",
-  "/_app/immutable/modules/pages/(pages)/achievements/_page.ts-b74843e7.js",
-  "/_app/immutable/chunks/_page-fa5d064b.js",
-  "/_app/immutable/chunks/1-6d3b3045.js",
-  "/_app/immutable/chunks/2-b1e2cf16.js",
-  "/_app/immutable/chunks/3-40f2beee.js",
-  "/_app/immutable/chunks/4-345539b2.js",
-  "/_app/immutable/chunks/5-d4aa0b4b.js",
-  "/_app/immutable/chunks/6-1e8288cf.js",
-  "/_app/immutable/chunks/7-22165701.js",
-  "/_app/immutable/modules/pages/_layout.ts-9cbb603b.js",
-  "/_app/immutable/chunks/rocket-0f9a48ab.js",
-  "/_app/immutable/chunks/index-2e1481b4.js",
-  "/_app/immutable/chunks/control-f5b05b5f.js",
-  "/_app/immutable/start-2a978e99.js",
-  "/_app/immutable/chunks/trophy-2cb64f43.js",
-  "/_app/immutable/chunks/stores-37b0f26c.js",
-  "/_app/immutable/components/pages/_layout.svelte-6dae7d42.js",
+  "/_app/immutable/assets/_layout-3c40b81d.css",
+  "/_app/immutable/chunks/5-35c926a4.js",
+  "/_app/immutable/chunks/trophy-4241fd82.js",
+  "/_app/immutable/chunks/github-5ce18aac.js",
+  "/_app/immutable/modules/pages/(pages)/rockets/_page.ts-dac0e512.js",
+  "/_app/immutable/components/pages/_layout.svelte-0938add4.js",
+  "/_app/immutable/chunks/_page-9d5b997f.js",
+  "/_app/immutable/chunks/0-2c05fda9.js",
+  "/_app/immutable/chunks/3-1397f3ce.js",
+  "/_app/immutable/chunks/4-792a912f.js",
+  "/_app/immutable/chunks/_page-d0a060c4.js",
+  "/_app/immutable/chunks/6-7c9a0e8d.js",
+  "/_app/immutable/chunks/comment-22384f42.js",
+  "/_app/immutable/chunks/_page-6ea1dc24.js",
+  "/_app/immutable/chunks/7-98eaca45.js",
+  "/_app/immutable/components/error.svelte-cd458005.js",
   "/_app/immutable/chunks/preload-helper-41c905a7.js",
-  "/_app/immutable/chunks/stalker-e3db8160.js"
+  "/_app/immutable/chunks/2-53b6fc45.js",
+  "/_app/immutable/chunks/rocket-ee938e04.js",
+  "/_app/immutable/modules/pages/_layout.ts-9cbb603b.js",
+  "/_app/immutable/modules/pages/_page.ts-e0daa41e.js",
+  "/_app/immutable/modules/pages/(pages)/contact/_page.ts-f603f7df.js",
+  "/_app/immutable/modules/pages/me/_page.ts-a413abf6.js",
+  "/_app/immutable/chunks/control-e7f5239e.js",
+  "/_app/immutable/chunks/stores-24f59206.js",
+  "/_app/immutable/chunks/1-9716eb9c.js",
+  "/_app/immutable/chunks/_page-40f33e87.js",
+  "/_app/immutable/chunks/singletons-a4e9f6b0.js",
+  "/_app/immutable/chunks/index-8d53411f.js",
+  "/_app/immutable/chunks/_layout-da46b06b.js",
+  "/_app/immutable/modules/pages/(pages)/achievements/_page.ts-b5e0fd56.js",
+  "/_app/immutable/components/pages/(pages)/achievements/_page.svelte-53df7fcb.js",
+  "/_app/immutable/start-1faffbfb.js",
+  "/_app/immutable/components/pages/(pages)/_layout.svelte-209fc884.js",
+  "/_app/immutable/components/pages/me/_page.svelte-04c4ad59.js",
+  "/_app/immutable/components/pages/(pages)/contact/_page.svelte-d1f67ec7.js",
+  "/_app/immutable/components/pages/(pages)/rockets/_page.svelte-41766df8.js",
+  "/_app/immutable/chunks/stalker-e3db8160.js",
+  "/_app/immutable/chunks/_page-fa5d064b.js"
 ], re = [
   "/favicon.ico",
   "/icons/apple-touch-icon-114x114.png",
@@ -83,7 +83,7 @@ const ae = [
   "/contact",
   "/me",
   "/rockets"
-], V = "1673291987905";
+], V = "1673839100110";
 try {
   self["workbox:core:6.5.3"] && _();
 } catch {
@@ -1416,7 +1416,12 @@ class U extends x {
       handler: t
     });
     a.push(r);
-    const c = await t.waitUntil((async () => await t.waitUntil(Promise.race(a)) || await r)());
+    const c = await t.waitUntil((async () => await t.waitUntil(Promise.race(a)) || // If Promise.race() resolved with null, it might be due to a network
+    // timeout + a cache miss. If that were to happen, we'd rather wait until
+    // the networkPromise resolves instead of returning null.
+    // Note that it's fine to await an already-resolved promise, so we don't
+    // have to check to see if it's still "in flight".
+    await r)());
     if (!c)
       throw new l("no-response", { url: e.url });
     return c;
@@ -1658,8 +1663,10 @@ function H(n, e) {
   if (I.get(e))
     return I.get(e);
   const t = e.replace(/FromIndex$/, ""), s = e !== t, a = $e.includes(t);
-  if (// Bail if the target doesn't exist on the target. Eg, getAll isn't in Edge.
-  !(t in (s ? IDBIndex : IDBObjectStore).prototype) || !(a || Qe.includes(t)))
+  if (
+    // Bail if the target doesn't exist on the target. Eg, getAll isn't in Edge.
+    !(t in (s ? IDBIndex : IDBObjectStore).prototype) || !(a || Qe.includes(t))
+  )
     return;
   const i = async function(r, ...c) {
     const o = this.transaction(r, a ? "readwrite" : "readonly");

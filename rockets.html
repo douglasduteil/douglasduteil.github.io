@@ -114,32 +114,26 @@
     <meta name="application-name" content="Douglas Duteil" />
 
     <meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout-3c40b81d.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/_layout-821f84a5.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/_page-a2f904ab.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-c30dc494.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-87544cf6.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-35fc207f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/control-e7f5239e.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-8f1ec6e2.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/stores-cbb6abe6.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/rocket-fbd38c1b.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/comment-c7c14bc8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/trophy-b0885c25.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.ts-9cbb603b.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/(pages)/_layout.svelte-664ff790.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/(pages)/rockets/_page.svelte-2de227e7.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/(pages)/rockets/_page.ts-45693e35.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_page-e0ab5fdf.js">
-		<script>
-			if ('serviceWorker' in navigator) {
-				addEventListener('load', function () {
-					navigator.serviceWorker.register('./service-worker.js');
-				});
-			}
-		</script><title>Douglas DUTEIL &gt; Rockets</title><!-- HEAD_svelte-1kwe6fq_START --><!-- HEAD_svelte-1kwe6fq_END -->
+		<link href="./_app/immutable/assets/_layout.3c40b81d.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_layout.821f84a5.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page.a2f904ab.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.d58921fd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.64d5adde.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.4c135370.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/control.e7f5239e.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.5d70545e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.8216b40f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.2574f39e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/rocket.eee797fe.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/comment.964fb89c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/trophy.675963bd.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.ts.984db11e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/(pages)-layout.svelte.02bd074d.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/(pages)-rockets-page.svelte.e4b25eb5.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/(pages)-rockets-page.ts.0ade1751.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_page.1260c2ef.js"><title>Douglas DUTEIL &gt; Rockets</title><!-- HEAD_svelte-1kwe6fq_START --><!-- HEAD_svelte-1kwe6fq_END -->
   </head>
   <body data-sveltekit-preload-data="hover">
     <div style="display: contents">
@@ -169,23 +163,37 @@
 </layout>
 
 
-		<script type="module" data-sveltekit-hydrate="836mzq">
-			import { start } from "./_app/immutable/start-c30dc494.js";
+			
+			<script>
+				{
+					__sveltekit_y8clax = {
+						env: {},
+						assets: new URL(".", location.href).pathname.replace(/^\/$/, ''),
+						element: document.currentScript.parentElement
+					};
 
-			start({
-				assets: "",
-				env: {},
-				target: document.querySelector('[data-sveltekit-hydrate="836mzq"]').parentNode,
-				version: "1677330855014",
-				hydrate: {
-					node_ids: [0, 2, 6],
-					data: [null,null,null],
-					form: null,
-					error: null
+					const data = [null,null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.d58921fd.js"),
+						import("./_app/immutable/entry/app.5d70545e.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_y8clax.element, {
+							node_ids: [0, 2, 6],
+							data,
+							form: null,
+							error: null
+						});
+					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('./service-worker.js');
+						});
+					}
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 
     <script async defer>
       WebFontConfig = {

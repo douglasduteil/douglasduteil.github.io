@@ -1,0 +1,1 @@
+import{T as e}from"./trophy.4236e76d.js";const o=()=>({title:"Achievements",backgroundColor:"#4F8C86",watermark:e}),t=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{t as _,o as l};

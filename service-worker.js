@@ -1,49 +1,30 @@
 const c = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), re = [
-  c + "/_app/immutable/entry/app.64a3e7ab.js",
-  c + "/_app/immutable/chunks/0.2a9c0197.js",
-  c + "/_app/immutable/chunks/1.0f043336.js",
-  c + "/_app/immutable/chunks/2.8cd0f5dc.js",
-  c + "/_app/immutable/chunks/3.ee6eb38f.js",
-  c + "/_app/immutable/chunks/4.eb4d5178.js",
-  c + "/_app/immutable/chunks/5.ec957b4d.js",
-  c + "/_app/immutable/chunks/6.ce145a9a.js",
-  c + "/_app/immutable/chunks/7.06c9110f.js",
-  c + "/_app/immutable/chunks/_layout.da46b06b.js",
-  c + "/_app/immutable/chunks/_page.3640aab1.js",
-  c + "/_app/immutable/chunks/_page.522fcd06.js",
-  c + "/_app/immutable/chunks/_page.8ccb9cd1.js",
-  c + "/_app/immutable/chunks/_page.aa23345c.js",
-  c + "/_app/immutable/chunks/_page.fa5d064b.js",
+  c + "/_app/immutable/entry/app.5cdeb2be.js",
+  c + "/_app/immutable/assets/0.3c40b81d.css",
+  c + "/_app/immutable/chunks/0.32a153b0.js",
+  c + "/_app/immutable/chunks/1.e4baa6c9.js",
+  c + "/_app/immutable/assets/2.821f84a5.css",
+  c + "/_app/immutable/chunks/2.6c95cac1.js",
+  c + "/_app/immutable/chunks/3.81f7397e.js",
+  c + "/_app/immutable/assets/4.890e339e.css",
+  c + "/_app/immutable/chunks/4.be0ea750.js",
+  c + "/_app/immutable/assets/5.3d0e8ef0.css",
+  c + "/_app/immutable/chunks/5.01454193.js",
+  c + "/_app/immutable/assets/6.a2f904ab.css",
+  c + "/_app/immutable/chunks/6.a7ece0bc.js",
+  c + "/_app/immutable/assets/7.ac07bd01.css",
+  c + "/_app/immutable/chunks/7.ccd1fe46.js",
+  c + "/_app/immutable/chunks/app.556c694e.js",
   c + "/_app/immutable/chunks/comment.2db22fd5.js",
   c + "/_app/immutable/chunks/control.e7f5239e.js",
   c + "/_app/immutable/chunks/github.f0bb0338.js",
   c + "/_app/immutable/chunks/index.0838f4bf.js",
-  c + "/_app/immutable/chunks/preload-helper.41c905a7.js",
   c + "/_app/immutable/chunks/rocket.31af189e.js",
-  c + "/_app/immutable/chunks/singletons.a3b7f449.js",
-  c + "/_app/immutable/chunks/stores.2b51b6cc.js",
+  c + "/_app/immutable/chunks/singletons.159870f0.js",
+  c + "/_app/immutable/chunks/stores.a2939aaf.js",
   c + "/_app/immutable/chunks/trophy.10dc9830.js",
-  c + "/_app/immutable/entry/start.e9937a8e.js",
-  c + "/_app/immutable/entry/error.svelte.8b47db02.js",
-  c + "/_app/immutable/chunks/stalker.e3db8160.js",
-  c + "/_app/immutable/assets/_layout.821f84a5.css",
-  c + "/_app/immutable/entry/(pages)-layout.svelte.36d3ba71.js",
-  c + "/_app/immutable/assets/_page.890e339e.css",
-  c + "/_app/immutable/entry/(pages)-achievements-page.svelte.6ae34686.js",
-  c + "/_app/immutable/entry/(pages)-achievements-page.ts.7bfd5cee.js",
-  c + "/_app/immutable/assets/_page.3d0e8ef0.css",
-  c + "/_app/immutable/entry/(pages)-contact-page.svelte.490e93ec.js",
-  c + "/_app/immutable/entry/(pages)-contact-page.ts.84d59311.js",
-  c + "/_app/immutable/assets/_page.a2f904ab.css",
-  c + "/_app/immutable/entry/(pages)-rockets-page.svelte.ecaa12b7.js",
-  c + "/_app/immutable/entry/(pages)-rockets-page.ts.1fb35ffe.js",
-  c + "/_app/immutable/assets/_layout.3c40b81d.css",
-  c + "/_app/immutable/entry/_layout.svelte.3ab2202c.js",
-  c + "/_app/immutable/entry/_layout.ts.984db11e.js",
-  c + "/_app/immutable/entry/_page.ts.8eebd999.js",
-  c + "/_app/immutable/assets/_page.ac07bd01.css",
-  c + "/_app/immutable/entry/me-page.svelte.835d928a.js",
-  c + "/_app/immutable/entry/me-page.ts.dba8d192.js"
+  c + "/_app/immutable/entry/start.571faf1d.js",
+  c + "/_app/immutable/chunks/stalker.e3db8160.js"
 ], ie = [
   c + "/favicon.ico",
   c + "/icons/apple-touch-icon-114x114.png",
@@ -84,7 +65,7 @@ const c = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), r
   c + "/contact",
   c + "/me",
   c + "/rockets"
-], J = "1683158358701";
+], J = "1683192632138";
 try {
   self["workbox:core:6.5.3"] && _();
 } catch {
@@ -93,7 +74,7 @@ const oe = (n, ...e) => {
   let t = n;
   return e.length > 0 && (t += ` :: ${JSON.stringify(e)}`), t;
 }, ue = oe;
-class h extends Error {
+class l extends Error {
   /**
    *
    * @param {string} errorCode The error code that
@@ -107,18 +88,18 @@ class h extends Error {
     super(s), this.name = e, this.details = t;
   }
 }
-const le = /* @__PURE__ */ new Set(), m = {
+const he = /* @__PURE__ */ new Set(), m = {
   googleAnalytics: "googleAnalytics",
   precache: "precache-v2",
   prefix: "workbox",
   runtime: "runtime",
   suffix: typeof registration < "u" ? registration.scope : ""
-}, N = (n) => [m.prefix, n, m.suffix].filter((e) => e && e.length > 0).join("-"), he = (n) => {
+}, N = (n) => [m.prefix, n, m.suffix].filter((e) => e && e.length > 0).join("-"), le = (n) => {
   for (const e of Object.keys(m))
     n(e);
-}, E = {
+}, k = {
   updateDetails: (n) => {
-    he((e) => {
+    le((e) => {
       typeof n[e] == "string" && (m[e] = n[e]);
     });
   },
@@ -170,7 +151,7 @@ class pe {
   }
 }
 async function me() {
-  for (const n of le)
+  for (const n of he)
     await n();
 }
 const ge = (n) => new URL(String(n), location.href).href.replace(new RegExp(`^${location.origin}`), "");
@@ -184,7 +165,7 @@ function F(n, e) {
 async function ye(n, e) {
   let t = null;
   if (n.url && (t = new URL(n.url).origin), t !== self.location.origin)
-    throw new h("cross-origin-copy-response", { origin: t });
+    throw new l("cross-origin-copy-response", { origin: t });
   const s = n.clone(), a = {
     headers: new Headers(s.headers),
     status: s.status,
@@ -202,7 +183,7 @@ try {
 const _e = "__WB_REVISION__";
 function be(n) {
   if (!n)
-    throw new h("add-to-cache-list-unexpected-type", { entry: n });
+    throw new l("add-to-cache-list-unexpected-type", { entry: n });
   if (typeof n == "string") {
     const i = new URL(n, location.href);
     return {
@@ -212,7 +193,7 @@ function be(n) {
   }
   const { revision: e, url: t } = n;
   if (!t)
-    throw new h("add-to-cache-list-unexpected-type", { entry: n });
+    throw new l("add-to-cache-list-unexpected-type", { entry: n });
   if (!e) {
     const i = new URL(t, location.href);
     return {
@@ -239,7 +220,7 @@ class Re {
     };
   }
 }
-class ke {
+class Ce {
   constructor({ precacheController: e }) {
     this.cacheKeyWillBeUsed = async ({ request: t, params: s }) => {
       const a = (s == null ? void 0 : s.cacheKey) || this._precacheController.getCacheKeyForURL(t.url);
@@ -254,7 +235,7 @@ try {
 function T(n) {
   return typeof n == "string" ? new Request(n) : n;
 }
-class Ce {
+class Ee {
   /**
    * Creates a new instance associated with the passed strategy and event
    * that's handling the request.
@@ -304,7 +285,7 @@ class Ce {
         s = await r({ request: s.clone(), event: t });
     } catch (r) {
       if (r instanceof Error)
-        throw new h("plugin-error-request-will-fetch", {
+        throw new l("plugin-error-request-will-fetch", {
           thrownErrorMessage: r.message
         });
     }
@@ -389,13 +370,13 @@ class Ce {
     await z(0);
     const a = await this.getCacheKey(s, "write");
     if (!t)
-      throw new h("cache-put-with-no-response", {
+      throw new l("cache-put-with-no-response", {
         url: ge(a.url)
       });
     const i = await this._ensureResponseSafeToCache(t);
     if (!i)
       return !1;
-    const { cacheName: r, matchOptions: o } = this._strategy, u = await self.caches.open(r), l = this.hasCallback("cacheDidUpdate"), w = l ? await de(
+    const { cacheName: r, matchOptions: o } = this._strategy, u = await self.caches.open(r), h = this.hasCallback("cacheDidUpdate"), w = h ? await de(
       // TODO(philipwalton): the `__WB_REVISION__` param is a precaching
       // feature. Consider into ways to only add this behavior if using
       // precaching.
@@ -405,7 +386,7 @@ class Ce {
       o
     ) : null;
     try {
-      await u.put(a, l ? i.clone() : i);
+      await u.put(a, h ? i.clone() : i);
     } catch (f) {
       if (f instanceof Error)
         throw f.name === "QuotaExceededError" && await me(), f;
@@ -584,7 +565,7 @@ class P {
    * for any `cache.match()` or `cache.put()` calls made by this strategy.
    */
   constructor(e = {}) {
-    this.cacheName = E.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
+    this.cacheName = k.getRuntimeName(e.cacheName), this.plugins = e.plugins || [], this.fetchOptions = e.fetchOptions, this.matchOptions = e.matchOptions;
   }
   /**
    * Perform a request strategy and returns a `Promise` that will resolve with
@@ -636,7 +617,7 @@ class P {
       event: e,
       request: e.request
     });
-    const t = e.event, s = typeof e.request == "string" ? new Request(e.request) : e.request, a = "params" in e ? e.params : void 0, i = new Ce(this, { event: t, request: s, params: a }), r = this._getResponse(i, s, t), o = this._awaitComplete(r, i, s, t);
+    const t = e.event, s = typeof e.request == "string" ? new Request(e.request) : e.request, a = "params" in e ? e.params : void 0, i = new Ee(this, { event: t, request: s, params: a }), r = this._getResponse(i, s, t), o = this._awaitComplete(r, i, s, t);
     return [r, o];
   }
   async _getResponse(e, t, s) {
@@ -644,7 +625,7 @@ class P {
     let a;
     try {
       if (a = await this._handle(t, e), !a || a.type === "error")
-        throw new h("no-response", { url: t.url });
+        throw new l("no-response", { url: t.url });
     } catch (i) {
       if (i instanceof Error) {
         for (const r of e.iterateCallbacks("handlerDidError"))
@@ -701,7 +682,7 @@ class g extends P {
    * get the response from the network if there's a precache miss.
    */
   constructor(e = {}) {
-    e.cacheName = E.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(g.copyRedirectedCacheableResponsesPlugin);
+    e.cacheName = k.getPrecacheName(e.cacheName), super(e), this._fallbackToNetwork = e.fallbackToNetwork !== !1, this.plugins.push(g.copyRedirectedCacheableResponsesPlugin);
   }
   /**
    * @private
@@ -723,7 +704,7 @@ class g extends P {
         integrity: e.mode !== "no-cors" ? r || i : void 0
       })), i && o && e.mode !== "no-cors" && (this._useDefaultCacheabilityPluginIfNeeded(), await t.cachePut(e, s.clone()));
     } else
-      throw new h("missing-precache-entry", {
+      throw new l("missing-precache-entry", {
         cacheName: this.cacheName,
         url: e.url
       });
@@ -733,7 +714,7 @@ class g extends P {
     this._useDefaultCacheabilityPluginIfNeeded();
     const s = await t.fetch(e);
     if (!await t.cachePut(e, s.clone()))
-      throw new h("bad-precaching-response", {
+      throw new l("bad-precaching-response", {
         url: e.url,
         status: s.status
       });
@@ -783,7 +764,7 @@ g.copyRedirectedCacheableResponsesPlugin = {
     return n.redirected ? await ye(n) : n;
   }
 };
-class Ee {
+class ke {
   /**
    * Create a new PrecacheController.
    *
@@ -796,10 +777,10 @@ class Ee {
    */
   constructor({ cacheName: e, plugins: t = [], fallbackToNetwork: s = !0 } = {}) {
     this._urlsToCacheKeys = /* @__PURE__ */ new Map(), this._urlsToCacheModes = /* @__PURE__ */ new Map(), this._cacheKeysToIntegrities = /* @__PURE__ */ new Map(), this._strategy = new g({
-      cacheName: E.getPrecacheName(e),
+      cacheName: k.getPrecacheName(e),
       plugins: [
         ...t,
-        new ke({ precacheController: this })
+        new Ce({ precacheController: this })
       ],
       fallbackToNetwork: s
     }), this.install = this.install.bind(this), this.activate = this.activate.bind(this);
@@ -837,13 +818,13 @@ class Ee {
       typeof s == "string" ? t.push(s) : s && s.revision === void 0 && t.push(s.url);
       const { cacheKey: a, url: i } = be(s), r = typeof s != "string" && s.revision ? "reload" : "default";
       if (this._urlsToCacheKeys.has(i) && this._urlsToCacheKeys.get(i) !== a)
-        throw new h("add-to-cache-list-conflicting-entries", {
+        throw new l("add-to-cache-list-conflicting-entries", {
           firstEntry: this._urlsToCacheKeys.get(i),
           secondEntry: a
         });
       if (typeof s != "string" && s.integrity) {
         if (this._cacheKeysToIntegrities.has(a) && this._cacheKeysToIntegrities.get(a) !== s.integrity)
-          throw new h("add-to-cache-list-conflicting-integrities", {
+          throw new l("add-to-cache-list-conflicting-integrities", {
             url: i
           });
         this._cacheKeysToIntegrities.set(a, s.integrity);
@@ -870,14 +851,14 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
       const t = new Re();
       this.strategy.plugins.push(t);
       for (const [i, r] of this._urlsToCacheKeys) {
-        const o = this._cacheKeysToIntegrities.get(r), u = this._urlsToCacheModes.get(i), l = new Request(i, {
+        const o = this._cacheKeysToIntegrities.get(r), u = this._urlsToCacheModes.get(i), h = new Request(i, {
           integrity: o,
           cache: u,
           credentials: "same-origin"
         });
         await Promise.all(this.strategy.handleAll({
           params: { cacheKey: r },
-          request: l,
+          request: h,
           event: e
         }));
       }
@@ -976,12 +957,12 @@ This is generally NOT safe. Learn more at https://bit.ly/wb-precache`;
   createHandlerBoundToURL(e) {
     const t = this.getCacheKeyForURL(e);
     if (!t)
-      throw new h("non-precached-url", { url: e });
+      throw new l("non-precached-url", { url: e });
     return (s) => (s.request = new Request(e), s.params = Object.assign({ cacheKey: t }, s.params), this.strategy.handle(s));
   }
 }
 let S;
-const X = () => (S || (S = new Ee()), S);
+const X = () => (S || (S = new ke()), S);
 try {
   self["workbox:routing:6.5.3"] && _();
 } catch {
@@ -1119,14 +1100,14 @@ class Z {
     const u = e.method;
     if (!o && this._defaultHandlerMap.has(u) && (o = this._defaultHandlerMap.get(u)), !o)
       return;
-    let l;
+    let h;
     try {
-      l = o.handle({ url: s, request: e, event: t, params: i });
+      h = o.handle({ url: s, request: e, event: t, params: i });
     } catch (f) {
-      l = Promise.reject(f);
+      h = Promise.reject(f);
     }
     const w = r && r.catchHandler;
-    return l instanceof Promise && (this._catchHandler || w) && (l = l.catch(async (f) => {
+    return h instanceof Promise && (this._catchHandler || w) && (h = h.catch(async (f) => {
       if (w)
         try {
           return await w.handle({ url: s, request: e, event: t, params: i });
@@ -1136,7 +1117,7 @@ class Z {
       if (this._catchHandler)
         return this._catchHandler.handle({ url: s, request: e, event: t });
       throw f;
-    })), l;
+    })), h;
   }
   /**
    * Checks a request and URL (and optionally an event) against the list of
@@ -1206,14 +1187,14 @@ class Z {
    */
   unregisterRoute(e) {
     if (!this._routes.has(e.method))
-      throw new h("unregister-route-but-not-found-with-method", {
+      throw new l("unregister-route-but-not-found-with-method", {
         method: e.method
       });
     const t = this._routes.get(e.method).indexOf(e);
     if (t > -1)
       this._routes.get(e.method).splice(t, 1);
     else
-      throw new h("unregister-route-route-not-registered");
+      throw new l("unregister-route-route-not-registered");
   }
 }
 let R;
@@ -1230,7 +1211,7 @@ function D(n, e, t) {
   else if (n instanceof d)
     s = n;
   else
-    throw new h("unsupported-route-type", {
+    throw new l("unsupported-route-type", {
       moduleName: "workbox-routing",
       funcName: "registerRoute",
       paramName: "capture"
@@ -1301,18 +1282,18 @@ const Le = "-precache-", Ie = async (n, e = Le) => {
 };
 function qe() {
   self.addEventListener("activate", (n) => {
-    const e = E.getPrecacheName();
+    const e = k.getPrecacheName();
     n.waitUntil(Ie(e).then((t) => {
     }));
   });
 }
-function je(n) {
+function Ue(n) {
   X().precache(n);
 }
 function ve(n, e) {
-  je(n), Se(e);
+  Ue(n), Se(e);
 }
-class Ue extends d {
+class je extends d {
   /**
    * If both `denylist` and `allowlist` are provided, the `denylist` will
    * take precedence and the request will not match this route.
@@ -1407,8 +1388,8 @@ class O extends P {
     const s = [], a = [];
     let i;
     if (this._networkTimeoutSeconds) {
-      const { id: u, promise: l } = this._getTimeoutPromise({ request: e, logs: s, handler: t });
-      i = u, a.push(l);
+      const { id: u, promise: h } = this._getTimeoutPromise({ request: e, logs: s, handler: t });
+      i = u, a.push(h);
     }
     const r = this._getNetworkPromise({
       timeoutId: i,
@@ -1424,7 +1405,7 @@ class O extends P {
     // have to check to see if it's still "in flight".
     await r)());
     if (!o)
-      throw new h("no-response", { url: e.url });
+      throw new l("no-response", { url: e.url });
     return o;
   }
   /**
@@ -1505,7 +1486,7 @@ class Oe extends P {
       i instanceof Error && (s = i);
     }
     if (!a)
-      throw new h("no-response", { url: e.url, error: s });
+      throw new l("no-response", { url: e.url, error: s });
     return a;
   }
 }
@@ -1545,7 +1526,7 @@ class A extends P {
         r instanceof Error && (i = r);
       }
     if (!a)
-      throw new h("no-response", { url: e.url, error: i });
+      throw new l("no-response", { url: e.url, error: i });
     return a;
   }
 }
@@ -1599,7 +1580,7 @@ function Fe(n) {
   });
   v.set(n, e);
 }
-let U = {
+let j = {
   get(n, e, t) {
     if (n instanceof IDBTransaction) {
       if (e === "done")
@@ -1619,7 +1600,7 @@ let U = {
   }
 };
 function We(n) {
-  U = n(U);
+  j = n(j);
 }
 function He(n) {
   return n === IDBDatabase.prototype.transaction && !("objectStoreNames" in IDBTransaction.prototype) ? function(e, ...t) {
@@ -1632,7 +1613,7 @@ function He(n) {
   };
 }
 function Ge(n) {
-  return typeof n == "function" ? He(n) : (n instanceof IDBTransaction && Fe(n), Ae(n, Me()) ? new Proxy(n, U) : n);
+  return typeof n == "function" ? He(n) : (n instanceof IDBTransaction && Fe(n), Ae(n, Me()) ? new Proxy(n, j) : n);
 }
 function y(n) {
   if (n instanceof IDBRequest)
@@ -1653,7 +1634,7 @@ function Qe(n, e, { blocked: t, upgrade: s, blocking: a, terminated: i } = {}) {
     u.newVersion,
     u
   )), o.then((u) => {
-    i && u.addEventListener("close", () => i()), a && u.addEventListener("versionchange", (l) => a(l.oldVersion, l.newVersion, l));
+    i && u.addEventListener("close", () => i()), a && u.addEventListener("versionchange", (h) => a(h.oldVersion, h.newVersion, h));
   }).catch(() => {
   }), o;
 }
@@ -1671,9 +1652,9 @@ function G(n, e) {
     return;
   const i = async function(r, ...o) {
     const u = this.transaction(r, a ? "readwrite" : "readonly");
-    let l = u.store;
-    return s && (l = l.index(o.shift())), (await Promise.all([
-      l[t](...o),
+    let h = u.store;
+    return s && (h = h.index(o.shift())), (await Promise.all([
+      h[t](...o),
       a && u.done
     ]))[0];
   };
@@ -1688,7 +1669,7 @@ try {
   self["workbox:background-sync:6.5.3"] && _();
 } catch {
 }
-const Q = 3, Je = "workbox-background-sync", p = "requests", k = "queueName";
+const Q = 3, Je = "workbox-background-sync", p = "requests", C = "queueName";
 class ze {
   constructor() {
     this._db = null;
@@ -1720,7 +1701,7 @@ class ze {
    * @return {Promise<QueueStoreEntry[]>}
    */
   async getAllEntriesByQueueName(e) {
-    const s = await (await this.getDb()).getAllFromIndex(p, k, IDBKeyRange.only(e));
+    const s = await (await this.getDb()).getAllFromIndex(p, C, IDBKeyRange.only(e));
     return s || new Array();
   }
   /**
@@ -1730,7 +1711,7 @@ class ze {
    * @return {Promise<number>}
    */
   async getEntryCountByQueueName(e) {
-    return (await this.getDb()).countFromIndex(p, k, IDBKeyRange.only(e));
+    return (await this.getDb()).countFromIndex(p, C, IDBKeyRange.only(e));
   }
   /**
    * Deletes a single entry by id.
@@ -1766,7 +1747,7 @@ class ze {
    * @private
    */
   async getEndEntryFromIndex(e, t) {
-    const a = await (await this.getDb()).transaction(p).store.index(k).openCursor(e, t);
+    const a = await (await this.getDb()).transaction(p).store.index(C).openCursor(e, t);
     return a == null ? void 0 : a.value;
   }
   /**
@@ -1790,7 +1771,7 @@ class ze {
     t > 0 && t < Q && e.objectStoreNames.contains(p) && e.deleteObjectStore(p), e.createObjectStore(p, {
       autoIncrement: !0,
       keyPath: "id"
-    }).createIndex(k, k, { unique: !1 });
+    }).createIndex(C, C, { unique: !1 });
   }
 }
 class Xe {
@@ -1895,7 +1876,7 @@ const Ye = [
   "integrity",
   "keepalive"
 ];
-class C {
+class E {
   /**
    * Accepts an object of request data that can be used to construct a
    * `Request` but can also be stored in IndexedDB.
@@ -1924,7 +1905,7 @@ class C {
       t.headers[s] = a;
     for (const s of Ye)
       e[s] !== void 0 && (t[s] = e[s]);
-    return new C(t);
+    return new E(t);
   }
   /**
    * Returns a deep clone of the instances `_requestData` object.
@@ -1949,12 +1930,12 @@ class C {
    * @return {StorableRequest}
    */
   clone() {
-    return new C(this.toObject());
+    return new E(this.toObject());
   }
 }
-const $ = "workbox-background-sync", Ze = 60 * 24 * 7, j = /* @__PURE__ */ new Set(), V = (n) => {
+const $ = "workbox-background-sync", Ze = 60 * 24 * 7, U = /* @__PURE__ */ new Set(), V = (n) => {
   const e = {
-    request: new C(n.requestData).toRequest(),
+    request: new E(n.requestData).toRequest(),
     timestamp: n.timestamp
   };
   return n.metadata && (e.metadata = n.metadata), e;
@@ -1986,9 +1967,9 @@ class et {
    *     implementation.
    */
   constructor(e, { forceSyncFallback: t, onSync: s, maxRetentionTime: a } = {}) {
-    if (this._syncInProgress = !1, this._requestsAddedDuringSync = !1, j.has(e))
-      throw new h("duplicate-queue-name", { name: e });
-    j.add(e), this._name = e, this._onSync = s || this.replayRequests, this._maxRetentionTime = a || Ze, this._forceSyncFallback = !!t, this._queueStore = new Xe(this._name), this._addSyncListener();
+    if (this._syncInProgress = !1, this._requestsAddedDuringSync = !1, U.has(e))
+      throw new l("duplicate-queue-name", { name: e });
+    U.add(e), this._name = e, this._onSync = s || this.replayRequests, this._maxRetentionTime = a || Ze, this._forceSyncFallback = !!t, this._queueStore = new Xe(this._name), this._addSyncListener();
   }
   /**
    * @return {string}
@@ -2089,7 +2070,7 @@ class et {
    */
   async _addRequest({ request: e, metadata: t, timestamp: s = Date.now() }, a) {
     const r = {
-      requestData: (await C.fromRequest(e.clone())).toObject(),
+      requestData: (await E.fromRequest(e.clone())).toObject(),
       timestamp: s
     };
     switch (t && (r.metadata = t), a) {
@@ -2138,7 +2119,7 @@ class et {
       try {
         await fetch(e.request.clone());
       } catch {
-        throw await this.unshiftRequest(e), new h("queue-replay-failed", { name: this._name });
+        throw await this.unshiftRequest(e), new l("queue-replay-failed", { name: this._name });
       }
   }
   /**
@@ -2186,7 +2167,7 @@ class et {
    * @private
    */
   static get _queueNames() {
-    return j;
+    return U;
   }
 }
 class tt {
@@ -2214,9 +2195,9 @@ const st = "workbox-google-analytics", nt = 60 * 48, ne = "www.google-analytics.
     try {
       const r = s.method === "POST" ? new URLSearchParams(await s.clone().text()) : i.searchParams, o = a - (Number(r.get("qt")) || 0), u = Date.now() - o;
       if (r.set("qt", String(u)), n.parameterOverrides)
-        for (const l of Object.keys(n.parameterOverrides)) {
-          const w = n.parameterOverrides[l];
-          r.set(l, w);
+        for (const h of Object.keys(n.parameterOverrides)) {
+          const w = n.parameterOverrides[h];
+          r.set(h, w);
         }
       typeof n.hitFilter == "function" && n.hitFilter.call(null, r), await fetch(new Request(i.origin + i.pathname, {
         body: r.toString(),
@@ -2234,23 +2215,23 @@ const st = "workbox-google-analytics", nt = 60 * 48, ne = "www.google-analytics.
     plugins: [n]
   });
   return [new d(e, t, "GET"), new d(e, t, "POST")];
-}, lt = (n) => {
+}, ht = (n) => {
   const e = ({ url: s }) => s.hostname === ne && s.pathname === at, t = new O({ cacheName: n });
   return new d(e, t, "GET");
-}, ht = (n) => {
+}, lt = (n) => {
   const e = ({ url: s }) => s.hostname === ae && s.pathname === rt, t = new O({ cacheName: n });
   return new d(e, t, "GET");
 }, dt = (n) => {
   const e = ({ url: s }) => s.hostname === ae && s.pathname === it, t = new O({ cacheName: n });
   return new d(e, t, "GET");
 }, ft = (n = {}) => {
-  const e = E.getGoogleAnalyticsName(n.cacheName), t = new tt(st, {
+  const e = k.getGoogleAnalyticsName(n.cacheName), t = new tt(st, {
     maxRetentionTime: nt,
     onSync: ot(n)
   }), s = [
     dt(e),
-    lt(e),
     ht(e),
+    lt(e),
     ...ut(t)
   ], a = new Z();
   for (const i of s)
@@ -2285,7 +2266,7 @@ D(
   )
 );
 D(
-  new Ue(
+  new je(
     new A({
       cacheName: J
     })

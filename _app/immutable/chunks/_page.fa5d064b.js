@@ -1,1 +1,0 @@
-const a="//1.gravatar.com/avatar/1e7cd3d5b060997af752aee10d724da1",t=()=>({title:"Me",backgoundImage:[a+"?s=1024",a,"/mini_me.jpeg"].map(e=>`url('${e}')`).join(",")}),o=Object.freeze(Object.defineProperty({__proto__:null,load:t},Symbol.toStringTag,{value:"Module"}));export{o as _,t as l};

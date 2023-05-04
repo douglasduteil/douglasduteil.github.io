@@ -1,1 +1,0 @@
-import{R as e}from"./rocket.31af189e.js";const o=()=>({title:"Rockets",backgroundColor:"#525A16",watermark:e}),r=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{r as _,o as l};

@@ -3338,8 +3338,8 @@ __metadata:
   linkType: hard
 
 "svelte-check@npm:^3.0.0":
-  version: 3.2.0
-  resolution: "svelte-check@npm:3.2.0"
+  version: 3.3.0
+  resolution: "svelte-check@npm:3.3.0"
   dependencies:
     "@jridgewell/trace-mapping": ^0.3.17
     chokidar: ^3.4.1
@@ -3353,7 +3353,7 @@ __metadata:
     svelte: ^3.55.0
   bin:
     svelte-check: bin/svelte-check
-  checksum: aee12828fb47e13b1aacd9f7069adc3f154087b5597ea8f4957b0288c87925a8b9542493e261b6bfba780a3e9962256a93ba3302d72a064735260e2371c7030d
+  checksum: c1bac9fe375b086de32b4ed6dfec21d532563d5d583cea9c14141093f41bed2962b0acb546737ae40d1d98e001400196a3faaf0435d1da8ce850fc06d307aade
   languageName: node
   linkType: hard
 

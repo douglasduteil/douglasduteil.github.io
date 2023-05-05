@@ -1,1 +1,0 @@
-import{R as t}from"./control.e7f5239e.js";function o(e,r){return new t(e,r)}new TextEncoder;function n(){throw o(307,"/me")}const i=Object.freeze(Object.defineProperty({__proto__:null,load:n},Symbol.toStringTag,{value:"Module"}));export{i as universal};

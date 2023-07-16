@@ -25,7 +25,7 @@ precacheAndRoute(
       url: pathname,
       revision: version,
     };
-  })
+  }),
 );
 
 // Cache extra requests
@@ -44,8 +44,8 @@ registerRoute(
     },
     new StaleWhileRevalidate({
       cacheName: "workbox-google-cache",
-    })
-  )
+    }),
+  ),
 );
 
 // // Gravatar Stuff
@@ -59,8 +59,8 @@ registerRoute(
     },
     new StaleWhileRevalidate({
       cacheName: "workbox-gravatar-cache",
-    })
-  )
+    }),
+  ),
 );
 
 // // Other...
@@ -68,8 +68,8 @@ registerRoute(
   new NavigationRoute(
     new StaleWhileRevalidate({
       cacheName: version,
-    })
-  )
+    }),
+  ),
 );
 
 // Ensure to remove incompatible cache from older versions of Workbox

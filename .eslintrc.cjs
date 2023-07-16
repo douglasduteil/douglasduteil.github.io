@@ -3,18 +3,18 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-		"plugin:svelte/recommended",
+    "plugin:svelte/recommended",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
-	plugins: ['@typescript-eslint'],
+  plugins: ["@typescript-eslint"],
   settings: {
     "svelte3/typescript": () => require("typescript"),
   },
   parserOptions: {
     sourceType: "module",
     ecmaVersion: 2020,
-		extraFileExtensions: ['.svelte']
+    extraFileExtensions: [".svelte"],
   },
   env: {
     browser: true,
@@ -24,13 +24,13 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
-	overrides: [
-		{
-			files: ['*.svelte'],
-			parser: 'svelte-eslint-parser',
-			parserOptions: {
-				parser: '@typescript-eslint/parser'
-			}
-		}
-	]
+  overrides: [
+    {
+      files: ["*.svelte"],
+      parser: "svelte-eslint-parser",
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+      },
+    },
+  ],
 };

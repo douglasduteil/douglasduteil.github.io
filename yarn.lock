@@ -719,10 +719,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/google.analytics@npm:^0.0.44":
-  version: 0.0.44
-  resolution: "@types/google.analytics@npm:0.0.44"
-  checksum: ff2b695e32f7ac16f4f13ef2fb9958d84b28d4013cdae10385ef7078b44f237d145cfa78ab587218c16ccc800f79918e47ddf4acff9e5d33e41c4497677d16c8
+"@types/google.analytics@npm:^0.0.45":
+  version: 0.0.45
+  resolution: "@types/google.analytics@npm:0.0.45"
+  checksum: 81c4b2bbf0364f3edcec0c9e7bfdfdb28e1cacf1270b8006d8e9f6583868584255aeb0789ca7a371617608740639e7c367639b3b886c9e45862badb0693cc71d
   languageName: node
   linkType: hard
 
@@ -1560,7 +1560,7 @@ __metadata:
   dependencies:
     "@sveltejs/adapter-static": "npm:^2.0.0"
     "@sveltejs/kit": "npm:^1.0.0"
-    "@types/google.analytics": "npm:^0.0.44"
+    "@types/google.analytics": "npm:^0.0.45"
     "@types/postcss-preset-env": "npm:^7.7.0"
     "@typescript-eslint/eslint-plugin": "npm:^6.0.0"
     "@typescript-eslint/parser": "npm:^6.0.0"

@@ -633,10 +633,10 @@ __metadata:
   linkType: hard
 
 "@sveltejs/kit@npm:^1.0.0":
-  version: 1.27.3
-  resolution: "@sveltejs/kit@npm:1.27.3"
+  version: 1.27.4
+  resolution: "@sveltejs/kit@npm:1.27.4"
   dependencies:
-    "@sveltejs/vite-plugin-svelte": "npm:^2.4.1"
+    "@sveltejs/vite-plugin-svelte": "npm:^2.5.0"
     "@types/cookie": "npm:^0.5.1"
     cookie: "npm:^0.5.0"
     devalue: "npm:^4.3.1"
@@ -650,11 +650,11 @@ __metadata:
     tiny-glob: "npm:^0.2.9"
     undici: "npm:~5.26.2"
   peerDependencies:
-    svelte: ^3.54.0 || ^4.0.0-next.0
+    svelte: ^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.0
     vite: ^4.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 04817d197520b99694d57c7f058aec3afa7cf777e4a444a1e3df47a16dc4861f875cf900764ecc112f39e6fa7c7879484c39e2282d23e349006c0b440607d700
+  checksum: bb4a81c53a1e5168fd019efe3720562f8fae5b5c97df736df364c12b2b43718aed7dbd8e18176c3e0b686b7487aa6e7b87fc7aa17f726c9e38a1fd26380f7315
   languageName: node
   linkType: hard
 
@@ -671,9 +671,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/vite-plugin-svelte@npm:^2.4.1":
-  version: 2.4.6
-  resolution: "@sveltejs/vite-plugin-svelte@npm:2.4.6"
+"@sveltejs/vite-plugin-svelte@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "@sveltejs/vite-plugin-svelte@npm:2.5.0"
   dependencies:
     "@sveltejs/vite-plugin-svelte-inspector": "npm:^1.0.4"
     debug: "npm:^4.3.4"
@@ -683,9 +683,9 @@ __metadata:
     svelte-hmr: "npm:^0.15.3"
     vitefu: "npm:^0.2.4"
   peerDependencies:
-    svelte: ^3.54.0 || ^4.0.0
+    svelte: ^3.54.0 || ^4.0.0 || ^5.0.0-next.0
     vite: ^4.0.0
-  checksum: de7d844bf5fc12aa4caf352f5825d58f6747eef68301a492128ea6756c3c193f1d1e1f75975abd4fdfb50f5a4ff45016a94f40c29e1b0121095c63f6bc10e219
+  checksum: 9882b19278ca69e50923266f8bc7701260a4e42bde03d82f621ddf8813fff58b16456dfafbdab8c986c4f3f3fef85076eff5e0c37e324bcbaa767ecebeb28714
   languageName: node
   linkType: hard
 

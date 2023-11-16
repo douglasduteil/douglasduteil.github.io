@@ -1,0 +1,1 @@
+import{R as r}from"../chunks/control.7lqj1LT_.js";function o(e,t){return new r(e,t.toString())}new TextEncoder;function n(){throw o(307,"/me")}const c=Object.freeze(Object.defineProperty({__proto__:null,load:n},Symbol.toStringTag,{value:"Module"}));export{c as universal};

@@ -3639,8 +3639,8 @@ __metadata:
   linkType: hard
 
 "svelte-preprocess@npm:^5.0.0, svelte-preprocess@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "svelte-preprocess@npm:5.1.0"
+  version: 5.1.1
+  resolution: "svelte-preprocess@npm:5.1.1"
   dependencies:
     "@types/pug": "npm:^2.0.6"
     detect-indent: "npm:^6.1.0"
@@ -3680,7 +3680,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: fb40153aa282edadad68221fcf82db1b7c67a208941b136c529fd843d1e8b595d79e9d39e5f252672e11a8b62c621ccf2078de4a57e5adbb89e13046998ae597
+  checksum: 8de6571ddca032dc7a33c37a6cd7caa72eeabf6acbe81924e26f14e9f5de8bbf2806c86d1ac3cb435923c3953d0d9365dfbe2a8c94cd3b383ecfe50957e1b8f9
   languageName: node
   linkType: hard
 

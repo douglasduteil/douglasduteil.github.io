@@ -3701,8 +3701,8 @@ __metadata:
   linkType: hard
 
 "svelte-preprocess@npm:^5.0.0, svelte-preprocess@npm:^5.1.0":
-  version: 5.1.1
-  resolution: "svelte-preprocess@npm:5.1.1"
+  version: 5.1.2
+  resolution: "svelte-preprocess@npm:5.1.2"
   dependencies:
     "@types/pug": "npm:^2.0.6"
     detect-indent: "npm:^6.1.0"
@@ -3714,7 +3714,7 @@ __metadata:
     coffeescript: ^2.5.1
     less: ^3.11.3 || ^4.0.0
     postcss: ^7 || ^8
-    postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
+    postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
     pug: ^3.0.0
     sass: ^1.26.8
     stylus: ^0.55.0
@@ -3742,7 +3742,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 8de6571ddca032dc7a33c37a6cd7caa72eeabf6acbe81924e26f14e9f5de8bbf2806c86d1ac3cb435923c3953d0d9365dfbe2a8c94cd3b383ecfe50957e1b8f9
+  checksum: e536d96c1d08cb419df9bd4aac0761b73ca86dd1dc6943ceb48cbd9363c62c41358914e9fba78c29209be84acf9b9d5d4f07107e073450724dc832c725ab01c5
   languageName: node
   linkType: hard
 

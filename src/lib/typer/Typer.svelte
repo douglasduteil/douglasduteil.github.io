@@ -39,7 +39,7 @@
 
   async function typingAnimation(
     direction: number,
-    speed: number
+    speed: number,
   ): Promise<void> {
     const limit = direction > 0 ? expectedWord.length : 0;
 
@@ -62,7 +62,7 @@
     const _cursor = cursor;
     timing_interval_blinking = +setInterval(
       cursorBlinking,
-      cursorBlinkingSpeed
+      cursorBlinkingSpeed,
     );
     return new Promise(
       (resolve) =>
@@ -71,7 +71,7 @@
           cursor = _cursor;
           render();
           resolve();
-        }, delay))
+        }, delay)),
     );
 
     function cursorBlinking() {

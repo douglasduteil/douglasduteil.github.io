@@ -483,12 +483,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-static@npm:^2.0.0":
-  version: 2.0.3
-  resolution: "@sveltejs/adapter-static@npm:2.0.3"
+"@sveltejs/adapter-static@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@sveltejs/adapter-static@npm:3.0.0"
   peerDependencies:
-    "@sveltejs/kit": ^1.5.0
-  checksum: f500aa7a9c3fc3d9dfc26173aa81c30db6cff37fdc9aa92c7c2653dbdb7bf02c70081a4289d286e5ae82fe29053e61e85a2ada790bb5262cd1e78f527ee6ff5a
+    "@sveltejs/kit": ^2.0.0
+  checksum: 9f94216cd3b451ee86b9f3102c3b6b4436a5f84fa196988b3b2744776844881d16fe0524b88e72f7c7c05a493640bf3e22e937a94aed09a91a35fcbec2f13136
   languageName: node
   linkType: hard
 
@@ -1393,7 +1393,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "douglasduteil.github.io@workspace:."
   dependencies:
-    "@sveltejs/adapter-static": "npm:^2.0.0"
+    "@sveltejs/adapter-static": "npm:^3.0.0"
     "@sveltejs/kit": "npm:^1.0.0"
     "@types/google.analytics": "npm:^0.0.45"
     "@types/postcss-preset-env": "npm:^7.7.0"

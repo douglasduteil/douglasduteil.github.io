@@ -486,8 +486,8 @@ __metadata:
   linkType: hard
 
 "@sveltejs/kit@npm:^2.0.0":
-  version: 2.5.3
-  resolution: "@sveltejs/kit@npm:2.5.3"
+  version: 2.5.4
+  resolution: "@sveltejs/kit@npm:2.5.4"
   dependencies:
     "@types/cookie": "npm:^0.6.0"
     cookie: "npm:^0.6.0"
@@ -507,7 +507,7 @@ __metadata:
     vite: ^5.0.3
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 10c0/a1c75d0163788bcf3c7e389709efe967683de632b4fd3803daf5b6efc1e4a4c15d1a97bad4ff8f19575517d14fa0660dca5e6371d410f0476b1db3d23d31dc25
+  checksum: 10c0/b694d341d773cfad884562ba3f3e92468560fd6110039942f54bfe1888a72e2e182506d0554a757d76e2d58e7159448c67c04765a7309d021670e5bbf474f96a
   languageName: node
   linkType: hard
 

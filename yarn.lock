@@ -2092,12 +2092,11 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-svelte@npm:^2.32.2":
-  version: 2.39.0
-  resolution: "eslint-plugin-svelte@npm:2.39.0"
+  version: 2.39.2
+  resolution: "eslint-plugin-svelte@npm:2.39.2"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.4.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.15"
-    debug: "npm:^4.3.4"
     eslint-compat-utils: "npm:^0.5.0"
     esutils: "npm:^2.0.3"
     known-css-properties: "npm:^0.31.0"
@@ -2105,15 +2104,15 @@ __metadata:
     postcss-load-config: "npm:^3.1.4"
     postcss-safe-parser: "npm:^6.0.0"
     postcss-selector-parser: "npm:^6.0.16"
-    semver: "npm:^7.6.0"
-    svelte-eslint-parser: "npm:>=0.36.0 <1.0.0"
+    semver: "npm:^7.6.2"
+    svelte-eslint-parser: "npm:^0.36.0"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0-0 || ^9.0.0-0
     svelte: ^3.37.0 || ^4.0.0 || ^5.0.0-next.112
   peerDependenciesMeta:
     svelte:
       optional: true
-  checksum: 10c0/cb99dcebde7ce8747e9793e5bbcb3e1a363b2ba9098d1b371711759c2e25ff9b4db2fb16b58b24557bbe3dfb30265e89ac58e51fbc2dd3715cc8698ee3d2bee5
+  checksum: 10c0/3f9b1149218cb48d176f0c15dd199a33f81049864e20d91116100233b16caf955277cb8eef672ceb7fe681556f21bc9598135f7189a7128e85b472b11f39e25f
   languageName: node
   linkType: hard
 
@@ -4265,7 +4264,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.3.5, semver@npm:^7.5.4, semver@npm:^7.6.0":
+"semver@npm:^7.3.5, semver@npm:^7.5.4, semver@npm:^7.6.0, semver@npm:^7.6.2":
   version: 7.6.2
   resolution: "semver@npm:7.6.2"
   bin:
@@ -4573,7 +4572,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte-eslint-parser@npm:>=0.36.0 <1.0.0":
+"svelte-eslint-parser@npm:^0.36.0":
   version: 0.36.0
   resolution: "svelte-eslint-parser@npm:0.36.0"
   dependencies:

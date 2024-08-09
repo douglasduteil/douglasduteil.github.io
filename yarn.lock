@@ -946,11 +946,11 @@ __metadata:
   linkType: hard
 
 "@sveltejs/adapter-static@npm:^3.0.0":
-  version: 3.0.2
-  resolution: "@sveltejs/adapter-static@npm:3.0.2"
+  version: 3.0.3
+  resolution: "@sveltejs/adapter-static@npm:3.0.3"
   peerDependencies:
     "@sveltejs/kit": ^2.0.0
-  checksum: 10c0/db3c287f0ed52b9c3c42e27cb54c18977627dd7596ac2f778b6a70500b6e07cc48f3fa305a39171d0279311cfe11ecf8afcd367abbb13e582ad10d96223721fe
+  checksum: 10c0/dbffe72ddf5705ef296065cfe598d4f83490dfccb1196a90a5a90cde4b1139ad5acefd1b216a9fbe1484449df3caa48c38550ec2ed7ae2d6767b8ce65c234a83
   languageName: node
   linkType: hard
 

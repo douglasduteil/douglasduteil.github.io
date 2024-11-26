@@ -1,1 +1,0 @@
-import{R as r}from"../chunks/control.CYgJF_JY.js";function n(e,o){throw isNaN(e)||e<300||e>308?new Error("Invalid status code"):new r(e,o.toString())}new TextEncoder;function t(){n(307,"/me")}const c=Object.freeze(Object.defineProperty({__proto__:null,load:t},Symbol.toStringTag,{value:"Module"}));export{c as universal};

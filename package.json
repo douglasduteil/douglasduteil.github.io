@@ -1,6 +1,6 @@
 {
   "name": "douglasduteil.github.io",
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "yarn@4.7.0",
   "type": "module",
   "private": true,
   "scripts": {

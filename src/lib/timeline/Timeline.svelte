@@ -12,7 +12,7 @@
       >
 
       <ul aria-label="events">
-        {#each events as event}
+        {#each events as event (event.title)}
           <li aria-label="event">
             <TimelineEventMatcher {event} />
           </li>

@@ -1253,14 +1253,15 @@ __metadata:
   linkType: hard
 
 "@sveltejs/kit@npm:^2.0.0":
-  version: 2.20.8
-  resolution: "@sveltejs/kit@npm:2.20.8"
+  version: 2.21.0
+  resolution: "@sveltejs/kit@npm:2.21.0"
   dependencies:
+    "@sveltejs/acorn-typescript": "npm:^1.0.5"
     "@types/cookie": "npm:^0.6.0"
+    acorn: "npm:^8.14.1"
     cookie: "npm:^0.6.0"
     devalue: "npm:^5.1.0"
     esm-env: "npm:^1.2.2"
-    import-meta-resolve: "npm:^4.1.0"
     kleur: "npm:^4.1.5"
     magic-string: "npm:^0.30.5"
     mrmime: "npm:^2.0.0"
@@ -1273,7 +1274,7 @@ __metadata:
     vite: ^5.0.3 || ^6.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 10c0/f991c42118c654f2f28f8396f978a558642fa4486cabef4a65ef0e2c9e129f25e4c25c2e9216abb4e72bafdeb8e2a25b1d27e6ffb4c41580cc1a1582c5a75dbe
+  checksum: 10c0/1378a70e14c4d7e9bf1a78490839cd4c92d481a6472ba55d21fbe203c846ae008f72c32d67ff3fdb8ff0f0d05700143c40f07ca6c030febccf206e23f835d393
   languageName: node
   linkType: hard
 
@@ -1563,7 +1564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.12.1, acorn@npm:^8.14.0":
+"acorn@npm:^8.12.1, acorn@npm:^8.14.0, acorn@npm:^8.14.1":
   version: 8.14.1
   resolution: "acorn@npm:8.14.1"
   bin:
@@ -3124,13 +3125,6 @@ __metadata:
     parent-module: "npm:^1.0.0"
     resolve-from: "npm:^4.0.0"
   checksum: 10c0/bf8cc494872fef783249709385ae883b447e3eb09db0ebd15dcead7d9afe7224dad7bd7591c6b73b0b19b3c0f9640eb8ee884f01cfaf2887ab995b0b36a0cbec
-  languageName: node
-  linkType: hard
-
-"import-meta-resolve@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "import-meta-resolve@npm:4.1.0"
-  checksum: 10c0/42f3284b0460635ddf105c4ad99c6716099c3ce76702602290ad5cbbcd295700cbc04e4bdf47bacf9e3f1a4cec2e1ff887dabc20458bef398f9de22ddff45ef5
   languageName: node
   linkType: hard
 

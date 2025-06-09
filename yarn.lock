@@ -1250,8 +1250,8 @@ __metadata:
   linkType: hard
 
 "@sveltejs/kit@npm:^2.0.0":
-  version: 2.21.2
-  resolution: "@sveltejs/kit@npm:2.21.2"
+  version: 2.21.3
+  resolution: "@sveltejs/kit@npm:2.21.3"
   dependencies:
     "@sveltejs/acorn-typescript": "npm:^1.0.5"
     "@types/cookie": "npm:^0.6.0"
@@ -1265,13 +1265,14 @@ __metadata:
     sade: "npm:^1.8.1"
     set-cookie-parser: "npm:^2.6.0"
     sirv: "npm:^3.0.0"
+    vitefu: "npm:^1.0.6"
   peerDependencies:
     "@sveltejs/vite-plugin-svelte": ^3.0.0 || ^4.0.0-next.1 || ^5.0.0
     svelte: ^4.0.0 || ^5.0.0-next.0
     vite: ^5.0.3 || ^6.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 10c0/085d2595749eb70ed91a7f1ab2a1bb51372603da1207a98c772b4c08558fb12134a7b9e9aa60bea14ca4506d91162b52f1c70f94771da98e6312c7667fd1c056
+  checksum: 10c0/930e58312e0fa9c57055bdef35382dcd16fd61a6e7ad5bde3e174efff3f996e1027fea2d699b4ecff51dd97ac5782fd6a6ceed710d148ce5aee08ccf6e093249
   languageName: node
   linkType: hard
 

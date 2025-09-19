@@ -23,7 +23,7 @@
     "@types/postcss-preset-env": "^8.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
-    "array-shuffle": "^3.0.0",
+    "array-shuffle": "^4.0.0",
     "autotrack": "^2.4.1",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^10.0.0",

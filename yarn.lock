@@ -1697,10 +1697,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array-shuffle@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "array-shuffle@npm:3.0.0"
-  checksum: 10c0/1219bf6377f2cd0168960af15e5f373eb423c44e22830c5b06075095c4fd05c17bf0157ac0c22051884665da46f8f6f228b3ae8da84433f2ee4e7be8f9a505b0
+"array-shuffle@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "array-shuffle@npm:4.0.0"
+  checksum: 10c0/b74941b3f138b574c2af5da40113698a572d733dd919418148c592e116a8cff626e5a3d5b21291c0a67449aa77a775b738e9fae1b594d83e2cf96eb33e20e3fb
   languageName: node
   linkType: hard
 
@@ -2116,7 +2116,7 @@ __metadata:
     "@types/postcss-preset-env": "npm:^8.0.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.0.0"
     "@typescript-eslint/parser": "npm:^8.0.0"
-    array-shuffle: "npm:^3.0.0"
+    array-shuffle: "npm:^4.0.0"
     autotrack: "npm:^2.4.1"
     eslint: "npm:^9.0.0"
     eslint-config-prettier: "npm:^10.0.0"

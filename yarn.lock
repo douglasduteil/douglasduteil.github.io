@@ -2330,8 +2330,8 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-svelte@npm:^3.0.0":
-  version: 3.11.0
-  resolution: "eslint-plugin-svelte@npm:3.11.0"
+  version: 3.12.4
+  resolution: "eslint-plugin-svelte@npm:3.12.4"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.6.1"
     "@jridgewell/sourcemap-codec": "npm:^1.5.0"
@@ -2349,7 +2349,7 @@ __metadata:
   peerDependenciesMeta:
     svelte:
       optional: true
-  checksum: 10c0/a2ec7d530148f2ff7a8e54185e2d777a013da9f25c14fba67f9384122525656367499175ef44b5a75267b12cc05eb399e694abacd2e88c294f61c7b0f4f7783f
+  checksum: 10c0/d91329eba0d23cbcd93d360fb4b29fb4ba07333d31cdca3a056804534e101b9100bf6c9f3c599c9761cf95c679dc875aeaf5244bb65e4bbb1603ec7271758529
   languageName: node
   linkType: hard
 

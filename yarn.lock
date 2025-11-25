@@ -2027,10 +2027,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devalue@npm:^5.3.2":
-  version: 5.3.2
-  resolution: "devalue@npm:5.3.2"
-  checksum: 10c0/2dab403779233224285afe4b30eaded038df10cb89b8f2c1e41dd855a8e6b634aa24175b87f64df665204bb9a6a6e7758d172682719b9c5cf3cef336ff9fa507
+"devalue@npm:^5.3.2, devalue@npm:^5.5.0":
+  version: 5.5.0
+  resolution: "devalue@npm:5.5.0"
+  checksum: 10c0/7604b11f2afc83e006922a211b1e975109e260c58fba740a5706f148be7345bafdf3ece1012a78bc9dab68f7d88da53e6d6e403e06358932a86f2cd3541e4297
   languageName: node
   linkType: hard
 
@@ -4407,8 +4407,8 @@ __metadata:
   linkType: hard
 
 "svelte@npm:^5.0.0":
-  version: 5.43.14
-  resolution: "svelte@npm:5.43.14"
+  version: 5.44.0
+  resolution: "svelte@npm:5.44.0"
   dependencies:
     "@jridgewell/remapping": "npm:^2.3.4"
     "@jridgewell/sourcemap-codec": "npm:^1.5.0"
@@ -4418,13 +4418,14 @@ __metadata:
     aria-query: "npm:^5.3.1"
     axobject-query: "npm:^4.1.0"
     clsx: "npm:^2.1.1"
+    devalue: "npm:^5.5.0"
     esm-env: "npm:^1.2.1"
     esrap: "npm:^2.1.0"
     is-reference: "npm:^3.0.3"
     locate-character: "npm:^3.0.0"
     magic-string: "npm:^0.30.11"
     zimmerframe: "npm:^1.1.2"
-  checksum: 10c0/964177e2337b80b2c2fd1768a96988e948db46b0ad25760da3c34550a9781cbb511a29db3083ed0a914899d4ac3adf3b248f1d7230749a5976d5aa97492cb3c2
+  checksum: 10c0/8a4dfde8b1d183b7eefff5d6054eb46eec4aa059a1983357ecb45d3a5d50d9423e79a2e1892e75d1f256dc239b45063ba9949cc5c6f6564a1bfa4a2178e8af24
   languageName: node
   linkType: hard
 

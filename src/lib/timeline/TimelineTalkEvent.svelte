@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from "$app/paths";
   import UsersIcon from "$lib/svg/users.svelte";
   import type { TimelineEvent } from "./types";
 
@@ -11,7 +12,7 @@
   <p><em>{body}</em></p>
   {#if link}
     <p>
-      <a href={link.href} rel="noreferrer" target="_blank">
+      <a href={resolve(link.href)} rel="noreferrer" target="_blank">
         {link.name}
       </a>
     </p>

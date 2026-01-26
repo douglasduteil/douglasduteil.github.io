@@ -2073,7 +2073,7 @@ __metadata:
     vite: "npm:^7.0.0"
     vitest: "npm:^4.0.0"
     workbox-core: "npm:^7.0.0"
-    workbox-google-analytics: "npm:^7.0.0"
+    workbox-expiration: "npm:^7.0.0"
     workbox-precaching: "npm:^7.0.0"
     workbox-routing: "npm:^7.0.0"
     workbox-strategies: "npm:^7.0.0"
@@ -4805,16 +4805,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"workbox-background-sync@npm:7.4.0":
-  version: 7.4.0
-  resolution: "workbox-background-sync@npm:7.4.0"
-  dependencies:
-    idb: "npm:^7.0.1"
-    workbox-core: "npm:7.4.0"
-  checksum: 10c0/024dfad37c9ca28480857aaf7c0dd2e2f2b2ea416e100b51260eaf28f14ca5a558d0e12b1e95f862fec04df54432c090fa29582ab88b43d8778a4c821f21d13f
-  languageName: node
-  linkType: hard
-
 "workbox-core@npm:7.4.0, workbox-core@npm:^7.0.0":
   version: 7.4.0
   resolution: "workbox-core@npm:7.4.0"
@@ -4822,15 +4812,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"workbox-google-analytics@npm:^7.0.0":
+"workbox-expiration@npm:^7.0.0":
   version: 7.4.0
-  resolution: "workbox-google-analytics@npm:7.4.0"
+  resolution: "workbox-expiration@npm:7.4.0"
   dependencies:
-    workbox-background-sync: "npm:7.4.0"
+    idb: "npm:^7.0.1"
     workbox-core: "npm:7.4.0"
-    workbox-routing: "npm:7.4.0"
-    workbox-strategies: "npm:7.4.0"
-  checksum: 10c0/34a5ad1ea6fd6c65d5eb78b8c4bcf30b2624099b1c7c2e8f6a2af7135dcfcff00531d042f99b45960dcc42185b0f9c4b62c02a38325429fa15f060f30df61e51
+  checksum: 10c0/d4f5e96e6d58d74a1be7d8c842e68e9fc2d4a22664f629ec71570039a1876e033ca1e54d68eccded83d901999e48fb388c1f807b14f706b9b83c7b3ab5815cf8
   languageName: node
   linkType: hard
 

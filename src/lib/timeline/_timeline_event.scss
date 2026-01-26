@@ -1,6 +1,6 @@
-@import "$lib/variables";
-@import "$lib/mixins";
-@import "./variables";
+@use "$lib/variables" as *;
+@use "$lib/mixins" as *;
+@use "./variables" as *;
 
 @mixin timeline_event {
   :global([aria-label="event card"]) {

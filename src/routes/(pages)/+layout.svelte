@@ -9,8 +9,8 @@
 <style lang="scss">
   //
 
-  @import "$lib/variables";
-  @import "$lib/mixins";
+  @use "$lib/variables" as *;
+  @use "$lib/mixins" as *;
 
   //
 

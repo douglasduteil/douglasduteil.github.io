@@ -25,10 +25,10 @@
 <style lang="scss">
   //
 
-  @import "$lib/variables";
-  @import "$lib/mixins";
-  @import "./variables";
-  @import "./timeline_event.scss";
+  @use "$lib/variables" as *;
+  @use "$lib/mixins" as *;
+  @use "./variables" as *;
+  @use "./timeline_event.scss" as *;
 
   //
 

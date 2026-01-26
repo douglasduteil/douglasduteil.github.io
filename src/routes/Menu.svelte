@@ -38,8 +38,8 @@
 <style lang="scss">
   //
 
-  @import "$lib/_variables.scss";
-  @import "$lib/_mixins.scss";
+  @use "$lib/_variables.scss" as *;
+  @use "$lib/_mixins.scss" as *;
 
   //
 

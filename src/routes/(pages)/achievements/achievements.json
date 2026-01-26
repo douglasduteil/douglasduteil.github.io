@@ -1,5 +1,39 @@
 [
   [
+    2025,
+    [
+      {
+        "type": "job",
+        "body": "Operating across all ProConnect related projects including ProConnect Fédération, ProConnect Identité, and user moderation tools.",
+        "title": "Become intern at DINUM"
+      }
+    ]
+  ],
+  [
+    2024,
+    [
+      {
+        "type": "music",
+        "body": "Music project",
+        "title": "Co-founded Vidya Desire",
+        "link": {
+          "href": "https://vidyadesire.bandcamp.com/",
+          "name": "Bandcamp"
+        }
+      }
+    ]
+  ],
+  [
+    2023,
+    [
+      {
+        "type": "job",
+        "body": "Support tools for ProConnect user moderation. Contribution to ProConnect Fédération (formerly AgentConnect). Contribution to ProConnect Identité (formerly MonComptePro).",
+        "title": "Join DINUM as Full Stack Developer"
+      }
+    ]
+  ],
+  [
     2022,
     [
       {

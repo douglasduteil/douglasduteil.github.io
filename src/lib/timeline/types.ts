@@ -1,6 +1,6 @@
 //
 
-export type TimelineEventType = "job" | "talk" | "study" | "github";
+export type TimelineEventType = "job" | "talk" | "study" | "github" | "music";
 
 export interface TimelineEvent {
   type: TimelineEventType;

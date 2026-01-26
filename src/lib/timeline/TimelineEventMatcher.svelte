@@ -4,6 +4,7 @@
   import TimelineStudyEvent from "./TimelineStudyEvent.svelte";
   import TimelineGithubEvent from "./TimelineGithubEvent.svelte";
   import TimelineTalkEvent from "./TimelineTalkEvent.svelte";
+  import TimelineMusicEvent from "./TimelineMusicEvent.svelte";
   export let event: TimelineEvent;
 </script>
 
@@ -15,6 +16,8 @@
   <TimelineStudyEvent {...event} />
 {:else if event.type === "talk"}
   <TimelineTalkEvent {...event} />
+{:else if event.type === "music"}
+  <TimelineMusicEvent {...event} />
 {:else}
   <TimelineJobEvent
     title="INFO(o_0): '{event.type}' event here ?"

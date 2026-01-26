@@ -11,7 +11,7 @@
   <p><em>{body}</em></p>
   {#if link}
     <p>
-      <a href={link.href} rel="noreferrer" target="_blank">
+      <a href={link.href} rel="external noreferrer" target="_blank">
         {link.name}
       </a>
     </p>

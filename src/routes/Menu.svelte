@@ -1,5 +1,5 @@
 <script>
-  import { base } from "$app/paths";
+  import { resolve } from "$app/paths";
   import { page } from "$app/stores";
   import FaceIcon from "$lib/svg/face.svelte";
   import RocketIcon from "$lib/svg/rocket.svelte";
@@ -8,27 +8,27 @@
 </script>
 
 <nav>
-  <a class:active={$page.url.pathname == base + "/me"} href="{base}/me">
+  <a class:active={$page.url.pathname == resolve("/me")} href={resolve("/me")}>
     <FaceIcon />
     <span class="sr-only">Me</span>
   </a>
   <a
-    class:active={$page.url.pathname == base + "/achievements"}
-    href="{base}/achievements"
+    class:active={$page.url.pathname == resolve("/achievements")}
+    href={resolve("/achievements")}
   >
     <TrophyIcon />
     <span class="sr-only">Achievements</span>
   </a>
   <a
-    class:active={$page.url.pathname == base + "/rockets"}
-    href="{base}/rockets"
+    class:active={$page.url.pathname == resolve("/rockets")}
+    href={resolve("/rockets")}
   >
     <RocketIcon />
     <span class="sr-only">Rockets</span>
   </a>
   <a
-    class:active={$page.url.pathname == base + "/contact"}
-    href="{base}/contact"
+    class:active={$page.url.pathname == resolve("/contact")}
+    href={resolve("/contact")}
   >
     <CommentIcon />
     <span class="sr-only">Contact</span>

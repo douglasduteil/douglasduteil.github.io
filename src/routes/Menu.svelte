@@ -1,6 +1,6 @@
 <script>
   import { resolve } from "$app/paths";
-  import { page } from "$app/stores";
+  import { page } from "$app/state";
   import FaceIcon from "$lib/svg/face.svelte";
   import RocketIcon from "$lib/svg/rocket.svelte";
   import CommentIcon from "$lib/svg/comment.svelte";
@@ -8,26 +8,26 @@
 </script>
 
 <nav>
-  <a class:active={$page.url.pathname == resolve("/me")} href={resolve("/me")}>
+  <a class:active={page.url.pathname == resolve("/me")} href={resolve("/me")}>
     <FaceIcon />
     <span class="sr-only">Me</span>
   </a>
   <a
-    class:active={$page.url.pathname == resolve("/achievements")}
+    class:active={page.url.pathname == resolve("/achievements")}
     href={resolve("/achievements")}
   >
     <TrophyIcon />
     <span class="sr-only">Achievements</span>
   </a>
   <a
-    class:active={$page.url.pathname == resolve("/rockets")}
+    class:active={page.url.pathname == resolve("/rockets")}
     href={resolve("/rockets")}
   >
     <RocketIcon />
     <span class="sr-only">Rockets</span>
   </a>
   <a
-    class:active={$page.url.pathname == resolve("/contact")}
+    class:active={page.url.pathname == resolve("/contact")}
     href={resolve("/contact")}
   >
     <CommentIcon />

@@ -1775,9 +1775,9 @@ __metadata:
   linkType: hard
 
 "array-shuffle@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "array-shuffle@npm:4.0.0"
-  checksum: 10c0/b74941b3f138b574c2af5da40113698a572d733dd919418148c592e116a8cff626e5a3d5b21291c0a67449aa77a775b738e9fae1b594d83e2cf96eb33e20e3fb
+  version: 4.1.0
+  resolution: "array-shuffle@npm:4.1.0"
+  checksum: 10c0/76536f7fc05bb06c7793a3b113908e345368142b51f5b3d9c321f347c742c4fa6051a48fe1fbd1c06c1bc458dda7218c38a45660797af38caefe5225ee6ca4d4
   languageName: node
   linkType: hard
 

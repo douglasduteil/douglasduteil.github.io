@@ -1355,8 +1355,8 @@ __metadata:
   linkType: hard
 
 "@sveltejs/kit@npm:^2.0.0":
-  version: 2.50.1
-  resolution: "@sveltejs/kit@npm:2.50.1"
+  version: 2.50.2
+  resolution: "@sveltejs/kit@npm:2.50.2"
   dependencies:
     "@standard-schema/spec": "npm:^1.0.0"
     "@sveltejs/acorn-typescript": "npm:^1.0.5"
@@ -1369,7 +1369,7 @@ __metadata:
     magic-string: "npm:^0.30.5"
     mrmime: "npm:^2.0.0"
     sade: "npm:^1.8.1"
-    set-cookie-parser: "npm:^2.6.0"
+    set-cookie-parser: "npm:^3.0.0"
     sirv: "npm:^3.0.0"
   peerDependencies:
     "@opentelemetry/api": ^1.0.0
@@ -1384,7 +1384,7 @@ __metadata:
       optional: true
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 10c0/f9d9a68dd63f79046c6ad5a882c25748331b3d6d2ba56bb8aedd6e1dd8a7753c6eef69683ca4b63eb21c66ad52914986dce86da6600a26eeb1087f9b7b25ac00
+  checksum: 10c0/a5e6c7781ae180bc35c5cdac8f17cc5795a3c50bd6b1ef422db11dafc0c52e95f3ab6f8fe2d08a90141d3541d60f4067deaff362d6da0022243263eee32d9205
   languageName: node
   linkType: hard
 
@@ -4140,10 +4140,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"set-cookie-parser@npm:^2.6.0":
-  version: 2.7.2
-  resolution: "set-cookie-parser@npm:2.7.2"
-  checksum: 10c0/4381a9eb7ee951dfe393fe7aacf76b9a3b4e93a684d2162ab35594fa4053cc82a4d7d7582bf397718012c9adcf839b8cd8f57c6c42901ea9effe33c752da4a45
+"set-cookie-parser@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "set-cookie-parser@npm:3.0.1"
+  checksum: 10c0/29bd085ab3167fd0b3ee25b20575c1be845bf1c051b816c83ea99aada02c6a1bf16458e3c2825abf702bd09725bbb4868730737596b7a2d48f712551cf733d1d
   languageName: node
   linkType: hard
 

@@ -1338,8 +1338,8 @@ __metadata:
   linkType: hard
 
 "@sveltejs/kit@npm:^2.0.0":
-  version: 2.53.0
-  resolution: "@sveltejs/kit@npm:2.53.0"
+  version: 2.53.1
+  resolution: "@sveltejs/kit@npm:2.53.1"
   dependencies:
     "@standard-schema/spec": "npm:^1.0.0"
     "@sveltejs/acorn-typescript": "npm:^1.0.5"
@@ -1366,7 +1366,7 @@ __metadata:
       optional: true
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 10c0/ec5d937b4328c6c9dd06439c817468c2bcbad1ccfa1c5be2615f77c8e7a04a4258e9143a832932109f36f1d6a0a4e4d56a14ea6801df275b4acf49574628c87f
+  checksum: 10c0/e3077c13d873282abd2f6c61160324e5b11f89ac49915aa17fc61028de0b2ac4cac7612130ca1bfcf237d2a9e60e281f6a4ca2fe10f5445bcf19ca14d4de9960
   languageName: node
   linkType: hard
 

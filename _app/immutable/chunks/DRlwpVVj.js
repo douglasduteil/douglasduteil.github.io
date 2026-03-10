@@ -1,0 +1,1 @@
+import{b as v,h as o,d as y,E as f,e as l,g as m,i as p,j as i,H as T,k as g}from"./DnerCQ4r.js";import{B as A}from"./BAyagPmz.js";function b(d,_,e){var s;o&&(s=g,y());var r=new A(d);v(()=>{var a=_()??null;if(o){var h=l(s),c=h===T,u=a!==null;if(c!==u){var t=m();p(t),r.anchor=t,i(!1),r.ensure(a,a&&(n=>e(n,a))),i(!0);return}}r.ensure(a,a&&(n=>e(n,a)))},f)}export{b as c};

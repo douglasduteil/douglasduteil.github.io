@@ -1158,8 +1158,8 @@ __metadata:
   linkType: hard
 
 "@sveltejs/kit@npm:^2.0.0":
-  version: 2.55.0
-  resolution: "@sveltejs/kit@npm:2.55.0"
+  version: 2.59.1
+  resolution: "@sveltejs/kit@npm:2.59.1"
   dependencies:
     "@standard-schema/spec": "npm:^1.0.0"
     "@sveltejs/acorn-typescript": "npm:^1.0.5"
@@ -1177,7 +1177,7 @@ __metadata:
     "@opentelemetry/api": ^1.0.0
     "@sveltejs/vite-plugin-svelte": ^3.0.0 || ^4.0.0-next.1 || ^5.0.0 || ^6.0.0-next.0 || ^7.0.0
     svelte: ^4.0.0 || ^5.0.0-next.0
-    typescript: ^5.3.3
+    typescript: ^5.3.3 || ^6.0.0
     vite: ^5.0.3 || ^6.0.0 || ^7.0.0-beta.0 || ^8.0.0
   peerDependenciesMeta:
     "@opentelemetry/api":
@@ -1186,7 +1186,7 @@ __metadata:
       optional: true
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 10c0/9153b875fe42604693798081f7ab8c62616369644e4286b77c7a5845c7ceeccb9cb6d3a5c6150ed5cb8f3523972e6dfa6853298ccb8d549ccb372fd28056fe88
+  checksum: 10c0/c6280b0c0c853a1fcaf268161047454c24f9a0d03eb2e37b04fb9798081ef2313eafab41144cda9534aba4b1998ed962b7d9f41cfffcd0978bfc70f7faf745bd
   languageName: node
   linkType: hard
 

@@ -4067,8 +4067,8 @@ __metadata:
   linkType: hard
 
 "svelte-preprocess@npm:^6.0.0":
-  version: 6.0.4
-  resolution: "svelte-preprocess@npm:6.0.4"
+  version: 6.0.5
+  resolution: "svelte-preprocess@npm:6.0.5"
   peerDependencies:
     "@babel/core": ^7.10.2
     coffeescript: ^2.5.1
@@ -4102,7 +4102,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/6de087cc1ffa60948168bd75207c88b34c4b74362aaa08b8c0654c91c7e1c83137f1df272b6932145d8967a26010ac7a89028f5ef2133b0bf097078973d1e7e5
+  checksum: 10c0/a986a5d75c2e45a87488bc847e13a8fdb5022823c0e0c84f3266adc344bdfc03abdb1a8bd6e76bf44c869ee6f7c224a875d3603665303696f7fad68db371bf73
   languageName: node
   linkType: hard
 

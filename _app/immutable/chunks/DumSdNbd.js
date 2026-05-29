@@ -1,1 +1,0 @@
-import{X as e}from"./BFzy9A2m.js";e();

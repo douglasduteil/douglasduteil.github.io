@@ -1,1 +1,0 @@
-import{t as e}from"../chunks/DK3Fl9T5.js";import{r as t}from"../chunks/DRsjW4hw.js";function n(e,n){throw new t(e,n.toString())}var r=e({load:()=>i});function i(){n(307,`/me`)}export{r as universal};

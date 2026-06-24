@@ -113,22 +113,22 @@
     />
     <meta name="application-name" content="Douglas Duteil" />
 
-    <link href="./_app/immutable/entry/start.aQi_kzEi.js" rel="modulepreload">
-		<link href="./_app/immutable/chunks/TCGPKG3r.js" rel="modulepreload">
-		<link href="./_app/immutable/chunks/DRsjW4hw.js" rel="modulepreload">
+    <link href="./_app/immutable/entry/start.BOBvFz7m.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/Ai1uoYcL.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/BuFlayix.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/rpeWG5CG.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/DK3Fl9T5.js" rel="modulepreload">
-		<link href="./_app/immutable/entry/app.Dtx0zML2.js" rel="modulepreload">
+		<link href="./_app/immutable/entry/app.CW1HdXfK.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/kNaey6uv.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
-		<link href="./_app/immutable/nodes/0.e3nSFgr4.js" rel="modulepreload">
-		<link href="./_app/immutable/chunks/DcTfKXTX.js" rel="modulepreload">
-		<link href="./_app/immutable/chunks/BtQDrGyC.js" rel="modulepreload">
+		<link href="./_app/immutable/nodes/0.nbrUBzlg.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/CQwxBQQL.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/-1zMQppr.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/DAT6a4kg.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/Bi5aum02.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/BPcXL9s-.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/DLTcYA6q.js" rel="modulepreload">
-		<link href="./_app/immutable/nodes/2.jPR6k2kr.js" rel="modulepreload">
+		<link href="./_app/immutable/nodes/2.D481MauL.js" rel="modulepreload">
 		<link href="./_app/immutable/nodes/4.BL5i3uQ-.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/qzsCLxSp.js" rel="modulepreload">
 		<!--12qhfyh--><!----><title>Douglas DUTEIL > Achievements</title>
@@ -141,15 +141,15 @@
 			
 			<script>
 				{
-					__sveltekit_2jhrkv = {
+					__sveltekit_c4y3vh = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.aQi_kzEi.js"),
-						import("./_app/immutable/entry/app.Dtx0zML2.js")
+						import("./_app/immutable/entry/start.BOBvFz7m.js"),
+						import("./_app/immutable/entry/app.CW1HdXfK.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 4],
@@ -160,8 +160,14 @@
 					});
 
 					if ('serviceWorker' in navigator) {
+						const script_url = './service-worker.js';
+						const policy = globalThis?.window?.trustedTypes?.createPolicy(
+							'sveltekit-trusted-url',
+							{ createScriptURL(url) { return url; } }
+						);
+						const sanitised = policy?.createScriptURL(script_url) ?? script_url;
 						addEventListener('load', function () {
-							navigator.serviceWorker.register('./service-worker.js');
+							navigator.serviceWorker.register(sanitised);
 						});
 					}
 				}

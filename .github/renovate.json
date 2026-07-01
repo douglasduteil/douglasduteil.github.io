@@ -1,6 +1,6 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     ":maintainLockFilesWeekly",
     ":automergeAll",
     ":timezone(Europe/Paris)"

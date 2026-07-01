@@ -1,3 +1,5 @@
+/// <reference types="google.analytics" />
+
 //
 
 import "autotrack/lib/plugins/event-tracker";

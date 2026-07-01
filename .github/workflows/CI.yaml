@@ -10,19 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Setup Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: node
-          cache: "yarn"
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
-      - run: yarn install
+      - run: bun install
 
-      - run: yarn lint
-      - run: yarn check
-      - run: yarn test
+      - run: bun run lint
+      - run: bun run check
+      - run: bun run test
 
-      - run: yarn build
+      - run: bun run build
 
       # Ensure that we produced a dist folder
       - run: test -f build/index.html

@@ -1,1 +1,0 @@
-import{X as e}from"./BYdcpa_i.js";e();

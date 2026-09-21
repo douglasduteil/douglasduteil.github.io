@@ -1,0 +1,1 @@
+import{Z as e}from"./DYCH_cn2.js";e();

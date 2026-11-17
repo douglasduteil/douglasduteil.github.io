@@ -24,13 +24,25 @@ jobs:
       # Ensure that we produced a dist folder
       - run: test -f build/index.html
 
-      - name: Deploy
+      - name: Upload Pages artifact
         if: github.ref == 'refs/heads/boss'
-        uses: peaceiris/actions-gh-pages@v4
+        uses: actions/upload-pages-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: master
-          publish_dir: ./build
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_message: ${{ github.event.head_commit.message }}
+          path: ./build
+
+  Deploy:
+    if: github.ref == 'refs/heads/boss'
+    needs: Build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

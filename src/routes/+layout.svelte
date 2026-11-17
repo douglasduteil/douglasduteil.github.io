@@ -1,38 +1,38 @@
 <script lang="ts">
-  import { page } from "$app/stores";
-  import "$lib/ciritcal.scss";
+  import { page } from "$app/state";
+  import "#lib/ciritcal.scss";
   import { onMount } from "svelte";
   import Menu from "./Menu.svelte";
 
   onMount(() => {
     if (import.meta.env.PROD) {
-      import("$lib/stalker");
+      import("#lib/stalker.ts");
     }
   });
 </script>
 
 <svelte:head>
-  <title>Douglas DUTEIL > {$page.data.title}</title>
+  <title>Douglas DUTEIL > {page.data.title}</title>
 </svelte:head>
 
 <layout
   style="
-  --backgroundColor: {$page.data.backgroundColor};
-  --backgoundImage: {$page.data.backgoundImage};
+  --backgroundColor: {page.data.backgroundColor};
+  --backgoundImage: {page.data.backgoundImage};
 "
 >
   <menu><Menu /></menu>
   <main
-    class:flat={$page.data.backgroundColor}
-    class:imaged={$page.data.backgoundImage}
+    class:flat={page.data.backgroundColor}
+    class:imaged={page.data.backgoundImage}
   >
     <slot />
   </main>
 </layout>
 
 <style lang="scss">
-  @use "$lib/variables" as *;
-  @use "$lib/mixins" as *;
+  @use "#lib/_variables.scss" as *;
+  @use "#lib/_mixins.scss" as *;
 
   layout {
     @include f-row;

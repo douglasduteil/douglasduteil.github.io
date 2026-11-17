@@ -1,5 +1,5 @@
 import type { PageLoad } from "./$types";
-import CommentIcon from "$lib/svg/comment.svelte";
+import CommentIcon from "#lib/svg/comment.svelte";
 
 export const load = (() => {
   return {

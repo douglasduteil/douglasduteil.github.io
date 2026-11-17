@@ -1,5 +1,5 @@
 <script lang="ts">
-  import GraduationIcon from "$lib/svg/graduation.svelte";
+  import GraduationIcon from "#lib/svg/graduation.svelte";
   import type { TimelineEvent } from "./types";
 
   export const { type, title, body } = $$props as TimelineEvent;

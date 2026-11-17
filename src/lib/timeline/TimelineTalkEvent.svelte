@@ -1,5 +1,5 @@
 <script lang="ts">
-  import UsersIcon from "$lib/svg/users.svelte";
+  import UsersIcon from "#lib/svg/users.svelte";
   import type { TimelineEvent } from "./types";
 
   export const { type, title, body, link } = $$props as TimelineEvent;

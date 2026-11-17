@@ -3,7 +3,8 @@
     "config:recommended",
     ":maintainLockFilesWeekly",
     ":automergeAll",
-    ":timezone(Europe/Paris)"
+    ":timezone(Europe/Paris)",
+    "helpers:pinGitHubActionDigestsToSemver"
   ],
   "dependencyDashboardAutoclose": true,
   "postUpdateOptions": ["npmDedupe", "yarnDedupeHighest"],

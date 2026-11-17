@@ -6,7 +6,9 @@
     ":timezone(Europe/Paris)",
     "helpers:pinGitHubActionDigestsToSemver"
   ],
-  "dependencyDashboardAutoclose": true,
+  "dependencyDashboard": {
+    "autoclose": true
+  },
   "postUpdateOptions": ["npmDedupe", "yarnDedupeHighest"],
   "labels": ["dependencies"]
 }

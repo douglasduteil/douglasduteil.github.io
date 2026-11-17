@@ -1,5 +1,5 @@
 import type { PageLoad } from "./$types";
-import RocketIcon from "$lib/svg/rocket.svelte";
+import RocketIcon from "#lib/svg/rocket.svelte";
 
 export const load = (() => {
   return {

@@ -1,5 +1,5 @@
 import type { PageLoad } from "./$types";
-import TrophyIcon from "$lib/svg/trophy.svelte";
+import TrophyIcon from "#lib/svg/trophy.svelte";
 
 export const load = (() => {
   return {

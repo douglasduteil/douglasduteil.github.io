@@ -1,10 +1,10 @@
 <script>
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
-  import FaceIcon from "$lib/svg/face.svelte";
-  import RocketIcon from "$lib/svg/rocket.svelte";
-  import CommentIcon from "$lib/svg/comment.svelte";
-  import TrophyIcon from "$lib/svg/trophy.svelte";
+  import FaceIcon from "#lib/svg/face.svelte";
+  import RocketIcon from "#lib/svg/rocket.svelte";
+  import CommentIcon from "#lib/svg/comment.svelte";
+  import TrophyIcon from "#lib/svg/trophy.svelte";
 </script>
 
 <nav>
@@ -13,22 +13,22 @@
     <span class="sr-only">Me</span>
   </a>
   <a
-    class:active={page.url.pathname == resolve("/achievements")}
-    href={resolve("/achievements")}
+    class:active={page.url.pathname == resolve("/(pages)/achievements")}
+    href={resolve("/(pages)/achievements")}
   >
     <TrophyIcon />
     <span class="sr-only">Achievements</span>
   </a>
   <a
-    class:active={page.url.pathname == resolve("/rockets")}
-    href={resolve("/rockets")}
+    class:active={page.url.pathname == resolve("/(pages)/rockets")}
+    href={resolve("/(pages)/rockets")}
   >
     <RocketIcon />
     <span class="sr-only">Rockets</span>
   </a>
   <a
-    class:active={page.url.pathname == resolve("/contact")}
-    href={resolve("/contact")}
+    class:active={page.url.pathname == resolve("/(pages)/contact")}
+    href={resolve("/(pages)/contact")}
   >
     <CommentIcon />
     <span class="sr-only">Contact</span>
@@ -38,8 +38,8 @@
 <style lang="scss">
   //
 
-  @use "$lib/_variables.scss" as *;
-  @use "$lib/_mixins.scss" as *;
+  @use "#lib/_variables.scss" as *;
+  @use "#lib/_mixins.scss" as *;
 
   //
 

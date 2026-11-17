@@ -25,8 +25,8 @@
 <style lang="scss">
   //
 
-  @use "$lib/variables" as *;
-  @use "$lib/mixins" as *;
+  @use "#lib/_variables.scss" as *;
+  @use "#lib/_mixins.scss" as *;
   @use "./variables" as *;
   @use "./timeline_event.scss" as *;
 

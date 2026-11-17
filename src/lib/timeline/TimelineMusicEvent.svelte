@@ -1,5 +1,5 @@
 <script lang="ts">
-  import MusicIcon from "$lib/svg/music.svelte";
+  import MusicIcon from "#lib/svg/music.svelte";
   import type { TimelineEvent } from "./types";
 
   export const { type, title, body, link } = $$props as TimelineEvent;

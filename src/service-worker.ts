@@ -1,6 +1,7 @@
 /// <reference lib="webworker" />
 
-import { build, files, prerendered, version } from "$service-worker";
+import { version } from "$app/env";
+import { assets, immutable, prerendered } from "$app/manifest";
 import { clientsClaim, skipWaiting } from "workbox-core";
 import { cleanupOutdatedCaches, precacheAndRoute } from "workbox-precaching";
 import { registerRoute, Route } from "workbox-routing";
@@ -16,9 +17,10 @@ cleanupOutdatedCaches();
 
 // Precache all static assets (build output, static files, prerendered pages)
 // These are versioned by SvelteKit's build hash, ensuring fresh content on deploy
+// Manifest paths are relative to the base path, which is where this worker lives
 precacheAndRoute(
-  [...build, ...files, ...prerendered].map((pathname) => ({
-    url: pathname,
+  [...immutable, ...assets, ...prerendered].map(({ path }) => ({
+    url: path,
     revision: version,
   })),
 );

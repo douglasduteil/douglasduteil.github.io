@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { page } from "$app/stores";
+  import { page } from "$app/state";
 </script>
 
-<watermark><svelte:component this={$page.data.watermark} /></watermark>
-<h1>{$page.data.title}</h1>
-<section class={$page.url.pathname}><slot /></section>
+<watermark><svelte:component this={page.data.watermark} /></watermark>
+<h1>{page.data.title}</h1>
+<section class={page.url.pathname}><slot /></section>
 
 <style lang="scss">
   //
 
-  @use "$lib/variables" as *;
-  @use "$lib/mixins" as *;
+  @use "#lib/_variables.scss" as *;
+  @use "#lib/_mixins.scss" as *;
 
   //
 

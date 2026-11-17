@@ -1,5 +1,5 @@
 <script lang="ts">
-  import GithubIcon from "$lib/svg/github.svelte";
+  import GithubIcon from "#lib/svg/github.svelte";
   import type { TimelineEvent } from "./types";
 
   export const { type, title, body } = $$props as TimelineEvent;

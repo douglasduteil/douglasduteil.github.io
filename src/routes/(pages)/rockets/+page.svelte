@@ -35,8 +35,8 @@
 <style lang="scss">
   //
 
-  @use "$lib/_variables.scss" as *;
-  @use "$lib/_mixins.scss" as *;
+  @use "#lib/_variables.scss" as *;
+  @use "#lib/_mixins.scss" as *;
 
   //
 

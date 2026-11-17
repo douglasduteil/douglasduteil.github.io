@@ -1,8 +1,8 @@
 <script>
-  import LocationIcon from "$lib/svg/location.svelte";
-  import GithubIcon from "$lib/svg/github.svelte";
-  import SuitcaseIcon from "$lib/svg/suitcase.svelte";
-  import { Typer, orders } from "$lib/typer";
+  import LocationIcon from "#lib/svg/location.svelte";
+  import GithubIcon from "#lib/svg/github.svelte";
+  import SuitcaseIcon from "#lib/svg/suitcase.svelte";
+  import { Typer, orders } from "#lib/typer/index.ts";
 
   const activities = [
     "===========",
@@ -43,8 +43,8 @@
 </section>
 
 <style lang="scss">
-  @use "$lib/variables" as *;
-  @use "$lib/mixins" as *;
+  @use "#lib/_variables.scss" as *;
+  @use "#lib/_mixins.scss" as *;
 
   section {
     @include media-min-tablet {

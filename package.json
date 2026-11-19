@@ -1,6 +1,6 @@
 {
   "name": "douglasduteil.github.io",
-  "packageManager": "bun@1.4.4",
+  "packageManager": "bun@1.4.5",
   "type": "module",
   "private": true,
   "imports": {

@@ -1,37 +1,45 @@
 <section>
   <ul>
     <li>
-      <a href="mailto:douglasduteil@gmail.com" rel="noreferrer" target="_blank"
-        >Gmail</a
-      >
+      <a href="mailto:douglasduteil@gmail.com" rel="noreferrer" target="_blank">
+        Gmail
+      </a>
     </li>
     <li>
       <a
         href="https://google.com/+DouglasDuteil"
         rel="noreferrer"
-        target="_blank">Google +</a
+        target="_blank"
       >
+        Google +
+      </a>
     </li>
     <li>
       <a
         href="https://twitter.com/douglasduteil"
         rel="noreferrer"
-        target="_blank">Twitter</a
+        target="_blank"
       >
+        Twitter
+      </a>
     </li>
     <li>
       <a
         href="https://www.facebook.com/douglas.duteil"
         rel="noreferrer"
-        target="_blank">Facebook</a
+        target="_blank"
       >
+        Facebook
+      </a>
     </li>
     <li>
       <a
         href="mailto:douglasduteil@outlook.com"
         rel="noreferrer"
-        target="_blank">Outlook</a
+        target="_blank"
       >
+        Outlook
+      </a>
     </li>
   </ul>
 </section>

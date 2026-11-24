@@ -7,9 +7,9 @@
 <ul aria-label="timeline">
   {#each eventsPerYear as [year, events] (year)}
     <li aria-labelledby={String(year)}>
-      <time datetime={new Date(year, 0, 1).toDateString()} id={String(year)}
-        >{year}</time
-      >
+      <time datetime={new Date(year, 0, 1).toDateString()} id={String(year)}>
+        {year}
+      </time>
 
       <ul aria-label="events">
         {#each events as event (event.title)}
